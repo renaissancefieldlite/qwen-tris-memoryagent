@@ -20,6 +20,10 @@ MemoryAgent lane.
 
 ## Submission Quick Links
 
+- Public page:
+  `https://renaissancefieldlite.com/qwen-tris-memoryagent.html`
+- Public GitHub repo:
+  `https://github.com/renaissancefieldlite/qwen-tris-memoryagent`
 - Track: `MemoryAgent`
 - License: `MIT`, see `LICENSE`
 - Architecture diagram: `docs/ARCHITECTURE.md`

@@ -8,8 +8,9 @@ Current working repo:
 
 ## Required By The Form
 
-- [ ] Public open-source code repository URL.
-  - Status: package prepared locally; publish/push still required.
+- [x] Public open-source code repository URL.
+  - URL: `https://github.com/renaissancefieldlite/qwen-tris-memoryagent`
+  - Public page: `https://renaissancefieldlite.com/qwen-tris-memoryagent.html`
   - Must include top-level `LICENSE` so GitHub detects the license in About.
 
 - [x] Source code, assets, and run instructions.
@@ -51,7 +52,8 @@ Current working repo:
   - Track 1: MemoryAgent.
 
 - [ ] Optional blog/social journey post.
-  - Status: pending.
+  - Draft: `docs/social/QWEN_TRIS_INSTAGRAM_CAPTION_2026-07-02.md`
+  - Status: caption prepared; posting still pending.
 
 ## Current Evidence To Cite
 
