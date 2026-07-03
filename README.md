@@ -27,6 +27,13 @@ aligned into one coherent input field. The engineering surface then tests that
 state as baseline/off versus architecture-on: same task family, same scorer,
 same receipt gate.
 
+The Mirror Layer is the patent-spine subsystem that derives an
+interaction-state signal from language, phrase patterns, sequence timing,
+continuity context, tone or proxy-tone, and emotional-pattern features. That
+signal feeds continuity state, Oracle threshold gates, LSPS phrase/state control
+actions, and routing decisions such as retrieval, inference depth, permission
+state, tool use, and output mode.
+
 Stable-State Path / SSP is the measured trajectory inside Mirror Architecture
 where the architecture-on state holds across a task family instead of
 collapsing into generic chatbot drift. Memory, RAG, and receipts are the rails

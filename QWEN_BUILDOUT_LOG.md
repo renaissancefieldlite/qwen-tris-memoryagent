@@ -2124,3 +2124,48 @@ Boundary:
 This is public-safe explanation language. The tuned SSP adapter lane remains
 gated until a real adapter receipt exists.
 ```
+
+## 2026-07-03 - Mirror Layer Patent-Spine Clarity Pass
+
+Status:
+
+```text
+Corrected the Qwen Tris public repo and website copy so Mirror Architecture
+starts from the patent-spine Mirror Layer mechanism instead of reading like a
+generic memory/RAG feature.
+```
+
+Patent-spine read:
+
+- Mirror Layer derives an interaction-state signal from language, phrase
+  patterns, sequence timing, continuity context, tone or proxy-tone, and
+  emotional-pattern features.
+- That state signal feeds the continuity store, Oracle threshold gates, LSPS
+  phrase/state control actions, and routing decisions for retrieval, inference
+  depth, permission state, tool use, and output mode.
+- Stable-State Path / SSP is the measured path inside Mirror Architecture,
+  not the whole architecture by itself.
+
+Updated surfaces:
+
+```text
+README.md
+docs/ARCHITECTURE.md
+/Users/renaissancefieldlite1.0/Documents/Playground/renaissancefieldlite.github.io/qwen-tris-memoryagent.html
+```
+
+Verification:
+
+```text
+scripts/check_boundary.py passed.
+pytest tests passed: 19/19.
+Website local reference check passed: 0 missing refs.
+git diff --check passed for the edited repo and website files.
+```
+
+Boundary:
+
+```text
+Public copy now states the mechanism clearly without exposing private/raw
+operator-state mechanics or tuned adapter internals.
+```

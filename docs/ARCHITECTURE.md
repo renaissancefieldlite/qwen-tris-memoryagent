@@ -12,6 +12,13 @@ source context, task gate, evidence spine, memory route, and model route aligned
 into one coherent input field. The backend turns that input field into a
 baseline/off versus architecture-on test route with saved receipts.
 
+The Mirror Layer is treated as the interaction-state subsystem from the patent
+spine: it derives a structured state signal from linguistic features,
+phrase-pattern features, temporal-sequence features, continuity-aware context,
+tone/proxy-tone, and emotional-pattern features. That state signal is used by
+the continuity store, Oracle threshold gate, LSPS phrase/state action registry,
+and routing layer before the Qwen model call is assembled.
+
 ```mermaid
 flowchart LR
     U["User / Judge"] --> UI["Qwen Tris Recall UI<br/>static/trini_recall"]
@@ -19,9 +26,12 @@ flowchart LR
     API --> MEM["SQLite memory store<br/>MemoryStore"]
     API --> AUDIT["JSONL audit receipts"]
     API --> RAG["Source/RAG retrieval<br/>SQLite FTS + LangChain if available"]
+    API --> ML["Mirror Layer<br/>interaction-state signal"]
+    ML --> GATE["Oracle / LSPS gates<br/>threshold + phrase-state actions"]
     API --> SSP["Mirror Architecture<br/>measured Stable-State Path"]
     API --> QWEN["Alibaba Cloud Model Studio<br/>Qwen Cloud API<br/>dashscope-intl.aliyuncs.com"]
     API --> LOCAL["Local fallback<br/>Ollama Qwen / Nemotron"]
+    GATE --> SSP
     SSP --> PROMPT["Architecture-on prompt assembly"]
     MEM --> PROMPT
     RAG --> PROMPT
