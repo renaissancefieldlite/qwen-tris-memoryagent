@@ -1,0 +1,1477 @@
+{
+  "run_id": "qwen_tris_longbench_public_slice_20260701T205333Z",
+  "provider": "qwen-cloud",
+  "model": "qwen-plus",
+  "benchmark": "LongBench public data.zip",
+  "tasks": [
+    "multifieldqa_en_e"
+  ],
+  "items": 50,
+  "condition_a": "baseline Qwen prompt-only answer discipline",
+  "condition_b": "Qwen Tris stable-state answer discipline",
+  "condition_a_mean": 0.4822128876412131,
+  "condition_b_mean": 0.5313332096422217,
+  "delta": 0.049120322001008604,
+  "family_totals": {
+    "multifieldqa_en_e": {
+      "n": 50,
+      "condition_a_mean": 0.4822128876412131,
+      "condition_b_mean": 0.5313332096422217,
+      "delta": 0.049120322001008604
+    }
+  },
+  "skipped_items": [],
+  "results": [
+    {
+      "index": 1,
+      "dataset": "multifieldqa_en_e",
+      "_id": "b619fa683cbbeb8db3d575fc2e261940701a530452b14eef",
+      "answers": [
+        "The focus of the study was on the reactive radical ethynyl (C$_2$H)."
+      ],
+      "length": 2115,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "C$_2$H",
+        "metric": "token_f1",
+        "score": 0.19999999999999998,
+        "prediction_key": "C$_2$H",
+        "gold": [
+          "The focus of the study was on the reactive radical ethynyl (C$_2$H)."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "C$_2$H",
+        "metric": "token_f1",
+        "score": 0.19999999999999998,
+        "prediction_key": "C$_2$H",
+        "gold": [
+          "The focus of the study was on the reactive radical ethynyl (C$_2$H)."
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "dataset": "multifieldqa_en_e",
+      "_id": "74334862b5d8e2a02deb3c24aa90d5339e443fbc412453b8",
+      "answers": [
+        "Other toxic products."
+      ],
+      "length": 3141,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Other toxic products, rather than against saline (genuine placebo).",
+        "metric": "token_f1",
+        "score": 0.5,
+        "prediction_key": "Other toxic products, rather than against saline (genuine placebo).",
+        "gold": [
+          "Other toxic products."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "other toxic products",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "other toxic products",
+        "gold": [
+          "Other toxic products."
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "dataset": "multifieldqa_en_e",
+      "_id": "1f3b1e37c3d2ead7ab4fe7dd9d5cddd55b2c76d28e6bfc86",
+      "answers": [
+        "The authors used simulated data and real data from a wireless MISO channel."
+      ],
+      "length": 2554,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Simulated and real data",
+        "metric": "token_f1",
+        "score": 0.5333333333333333,
+        "prediction_key": "Simulated and real data",
+        "gold": [
+          "The authors used simulated data and real data from a wireless MISO channel."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "simulated and real data",
+        "metric": "token_f1",
+        "score": 0.5333333333333333,
+        "prediction_key": "simulated and real data",
+        "gold": [
+          "The authors used simulated data and real data from a wireless MISO channel."
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "dataset": "multifieldqa_en_e",
+      "_id": "6caa98612cf0e2ddf58e1ba70daaf79a3ac616280fb48188",
+      "answers": [
+        "Verifying other meta-information such as patient's gender, age, race, etc."
+      ],
+      "length": 2947,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Applying the findings to non-Japanese EHRs, verifying other meta-information (e.g., patient's gender, age, race, religion, used EHR system), developing a robust and flexible research infrastructure for large-scale cross-sectional studies, and conducting human evaluations.",
+        "metric": "token_f1",
+        "score": 0.3414634146341463,
+        "prediction_key": "Applying the findings to non-Japanese EHRs, verifying other meta-information (e.g., patient's gender, age, race, religion, used EHR system), developing a robust",
+        "gold": [
+          "Verifying other meta-information such as patient's gender, age, race, etc."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Developing a robust and flexible research infrastructure to conduct a more large scale cross-sectional study, verifying other meta-information such as patient's gender, age, race, religion and used EHR system, and performing human evaluations.",
+        "metric": "token_f1",
+        "score": 0.4390243902439024,
+        "prediction_key": "Developing a robust and flexible research infrastructure to conduct a more large scale cross-sectional study, verifying other meta-information such as patient's",
+        "gold": [
+          "Verifying other meta-information such as patient's gender, age, race, etc."
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "dataset": "multifieldqa_en_e",
+      "_id": "60c66572f28b071899547f0aa0b4a271969c3b153e96406b",
+      "answers": [
+        "The three subsets are V+, V0, and V-, determined by the Kullback-Leibler information distance."
+      ],
+      "length": 3737,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "V⁺, V₀, and V⁻",
+        "metric": "token_f1",
+        "score": 0.125,
+        "prediction_key": "V⁺, V₀, and V⁻",
+        "gold": [
+          "The three subsets are V+, V0, and V-, determined by the Kullback-Leibler information distance."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "V⁺, V₀, V⁻",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "V⁺, V₀, V⁻",
+        "gold": [
+          "The three subsets are V+, V0, and V-, determined by the Kullback-Leibler information distance."
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "dataset": "multifieldqa_en_e",
+      "_id": "135b82aecda3c83cfd73d1447e8f92a8a44de50ffdb09444",
+      "answers": [
+        "$\\int f'(u) \\psi^2 \\le \\int | \\nabla \\psi|^2, \\forall \\psi \\in C_c^2$."
+      ],
+      "length": 3743,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "A solution $ u $ of $ -\\Delta u = f(u) $ in $ \\mathbb{R}^N $ is stable if  \n$$ \\int f'(u) \\psi^2 \\le \\int | \\nabla \\psi|^2 \\quad \\forall \\psi \\in C_c^2. $$",
+        "metric": "token_f1",
+        "score": 0.6470588235294118,
+        "prediction_key": "A solution $ u $ of $ -\\Delta u = f(u) $ in $ \\mathbb{R}^N $ is stable if  \n$$ \\int f'(u) \\psi^2 \\le \\int | \\nabla \\psi|^2 \\quad \\forall \\psi \\in C_c^2. $$",
+        "gold": [
+          "$\\int f'(u) \\psi^2 \\le \\int | \\nabla \\psi|^2, \\forall \\psi \\in C_c^2$."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "$\\int f'(u) \\psi^2 \\le \\int | \\nabla \\psi|^2, \\qquad \\forall \\psi \\in C_c^2$",
+        "metric": "token_f1",
+        "score": 0.9565217391304348,
+        "prediction_key": "$\\int f'(u) \\psi^2 \\le \\int | \\nabla \\psi|^2, \\qquad \\forall \\psi \\in C_c^2$",
+        "gold": [
+          "$\\int f'(u) \\psi^2 \\le \\int | \\nabla \\psi|^2, \\forall \\psi \\in C_c^2$."
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "dataset": "multifieldqa_en_e",
+      "_id": "238c4efe738cecd8346abfdc57707996aef30f9b43d1a577",
+      "answers": [
+        "21."
+      ],
+      "length": 2103,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "21",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "21",
+        "gold": [
+          "21."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "21",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "21",
+        "gold": [
+          "21."
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "dataset": "multifieldqa_en_e",
+      "_id": "910c9a02ee857c1019702818b6fa2d5c25ed432d08385ba8",
+      "answers": [
+        "48V."
+      ],
+      "length": 898,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "20V",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "20V",
+        "gold": [
+          "48V."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "48V",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "48V",
+        "gold": [
+          "48V."
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "dataset": "multifieldqa_en_e",
+      "_id": "462011b6f9beb976aaf7b38082bcf7d70a91c3c74d2c6e95",
+      "answers": [
+        "The Wallace electorate."
+      ],
+      "length": 3597,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Wallace",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "Wallace",
+        "gold": [
+          "The Wallace electorate."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Wallace",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "Wallace",
+        "gold": [
+          "The Wallace electorate."
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "dataset": "multifieldqa_en_e",
+      "_id": "46b15f1200c46251053ec3dfa806dbdf515eb34053a5e0d1",
+      "answers": [
+        "The paper was published on 7 March 2023."
+      ],
+      "length": 3080,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7 March 2023",
+        "metric": "token_f1",
+        "score": 0.6,
+        "prediction_key": "7 March 2023",
+        "gold": [
+          "The paper was published on 7 March 2023."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7 March 2023",
+        "metric": "token_f1",
+        "score": 0.6,
+        "prediction_key": "7 March 2023",
+        "gold": [
+          "The paper was published on 7 March 2023."
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "dataset": "multifieldqa_en_e",
+      "_id": "25ebcea4435f88495b4175446d1d7d6dacb1034a8f861ca5",
+      "answers": [
+        "Weep Not, Child was first published in 1964."
+      ],
+      "length": 1489,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "1964",
+        "metric": "token_f1",
+        "score": 0.2222222222222222,
+        "prediction_key": "1964",
+        "gold": [
+          "Weep Not, Child was first published in 1964."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "1964",
+        "metric": "token_f1",
+        "score": 0.2222222222222222,
+        "prediction_key": "1964",
+        "gold": [
+          "Weep Not, Child was first published in 1964."
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "dataset": "multifieldqa_en_e",
+      "_id": "5a18017502d827b72fc74d91f13f6f14193b4964c3420e47",
+      "answers": [
+        "Multiple vacuum processing apparatuses are arranged in parallel."
+      ],
+      "length": 2355,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The vacuum processing system is configured with multiple vacuum processing apparatuses arranged in parallel, where all vacuum processing chambers are aligned in a straight line.",
+        "metric": "token_f1",
+        "score": 0.5161290322580645,
+        "prediction_key": "The vacuum processing system is configured with multiple vacuum processing apparatuses arranged in parallel, where all vacuum processing chambers are aligned in",
+        "gold": [
+          "Multiple vacuum processing apparatuses are arranged in parallel."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "parallel",
+        "metric": "token_f1",
+        "score": 0.2222222222222222,
+        "prediction_key": "parallel",
+        "gold": [
+          "Multiple vacuum processing apparatuses are arranged in parallel."
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "dataset": "multifieldqa_en_e",
+      "_id": "a40877e222497d3ff2efbeb1926e20600f8aac947820063c",
+      "answers": [
+        "NFPA and FPSA greatly outperform GMRES and DSA."
+      ],
+      "length": 3996,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "NFPA and FPSA vastly outperform GMRES and DSA in runtime and iteration counts by orders of magnitude for all tested cases.",
+        "metric": "token_f1",
+        "score": 0.48275862068965514,
+        "prediction_key": "NFPA and FPSA vastly outperform GMRES and DSA in runtime and iteration counts by orders of magnitude for all tested cases.",
+        "gold": [
+          "NFPA and FPSA greatly outperform GMRES and DSA."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "NFPA and FPSA vastly outperform GMRES and DSA in runtime and iterations by orders of magnitude.",
+        "metric": "token_f1",
+        "score": 0.5833333333333334,
+        "prediction_key": "NFPA and FPSA vastly outperform GMRES and DSA in runtime and iterations by orders of magnitude.",
+        "gold": [
+          "NFPA and FPSA greatly outperform GMRES and DSA."
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "dataset": "multifieldqa_en_e",
+      "_id": "fc1544761460f97af3a338bbf3e3c648c00ec27b8b297069",
+      "answers": [
+        "Romance novels and women's fiction."
+      ],
+      "length": 1193,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Romance novels and women's fiction",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "Romance novels and women's fiction",
+        "gold": [
+          "Romance novels and women's fiction."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "romance novels and women's fiction",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "romance novels and women's fiction",
+        "gold": [
+          "Romance novels and women's fiction."
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "dataset": "multifieldqa_en_e",
+      "_id": "b321c147c0e0a8a35ee8738ad89326ecad1509bf591b4233",
+      "answers": [
+        "URPC2017, URPC2018, URPC2019, URPC2020_ZJ and URPC2020_DL."
+      ],
+      "length": 2616,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "URPC2017 and URPC2018",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "URPC2017 and URPC2018",
+        "gold": [
+          "URPC2017, URPC2018, URPC2019, URPC2020_ZJ and URPC2020_DL."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "URPC2017 and URPC2018",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "URPC2017 and URPC2018",
+        "gold": [
+          "URPC2017, URPC2018, URPC2019, URPC2020_ZJ and URPC2020_DL."
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "dataset": "multifieldqa_en_e",
+      "_id": "b41aef2d0475f46a78a3168c6c8a614170975f82507cf2e4",
+      "answers": [
+        "Unknown."
+      ],
+      "length": 2490,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "No.",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "No.",
+        "gold": [
+          "Unknown."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Nothing can give a solid proof of the existence of heaven and hell, yet, nothing can disprove it either.",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "Nothing can give a solid proof of the existence of heaven and hell, yet, nothing can disprove it either.",
+        "gold": [
+          "Unknown."
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "dataset": "multifieldqa_en_e",
+      "_id": "73debbba53d5848cdc1e726c047bb0b82c5730d747fa710c",
+      "answers": [
+        "He became deputy prime minister and minister of finance."
+      ],
+      "length": 3602,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Deputy Prime Minister and Minister of Finance",
+        "metric": "token_f1",
+        "score": 0.8750000000000001,
+        "prediction_key": "Deputy Prime Minister and Minister of Finance",
+        "gold": [
+          "He became deputy prime minister and minister of finance."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Deputy Prime Minister and Minister of Finance",
+        "metric": "token_f1",
+        "score": 0.8750000000000001,
+        "prediction_key": "Deputy Prime Minister and Minister of Finance",
+        "gold": [
+          "He became deputy prime minister and minister of finance."
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "dataset": "multifieldqa_en_e",
+      "_id": "2d0e8d88c8dcd187eb0590fb072f6a69bd774c9aa029246b",
+      "answers": [
+        "The generative interactive model used in the method is called the Coupled Generalized Dynamic Bayesian Network (C-GDBN)."
+      ],
+      "length": 4482,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Coupled Generalized Dynamic Bayesian Network (C-GDBN)",
+        "metric": "token_f1",
+        "score": 0.6,
+        "prediction_key": "Coupled Generalized Dynamic Bayesian Network (C-GDBN)",
+        "gold": [
+          "The generative interactive model used in the method is called the Coupled Generalized Dynamic Bayesian Network (C-GDBN)."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "C-GDBN",
+        "metric": "token_f1",
+        "score": 0.13333333333333333,
+        "prediction_key": "C-GDBN",
+        "gold": [
+          "The generative interactive model used in the method is called the Coupled Generalized Dynamic Bayesian Network (C-GDBN)."
+        ]
+      }
+    },
+    {
+      "index": 19,
+      "dataset": "multifieldqa_en_e",
+      "_id": "690d6407b1ef9f8d373370bbcb02f7ecf198379774101140",
+      "answers": [
+        "It uses a content-recognition module or algorithm."
+      ],
+      "length": 5567,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "A media application determines the context of an event using a content-recognition module or algorithm that may employ techniques such as object recognition (e.g., edge detection, pattern recognition, optical character recognition), speech recognition (e.g., Hidden Markov Models, neural networks), audio and visual data processing (e.g., monitoring volume to determine tone), and cross-referencing data with databases to identify circumstances, facts, relationships, and meanings surrounding the event.",
+        "metric": "token_f1",
+        "score": 0.1212121212121212,
+        "prediction_key": "A media application determines the context of an event using a content-recognition module or algorithm that may employ techniques such as object recognition (e.",
+        "gold": [
+          "It uses a content-recognition module or algorithm."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "A media application uses a content-recognition module or algorithm to determine the context of an event.",
+        "metric": "token_f1",
+        "score": 0.5555555555555556,
+        "prediction_key": "A media application uses a content-recognition module or algorithm to determine the context of an event.",
+        "gold": [
+          "It uses a content-recognition module or algorithm."
+        ]
+      }
+    },
+    {
+      "index": 20,
+      "dataset": "multifieldqa_en_e",
+      "_id": "7d357dddfddb09bf71c6ce3d2c6780b3380d725f534d0b91",
+      "answers": [
+        "Smartphones are more compact and power constrained."
+      ],
+      "length": 7568,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Smartphones are more compact and power-constrained (limited to ~1W), require integrated cellular modems, and have stricter thermal and battery limitations. Tablets have a higher power budget (up to 4W passively cooled, up to 7–8W with fans), typically use Wi-Fi as default connectivity, and usually lack integrated cellular modems—making them more akin to PCs technically.",
+        "metric": "token_f1",
+        "score": 0.2,
+        "prediction_key": "Smartphones are more compact and power-constrained (limited to ~1W), require integrated cellular modems, and have stricter thermal and battery limitations. Tabl",
+        "gold": [
+          "Smartphones are more compact and power constrained."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Smartphones are far more compact and power constrained, with SoCs limited to around 1W, while tablets have a much greater power budget—up to 4W for passively cooled devices and as high as 7–8W for systems with fans. Additionally, smartphones require an integrated cellular modem, whereas tablets default to Wi-Fi and typically lack cellular modems.",
+        "metric": "token_f1",
+        "score": 0.23728813559322035,
+        "prediction_key": "Smartphones are far more compact and power constrained, with SoCs limited to around 1W, while tablets have a much greater power budget—up to 4W for passively co",
+        "gold": [
+          "Smartphones are more compact and power constrained."
+        ]
+      }
+    },
+    {
+      "index": 21,
+      "dataset": "multifieldqa_en_e",
+      "_id": "2646315b4135b08675c4ab2110dc544058659b9b6aab4752",
+      "answers": [
+        "172."
+      ],
+      "length": 6956,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "172",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "172",
+        "gold": [
+          "172."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "172",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "172",
+        "gold": [
+          "172."
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "dataset": "multifieldqa_en_e",
+      "_id": "120cb783c796fbedbc76f04cf9be3318e54a63cd642c4401",
+      "answers": [
+        "An unsupervised method based on the information bottleneck and contrastive learning."
+      ],
+      "length": 6235,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The main methodology used in the research is an unsupervised method based on the information bottleneck, combining compositional communication (to satisfy the complexity objective) and contrastive learning (to satisfy the utility objective).",
+        "metric": "token_f1",
+        "score": 0.5142857142857142,
+        "prediction_key": "The main methodology used in the research is an unsupervised method based on the information bottleneck, combining compositional communication (to satisfy the c",
+        "gold": [
+          "An unsupervised method based on the information bottleneck and contrastive learning."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Unsupervised method based on the information bottleneck",
+        "metric": "token_f1",
+        "score": 0.8,
+        "prediction_key": "Unsupervised method based on the information bottleneck",
+        "gold": [
+          "An unsupervised method based on the information bottleneck and contrastive learning."
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "dataset": "multifieldqa_en_e",
+      "_id": "9ac60cf60d4bae1dc93b09f374b74b3dec8b1b333397d7cd",
+      "answers": [
+        "The longerons bow up from the building surface, forming a \"banana\" shape."
+      ],
+      "length": 6240,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The problem is that the once straight longerons bow up from the building surface, forming an unacceptable \"banana\" shape when the completed fuselage sides are laid into position to form the fuselage box section.",
+        "metric": "token_f1",
+        "score": 0.4864864864864865,
+        "prediction_key": "The problem is that the once straight longerons bow up from the building surface, forming an unacceptable \"banana\" shape when the completed fuselage sides are l",
+        "gold": [
+          "The longerons bow up from the building surface, forming a \"banana\" shape."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "The problem is that the once straight longerons bow up from the building surface, forming a \"banana\" shape.",
+        "metric": "token_f1",
+        "score": 0.782608695652174,
+        "prediction_key": "The problem is that the once straight longerons bow up from the building surface, forming a \"banana\" shape.",
+        "gold": [
+          "The longerons bow up from the building surface, forming a \"banana\" shape."
+        ]
+      }
+    },
+    {
+      "index": 24,
+      "dataset": "multifieldqa_en_e",
+      "_id": "f1b59c798ab323ea8409ba09709de506bd83699885ce61a5",
+      "answers": [
+        "The belief entropy decreases more steadily."
+      ],
+      "length": 5655,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The time required to update the robot's belief does not increase with the complexity of the environment (e.g., number of obstacles or polytopes), making the belief update tractable and suitable for online applications.",
+        "metric": "token_f1",
+        "score": 0.06060606060606061,
+        "prediction_key": "The time required to update the robot's belief does not increase with the complexity of the environment (e.g., number of obstacles or polytopes), making the bel",
+        "gold": [
+          "The belief entropy decreases more steadily."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "The time required to update the robot's belief does not increase with the complexity of the environment.",
+        "metric": "token_f1",
+        "score": 0.1111111111111111,
+        "prediction_key": "The time required to update the robot's belief does not increase with the complexity of the environment.",
+        "gold": [
+          "The belief entropy decreases more steadily."
+        ]
+      }
+    },
+    {
+      "index": 25,
+      "dataset": "multifieldqa_en_e",
+      "_id": "c677827fc67e60c6396dceb5c4194aaba925aa1c61ad7115",
+      "answers": [
+        "Players can skip dialogue on the quest map by pressing the 'SKIP' button."
+      ],
+      "length": 6743,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "By pressing ‘SKIP’.",
+        "metric": "token_f1",
+        "score": 0.28571428571428575,
+        "prediction_key": "By pressing ‘SKIP’.",
+        "gold": [
+          "Players can skip dialogue on the quest map by pressing the 'SKIP' button."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "by pressing ‘SKIP’",
+        "metric": "token_f1",
+        "score": 0.28571428571428575,
+        "prediction_key": "by pressing ‘SKIP’",
+        "gold": [
+          "Players can skip dialogue on the quest map by pressing the 'SKIP' button."
+        ]
+      }
+    },
+    {
+      "index": 26,
+      "dataset": "multifieldqa_en_e",
+      "_id": "e84f6371f23c95f766248ac4e52b781f325f52f09c6eb9ae",
+      "answers": [
+        "Privacy concerns and skepticism about its effectiveness."
+      ],
+      "length": 6048,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Governor Rick Scott cited privacy concerns, expressed skepticism that the monitoring program would work, and raised the possibility that taxpayers would be left with a $500,000-a-year bill to operate it.",
+        "metric": "token_f1",
+        "score": 0.2285714285714286,
+        "prediction_key": "Governor Rick Scott cited privacy concerns, expressed skepticism that the monitoring program would work, and raised the possibility that taxpayers would be left",
+        "gold": [
+          "Privacy concerns and skepticism about its effectiveness."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "privacy concerns, skepticism that the monitoring program would work, and concern that taxpayers would be left with a $500,000-a-year bill to operate it",
+        "metric": "token_f1",
+        "score": 0.27586206896551724,
+        "prediction_key": "privacy concerns, skepticism that the monitoring program would work, and concern that taxpayers would be left with a $500,000-a-year bill to operate it",
+        "gold": [
+          "Privacy concerns and skepticism about its effectiveness."
+        ]
+      }
+    },
+    {
+      "index": 27,
+      "dataset": "multifieldqa_en_e",
+      "_id": "daa4eb9d8b28a987b1c2c049200634cdc510636b19a64ccd",
+      "answers": [
+        "5."
+      ],
+      "length": 4837,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "five",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "five",
+        "gold": [
+          "5."
+        ]
+      }
+    },
+    {
+      "index": 28,
+      "dataset": "multifieldqa_en_e",
+      "_id": "e568cc6d77a0a433937ab4bcf62e49b36a5cf7b3faa0d3ab",
+      "answers": [
+        "L = 8 and L = 14."
+      ],
+      "length": 5385,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "L = 6, L = 8, and L = 14",
+        "metric": "token_f1",
+        "score": 0.8333333333333333,
+        "prediction_key": "L = 6, L = 8, and L = 14",
+        "gold": [
+          "L = 8 and L = 14."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "L = 6, L = 8, L = 14",
+        "metric": "token_f1",
+        "score": 0.7272727272727272,
+        "prediction_key": "L = 6, L = 8, L = 14",
+        "gold": [
+          "L = 8 and L = 14."
+        ]
+      }
+    },
+    {
+      "index": 29,
+      "dataset": "multifieldqa_en_e",
+      "_id": "5b978c8d5792b07ad99da0fc2639c6046051e9c29825ad25",
+      "answers": [
+        "Low temperature scanning tunneling microscopy and spectroscopy (STM/STS)."
+      ],
+      "length": 4297,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Low temperature scanning tunneling microscopy and spectroscopy (STM/STS)",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "Low temperature scanning tunneling microscopy and spectroscopy (STM/STS)",
+        "gold": [
+          "Low temperature scanning tunneling microscopy and spectroscopy (STM/STS)."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "low temperature scanning tunneling microscopy and spectroscopy (STM/STS)",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "low temperature scanning tunneling microscopy and spectroscopy (STM/STS)",
+        "gold": [
+          "Low temperature scanning tunneling microscopy and spectroscopy (STM/STS)."
+        ]
+      }
+    },
+    {
+      "index": 30,
+      "dataset": "multifieldqa_en_e",
+      "_id": "ddfed65e5495d0257b22a9537993c3453d8590cc94b8e0d6",
+      "answers": [
+        "There are 14,520 attendees, including 7,152 chemical scientists, 5,059 students, 1,283 exhibitors, 119 precollege teachers, 573 exposition visitors, and 453 guests."
+      ],
+      "length": 6444,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "14,520",
+        "metric": "token_f1",
+        "score": 0.0909090909090909,
+        "prediction_key": "14,520",
+        "gold": [
+          "There are 14,520 attendees, including 7,152 chemical scientists, 5,059 students, 1,283 exhibitors, 119 precollege teachers, 573 exposition visitors, and 453 guests."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "14,520",
+        "metric": "token_f1",
+        "score": 0.0909090909090909,
+        "prediction_key": "14,520",
+        "gold": [
+          "There are 14,520 attendees, including 7,152 chemical scientists, 5,059 students, 1,283 exhibitors, 119 precollege teachers, 573 exposition visitors, and 453 guests."
+        ]
+      }
+    },
+    {
+      "index": 31,
+      "dataset": "multifieldqa_en_e",
+      "_id": "1d46294ee8fcc0a64828778b04198fcbe4f75841775e1205",
+      "answers": [
+        "No, it is not necessary."
+      ],
+      "length": 6900,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "No",
+        "metric": "token_f1",
+        "score": 0.33333333333333337,
+        "prediction_key": "No",
+        "gold": [
+          "No, it is not necessary."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "No",
+        "metric": "token_f1",
+        "score": 0.33333333333333337,
+        "prediction_key": "No",
+        "gold": [
+          "No, it is not necessary."
+        ]
+      }
+    },
+    {
+      "index": 32,
+      "dataset": "multifieldqa_en_e",
+      "_id": "b16c38bf627891a3bf60ee57f9f3c2f5730f4ea3a0f44b0e",
+      "answers": [
+        "Power-law functions."
+      ],
+      "length": 6766,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Power-law distributions",
+        "metric": "token_f1",
+        "score": 0.5,
+        "prediction_key": "Power-law distributions",
+        "gold": [
+          "Power-law functions."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "power-law functions",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "power-law functions",
+        "gold": [
+          "Power-law functions."
+        ]
+      }
+    },
+    {
+      "index": 33,
+      "dataset": "multifieldqa_en_e",
+      "_id": "40a85211345155859f3d2f7268da928f516a65ac6f8c6e08",
+      "answers": [
+        "The main topic of the text is Iraq's politics and current situation."
+      ],
+      "length": 4468,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The main topic of the text is the political, social, and humanitarian situation in Iraq as of late December 2010, including the formation of a new government, ongoing violence and sectarian tensions, persecution and displacement of Iraqi Christians, U.S. military presence and policy, women’s rights and representation, and anti-war activism.",
+        "metric": "token_f1",
+        "score": 0.2545454545454545,
+        "prediction_key": "The main topic of the text is the political, social, and humanitarian situation in Iraq as of late December 2010, including the formation of a new government, o",
+        "gold": [
+          "The main topic of the text is Iraq's politics and current situation."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Iraq War and its aftermath",
+        "metric": "token_f1",
+        "score": 0.13333333333333333,
+        "prediction_key": "Iraq War and its aftermath",
+        "gold": [
+          "The main topic of the text is Iraq's politics and current situation."
+        ]
+      }
+    },
+    {
+      "index": 34,
+      "dataset": "multifieldqa_en_e",
+      "_id": "04b588ff2dea15f4a9c4fdbaabc55aaad1ba3446114d6741",
+      "answers": [
+        "Flexibility."
+      ],
+      "length": 7565,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The main advantage of a horizontal business model for mobile devices is flexibility, allowing vendors to offer a wide range of phones based on radically different SoCs as costs drop and the market expands.",
+        "metric": "token_f1",
+        "score": 0.06451612903225806,
+        "prediction_key": "The main advantage of a horizontal business model for mobile devices is flexibility, allowing vendors to offer a wide range of phones based on radically differe",
+        "gold": [
+          "Flexibility."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "flexibility",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "flexibility",
+        "gold": [
+          "Flexibility."
+        ]
+      }
+    },
+    {
+      "index": 35,
+      "dataset": "multifieldqa_en_e",
+      "_id": "c7ad556387e8215bae3f8ccd30ba35e0093218fe48168718",
+      "answers": [
+        "Vitamins K3, K4, and K5."
+      ],
+      "length": 7133,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Vitamins K3, K4, and K5",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "Vitamins K3, K4, and K5",
+        "gold": [
+          "Vitamins K3, K4, and K5."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "vitamins K3, K4, and K5",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "vitamins K3, K4, and K5",
+        "gold": [
+          "Vitamins K3, K4, and K5."
+        ]
+      }
+    },
+    {
+      "index": 36,
+      "dataset": "multifieldqa_en_e",
+      "_id": "cd0ecda68ad8031330b971fbfdd3794916e815109f004d3b",
+      "answers": [
+        "The relationships between catch per set and fishing behavior variables differ when comparing unstandardized CPUE and standardized CPUE."
+      ],
+      "length": 6133,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The relationships between catch per set and fishing behavior variables differ for different measures of CPUE because unstandardized CPUE (individuals per set) shows positive associations with variables like number of hooks, engine power, and number of sets, whereas standardized CPUE (individuals per 100 hooks per set) shows negative relationships with these same variables, indicating diminishing returns above low to moderate effort levels.",
+        "metric": "token_f1",
+        "score": 0.3846153846153846,
+        "prediction_key": "The relationships between catch per set and fishing behavior variables differ for different measures of CPUE because unstandardized CPUE (individuals per set) s",
+        "gold": [
+          "The relationships between catch per set and fishing behavior variables differ when comparing unstandardized CPUE and standardized CPUE."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Unstandardised CPUE (individuals per set) shows positive relationships with number of hooks, engine power, and number of sets, while standardised CPUE (individuals per 100 hooks per set) shows negative relationships with these same variables.",
+        "metric": "token_f1",
+        "score": 0.2745098039215686,
+        "prediction_key": "Unstandardised CPUE (individuals per set) shows positive relationships with number of hooks, engine power, and number of sets, while standardised CPUE (individu",
+        "gold": [
+          "The relationships between catch per set and fishing behavior variables differ when comparing unstandardized CPUE and standardized CPUE."
+        ]
+      }
+    },
+    {
+      "index": 37,
+      "dataset": "multifieldqa_en_e",
+      "_id": "7ae0ad8d4ded2dee79251ff4f951ecfcabad31d8b4f896ae",
+      "answers": [
+        "As the transition probability increases, the learning rate initially rises and then declines."
+      ],
+      "length": 5346,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The learning rate in the static agent rapidly rises as the transition probability increases from 0, peaks, and then slowly declines, eventually reaching zero when the transition becomes too fast.",
+        "metric": "token_f1",
+        "score": 0.5405405405405405,
+        "prediction_key": "The learning rate in the static agent rapidly rises as the transition probability increases from 0, peaks, and then slowly declines, eventually reaching zero wh",
+        "gold": [
+          "As the transition probability increases, the learning rate initially rises and then declines."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "The learning rate rapidly rises as the transition probability increases from 0, peaks, then slowly declines and eventually reaches zero.",
+        "metric": "token_f1",
+        "score": 0.6896551724137931,
+        "prediction_key": "The learning rate rapidly rises as the transition probability increases from 0, peaks, then slowly declines and eventually reaches zero.",
+        "gold": [
+          "As the transition probability increases, the learning rate initially rises and then declines."
+        ]
+      }
+    },
+    {
+      "index": 38,
+      "dataset": "multifieldqa_en_e",
+      "_id": "d1f31d2998513a4552d0419e16f8eba896e9ea1c8403605b",
+      "answers": [
+        "\"I have seen the Lord.\"."
+      ],
+      "length": 6856,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "\"I have seen the Lord.\"",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "\"I have seen the Lord.\"",
+        "gold": [
+          "\"I have seen the Lord.\"."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "“I have seen the Lord”",
+        "metric": "token_f1",
+        "score": 0.5,
+        "prediction_key": "“I have seen the Lord”",
+        "gold": [
+          "\"I have seen the Lord.\"."
+        ]
+      }
+    },
+    {
+      "index": 39,
+      "dataset": "multifieldqa_en_e",
+      "_id": "4c7891d780eb3f45e8c4e5bf14fd9ed6c0bf898fb159b329",
+      "answers": [
+        "Watt, one joule per second."
+      ],
+      "length": 6197,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "watt",
+        "metric": "token_f1",
+        "score": 0.33333333333333337,
+        "prediction_key": "watt",
+        "gold": [
+          "Watt, one joule per second."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "watt",
+        "metric": "token_f1",
+        "score": 0.33333333333333337,
+        "prediction_key": "watt",
+        "gold": [
+          "Watt, one joule per second."
+        ]
+      }
+    },
+    {
+      "index": 40,
+      "dataset": "multifieldqa_en_e",
+      "_id": "566881d2138d7e29cd6dd2b661b6f7ffe4c515c92fdaf837",
+      "answers": [
+        "Yes, individual molecules of indeno[1,2-a]fluorene can switch between open-shell and closed-shell states by changing their adsorption site on the surface."
+      ],
+      "length": 5523,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Yes",
+        "metric": "token_f1",
+        "score": 0.09523809523809523,
+        "prediction_key": "Yes",
+        "gold": [
+          "Yes, individual molecules of indeno[1,2-a]fluorene can switch between open-shell and closed-shell states by changing their adsorption site on the surface."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Yes",
+        "metric": "token_f1",
+        "score": 0.09523809523809523,
+        "prediction_key": "Yes",
+        "gold": [
+          "Yes, individual molecules of indeno[1,2-a]fluorene can switch between open-shell and closed-shell states by changing their adsorption site on the surface."
+        ]
+      }
+    },
+    {
+      "index": 41,
+      "dataset": "multifieldqa_en_e",
+      "_id": "d427e3ab7584a0e253bfb6a9d76626b726c79b57d5e39f2a",
+      "answers": [
+        "Severe anemia that begins even before birth."
+      ],
+      "length": 6102,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Severe anemia beginning before birth, enlarged placenta, heart, liver, spleen, and adrenal glands, fluid accumulation throughout the body (hydrops fetalis), growth retardation, miscarriage or death shortly after birth, and maternal complications including toxemia, premature delivery, cesarean section, and postpartum hemorrhage.",
+        "metric": "token_f1",
+        "score": 0.17391304347826086,
+        "prediction_key": "Severe anemia beginning before birth, enlarged placenta, heart, liver, spleen, and adrenal glands, fluid accumulation throughout the body (hydrops fetalis), gro",
+        "gold": [
+          "Severe anemia that begins even before birth."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Severe anemia beginning before birth, placental and organ enlargement (heart, liver, spleen, adrenal glands), fluid accumulation throughout the body starting in the second trimester, growth retardation, miscarriage or death shortly after birth, maternal toxemia, premature delivery, increased cesarean section rates, and postpartum hemorrhage.",
+        "metric": "token_f1",
+        "score": 0.16666666666666669,
+        "prediction_key": "Severe anemia beginning before birth, placental and organ enlargement (heart, liver, spleen, adrenal glands), fluid accumulation throughout the body starting in",
+        "gold": [
+          "Severe anemia that begins even before birth."
+        ]
+      }
+    },
+    {
+      "index": 42,
+      "dataset": "multifieldqa_en_e",
+      "_id": "6ee1971ac8c7c0ee4a5add9ec201557d28d3c2f66b176fb4",
+      "answers": [
+        "The sticking point in the political showdown over the budget is how much spending to cut."
+      ],
+      "length": 7321,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The sticking points in the political showdown over the budget are disagreements over how much to cut spending, policy riders (such as regulating greenhouse gases and abortion), and which programs and agencies to cut.",
+        "metric": "token_f1",
+        "score": 0.5,
+        "prediction_key": "The sticking points in the political showdown over the budget are disagreements over how much to cut spending, policy riders (such as regulating greenhouse gase",
+        "gold": [
+          "The sticking point in the political showdown over the budget is how much spending to cut."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "How much spending to cut and policy riders, especially over abortion and regulating greenhouse gases.",
+        "metric": "token_f1",
+        "score": 0.42857142857142855,
+        "prediction_key": "How much spending to cut and policy riders, especially over abortion and regulating greenhouse gases.",
+        "gold": [
+          "The sticking point in the political showdown over the budget is how much spending to cut."
+        ]
+      }
+    },
+    {
+      "index": 43,
+      "dataset": "multifieldqa_en_e",
+      "_id": "229b5bf2402ae2950c72494dcfd5f1c825c396205b49ca50",
+      "answers": [
+        "1766."
+      ],
+      "length": 6539,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "1766",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "1766",
+        "gold": [
+          "1766."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "1766",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "1766",
+        "gold": [
+          "1766."
+        ]
+      }
+    },
+    {
+      "index": 44,
+      "dataset": "multifieldqa_en_e",
+      "_id": "aeb34faf1b5507b32d6d5b49474ea5c71d4ec2aa84a82d93",
+      "answers": [
+        "The time required to update the belief does not increase with the complexity of the environment."
+      ],
+      "length": 5665,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The time required to update the robot's belief does not increase with the complexity of the environment.",
+        "metric": "token_f1",
+        "score": 0.9600000000000001,
+        "prediction_key": "The time required to update the robot's belief does not increase with the complexity of the environment.",
+        "gold": [
+          "The time required to update the belief does not increase with the complexity of the environment."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "The time required to update the robot's belief does not increase with the complexity of the environment.",
+        "metric": "token_f1",
+        "score": 0.9600000000000001,
+        "prediction_key": "The time required to update the robot's belief does not increase with the complexity of the environment.",
+        "gold": [
+          "The time required to update the belief does not increase with the complexity of the environment."
+        ]
+      }
+    },
+    {
+      "index": 45,
+      "dataset": "multifieldqa_en_e",
+      "_id": "e4725ed7b6df9933d5336f79d5c9d1d803a3e475831f1017",
+      "answers": [
+        "Quill harmed states more than anticipated due to the Internet."
+      ],
+      "length": 5429,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Justice Kennedy argued that the Internet had caused far-reaching systemic and structural changes in the economy, making Quill’s physical presence rule harmful to states to a degree far greater than anticipated, and he expressed a wish for the Court to reexamine Quill and Bellas Hess.",
+        "metric": "token_f1",
+        "score": 0.24489795918367346,
+        "prediction_key": "Justice Kennedy argued that the Internet had caused far-reaching systemic and structural changes in the economy, making Quill’s physical presence rule harmful t",
+        "gold": [
+          "Quill harmed states more than anticipated due to the Internet."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Justice Kennedy argued that “[t]he Internet has caused far-reaching systemic and structural changes in the economy” and therefore “Quill now harms States to a degree far greater than could have been anticipated earlier,” concluding with the wish that “[t]he legal system should find an appropriate case for this Court to reexamine Quill and Bellas Hess.”",
+        "metric": "token_f1",
+        "score": 0.2,
+        "prediction_key": "Justice Kennedy argued that “[t]he Internet has caused far-reaching systemic and structural changes in the economy” and therefore “Quill now harms States to a d",
+        "gold": [
+          "Quill harmed states more than anticipated due to the Internet."
+        ]
+      }
+    },
+    {
+      "index": 46,
+      "dataset": "multifieldqa_en_e",
+      "_id": "4d6cd243b10a8460d2e2239182b797420ccc36335a74d23e",
+      "answers": [
+        "Nuclear liquid-gas transition in lattice QCD."
+      ],
+      "length": 4017,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The main focus of the research paper is determining the nuclear liquid-gas transition in the strong coupling regime of lattice QCD using a dual formulation, including its dependence on quark mass and inverse gauge coupling β, as well as studying baryon mass and nuclear interactions.",
+        "metric": "token_f1",
+        "score": 0.2608695652173913,
+        "prediction_key": "The main focus of the research paper is determining the nuclear liquid-gas transition in the strong coupling regime of lattice QCD using a dual formulation, inc",
+        "gold": [
+          "Nuclear liquid-gas transition in lattice QCD."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Nuclear liquid-gas transition in the strong coupling regime of lattice QCD",
+        "metric": "token_f1",
+        "score": 0.7499999999999999,
+        "prediction_key": "Nuclear liquid-gas transition in the strong coupling regime of lattice QCD",
+        "gold": [
+          "Nuclear liquid-gas transition in lattice QCD."
+        ]
+      }
+    },
+    {
+      "index": 47,
+      "dataset": "multifieldqa_en_e",
+      "_id": "032ee1448dec7751d00cd9f752fc61c5843a47e49dd7fcb6",
+      "answers": [
+        "Using the vacuum Einstein equation and the Baez-Bunn form."
+      ],
+      "length": 4982,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The function $\\beta(r)$ is determined by applying the vacuum Einstein equations in the simplified Baez-Bunn form—specifically, the condition that the second time derivative of the volume of a freely falling test ball vanishes—to the metric expressed in infalling observer coordinates. This leads to a differential equation for $B(r) = \\beta(r)\\beta'(r)$, which is solved to find $B(r) = C/r^2$. Integrating again yields $\\beta(r) = \\sqrt{-2C/r + 2D}$. The constants $C$ and $D$ are fixed using the initial condition that infalling observers start from rest at infinity ($D = 0$) and matching to the Newtonian limit ($C = -GM/c^2$), resulting in $\\beta(r) = \\sqrt{2GM/(rc^2)}$.",
+        "metric": "token_f1",
+        "score": 0.13333333333333333,
+        "prediction_key": "The function $\\beta(r)$ is determined by applying the vacuum Einstein equations in the simplified Baez-Bunn form—specifically, the condition that the second tim",
+        "gold": [
+          "Using the vacuum Einstein equation and the Baez-Bunn form."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "From the simplified form of the vacuum Einstein equations (\\ref{EinsteinVacuum}) applied to a test ball in free fall alongside one of the infalling observers.",
+        "metric": "token_f1",
+        "score": 0.2222222222222222,
+        "prediction_key": "From the simplified form of the vacuum Einstein equations (\\ref{EinsteinVacuum}) applied to a test ball in free fall alongside one of the infalling observers.",
+        "gold": [
+          "Using the vacuum Einstein equation and the Baez-Bunn form."
+        ]
+      }
+    },
+    {
+      "index": 48,
+      "dataset": "multifieldqa_en_e",
+      "_id": "60b19bbfd875f79ca168f6db761d192ab710f9b5f395de89",
+      "answers": [
+        "Legacies of Losing in American Politics and an expanded edition of The Rhetorical Presidency in the Princeton Classics series."
+      ],
+      "length": 5306,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Legacies of Losing in American Politics, with Nicole Mellow (University of Chicago Press, Fall 2017), and an expanded edition of The Rhetorical Presidency in the Princeton Classics series (Princeton, Fall 2017)",
+        "metric": "token_f1",
+        "score": 0.7272727272727273,
+        "prediction_key": "Legacies of Losing in American Politics, with Nicole Mellow (University of Chicago Press, Fall 2017), and an expanded edition of The Rhetorical Presidency in th",
+        "gold": [
+          "Legacies of Losing in American Politics and an expanded edition of The Rhetorical Presidency in the Princeton Classics series."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Legacies of Losing in American Politics",
+        "metric": "token_f1",
+        "score": 0.5454545454545454,
+        "prediction_key": "Legacies of Losing in American Politics",
+        "gold": [
+          "Legacies of Losing in American Politics and an expanded edition of The Rhetorical Presidency in the Princeton Classics series."
+        ]
+      }
+    },
+    {
+      "index": 49,
+      "dataset": "multifieldqa_en_e",
+      "_id": "6b35731428ea6d9b480338b90572d21690c2fbb89ebba249",
+      "answers": [
+        "SNNs have the potential to better model and explain the functional hierarchy and mechanisms of the visual system."
+      ],
+      "length": 5588,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "SNNs have the potential to serve as promising candidates to better model and explain the functional hierarchy and mechanisms of the visual system, demonstrating higher neural representation similarity than CNNs and offering a more biologically plausible approach.",
+        "metric": "token_f1",
+        "score": 0.625,
+        "prediction_key": "SNNs have the potential to serve as promising candidates to better model and explain the functional hierarchy and mechanisms of the visual system, demonstrating",
+        "gold": [
+          "SNNs have the potential to better model and explain the functional hierarchy and mechanisms of the visual system."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "SNNs could serve as promising candidates to better model and explain the functional hierarchy and mechanisms of the visual system.",
+        "metric": "token_f1",
+        "score": 0.7878787878787877,
+        "prediction_key": "SNNs could serve as promising candidates to better model and explain the functional hierarchy and mechanisms of the visual system.",
+        "gold": [
+          "SNNs have the potential to better model and explain the functional hierarchy and mechanisms of the visual system."
+        ]
+      }
+    },
+    {
+      "index": 50,
+      "dataset": "multifieldqa_en_e",
+      "_id": "18ef34b54d2ddc134e1be7cae3d6101432465011d016c77a",
+      "answers": [
+        "The water depth in the Greater Ekofisk Area is 70-75 meters."
+      ],
+      "length": 6625,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "70-75 metres",
+        "metric": "token_f1",
+        "score": 0.1818181818181818,
+        "prediction_key": "70-75 metres",
+        "gold": [
+          "The water depth in the Greater Ekofisk Area is 70-75 meters."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "70-75 metres",
+        "metric": "token_f1",
+        "score": 0.1818181818181818,
+        "prediction_key": "70-75 metres",
+        "gold": [
+          "The water depth in the Greater Ekofisk Area is 70-75 meters."
+        ]
+      }
+    }
+  ],
+  "boundary": "Public LongBench smoke slice. This is not a full LongBench leaderboard claim; it is a source-backed answer-key accuracy receipt that can scale to larger slices."
+}

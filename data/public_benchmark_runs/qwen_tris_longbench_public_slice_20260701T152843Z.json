@@ -1,0 +1,1477 @@
+{
+  "run_id": "qwen_tris_longbench_public_slice_20260701T152843Z",
+  "provider": "qwen-cloud",
+  "model": "qwen-plus",
+  "benchmark": "LongBench public data.zip",
+  "tasks": [
+    "passage_count_e"
+  ],
+  "items": 50,
+  "condition_a": "baseline Qwen prompt-only answer discipline",
+  "condition_b": "Qwen Tris stable-state answer discipline",
+  "condition_a_mean": 0.36,
+  "condition_b_mean": 0.34,
+  "delta": -0.02,
+  "family_totals": {
+    "passage_count_e": {
+      "n": 50,
+      "condition_a_mean": 0.36,
+      "condition_b_mean": 0.34,
+      "delta": -0.02
+    }
+  },
+  "skipped_items": [],
+  "results": [
+    {
+      "index": 1,
+      "dataset": "passage_count_e",
+      "_id": "0358aa51ab38acc1b97405f4307203e982cbb19500435368",
+      "answers": [
+        "6"
+      ],
+      "length": 3615,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "dataset": "passage_count_e",
+      "_id": "ec5670be0aea90e8e1a05d687158371f45f64a07f6177b69",
+      "answers": [
+        "10"
+      ],
+      "length": 3667,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "10"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "10"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "dataset": "passage_count_e",
+      "_id": "1a276604ab10692c64480e83d99a53c121f3dca26d05e5ff",
+      "answers": [
+        "4"
+      ],
+      "length": 1973,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "4"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "4"
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "dataset": "passage_count_e",
+      "_id": "60608c75686cb0a1d59dd3b64ccec4655757bfaf1b54ee03",
+      "answers": [
+        "6"
+      ],
+      "length": 3503,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "6"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "dataset": "passage_count_e",
+      "_id": "7d28069ded012b00d0d149edb38235620f24e7edb3bcdb74",
+      "answers": [
+        "12"
+      ],
+      "length": 3053,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Let's carefully compare all 18 paragraphs to identify duplicates.\n\nWe'll group identical paragraphs by content (ignoring paragraph numbers). We need to check exact textual matches — even small differences matter, but note that some paragraphs may have identical wording despite different numbering.\n\nList of paragraphs:\n\n- P1: Vaqueiro exonym paragraph  \n- P2: Hiri Motu dialects  \n- P3: Identical to P1? Let's check:  \n  P1 and P3 are **identical** word-for-word (including spacing, punctuation, and the blank spots like \"The word  is an exonym...\"). Yes — same text.\n\n- P4: Julius Jones football paragraph  \n- P5: Priory cloister/architecture paragraph  \n- P6: Shamita Shetty biography  \n- P7: Identical to P2? Yes — same Hiri Motu text.  \n- P8: Identical to P4? Let's compare:  \n  P4 and P8 — yes, identical.  \n- P9: Also identical to P4/P8? Yes — same full text.  \n- P10: Same as P2/P7? Yes.  \n- P11: Same as P2/P7/P10? Yes.  \n- P12: Same as P1/P3? Yes.  \n- P13: Same as P2/P7/P10/P11? Yes.  \n- P14: Same as P6? Let's compare:  \n  P6 and P14 — yes, identical word-for-word.  \n- P15: Same as P5? Yes — identical description of priory ruins.  \n- P16: Same as P1/P3/P12? Yes.  \n- P17: Unique — Moyola Park football club history (no other like it)  \n- P18: Unique — CETB university upgrade (no duplicate)\n\nNow let’s count unique *content groups*:\n\n1. **Vaqueiro paragraph** → appears in P1, P3, P12, P16 → 4 copies → **1 unique**\n2. **Hiri Motu dialects** → P2, P7, P10, P11, P13 → 5 copies → **1 unique**\n3. **Julius Jones (Cowboys)** → P4, P8, P9 → 3 copies → **1 unique**\n4. **Priory architecture** → P5, P15 → 2 copies → **1 unique**\n5. **Shamita Shetty** → P6, P14 → 2 copies → **1 unique**\n6. **Moyola Park** → P17 → only once → **1 unique**\n7. **CETB / OUTr** → P18 → only once → **1 unique**\n\nThat’s **7 unique paragraphs**.\n\nDouble-check no other overlaps:\n\n- P17: No match elsewhere — confirmed.\n- P18: No match elsewhere — confirmed.\n- All others are fully duplicated within their groups.\n\nNo partial or near-duplicates — all matches are exact.\n\n✅ Final count of unique paragraphs = **7**\n\nThe final answer is:  \n7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "12"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Let's carefully compare all 18 paragraphs to identify duplicates.\n\nWe'll group identical paragraphs.\n\nFirst, look for exact duplicates (same text, character-for-character — including spacing, punctuation, and blank lines).\n\nParagraph 1:  \n\"The word  is an exonym and until more recent years, this term was not frequently used by Vaqueiros themselves. In Vaqueiro Territory and surrounding areas, the term Vaqueiro is used exclusively to refer to the Vaqueiros de Alzada and has connotations of race and ethnicity instead of a profession.  was added by Gaspar Melchor de Jovellanos to help distinguish the Vaqueiros from the non-Vaqueiro cattle herding population. It comes from the Asturian verb , to raise or to go up, after Jovellanos observed that the Vaqueiros raised, or brought their homes up, every summer to the higher summer brañas. The full name , which is used most often in outside sources, is not often used in Asturias and León.\"\n\nParagraph 3: Identical to Paragraph 1? Let's check — yes, same text.\n\nParagraph 12: Same? Yes — identical.\n\nParagraph 16: Same? Yes — identical.\n\nSo Paragraphs 1, 3, 12, 16 are identical → 1 unique paragraph.\n\nNow Paragraph 2:  \n\"Hiri Motu has two dialects: \"Austronesian\" and \"Papuan\". Both dialects are Austronesian in both grammar and vocabulary due to their derivation from Motu; the dialect names refer to the first languages spoken by users of this lingua franca. The \"Papuan\" dialect (also called \"non-central\") was more widely spoken and was, at least from about 1964, used as the standard for official publications. The \"Austronesian\" (or \"central\") dialect is closer to Motu in grammar and phonology, and its vocabulary is both more extensive and closer to the original language. It was the prestige dialect, which was regarded by speakers as being more \"correct\".\"\n\nParagraph 7: Same? Yes.\n\nParagraph 10: Same? Yes.\n\nParagraph 11: Same? Yes.\n\nParagraph 13: Same? Yes.\n\nSo Paragraphs 2, 7, 10, 11, 13 → all identical → 1 unique paragraph.\n\nNow Paragraph 4:  \n\"Jones made a bold and confident goal of reaching 1,700 yards and 20 touchdowns. Against the Philadelphia Eagles in week 5, Julius rushed for 72 yards in the first half but suffered a high ankle sprain that bothered him the entire season and was forced to sit out for 3 games. For the second straight year, Jones was considered to be injury-prone and unable to carry the load of a franchise back. Rookie running back Marion Barber III turned in several strong performances in Julius' absence creating a running back controversy.  Against the Detroit Lions Jones had rushed for 92 yards, but on 1st and goal from the 1-yard line, he was stopped 3 consecutive times. Later against the Carolina Panthers, Jones once again demonstrated his playmaking ability when rushed for two touchdowns and 194 yards. Former Cowboys quarterback and now Fox Network commentator Troy Aikman, commented on Jones' speed burst and agility, something he had not seen since Julius' rookie season in 2004. The Cowboys finished the season with an uninspiring loss the next week to the St. Louis Rams at Texas Stadium. At a record of 9–7, Dallas missed the playoffs for the 2nd consecutive year and as if to signify the entire season, Jones came just 7 yards short of his first 1,000-yard season.\"\n\nParagraph 8: Same? Yes.\n\nParagraph 9: Same? Yes.\n\nSo Paragraphs 4, 8, 9 → identical → 1 unique paragraph.\n\nParagraph 5:  \n\"The cloister, to the south of the nave of the priory church, is now part of the Priory Farm garden. To the east of the cloister, still standing, are part of the walls of the chapter house, and also some traces of the dormitory. The refectory and other domestic buildings probably are beneath or have been incorporated into the 18th century Priory Farmhouse, which was probably built from materials from the demolition of the early buildings. Much remains of the main priory church. The nave, from the west wall to the transept, is  long and  wide. The north wall still stands practically to the roof level, although the divisions between the windows have long gone. The belfry tower has gone, although the first steps can be seen in a doorway in the south wall. The south wall is only as high as the window-sill level. The west wall is standing almost intact to gable height, although the lining of the original door has been replaced by modern brickwork. The north transept is  long and  wide. The east wall of the transept is entirely gone, except for traces of its junction with the north wall. At the south end of this wall once stood a pillar; the opposite pillar, west of the south door, is almost complete and in a good state of preservation. Also in the transept there is a doorway which leads to what is thought to be a sacristy, and is the only doorway remaining in its original form. The architrave is almost complete. West of the transept there is a small chapel  long and  wide. Most of the chapel's window mouldings survive. The chancel at the eastern end of the ruin remains to roof height on the north and south side. The original eastern wall has been demolished, but a flint wall has been built up to window-sill level. The north-east corner still has most of its window mouldings.\"\n\nParagraph 15: Same? Yes — identical.\n\nSo Paragraphs 5 and 15 → 1 unique paragraph.\n\nParagraph 6:  \n\"Shetty made her film debut in 2000 with the Yash Raj Films movie Mohabbatein, directed by Aditya Chopra. Her portrayal of Ishika earned her the 2001 IIFA Award for Star Debut of the Year – Female. Soon after, she gave hit dance numbers to Bollywood, including Sharara Sharara in Mere Yaar Ki Shaadi Hai (2002), Chori Pe Chori in Saathiya (2002) and Mind Blowing Mahiya in Cash (2007). She was appreciated for her acting in the film Zeher (2005), for which she was nominated for the Stardust Award as Star of the Year Female (2006). Sify said, \"Shamita Shetty is a surprise, a revelation. The actress proves that she can deliver if given an opportunity. She looks gorgeous all through, but more than anything else, it's her talent that you notice at the end of the show.\" She worked with her sister Shilpa Shetty in the film Fareb. She also starred in multi-star projects like Bewafaa (2005) and Cash (2007). In 2009, she participated in the reality television series Bigg Boss 3. After 42 days, she left the show to attend her sister Shilpa Shetty's wedding. She was the only contestant who wasn't nominated even once during her stay in the Bigg Boss house.\"\n\nParagraph 14: Same? Yes — identical.\n\nSo Paragraphs 6 and 14 → 1 unique paragraph.\n\nNow check remaining paragraphs:\n\nParagraph 17: Unique? Let's read — about Moyola Park football club history. Not repeated elsewhere. No match with any other paragraph.\n\nParagraph 18: About CETB becoming university — unique.\n\nNow list all *distinct* paragraph contents:\n\n- Group A (Vaqueiro): P1, P3, P12, P16 → 1 unique  \n- Group B (Hiri Motu dialects): P2, P7, P10, P11, P13 → 1 unique  \n- Group C (Jones/Cowboys): P4, P8, P9 → 1 unique  \n- Group D (Priory ruins): P5, P15 → 1 unique  \n- Group E (Shetty): P6, P14 → 1 unique  \n- P17 → unique  \n- P18 → unique  \n\nThat’s 7 groups.\n\nWait — let's count total distinct *contents*:\n\n1. Vaqueiro paragraph (appears 4 times)  \n2. Hiri Motu paragraph (appears 5 times)  \n3. Julius Jones paragraph (appears 3 times)  \n4. Priory ruins paragraph (appears 2 times)  \n5. Shamita Shetty paragraph (appears 2 times)  \n6. Moyola Park paragraph (P17 — appears once)  \n7. CETB university paragraph (P18 — appears once)\n\nThat’s **7 unique paragraphs**.\n\nDouble-check no accidental duplication across groups — e.g., does P17 appear elsewhere? No. P18? No. All others are accounted for.\n\nConfirm P17 and P18 are not copies of anything else — yes, they’re distinct.\n\nSo total unique paragraphs = **7**\n\n✅ Final answer: 7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "12"
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "dataset": "passage_count_e",
+      "_id": "8319b481fb2b8c0c4ab4903f7418b4086c3b0a2860906fa1",
+      "answers": [
+        "8"
+      ],
+      "length": 3034,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "8"
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "dataset": "passage_count_e",
+      "_id": "5c1ef546343d32b3fc2d85aa5578d7560c255fb44141cede",
+      "answers": [
+        "9"
+      ],
+      "length": 3299,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "dataset": "passage_count_e",
+      "_id": "90444c751218b9ac6717a3ae82579e53476b085ae47887fa",
+      "answers": [
+        "7"
+      ],
+      "length": 3757,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "7",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "7",
+        "gold": [
+          "7"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "dataset": "passage_count_e",
+      "_id": "0d42be0ec18776870876934959bda7c4a4856061bc7cb427",
+      "answers": [
+        "3"
+      ],
+      "length": 3328,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "dataset": "passage_count_e",
+      "_id": "974b68875af8d477173b49c00c716b7003a35b345f7d5a62",
+      "answers": [
+        "9"
+      ],
+      "length": 3758,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "We are given 11 paragraphs and asked to count how many **unique** (non-duplicate) paragraphs there are.\n\nLet’s compare them carefully.\n\n---\n\n### Step 1: Identify duplicates by content.\n\n- **Paragraph 1**: About Keweenaw site & WEBROC project (1965, rockets, Mighty Mouse, closed-breech launcher testing).\n\n- **Paragraph 2**: Long paragraph about *Vote Loki* #3 — Nisa Contreras, Hydra truck crash, Angela, Doomstadt, debate, Latverian New Prosperity Alliance, Loki’s disguise, etc.\n\n- **Paragraph 3**: Identical to Paragraph 2? Let's check.\n\nCompare Paragraph 2 and Paragraph 3 **word-for-word**.\n\nThey are **identical**, including punctuation, spacing, and even the typo “ticked” (instead of “ticket”) — yes, both say “ticked to Latveria”. So **P2 = P3**.\n\n- **Paragraph 4**: Identical to Paragraph 1? Yes — same wording, same details about WEBROC, Mighty Mouse, enclosed launcher, etc. So **P1 = P4**.\n\n- **Paragraph 5**: Tibetan calendar month explanation — starts/ends with tithi, 29–30 days, dates may skip or repeat, but no duplicate natural days.\n\n- **Paragraph 6**: About Ceol, son of Cutha, reign dates, Anglo-Saxon Chronicle, stone inscription at Wroxeter.\n\n- **Paragraph 7**: Compare to Paragraph 5 — identical text. Yes, same wording, same structure, same parentheses and transliterations. So **P5 = P7**.\n\n- **Paragraph 8**: About Keith Dudemeister from *Scrubs*: his intro, relationship with Elliot and J.D., politics, engagement, breakup, reconciliation, appearance in finale.\n\n- **Paragraph 9**: About Colcombe estate, William Pole, Sir William Pole, Civil War destruction, rebuilding attempts, 6th baronet, will, widow — long historical paragraph.\n\n- **Paragraph 10**: Compare to Paragraph 5 and 7 — yes, identical Tibetan calendar text. So **P5 = P7 = P10**.\n\n- **Paragraph 11**: Compare to Paragraph 2 and 3 — yes, identical *Vote Loki* text (including same typo “ticked”). So **P2 = P3 = P11**.\n\nSo grouping:\n\n- Group A (Keweenaw/WEBROC): P1, P4 → 2 copies  \n- Group B (*Vote Loki* #3): P2, P3, P11 → 3 copies  \n- Group C (Tibetan calendar): P5, P7, P10 → 3 copies  \n- Unique singles:  \n  - P6 (Ceol)  \n  - P8 (Keith Dudemeister)  \n  - P9 (Colcombe estate)\n\nThat’s 3 groups of duplicates + 3 unique = total unique paragraphs = ?\n\n- Group A → 1 unique  \n- Group B → 1 unique  \n- Group C → 1 unique  \n- P6 → 1  \n- P8 → 1  \n- P9 → 1  \n\nSo total unique = **6**\n\nLet’s list them explicitly to confirm no overlap:\n\n1. Keweenaw/WEBROC (P1/P4)  \n2. *Vote Loki* #3 (P2/P3/P11)  \n3. Tibetan calendar (P5/P7/P10)  \n4. Ceol (P6)  \n5. Keith Dudemeister (P8)  \n6. Colcombe estate (P9)\n\n✅ All six are topically and textually distinct. No two groups share content.\n\nTherefore, number of **unique paragraphs** = **6**\n\nFinal answer:  \n6",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "We are given 11 paragraphs and asked to count how many **unique** (non-duplicate) paragraphs there are.\n\nLet’s compare them carefully.\n\n---\n\n### Step 1: Identify duplicates by content.\n\n- **Paragraph 1**: About Keweenaw site & WEBROC project (1965, rockets, buoys, Mighty Mouse, closed-breech launcher testing).\n\n- **Paragraph 2**: Long narrative about *Vote Loki* #3 — Nisa Contreras, Hydra truck crash, Angela, Doomstadt, Iowa State Fair, debate, Latverian New Prosperity Alliance, explosion, Loki in disguise, Nisa filming, public reaction.\n\n- **Paragraph 3**: Identical to Paragraph 2 — let’s verify.\n\n  ✅ Copy-paste comparison shows **Paragraph 2 and Paragraph 3 are identical** (same wording, punctuation, spacing, even the typo “ticked” instead of “ticket”).\n\n- **Paragraph 4**: Identical to Paragraph 1 — same text about WEBROC, Keweenaw, rockets, etc.\n\n  ✅ So P1 = P4.\n\n- **Paragraph 5**: About Tibetan calendar month — starts/ends with tithi, 29–30 natural days, dates may skip or repeat, no duplicate days.\n\n- **Paragraph 6**: About Ceol, son of Cutha/Cuthwulf, reign 591–597, Anglo-Saxon Chronicle, Wroxeter stone inscription.\n\n- **Paragraph 7**: Identical to Paragraph 5 — same structure, wording, even the same Unicode symbols and parentheses. ✅ Duplicate.\n\n- **Paragraph 8**: About Keith Dudemeister from *Scrubs* — his role, relationship with J.D./Elliot, politics, engagement, breakup, reconciliation.\n\n- **Paragraph 9**: About Colcombe estate, William Pole, Sir William Pole, Civil War destruction, later repurchase by 6th baronet, will, etc.\n\n- **Paragraph 10**: Identical to Paragraph 5 and 7 — yes, same Tibetan calendar text. ✅ Third copy.\n\n- **Paragraph 11**: Identical to Paragraph 2 and 3 — yes, full copy of the *Vote Loki* narrative. ✅ Third copy.\n\nSo far:\n\n- P1 = P4 → group A (Keweenaw/WEBROC): size 2  \n- P2 = P3 = P11 → group B (*Vote Loki*): size 3  \n- P5 = P7 = P10 → group C (Tibetan calendar): size 3  \n- P6 → unique  \n- P8 → unique  \n- P9 → unique  \n\nThat’s 3 groups of duplicates + 3 singles = total unique = ?\n\nLet’s list all distinct contents:\n\n1. Keweenaw/WEBROC (P1, P4) → 1 unique  \n2. Vote Loki #3 (P2, P3, P11) → 1 unique  \n3. Tibetan calendar (P5, P7, P10) → 1 unique  \n4. Ceol (P6) → 1 unique  \n5. Keith Dudemeister (P8) → 1 unique  \n6. Colcombe estate (P9) → 1 unique  \n\nThat’s **6 unique paragraphs**.\n\nDouble-check no other overlaps:\n\n- P6 (Ceol) is not repeated anywhere else — no other paragraph mentions Ceol, Cutha, Wroxeter stone, etc. ✔️  \n- P8 (Keith) is not repeated — no other paragraph discusses *Scrubs* characters. ✔️  \n- P9 (Colcombe) is long and specific — no repetition. ✔️  \n\nNo other paragraph matches these.\n\nSo total unique = **6**\n\n✅ Final answer: 6",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "dataset": "passage_count_e",
+      "_id": "6eba84932b263f1702cf77340cfaac4dbba70f3fa8cedb80",
+      "answers": [
+        "7"
+      ],
+      "length": 2179,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "7",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "7",
+        "gold": [
+          "7"
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "dataset": "passage_count_e",
+      "_id": "ee7eb82c5b9d3d6ae888089f6fc6975ab3aa99eb06d029f5",
+      "answers": [
+        "7"
+      ],
+      "length": 3450,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Let's carefully analyze the 12 paragraphs and identify duplicates.\n\nWe need to determine how many **unique** paragraphs there are — i.e., paragraphs that are *not identical* (character-for-character, including punctuation, spacing, capitalization, etc.). Minor differences like extra spaces or line breaks would count as different unless they’re truly identical in content and formatting. But since these are given as clean blocks, we’ll compare exact text.\n\nLet’s group them by content:\n\n- **Paragraph 1**: Siddhashrama description (long, detailed, with Devanagari, mentions Gyanganj, Shambhala, Kailash, Vedas, sages, Swami Vishuddhananda, etc.)\n\n- **Paragraph 2**: Story about Alisha, Rajiv, Payal, Mambo at Spencer College.\n\n- **Paragraph 3**: The Outfit (Chicago crime syndicate) history — Torrio, Capone, Ricca, Accardo.\n\n- **Paragraph 4**: *Identical* to Paragraph 1 — copy-paste. Let’s verify:  \n  Yes — same opening “Siddhashrama (; Devanagari:सिद्धाश्रम), popularly called Gyangunj...” — all sentences match, including spacing, punctuation, even the odd double space before “hermitage”, and the same typos (“artfully camouflages (willingly hides itself) itself”). ✅ Duplicate of P1.\n\n- **Paragraph 5**: Identical to Paragraph 3 — same wording, punctuation, spacing. ✅ Duplicate of P3.\n\n- **Paragraph 6**: Also identical to P3 and P5. ✅ Duplicate.\n\n- **Paragraph 7**: Same again. ✅ Duplicate.\n\n- **Paragraph 8**: Review of Lady Antebellum’s *Own the Night* album — long, multi-critic review with scores and quotes.\n\n- **Paragraph 9**: Again, identical to P3/P5/P6/P7 — The Outfit paragraph. ✅ Duplicate.\n\n- **Paragraph 10**: Identical to Paragraph 2 — Alisha/Rajiv/Payal story. ✅ Duplicate.\n\n- **Paragraph 11**: Identical to Paragraph 1 and 4 — Siddhashrama. ✅ Duplicate.\n\n- **Paragraph 12**: About Chicago sports, Da Bears, Smigel, Odenkirk, Chicago accent — unique.\n\nSo let’s list unique *content groups*:\n\n1. **Siddhashrama** → appears in P1, P4, P11 → 3 copies → **1 unique**\n2. **Spencer College drama (Alisha/Rajiv/Payal)** → P2, P10 → 2 copies → **1 unique**\n3. **The Outfit (Chicago mob)** → P3, P5, P6, P7, P9 → 5 copies → **1 unique**\n4. **Own the Night album reviews** → only P8 → **1 unique**\n5. **Da Bears / Chicago sports / Smigel** → only P12 → **1 unique**\n\nThat’s **5 unique paragraphs**.\n\nDouble-check:\n- P1 = P4 = P11 → yes.\n- P2 = P10 → yes.\n- P3 = P5 = P6 = P7 = P9 → yes.\n- P8 — no other like it.\n- P12 — no other like it.\n\nNo other overlaps:  \n- P8 is long and distinct — no repetition elsewhere.  \n- P12 is entirely different topic and wording.\n\n✅ So total unique paragraphs = **5**\n\nFinal answer:  \n5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "We are given 12 paragraphs and asked to count how many **unique** (non-duplicate) paragraphs there are.\n\nLet’s compare them carefully.\n\n---\n\n### Step 1: Identify duplicates by content.\n\n- **Paragraph 1**: Siddhashrama description — long, detailed, spiritual/mystical Himalayan hermitage.\n\n- **Paragraph 2**: Plot summary about Rajiv, Alisha, Payal, Mambo — a soap/drama storyline.\n\n- **Paragraph 3**: The Outfit (Chicago crime syndicate) history — Torrio, Capone, Ricca, Accardo.\n\n- **Paragraph 4**: Identical to Paragraph 1? Let's check.\n\nCompare Paragraph 1 and Paragraph 4 word-for-word.\n\n✅ Yes — **Paragraph 4 is identical to Paragraph 1**, character-for-character (including spacing, punctuation, Devanagari script, typos like “artfully camouflages (willingly hides itself) itself”, etc.). So Paragraph 4 is a duplicate of Paragraph 1.\n\n- **Paragraph 5**: Same as Paragraph 3? Yes — identical description of The Outfit. ✅ Duplicate.\n\n- **Paragraph 6**: Also identical to Paragraph 3. ✅ Duplicate.\n\n- **Paragraph 7**: Also identical to Paragraph 3. ✅ Duplicate.\n\n- **Paragraph 8**: Review of *Own the Night* album — unique content; no repetition elsewhere.\n\n- **Paragraph 9**: Again, same Outfit text as Paragraph 3. ✅ Duplicate.\n\n- **Paragraph 10**: Identical to Paragraph 2 (Rajiv/Alisha/Payal storyline). ✅ Duplicate.\n\n- **Paragraph 11**: Again, identical to Paragraph 1 (Siddhashrama). ✅ Duplicate.\n\n- **Paragraph 12**: Chicago sports + \"Da Bears!\" origin story — unique.\n\nSo let’s group:\n\n- **Siddhashrama group**: Paragraphs 1, 4, 11 → all identical → **1 unique**\n\n- **Outfit group**: Paragraphs 3, 5, 6, 7, 9 → all identical → **1 unique**\n\n- **Rajiv/Alisha/Payal group**: Paragraphs 2 and 10 → identical → **1 unique**\n\n- **Own the Night review**: Paragraph 8 → only one → **1 unique**\n\n- **Da Bears / Chicago sports**: Paragraph 12 → only one → **1 unique**\n\nThat’s **5 unique paragraphs**.\n\nLet’s double-check no other overlaps:\n\n- Is Paragraph 8 repeated? No.\n\n- Is Paragraph 12 repeated? No.\n\n- Any subtle differences? Let’s verify a few key points.\n\n🔍 Paragraph 1 vs 4 vs 11: All have same opening:  \n\"Siddhashrama (; Devanagari:सिद्धाश्रम), popularly called Gyangunj...\"  \nSame length, same line breaks, same phrasing (“artfully camouflages (willingly hides itself) itself”), same ending. ✅ Identical.\n\n🔍 Paragraph 3 vs 5/6/7/9: All begin with “The Outfit rose to power in the 1920s…” and end with “…upon his death in 1992.” Identical wording, punctuation, spacing. ✅\n\n🔍 Paragraph 2 vs 10: Same plot, same dialogue (\"I love you, Payal.\"), same sequence. ✅\n\nNo other paragraph repeats any of these or each other.\n\nSo total unique =  \n- Siddhashrama (1)  \n- Outfit (1)  \n- Rajiv/Alisha/Payal (1)  \n- Own the Night reviews (1)  \n- Da Bears origin (1)  \n\n= **5**\n\n✅ Final answer: **5**",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "dataset": "passage_count_e",
+      "_id": "f9fc0cddc210b1dfb44bfd42b9f94e64fec43cce04e69d64",
+      "answers": [
+        "6"
+      ],
+      "length": 3293,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "6",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "6",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "6",
+        "gold": [
+          "6"
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "dataset": "passage_count_e",
+      "_id": "a7a94aecaea08f0d2799fe3ca3af73a9fc5317a7860d7909",
+      "answers": [
+        "2"
+      ],
+      "length": 3849,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "2",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "dataset": "passage_count_e",
+      "_id": "bf7fc7dae69baf3f18bcc7a2d0c7a975730fd7ab04b028cb",
+      "answers": [
+        "6"
+      ],
+      "length": 3450,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "6",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "dataset": "passage_count_e",
+      "_id": "1795269f5f7efef8da447c1797cfe8082c5fec5fbc13a587",
+      "answers": [
+        "2"
+      ],
+      "length": 1940,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "2"
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "dataset": "passage_count_e",
+      "_id": "0b87678ce1ae85acc57a914550242f987932afd1abda2831",
+      "answers": [
+        "4"
+      ],
+      "length": 3746,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "4",
+        "gold": [
+          "4"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "4",
+        "gold": [
+          "4"
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "dataset": "passage_count_e",
+      "_id": "1aa7aac093fccb8c81b386b732131d7369ea691d6fde9a49",
+      "answers": [
+        "2"
+      ],
+      "length": 2906,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "2",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      }
+    },
+    {
+      "index": 19,
+      "dataset": "passage_count_e",
+      "_id": "6dc5076fc7d36d9f827f67041432c34085c45dd86395bdb1",
+      "answers": [
+        "8"
+      ],
+      "length": 2855,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "8"
+        ]
+      }
+    },
+    {
+      "index": 20,
+      "dataset": "passage_count_e",
+      "_id": "de5a944fe7d91577daaf979663b17492c26441b905456c63",
+      "answers": [
+        "4"
+      ],
+      "length": 3857,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "4",
+        "gold": [
+          "4"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "4",
+        "gold": [
+          "4"
+        ]
+      }
+    },
+    {
+      "index": 21,
+      "dataset": "passage_count_e",
+      "_id": "558eb0f077b73689c0ebdecd6835412bea8d7c84cba3e834",
+      "answers": [
+        "9"
+      ],
+      "length": 3516,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Let's carefully compare all 15 paragraphs to identify duplicates.\n\nWe'll group identical paragraphs:\n\n- Paragraph 1: Holmes/Watson/Pinner story (Sherlock Holmes pastiche — \"The Adventure of the Stockbroker's Clerk\" adaptation)\n- Paragraph 2: Joubert — heartthrob, Bléger lawsuit, Marchei relationship\n- Paragraph 3: Mississippi constitutional amendment / referendum history\n- Paragraph 4: Baháʼí Faith in Botswana / Robarts family\n- Paragraph 5: Te Arawa tradition — Uenuku, Pōtaka Tawhiti, Tamatekapua & Whakatūria\n- Paragraph 6: Identical to Paragraph 5 — word-for-word same. ✅ duplicate\n- Paragraph 7: Identical to Paragraph 3 — word-for-word same. ✅ duplicate\n- Paragraph 8: Palazzo Pubblico in Siena architecture\n- Paragraph 9: Toronto Hospital baby deaths (Sick Kids, 1980–81, Susan Nelles case)\n- Paragraph 10: Identical to Paragraph 4 — word-for-word same. ✅ duplicate\n- Paragraph 11: Ultraman Leo storyline (Nebula L77, Gen Ootori, Ultraseven injury, Commander Black, etc.)\n- Paragraph 12: Identical to Paragraph 1 — word-for-word same. ✅ duplicate\n- Paragraph 13: Identical to Paragraph 2 — word-for-word same. ✅ duplicate\n- Paragraph 14: Identical to Paragraph 2 and 13 — word-for-word same. ✅ duplicate\n- Paragraph 15: Identical to Paragraph 1, 12 — word-for-word same. ✅ duplicate\n\nNow let’s list unique originals:\n\n- P1 = P12 = P15 → one unique (call it Group A)\n- P2 = P13 = P14 → one unique (Group B)\n- P3 = P7 → one unique (Group C)\n- P4 = P10 → one unique (Group D)\n- P5 = P6 → one unique (Group E)\n- P8 → unique (Group F)\n- P9 → unique (Group G)\n- P11 → unique (Group H)\n\nThat’s 8 groups.\n\nLet’s verify no other overlaps:\n\n- P1: Holmes/Pinner — distinct from all others.\n- P2: Joubert — distinct.\n- P3: Mississippi referendum — long, specific names/dates/courts — no overlap with others.\n- P4: Baháʼí in Botswana — rich detail (Robarts, Mafeking, Lally Warren quote) — matches only P10.\n- P5/P6: Te Arawa myth — matches only each other.\n- P8: Palazzo Pubblico — architectural description — no match elsewhere.\n- P9: Toronto hospital baby deaths — very specific (Cardiac Ward, Sick Kids, Susan Nelles, digoxin, 1980–81) — no duplication.\n- P11: Ultraman Leo — detailed plot with episode numbers, characters, monsters — no duplication.\n\nNo paragraph appears more than once across these groups.\n\nSo total unique paragraphs = 8.\n\n✅ Final answer: 8",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Let's carefully compare all 15 paragraphs to identify duplicates.\n\nWe'll group identical or near-identical paragraphs. Note: We must check for *exact* textual duplicates — even minor differences (e.g., punctuation, spacing, wording) would make them non-duplicates. But per the instruction, \"some may be duplicates\", and we are to count *unique* paragraphs after removing duplicates — i.e., exact duplicates.\n\nLet’s list and compare:\n\n- **Paragraph 1**: Sherlock Holmes/Pinner/Pycroft story (Mawsons, handwriting, safebreaker).  \n- **Paragraph 2**: Joubert — France heartthrob, Bléger lawsuit, Marchei relationship.  \n- **Paragraph 3**: Mississippi constitutional amendment, referendum, Ethridge quote, 1988–1991 events.  \n- **Paragraph 4**: Baháʼí Faith in Botswana/Bechuanaland, Robarts, Ten Year Crusade, Lally Warren quote.  \n- **Paragraph 5**: Te Arawa tradition — Uenuku, dog Pōtaka Tawhiti, Tamatekapua & Whakatūria, stilts, poroporo tree, war, Arawa canoe.  \n- **Paragraph 6**: *Identical* to Paragraph 5 — let’s verify word-for-word.\n\nCompare P5 and P6:\n\nP5 starts: \"In Te Arawa traditions, Chief Uenuku of Ra'iātea Island becomes annoyed with a dog named Pōtaka Tawhiti...\"  \nP6 starts identically — same spelling, same punctuation, same line breaks? Let's check full text.\n\nYes — every sentence matches exactly, including the final sentence: \"In this telling, Uenuku lived four generations after Ruatapu, who was one of Houmaitawhiti's ancestors.\"  \n✅ P5 = P6 → duplicate.\n\n- **Paragraph 7**: Identical to Paragraph 3? Let's compare.\n\nP3 and P7 both begin: \"A constitutional amendment creating an initiative system was passed by the state legislature...\"  \nContinue: same details — 1914, 1916, 1917 upheld, 1922 overturned, Ethridge quote, 1988 legislators list (same names), 1990 petition, Molpus, Moore lawsuit, court rulings, Lambert legislation.  \nYes — full text is identical. ✅ P3 = P7 → duplicate.\n\n- **Paragraph 8**: Palazzo Pubblico in Siena — architecture, facade, Christogram, Bernardino, 1425. Unique so far.\n\n- **Paragraph 9**: Toronto hospital baby deaths — Sick Kids, 1980–81, digoxin, Susan Nelles. Unique.\n\n- **Paragraph 10**: Identical to Paragraph 4? Let's check.\n\nP4 and P10 both start: \"The religion arrived in the area during the end of the era of the Bechuanaland Protectorate...\"  \nSame content: Shoghi Effendi, Ten Year Crusade, Johnsons, Robarts arrival in Mafeking by Oct 1954, Knight of Baháʼu'lláh, assemblies in 1963, Robarts’ background, Lally Warren quote with identical wording including ellipses and quotes.  \n✅ P4 = P10 → duplicate.\n\n- **Paragraph 11**: Ultraman Leo story — Nebula L77, Gen Ootori, Ultraseven injured, MAC destroyed, Dan taken to M78, Leo dismembered, revived by King, Black End, kids, Leo Ring removed. Unique.\n\n- **Paragraph 12**: Identical to Paragraph 1?  \nP1: \"When the trio arrive at the office, on Corporation Street, Birmingham...\"  \nP12: same opening, same sentences — \"Pinner is reading a London newspaper...\", \"attempts suicide\", \"Holmes concludes...\", \"Mawsons was keeping a vast stock...\"  \nYes — identical. ✅ P1 = P12 → duplicate.\n\n- **Paragraph 13**: Same as P2?  \nP2: \"Joubert has been considered a heartthrob in his native country, France...\"  \nP13: identical text — same structure, same names, same lawsuit amount (40,000 Euros), same court outcome (17,000 Euros), same Marchei relationship ending in 2009.  \n✅ P2 = P13 → duplicate.\n\n- **Paragraph 14**: Same as P2 and P13? Yes — identical wording. ✅ P2 = P13 = P14 → all duplicates.\n\n- **Paragraph 15**: Same as P1 and P12? Yes — identical text. ✅ P1 = P12 = P15 → all duplicates.\n\nSo now let’s collect unique base paragraphs:\n\n- P1 / P12 / P15 → 1 unique  \n- P2 / P13 / P14 → 1 unique  \n- P3 / P7 → 1 unique  \n- P4 / P10 → 1 unique  \n- P5 / P6 → 1 unique  \n- P8 → unique  \n- P9 → unique  \n- P11 → unique  \n\nThat’s 8 so far.\n\nNow confirm no other overlaps:\n\n- P8: Palazzo Pubblico — not repeated elsewhere. ✔  \n- P9: Toronto hospital — not repeated. ✔  \n- P11: Ultraman Leo — not repeated. ✔  \n\nAre there any others that might match? Let's scan:\n\n- P8: only appears once.  \n- P9: only once.  \n- P11: only once.  \n\nSo total unique paragraphs =  \nP1-group (3 copies) → 1  \nP2-group (3 copies) → 1  \nP3-group (2 copies) → 1  \nP4-group (2 copies) → 1  \nP5-group (2 copies) → 1  \nP8 → 1  \nP9 → 1  \nP11 → 1  \n\nThat’s 8.\n\nCount explicitly:\n\nUnique originals:  \n- Paragraph 1 (replicated in 12, 15)  \n- Paragraph 2 (replicated in 13, 14)  \n- Paragraph 3 (replicated in 7)  \n- Paragraph 4 (replicated in 10)  \n- Paragraph 5 (replicated in 6)  \n- Paragraph 8  \n- Paragraph 9  \n- Paragraph 11  \n\nThat’s 8.\n\nNo other paragraphs remain unaccounted for — all 15 are covered.\n\n✅ Final count = 8\n\nAnswer: 8",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "dataset": "passage_count_e",
+      "_id": "c728edcdddef5c2dcb6df4bf4531ddddb351f094ff62b5ec",
+      "answers": [
+        "3"
+      ],
+      "length": 2138,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "dataset": "passage_count_e",
+      "_id": "288f4e37f101d146d77c62f996e4e9570b2771c27bc81979",
+      "answers": [
+        "7"
+      ],
+      "length": 2375,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      }
+    },
+    {
+      "index": 24,
+      "dataset": "passage_count_e",
+      "_id": "b840b98f785681073e1294d070f22aef0fbffd88593251b7",
+      "answers": [
+        "10"
+      ],
+      "length": 2028,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "10"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "6",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "10"
+        ]
+      }
+    },
+    {
+      "index": 25,
+      "dataset": "passage_count_e",
+      "_id": "79a3950607bd55a0c9d640bca5e886ecef6b8c1548d72010",
+      "answers": [
+        "3"
+      ],
+      "length": 3076,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "3"
+        ]
+      }
+    },
+    {
+      "index": 26,
+      "dataset": "passage_count_e",
+      "_id": "0e4b6fd7e9532b62224647c07b72d1ef61b5442a96507314",
+      "answers": [
+        "5"
+      ],
+      "length": 3830,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      }
+    },
+    {
+      "index": 27,
+      "dataset": "passage_count_e",
+      "_id": "ce3b44c862cb686ac5aa193be6ded32cab696d2caf89ba48",
+      "answers": [
+        "13"
+      ],
+      "length": 2836,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "8",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "13"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "8",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "13"
+        ]
+      }
+    },
+    {
+      "index": 28,
+      "dataset": "passage_count_e",
+      "_id": "bc84939098d7b7b2a9281c2d3285c4c14fc400828c526597",
+      "answers": [
+        "2"
+      ],
+      "length": 2567,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "2",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      }
+    },
+    {
+      "index": 29,
+      "dataset": "passage_count_e",
+      "_id": "89d39f31cc4adedb47a9e9308e30a02cb7fb96d0ce18e69e",
+      "answers": [
+        "3"
+      ],
+      "length": 2609,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      }
+    },
+    {
+      "index": 30,
+      "dataset": "passage_count_e",
+      "_id": "bfce730da941bc2f088c4d892f9ba2628c380a9e88d8e773",
+      "answers": [
+        "8"
+      ],
+      "length": 2971,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "8"
+        ]
+      }
+    },
+    {
+      "index": 31,
+      "dataset": "passage_count_e",
+      "_id": "adcc795638d85833e743ac9d8b1eb6ee866f03c43a1b5bff",
+      "answers": [
+        "5"
+      ],
+      "length": 2753,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      }
+    },
+    {
+      "index": 32,
+      "dataset": "passage_count_e",
+      "_id": "159da58eb5686ecce86672c0afccf29e6cd388280a01846f",
+      "answers": [
+        "4"
+      ],
+      "length": 2914,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "4"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "4"
+        ]
+      }
+    },
+    {
+      "index": 33,
+      "dataset": "passage_count_e",
+      "_id": "415813a9629f6a8b5f0a2741d906b989493b55d9bc52d04d",
+      "answers": [
+        "2"
+      ],
+      "length": 3169,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "2",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      }
+    },
+    {
+      "index": 34,
+      "dataset": "passage_count_e",
+      "_id": "2d2848f2540d8bd30f8c7a45ec7d9bc501aad849fd70854b",
+      "answers": [
+        "10"
+      ],
+      "length": 2879,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "10"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "10"
+        ]
+      }
+    },
+    {
+      "index": 35,
+      "dataset": "passage_count_e",
+      "_id": "66ad65384cc56d1cc0248007f6ae4e1153ebad02c3ca86d6",
+      "answers": [
+        "16"
+      ],
+      "length": 3773,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "9",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "9",
+        "gold": [
+          "16"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "9",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "9",
+        "gold": [
+          "16"
+        ]
+      }
+    },
+    {
+      "index": 36,
+      "dataset": "passage_count_e",
+      "_id": "d6da336516d72144d20a564e479f9df7af8801b04ed93750",
+      "answers": [
+        "5"
+      ],
+      "length": 2737,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      }
+    },
+    {
+      "index": 37,
+      "dataset": "passage_count_e",
+      "_id": "935778f03f2632c87b080ee9b2f452ea83fbbfb5c77332a2",
+      "answers": [
+        "5"
+      ],
+      "length": 1851,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "5"
+        ]
+      }
+    },
+    {
+      "index": 38,
+      "dataset": "passage_count_e",
+      "_id": "dcab2f7f14e5de08bfa5baf40fb4ab0d455ff613cd8651fa",
+      "answers": [
+        "5"
+      ],
+      "length": 2055,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "6",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "5"
+        ]
+      }
+    },
+    {
+      "index": 39,
+      "dataset": "passage_count_e",
+      "_id": "93ef798766f5c0b64ef9f76af5df9443006d742ffddaca69",
+      "answers": [
+        "9"
+      ],
+      "length": 3324,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 40,
+      "dataset": "passage_count_e",
+      "_id": "2d42519cde960e97c7fbac956fb3de191fe12ce75dd5576a",
+      "answers": [
+        "9"
+      ],
+      "length": 3202,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 41,
+      "dataset": "passage_count_e",
+      "_id": "a5b91208502dbf155e966bc108c0f5c639f2302b3daf397e",
+      "answers": [
+        "11"
+      ],
+      "length": 2257,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "11"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "11"
+        ]
+      }
+    },
+    {
+      "index": 42,
+      "dataset": "passage_count_e",
+      "_id": "91403e4f72e0fbbd112e8fe689ca5de5b0abb5aa0a2cd94c",
+      "answers": [
+        "11"
+      ],
+      "length": 3487,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "8",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "11"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "8",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "11"
+        ]
+      }
+    },
+    {
+      "index": 43,
+      "dataset": "passage_count_e",
+      "_id": "f136b8a5c0e851a6991647b31ae9f9fd0344ac054d8350a9",
+      "answers": [
+        "8"
+      ],
+      "length": 2904,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "8"
+        ]
+      }
+    },
+    {
+      "index": 44,
+      "dataset": "passage_count_e",
+      "_id": "3e1812cd381a9bf8ed824129c7f5573a38750f193f53259c",
+      "answers": [
+        "3"
+      ],
+      "length": 1488,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      }
+    },
+    {
+      "index": 45,
+      "dataset": "passage_count_e",
+      "_id": "eaa6f4f5a40f8dc1fbeba6b1a529af732b893f94cf07b2d1",
+      "answers": [
+        "8"
+      ],
+      "length": 3080,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "6",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "8"
+        ]
+      }
+    },
+    {
+      "index": 46,
+      "dataset": "passage_count_e",
+      "_id": "4fb0504b375e752cdb7a29672e54edaee0637d835c0d519d",
+      "answers": [
+        "2"
+      ],
+      "length": 3453,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "2",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      }
+    },
+    {
+      "index": 47,
+      "dataset": "passage_count_e",
+      "_id": "3efa1632c6c972106fdbc825cb4f48bb326dea5b7cceacc7",
+      "answers": [
+        "9"
+      ],
+      "length": 3911,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 48,
+      "dataset": "passage_count_e",
+      "_id": "a1e7977a29492b5e0d19bc3bc169fdb536104e36675be0ad",
+      "answers": [
+        "9"
+      ],
+      "length": 2291,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "6",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 49,
+      "dataset": "passage_count_e",
+      "_id": "9dd6dce168fd5151a9c1f8a776fbce5e92b85611edbdfb5f",
+      "answers": [
+        "17"
+      ],
+      "length": 3923,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Let's carefully compare all 17 paragraphs to identify duplicates.\n\nWe'll go paragraph by paragraph and group identical ones.\n\nParagraph 1: About Robbie Davis-Floyd — awards, grants, honors.\n\nParagraph 2: About Vega (actress) — filmography.\n\nParagraph 3: About Anthony Davis (NBA player) — stats and timeline from 2013–14 season.\n\nParagraph 4: **Identical to Paragraph 1** — word-for-word same text. ✔️ Duplicate.\n\nParagraph 5: About Centers (football player) — biography.\n\nParagraph 6: About an uncut film parodying Fantasia — detailed description of live-action sequences.\n\nParagraph 7: About Little Armenia — founding by Garbis Keurjikian in 1999–2000.\n\nParagraph 8: **Identical to Paragraph 7** — same wording, spacing, punctuation. ✔️ Duplicate.\n\nParagraph 9: About Angel and Jhiera — scene from *Angel* TV series (likely S1E7 “The Ring”).\n\nParagraph 10: About learning organizations and systems thinking.\n\nParagraph 11: **Identical to Paragraph 5** — same text about Centers’ background. ✔️ Duplicate.\n\nParagraph 12: About Reuleaux polygons — geometry definition.\n\nParagraph 13: **Identical to Paragraph 2** — same Vega filmography. ✔️ Duplicate.\n\nParagraph 14: About Anglo-Catholic ritualism and SSC.\n\nParagraph 15: **Identical to Paragraph 7** — same Little Armenia text. ✔️ Duplicate.\n\nParagraph 16: **Identical to Paragraph 14** — same Anglo-Catholic ritualism text. ✔️ Duplicate.\n\nParagraph 17: About Nicole and Chase — plot summary (likely from *What a Girl Wants* or similar; actually matches *Chasing Amy*? Wait — no, this is the plot of *She’s All That* (1999), but character names differ — however, content matches *She’s All That* remake or derivative; regardless, textual match matters). Let’s verify uniqueness: no other paragraph matches this. So it's unique.\n\nNow list all *unique* base paragraphs:\n\n- P1 = P4 → count as 1  \n- P2 = P13 → count as 1  \n- P3 → unique  \n- P5 = P11 → count as 1  \n- P6 → unique  \n- P7 = P8 = P15 → count as 1  \n- P9 → unique  \n- P10 → unique  \n- P12 → unique  \n- P14 = P16 → count as 1  \n- P17 → unique  \n\nSo far, unique groups:\n\n1. Davis-Floyd (P1, P4)  \n2. Vega filmography (P2, P13)  \n3. Anthony Davis NBA stats (P3)  \n4. Centers biography (P5, P11)  \n5. Fantasia parody film (P6)  \n6. Little Armenia (P7, P8, P15)  \n7. Angel & Jhiera (P9)  \n8. Learning organization (P10)  \n9. Reuleaux polygons (P12)  \n10. Anglo-Catholic ritualism (P14, P16)  \n11. Nicole & Chase plot (P17)\n\nThat’s **11 unique paragraphs**.\n\nDouble-check for any missed similarity:\n\n- P3 is long and highly specific (dates, stats, opponents, injuries) — no other paragraph resembles it.\n\n- P6 is very detailed and stylistically distinct — no duplicate.\n\n- P9 is narrative/dialogue-heavy and unique.\n\n- P10, P12, P17 — all distinct in topic and wording.\n\nNo cross-topic duplication (e.g., no paragraph accidentally repeated across different subjects).\n\nThus, total unique paragraphs = **11**\n\n✅ Final answer:  \n11",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "11",
+        "gold": [
+          "17"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "9",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "9",
+        "gold": [
+          "17"
+        ]
+      }
+    },
+    {
+      "index": 50,
+      "dataset": "passage_count_e",
+      "_id": "4f33f4d1d7d8ae1101daea37320fc52e5df9fec8d8d544bf",
+      "answers": [
+        "7"
+      ],
+      "length": 3413,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      }
+    }
+  ],
+  "boundary": "Public LongBench smoke slice. This is not a full LongBench leaderboard claim; it is a source-backed answer-key accuracy receipt that can scale to larger slices."
+}

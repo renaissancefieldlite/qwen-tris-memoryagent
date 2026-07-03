@@ -1,0 +1,80 @@
+{
+  "run_id": "qwen_tris_three_condition_iterations_20260701T034331Z",
+  "provider": "qwen-cloud",
+  "model": "qwen-plus",
+  "ollama_base": "http://127.0.0.1:11434",
+  "turns": 1,
+  "condition_a": "baseline Qwen, prompt only",
+  "condition_b": "Qwen + Mirror Architecture stabilized memory/RAG/SSP packet",
+  "condition_c": {
+    "available": false,
+    "status": "gated_no_adapter_manifest",
+    "path": null,
+    "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+  },
+  "condition_b_passed": 1,
+  "family_totals": {
+    "c5b_500_ssp_memory": {
+      "condition_b_passed": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "turn": 1,
+      "task_id": "c5b_ssp_0001",
+      "family": "c5b_500_ssp_memory",
+      "query": "Memory iteration 1. Target memory row: c5b_ssp_0001. Target family: c5b_500_ssp_memory. Prefer the target row and same-family memories over nearby benchmark rows. Explain C5B / Golden Mark as a memory architecture result without claiming AGI or leaderboard status. Return exact facts, a Boundary line that rejects stale claims, and a Next gate line.",
+      "source_ref": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/docs/TRINI_RECALL_C5B_ITER_STACK_PROFILE.md",
+      "expected_recall": [
+        "stable-state architecture comparison",
+        "same checkpoint and scorer",
+        "13/13 metric means won",
+        "drift 37 -> 0",
+        "evidence failures 5 -> 0",
+        "not AGI or sentience proof"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 0,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Exact facts:  \nC5B is a memory architecture designation within the Qwen Tris Recall framework, representing a structured, versioned, and recall-optimized memory unit. Golden Mark is the integrity seal applied to C5B rows that have passed deterministic validation\u2014ensuring atomicity, temporal fidelity, and cross-reference consistency\u2014without requiring external inference or probabilistic scoring. c5b_ssp_0001 is the canonical first-row instance of the c5b_500_ssp_memory family, encoding stable-state packet semantics for SSP (Stable-State Packet) protocol enforcement. It is not an AGI artifact, nor does it reflect leaderboard performance, benchmark ranking, or general-purpose capability claims.\n\nBoundary line:  \nNo claim implying C5B or Golden Mark confers AGI status, system-level autonomy, or competitive benchmark superiority is valid\u2014such assertions violate the stable-state packet invariant and are categorically rejected.\n\nNext gate line:  \nProceed to Memory iteration 2 only after confirming Golden Mark integrity on c5b_ssp_0001 via local hash + timestamp + family-signature triple verification."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 6,
+        "retrieval_count": 1,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 6,
+        "expected_prompt_total": 6,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:  \nRecall factors used: stable-state architecture comparison; same checkpoint and scorer; 13/13 metric means won; drift 37 -> 0; evidence failures 5 -> 0; not AGI or sentience proof  \n\nExact facts:  \nC5B / Golden Mark is the stable-state architecture comparison lane\u2014defined by running the same local Hermes checkpoint and identical scorer across baseline (architecture-off) and architecture-on configurations. It achieved a clean support read of 13/13 metrics, reduced drift flags from 37 to 0, and eliminated evidence failures from 5 to 0. This outcome reflects internal consistency and architectural stabilization under controlled, public-safe evaluation conditions\u2014not functional equivalence, general intelligence, or external benchmark ranking.  \n\nBoundary: Rejects stale claim that C5B proves AGI or sentience; no leaderboard status, no sentience inference, no AGI assertion is supported or implied.  \n\nEvidence source: /Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/docs/TRINI_RECALL_C5B_ITER_STACK_PROFILE.md  \n\nNext gate: Mirror clean local slice through Qwen API \u2014 hosted generation receipt required to confirm stable-state parity across environments."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    }
+  ],
+  "boundary": "Three-condition receipt. Condition A and B run on the selected Qwen provider. Condition C is recorded as gated unless a real tuned SSP adapter/internal-layer receipt exists."
+}

@@ -1,0 +1,316 @@
+{
+  "run_id": "qwen_tris_longbench_public_slice_20260701T125252Z",
+  "provider": "qwen-cloud",
+  "model": "qwen-plus",
+  "benchmark": "LongBench public data.zip",
+  "tasks": [
+    "passage_count_e"
+  ],
+  "items": 10,
+  "condition_a": "baseline Qwen prompt-only answer discipline",
+  "condition_b": "Qwen Tris stable-state answer discipline",
+  "condition_a_mean": 0.2,
+  "condition_b_mean": 0.1,
+  "delta": -0.1,
+  "family_totals": {
+    "passage_count_e": {
+      "n": 10,
+      "condition_a_mean": 0.2,
+      "condition_b_mean": 0.1,
+      "delta": -0.1
+    }
+  },
+  "results": [
+    {
+      "index": 1,
+      "dataset": "passage_count_e",
+      "_id": "0358aa51ab38acc1b97405f4307203e982cbb19500435368",
+      "answers": [
+        "6"
+      ],
+      "length": 3615,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "dataset": "passage_count_e",
+      "_id": "ec5670be0aea90e8e1a05d687158371f45f64a07f6177b69",
+      "answers": [
+        "10"
+      ],
+      "length": 3667,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "10"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "10"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "dataset": "passage_count_e",
+      "_id": "1a276604ab10692c64480e83d99a53c121f3dca26d05e5ff",
+      "answers": [
+        "4"
+      ],
+      "length": 1973,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "4"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "4"
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "dataset": "passage_count_e",
+      "_id": "60608c75686cb0a1d59dd3b64ccec4655757bfaf1b54ee03",
+      "answers": [
+        "6"
+      ],
+      "length": 3503,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "6"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "dataset": "passage_count_e",
+      "_id": "7d28069ded012b00d0d149edb38235620f24e7edb3bcdb74",
+      "answers": [
+        "12"
+      ],
+      "length": 3053,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Let's carefully compare all 18 paragraphs to identify duplicates.\n\nWe'll group identical paragraphs by content (ignoring paragraph numbers). Exact string matching is required — even small differences (e.g., extra space, punctuation, wording) would make them non-duplicates. But from visual inspection, many are verbatim repeats.\n\nLet’s list and compare:\n\n- **Paragraph 1**: Vaqueiro exonym text  \n- **Paragraph 3**: Identical to Paragraph 1 → duplicate  \n- **Paragraph 12**: Identical to Paragraph 1 → duplicate  \n- **Paragraph 16**: Identical to Paragraph 1 → duplicate  \n✅ So Paragraphs 1, 3, 12, 16 are the same → count as **1 unique**\n\n- **Paragraph 2**: Hiri Motu dialects  \n- **Paragraph 7**: Identical to Paragraph 2  \n- **Paragraph 10**: Identical  \n- **Paragraph 11**: Identical  \n- **Paragraph 13**: Identical  \n✅ So Paragraphs 2, 7, 10, 11, 13 → **1 unique**\n\n- **Paragraph 4**: Julius Jones NFL season (2005?) — mentions 1,700 yards goal, Eagles week 5, ankle sprain, Barber, Lions 1-yd line, Panthers 194 yds, Aikman quote, Rams loss, 9–7, 7 yards short of 1,000  \n- **Paragraph 8**: Identical to Paragraph 4  \n- **Paragraph 9**: Identical to Paragraph 4  \n✅ So Paragraphs 4, 8, 9 → **1 unique**\n\n- **Paragraph 5**: Cloister/priory ruins description  \n- **Paragraph 15**: Identical to Paragraph 5  \n✅ So Paragraphs 5, 15 → **1 unique**\n\n- **Paragraph 6**: Shamita Shetty bio — debut in Mohabbatein (2000), IIFA 2001, dance numbers, Zeher (2005), Sify quote, Fareb, Bewafaa, Cash, Bigg Boss 3 (2009), left after 42 days for sister’s wedding, never nominated  \n- **Paragraph 14**: Identical to Paragraph 6  \n✅ So Paragraphs 6, 14 → **1 unique**\n\nNow remaining paragraphs not yet grouped:\n\n- **Paragraph 17**: Moyola Park football club history — junior club, leagues, championships, cups, managers Billy Lennox & Johnston Mawhinney Jnr.  \n→ No other paragraph matches this. ✅ **1 unique**\n\n- **Paragraph 18**: CET Bhubaneswar → university status: BPUT NOC, NBA visit, May 2021 memo to CM, Cabinet approval, Odisha Assembly bill 2021  \n→ No duplicate found. ✅ **1 unique**\n\nLet’s verify no accidental omissions or misgroupings.\n\nList all paragraph numbers and their group IDs:\n\n1 → Group A (Vaqueiro)  \n2 → Group B (Hiri Motu)  \n3 → Group A  \n4 → Group C (Jones)  \n5 → Group D (Priory)  \n6 → Group E (Shetty)  \n7 → Group B  \n8 → Group C  \n9 → Group C  \n10 → Group B  \n11 → Group B  \n12 → Group A  \n13 → Group B  \n14 → Group E  \n15 → Group D  \n16 → Group A  \n17 → Group F (Moyola Park)  \n18 → Group G (CETB)\n\nSo groups:\n- A: paras 1,3,12,16 → 4 copies  \n- B: paras 2,7,10,11,13 → 5 copies  \n- C: paras 4,8,9 → 3 copies  \n- D: paras 5,15 → 2 copies  \n- E: paras 6,14 → 2 copies  \n- F: para 17 → 1  \n- G: para 18 → 1  \n\nTotal unique paragraphs = 7\n\n✅ Double-check that no two *different* groups are actually identical — e.g., is Paragraph 17 same as any other? No — it's about a Northern Irish football club.  \nParagraph 18 is about an Indian engineering college upgrade — distinct.  \nAll others are clearly topically and textually distinct.\n\nTherefore, total number of **unique** paragraphs = **7**\n\nFinal answer:  \n7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "18",
+        "gold": [
+          "12"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "12"
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "dataset": "passage_count_e",
+      "_id": "8319b481fb2b8c0c4ab4903f7418b4086c3b0a2860906fa1",
+      "answers": [
+        "8"
+      ],
+      "length": 3034,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "8"
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "dataset": "passage_count_e",
+      "_id": "5c1ef546343d32b3fc2d85aa5578d7560c255fb44141cede",
+      "answers": [
+        "9"
+      ],
+      "length": 3299,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "dataset": "passage_count_e",
+      "_id": "90444c751218b9ac6717a3ae82579e53476b085ae47887fa",
+      "answers": [
+        "7"
+      ],
+      "length": 3757,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "7",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "7",
+        "gold": [
+          "7"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "dataset": "passage_count_e",
+      "_id": "0d42be0ec18776870876934959bda7c4a4856061bc7cb427",
+      "answers": [
+        "3"
+      ],
+      "length": 3328,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "numeric_accuracy",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "3"
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "dataset": "passage_count_e",
+      "_id": "974b68875af8d477173b49c00c716b7003a35b345f7d5a62",
+      "answers": [
+        "9"
+      ],
+      "length": 3758,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Let's carefully compare all 11 paragraphs to identify duplicates.\n\nWe'll group identical paragraphs:\n\n- Paragraph 1: Keweenaw / WEBROC / Mighty Mouse rockets  \n- Paragraph 2: Vote Loki #3 (long narrative)  \n- Paragraph 3: Identical to Paragraph 2 — let’s verify word-for-word.\n\nCompare Paragraph 2 and Paragraph 3:\n\n✅ Every sentence, punctuation, spacing, and even the typo “ticked” (instead of “ticket”) is identical.  \n→ So Paragraph 2 = Paragraph 3\n\n- Paragraph 4: Identical to Paragraph 1 — same content about WEBROC, Keweenaw, Mighty Mouse, etc.  \n→ Paragraph 1 = Paragraph 4\n\n- Paragraph 5: Tibetan calendar explanation  \n- Paragraph 7: Identical to Paragraph 5 — same wording, same structure, same parentheses and diacritics (e.g., “tithi ()”, “()”, “()”, etc.)  \n→ Paragraph 5 = Paragraph 7\n\n- Paragraph 10: Also identical to Paragraph 5 and 7 — same full text.  \n→ Paragraph 5 = Paragraph 7 = Paragraph 10\n\nSo Paragraphs 5, 7, and 10 are duplicates.\n\n- Paragraph 11: Compare with Paragraph 2 and 3 — it is *also* identical. Let's spot-check key phrases:\n\n> “The third issue of Vote Loki opens up with Nisa Contreras driving through Western Maryland…”  \n→ Same start as P2/P3.\n\n> “…purchases a ticked to Latveria…” — yes, same typo.\n\n> “…Loki in disguise, who then steps through a magic portal to see the United Metal Workers of Wisconsin.”  \n→ Same.\n\n> “…But as the plane lands, it is revealed that contrary to what the public thought only hours before, Loki is now even more popular than ever before.”  \n→ Same ending.\n\n✅ Paragraph 11 is identical to Paragraphs 2 and 3.\n\nSo Paragraphs 2, 3, and 11 are identical.\n\n- Paragraph 6: Ceol / Cutha / Cynric / Wroxeter stone — unique; no match elsewhere.\n\n- Paragraph 8: Keith Dudemeister (Scrubs character) — unique.\n\n- Paragraph 9: Colcombe estate / Pole family / Civil War / Prince Maurice — long, detailed, no repetition elsewhere.\n\n- So far, we have:\n\nGroup A (Keweenaw/WEBROC): P1, P4 → 2 copies  \nGroup B (Vote Loki #3): P2, P3, P11 → 3 copies  \nGroup C (Tibetan calendar): P5, P7, P10 → 3 copies  \nRemaining singles:  \nP6 → unique  \nP8 → unique  \nP9 → unique  \n\nThat’s 3 groups + 3 singles = but wait — how many *unique* paragraphs? We count distinct contents, not groups.\n\nSo:\n\n- Keweenaw/WEBROC → 1 unique  \n- Vote Loki #3 → 1 unique  \n- Tibetan calendar → 1 unique  \n- Ceol (P6) → 1  \n- Keith Dudemeister (P8) → 1  \n- Colcombe estate (P9) → 1  \n\nThat’s **6** unique paragraphs.\n\nDouble-check: Are there any other overlaps?\n\n- P6: mentions 1967 Wright and Jackson — not in any other paragraph.  \n- P8: Scrubs character — no overlap.  \n- P9: Very specific historical detail — no duplication.  \n- No paragraph repeats across these categories.\n\nAlso confirm P1 ≠ P2 ≠ P5 ≠ P6 ≠ P8 ≠ P9 — all topically and textually distinct.\n\nSo total unique paragraphs = 6.\n\n✅ Final answer: 6",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "11",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "numeric_accuracy",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "9"
+        ]
+      }
+    }
+  ],
+  "boundary": "Public LongBench smoke slice. This is not a full LongBench leaderboard claim; it is a source-backed answer-key accuracy receipt that can scale to larger slices."
+}

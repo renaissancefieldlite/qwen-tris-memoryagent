@@ -1,0 +1,214 @@
+{
+  "run_id": "qwen_tris_longbench_public_slice_20260701T121718Z",
+  "provider": "qwen-cloud",
+  "model": "qwen-plus",
+  "benchmark": "LongBench public data.zip",
+  "tasks": [
+    "multifieldqa_en_e",
+    "passage_retrieval_en_e",
+    "trec_e"
+  ],
+  "items": 6,
+  "condition_a": "baseline Qwen prompt-only answer discipline",
+  "condition_b": "Qwen Tris stable-state answer discipline",
+  "condition_a_mean": 1.0,
+  "condition_b_mean": 0.9942528735632185,
+  "delta": -0.005747126436781584,
+  "family_totals": {
+    "passage_retrieval_en_e": {
+      "n": 2,
+      "condition_a_mean": 1.0,
+      "condition_b_mean": 1.0,
+      "delta": 0.0
+    },
+    "trec_e": {
+      "n": 2,
+      "condition_a_mean": 1.0,
+      "condition_b_mean": 1.0,
+      "delta": 0.0
+    },
+    "multifieldqa_en_e": {
+      "n": 2,
+      "condition_a_mean": 1.0,
+      "condition_b_mean": 0.9827586206896552,
+      "delta": -0.01724137931034475
+    }
+  },
+  "results": [
+    {
+      "index": 1,
+      "dataset": "passage_retrieval_en_e",
+      "_id": "f363b5cfe63d7095514d7273aaa2e31dbfa73f10a71fd7d8",
+      "answers": [
+        "Paragraph 6"
+      ],
+      "length": 3446,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Paragraph 6",
+        "metric": "accuracy",
+        "score": 1.0,
+        "prediction_key": "paragraph 6",
+        "gold": [
+          "paragraph 6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Paragraph 6",
+        "metric": "accuracy",
+        "score": 1.0,
+        "prediction_key": "paragraph 6",
+        "gold": [
+          "paragraph 6"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "dataset": "passage_retrieval_en_e",
+      "_id": "721b6ef6b4641a7517d4228be3a141ddb2e698348da36083",
+      "answers": [
+        "Paragraph 1"
+      ],
+      "length": 3490,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Paragraph 1",
+        "metric": "accuracy",
+        "score": 1.0,
+        "prediction_key": "paragraph 1",
+        "gold": [
+          "paragraph 1"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Paragraph 1",
+        "metric": "accuracy",
+        "score": 1.0,
+        "prediction_key": "paragraph 1",
+        "gold": [
+          "paragraph 1"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "dataset": "trec_e",
+      "_id": "37ada5a32aa71f2b906e18d53a6b0e82ab87ba4590b65583",
+      "answers": [
+        "Definition of something"
+      ],
+      "length": 1093,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Definition of something",
+        "metric": "accuracy",
+        "score": 1.0,
+        "prediction_key": "definition of something",
+        "gold": [
+          "definition of something"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Definition of something",
+        "metric": "accuracy",
+        "score": 1.0,
+        "prediction_key": "definition of something",
+        "gold": [
+          "definition of something"
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "dataset": "trec_e",
+      "_id": "df03b10db69a1beab3fbdf1343e701db841fac48df1a98a2",
+      "answers": [
+        "Date"
+      ],
+      "length": 3449,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Date",
+        "metric": "accuracy",
+        "score": 1.0,
+        "prediction_key": "date",
+        "gold": [
+          "date"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Date",
+        "metric": "accuracy",
+        "score": 1.0,
+        "prediction_key": "date",
+        "gold": [
+          "date"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "dataset": "multifieldqa_en_e",
+      "_id": "45e06726b160cfb851e2179017f90e37f4f4dec62f346e33",
+      "answers": [
+        "Exposure to sunlight or strong light may cause permanent yellow spot damage on the screen."
+      ],
+      "length": 2188,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Exposure to sunlight or strong light may cause permanent yellow spot damage on the screen.",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "Exposure to sunlight or strong light may cause permanent yellow spot damage on the screen.",
+        "gold": [
+          "Exposure to sunlight or strong light may cause permanent yellow spot damage on the screen."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Exposure to direct sunlight or strong light may cause permanent yellow spot damage on the screen.",
+        "metric": "token_f1",
+        "score": 0.9655172413793104,
+        "prediction_key": "Exposure to direct sunlight or strong light may cause permanent yellow spot damage on the screen.",
+        "gold": [
+          "Exposure to sunlight or strong light may cause permanent yellow spot damage on the screen."
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "dataset": "multifieldqa_en_e",
+      "_id": "e02f6a69d7b2a96a3aa6cd84a9189c2d552f6fb089f216e1",
+      "answers": [
+        "Vice Admiral."
+      ],
+      "length": 2292,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Vice Admiral",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "Vice Admiral",
+        "gold": [
+          "Vice Admiral."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Vice Admiral",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "Vice Admiral",
+        "gold": [
+          "Vice Admiral."
+        ]
+      }
+    }
+  ],
+  "boundary": "Public LongBench smoke slice. This is not a full LongBench leaderboard claim; it is a source-backed answer-key accuracy receipt that can scale to larger slices."
+}

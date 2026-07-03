@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Qwen Tris Recall</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="sigil">QT</div>
+          <div>
+            <h1>Qwen Tris Recall</h1>
+            <p>Memory AI Expert Partner</p>
+          </div>
+        </div>
+        <div class="logo-strip" aria-label="Qwen Tris stack">
+          <span>Qwen</span>
+          <span>Tris</span>
+          <span>SSP</span>
+        </div>
+        <button id="newChat" class="primary-action">New Chat</button>
+        <div class="side-section grow">
+          <div class="section-title">Chats</div>
+          <div id="chatList" class="chat-list"></div>
+        </div>
+        <div class="status-card">
+          <div class="status-row"><span>Qwen local</span><strong id="qwenStatus">checking</strong></div>
+          <div class="status-row"><span>Nemotron</span><strong id="nemotronStatus">checking</strong></div>
+          <div class="status-row"><span>Qwen Cloud</span><strong id="qwenCloudStatus">key gate</strong></div>
+          <div class="status-row"><span>NemoClaw</span><strong id="openClawStatus">not connected</strong></div>
+          <div class="status-row"><span>LangChain RAG</span><strong id="langchainStatus">checking</strong></div>
+          <div class="status-row"><span>Audio lane</span><strong id="audioStatus">checking</strong></div>
+          <div class="status-row"><span>Home Node</span><strong id="homeNodeStatus">offline</strong></div>
+          <div class="status-row"><span>Memory</span><strong id="memoryStatus">SQLite/FTS</strong></div>
+        </div>
+      </aside>
+
+      <main class="chat-pane">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">MemoryAgent Track 1</div>
+            <h2>Qwen Tris Recall</h2>
+          </div>
+          <select id="routeSelect" aria-label="Model route">
+            <option value="auto">Auto real route</option>
+            <option value="qwen">Qwen local</option>
+            <option value="nemotron">Nemotron local</option>
+            <option value="qwen_cloud">Qwen Cloud</option>
+          </select>
+        </header>
+
+        <section id="messages" class="messages" aria-live="polite"></section>
+
+        <form id="composer" class="composer">
+          <textarea id="prompt" rows="2" placeholder="Talk to Qwen Tris. It will recall memory, use RAG, and answer through the selected real model route."></textarea>
+          <div class="composer-tools">
+            <button id="voiceBtn" type="button">Voice</button>
+            <button id="recordBtn" type="button">Record</button>
+            <button id="speakBtn" type="button" data-active="false">Speak</button>
+            <button type="submit">Send</button>
+          </div>
+          <div id="voiceStatus" class="voice-status">Voice idle.</div>
+          <audio id="micPlayback" controls hidden></audio>
+        </form>
+      </main>
+
+      <aside class="memory-panel">
+        <div class="panel-header">
+          <div>
+            <div class="eyebrow">Recall</div>
+            <h3>Memory / RAG</h3>
+          </div>
+        </div>
+        <div id="lastRecall" class="recall-list"></div>
+        <div class="source-box">
+          <label for="fetchUrl">Add source</label>
+          <div class="source-row">
+            <input id="fetchUrl" placeholder="https://..." value="https://github.com/QwenLM/Qwen-Agent">
+            <button id="webFetch" type="button">Fetch</button>
+          </div>
+          <p id="fetchResult"></p>
+        </div>
+      </aside>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1527 @@
+{
+  "run_id": "qwen_tris_longbench_public_slice_20260701T212143Z",
+  "provider": "qwen-cloud",
+  "model": "qwen-plus",
+  "benchmark": "LongBench public data.zip",
+  "tasks": [
+    "passage_count_e"
+  ],
+  "items": 50,
+  "condition_a": "baseline Qwen prompt-only answer discipline",
+  "condition_b": "Qwen Tris stable-state answer discipline",
+  "condition_a_mean": 0.38,
+  "condition_b_mean": 0.38,
+  "delta": 0.0,
+  "family_totals": {
+    "passage_count_e": {
+      "n": 50,
+      "condition_a_mean": 0.38,
+      "condition_b_mean": 0.38,
+      "delta": 0.0
+    }
+  },
+  "skipped_items": [],
+  "results": [
+    {
+      "index": 1,
+      "dataset": "passage_count_e",
+      "_id": "65f2a63e597e3c77ae2ec7a4fb27dfe749c2c85b572957ef",
+      "answers": [
+        "2"
+      ],
+      "length": 3735,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 2,
+      "dataset": "passage_count_e",
+      "_id": "c9f6a11ff94e485480ef3e6fc327c0081d0c6c90740c2a15",
+      "answers": [
+        "3"
+      ],
+      "length": 2792,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 3,
+      "dataset": "passage_count_e",
+      "_id": "c9cb79a1b336b3dd72f967dd07e38bc20e9a5941b2121148",
+      "answers": [
+        "6"
+      ],
+      "length": 2472,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 4,
+      "dataset": "passage_count_e",
+      "_id": "7634a6043dbae284c058945acd97de1732480116c17b09a6",
+      "answers": [
+        "9"
+      ],
+      "length": 2989,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "9"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 5,
+      "dataset": "passage_count_e",
+      "_id": "49b38732bbcae35978fd4c6cfdf9c27b7383109c4b6ad6a9",
+      "answers": [
+        "14"
+      ],
+      "length": 3388,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "9",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "9",
+        "gold": [
+          "14"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "9",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "9",
+        "gold": [
+          "14"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 6,
+      "dataset": "passage_count_e",
+      "_id": "b5632108341c1ca7995b00fe559e6281d6076c327973356f",
+      "answers": [
+        "2"
+      ],
+      "length": 2124,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 7,
+      "dataset": "passage_count_e",
+      "_id": "a46222a353586063b55253f67f37183ce1ee0e0b76ed0a73",
+      "answers": [
+        "2"
+      ],
+      "length": 3102,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 8,
+      "dataset": "passage_count_e",
+      "_id": "55708f724c66bd79f483659193c607f7905dcfd5877fe8ac",
+      "answers": [
+        "3"
+      ],
+      "length": 3592,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 9,
+      "dataset": "passage_count_e",
+      "_id": "985dbc1e6123878a5510288a86c9719b74242b088cab5d60",
+      "answers": [
+        "3"
+      ],
+      "length": 3990,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 10,
+      "dataset": "passage_count_e",
+      "_id": "8b209b21bfc10469d1ed116cd3e10d1b930f23a8d5d11f6a",
+      "answers": [
+        "12"
+      ],
+      "length": 3127,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "12"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "12"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 11,
+      "dataset": "passage_count_e",
+      "_id": "2658274202c512a4327340881d767e0afb70b3dbfe13a12d",
+      "answers": [
+        "10"
+      ],
+      "length": 2594,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "10"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "10"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 12,
+      "dataset": "passage_count_e",
+      "_id": "1f71b6dbebefc18f8a5b188cec6be25cd20dc0cff599b430",
+      "answers": [
+        "8"
+      ],
+      "length": 3592,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "8"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 13,
+      "dataset": "passage_count_e",
+      "_id": "02dfad85bf01af369a8fc0b29e487839de2011faecc2e811",
+      "answers": [
+        "4"
+      ],
+      "length": 3966,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "4",
+        "gold": [
+          "4"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "4",
+        "gold": [
+          "4"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 14,
+      "dataset": "passage_count_e",
+      "_id": "0fec84b109bb1fbbf2490312c18ac288b7bb5256887d59cd",
+      "answers": [
+        "6"
+      ],
+      "length": 3741,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "6",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "6",
+        "gold": [
+          "6"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 15,
+      "dataset": "passage_count_e",
+      "_id": "1b686413964841c81ac3906d53cd4583c834f38b7a417676",
+      "answers": [
+        "7"
+      ],
+      "length": 1906,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 16,
+      "dataset": "passage_count_e",
+      "_id": "4a4f5b1c8cb47aa585ea5335ded68388760a56212e31b943",
+      "answers": [
+        "15"
+      ],
+      "length": 3977,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "8",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "15"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "8",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "15"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 17,
+      "dataset": "passage_count_e",
+      "_id": "3fcf9538bb0130b5249aed121f0abb25d47228991bc99347",
+      "answers": [
+        "7"
+      ],
+      "length": 3188,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "7"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 18,
+      "dataset": "passage_count_e",
+      "_id": "e91fb674b5b0ec9b0f9c37424c00a7fa292f7fe3d24a3735",
+      "answers": [
+        "12"
+      ],
+      "length": 3404,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "12"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "12"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 19,
+      "dataset": "passage_count_e",
+      "_id": "d8c82d9718d94504ad800eba373d15f227831550a6c62391",
+      "answers": [
+        "3"
+      ],
+      "length": 1407,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 20,
+      "dataset": "passage_count_e",
+      "_id": "f1405e58115865757f93e3e1aba86e546d594fb7bc99f26c",
+      "answers": [
+        "5"
+      ],
+      "length": 2383,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "5"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 21,
+      "dataset": "passage_count_e",
+      "_id": "9584a211dbcfaf17a9930234c99741c120dbf19b7e5134d9",
+      "answers": [
+        "6"
+      ],
+      "length": 2953,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "6"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 22,
+      "dataset": "passage_count_e",
+      "_id": "e59eb57e3956b5ac15c830a60f333c4ac99a54c1e5e75b62",
+      "answers": [
+        "11"
+      ],
+      "length": 3276,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "11"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "11"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 23,
+      "dataset": "passage_count_e",
+      "_id": "70de565b3fe6a60eaf2569d9e7894cceebe75549b27a04cf",
+      "answers": [
+        "10"
+      ],
+      "length": 3286,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "10"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "10"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 24,
+      "dataset": "passage_count_e",
+      "_id": "7a8c90c196abc2d5f33e512e7308c47f229a59b8bda36158",
+      "answers": [
+        "8"
+      ],
+      "length": 3845,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "8"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 25,
+      "dataset": "passage_count_e",
+      "_id": "b7dd8ed217e148fa3d3c78e82a83645300bfda7fe86a9140",
+      "answers": [
+        "11"
+      ],
+      "length": 3153,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "11"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "11"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 26,
+      "dataset": "passage_count_e",
+      "_id": "0ec5cac2f838e70ee74e2442bb604526573b3eb9dc482eaf",
+      "answers": [
+        "5"
+      ],
+      "length": 3480,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "5"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 27,
+      "dataset": "passage_count_e",
+      "_id": "c3f4a166fb45e2679b7bc6547fbd129a89a56927b3e58cf6",
+      "answers": [
+        "3"
+      ],
+      "length": 3873,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 28,
+      "dataset": "passage_count_e",
+      "_id": "6e76455fc56cd6f7caac93703e8a2e1d2e56277099188e37",
+      "answers": [
+        "6"
+      ],
+      "length": 3262,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "6",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "6",
+        "gold": [
+          "6"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 29,
+      "dataset": "passage_count_e",
+      "_id": "a856257dbe75aece5a0e1d84429c1b253bc3276cda17a070",
+      "answers": [
+        "8"
+      ],
+      "length": 3644,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "8"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 30,
+      "dataset": "passage_count_e",
+      "_id": "cab713d4812f7c19a4e2fa511895ac02eff30509bb174327",
+      "answers": [
+        "2"
+      ],
+      "length": 2725,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 31,
+      "dataset": "passage_count_e",
+      "_id": "a5069607226aff388bb09acae7ae0804028e8182f3b54fe6",
+      "answers": [
+        "9"
+      ],
+      "length": 3805,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 32,
+      "dataset": "passage_count_e",
+      "_id": "d2fcd75fd9aaf968081ef5184880a2db0e7abc4d5308b37c",
+      "answers": [
+        "9"
+      ],
+      "length": 3637,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 33,
+      "dataset": "passage_count_e",
+      "_id": "916506bee252ce51947e3007c9b4ac7862407ea4428dc065",
+      "answers": [
+        "4"
+      ],
+      "length": 3359,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "4",
+        "gold": [
+          "4"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "4",
+        "gold": [
+          "4"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 34,
+      "dataset": "passage_count_e",
+      "_id": "7c6c68496e0a8cc6d1fef9b164d038bd4f19f26f0e75a43c",
+      "answers": [
+        "11"
+      ],
+      "length": 3031,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "11"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "11"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 35,
+      "dataset": "passage_count_e",
+      "_id": "292511097c2acdea2de38487c8e58c3e907c3a1509eb2671",
+      "answers": [
+        "2"
+      ],
+      "length": 3900,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "2"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 36,
+      "dataset": "passage_count_e",
+      "_id": "c82315b20e4cb32976563f568c88cc44afe97ddc6ade258a",
+      "answers": [
+        "8"
+      ],
+      "length": 3634,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "8"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 37,
+      "dataset": "passage_count_e",
+      "_id": "023784d1d72cb34fc8f776ac2d46c9e280686e6ac39e3c58",
+      "answers": [
+        "2"
+      ],
+      "length": 2731,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 38,
+      "dataset": "passage_count_e",
+      "_id": "4d7c80fd8edacc4b4cd8f30f0a795c6db7046c002bbcfb54",
+      "answers": [
+        "2"
+      ],
+      "length": 3963,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "2"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 39,
+      "dataset": "passage_count_e",
+      "_id": "d50e378285ffe6f2eb6ea81e130fe710246d93408b867267",
+      "answers": [
+        "5"
+      ],
+      "length": 1627,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 40,
+      "dataset": "passage_count_e",
+      "_id": "e3b5e66382adff58b4bb667378610ea770d1c7b513024220",
+      "answers": [
+        "14"
+      ],
+      "length": 3929,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "14"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "14"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 41,
+      "dataset": "passage_count_e",
+      "_id": "76518693dd0e54940760545b20931ac42128b6ed70a0c175",
+      "answers": [
+        "2"
+      ],
+      "length": 3569,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 42,
+      "dataset": "passage_count_e",
+      "_id": "0bcc458ed54b58e54442eda5d83a809d8114f6dd74bc42f2",
+      "answers": [
+        "7"
+      ],
+      "length": 3170,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 43,
+      "dataset": "passage_count_e",
+      "_id": "ceb5722eb84fcc841ea454ae645027a5c080f18662f2dd45",
+      "answers": [
+        "7"
+      ],
+      "length": 3120,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "7"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 44,
+      "dataset": "passage_count_e",
+      "_id": "35fc98f020eced6fe7ea47ca14e7371dd78198c7c868dc49",
+      "answers": [
+        "3"
+      ],
+      "length": 3602,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 45,
+      "dataset": "passage_count_e",
+      "_id": "c0745e289534ab19ddc5ea86feb36a1d4b193fb79fa299db",
+      "answers": [
+        "2"
+      ],
+      "length": 2012,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 46,
+      "dataset": "passage_count_e",
+      "_id": "68fb1a1c33cad3fd3e944ed7b2b46d85c00e3260e4e6a7eb",
+      "answers": [
+        "3"
+      ],
+      "length": 3519,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 47,
+      "dataset": "passage_count_e",
+      "_id": "20dae6354cb2c1073ec330effa3aece90a9a457b73be31dd",
+      "answers": [
+        "9"
+      ],
+      "length": 3459,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "8",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "8",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "9"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 48,
+      "dataset": "passage_count_e",
+      "_id": "bf1b0a93802e558790a7ecacb1c167698cd8b5158104ca69",
+      "answers": [
+        "5"
+      ],
+      "length": 3224,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "5"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 49,
+      "dataset": "passage_count_e",
+      "_id": "08c1a056f3f9a89b40b851c180e8658a19f1e14b2edd9e95",
+      "answers": [
+        "13"
+      ],
+      "length": 3916,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "9",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "9",
+        "gold": [
+          "13"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "9",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "9",
+        "gold": [
+          "13"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    },
+    {
+      "index": 50,
+      "dataset": "passage_count_e",
+      "_id": "5699783485e204c5168993c11f0698f1f13936b2418fb3d3",
+      "answers": [
+        "7"
+      ],
+      "length": 3541,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_selected_baseline_passthrough",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "7"
+        ],
+        "passthrough_from_condition_a": true
+      }
+    }
+  ],
+  "boundary": "Public LongBench smoke slice. This is not a full LongBench leaderboard claim; it is a source-backed answer-key accuracy receipt that can scale to larger slices."
+}

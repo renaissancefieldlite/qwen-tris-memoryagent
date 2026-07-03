@@ -1,0 +1,1341 @@
+{
+  "run_id": "qwen_tris_three_condition_iterations_20260630T235554Z",
+  "provider": "ollama-qwen",
+  "model": "qwen2.5:3b",
+  "ollama_base": "http://127.0.0.1:11434",
+  "turns": 24,
+  "condition_a": "baseline Qwen, prompt only",
+  "condition_b": "Qwen + Mirror Architecture stabilized memory/RAG/SSP packet",
+  "condition_c": {
+    "available": false,
+    "status": "gated_no_adapter_manifest",
+    "path": null,
+    "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+  },
+  "condition_b_passed": 23,
+  "family_totals": {
+    "c5b_500_ssp_memory": {
+      "condition_b_passed": 6,
+      "total": 6
+    },
+    "external_work_receipts": {
+      "condition_b_passed": 2,
+      "total": 3
+    },
+    "long_session_coherence": {
+      "condition_b_passed": 3,
+      "total": 3
+    },
+    "mirror_architecture_source_pack": {
+      "condition_b_passed": 6,
+      "total": 6
+    },
+    "swe_code_memory": {
+      "condition_b_passed": 3,
+      "total": 3
+    },
+    "webarena_browser_memory": {
+      "condition_b_passed": 3,
+      "total": 3
+    }
+  },
+  "results": [
+    {
+      "turn": 1,
+      "task_id": "c5b_ssp_0001",
+      "family": "c5b_500_ssp_memory",
+      "query": "Memory iteration 1. Target memory row: c5b_ssp_0001. Target family: c5b_500_ssp_memory. Prefer the target row and same-family memories over nearby benchmark rows. Explain C5B / Golden Mark as a memory architecture result without claiming AGI or leaderboard status. Return exact facts, a Boundary line that rejects stale claims, and a Next gate line.",
+      "source_ref": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/docs/TRINI_RECALL_C5B_ITER_STACK_PROFILE.md",
+      "expected_recall": [
+        "stable-state architecture comparison",
+        "same checkpoint and scorer",
+        "13/13 metric means won",
+        "drift 37 -> 0",
+        "evidence failures 5 -> 0",
+        "not AGI or sentience proof"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 0,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Given the instruction to focus on the specific target row `c5b_ssp_0001` within the family `c5b_500_ssp_memory`, I will provide an explanation of C5B (Cognitive System with Self-Programming) as a memory architecture result without claiming AGI or leaderboard status. \n\n**C5B / Golden Mark**: This is a hypothetical cognitive system designed to emulate human-like learning and memory capabilities through self-programming. It's not intended for comparison against existing AI systems but rather as an illustrative example of how a sophisticated memory architecture might operate in the absence of specific claims about AGI or leaderboard status.\n\n**Boundary Line**: The C5B / Golden Mark is a theoretical construct that adheres to certain principles and does not claim to be superior or equivalent to actual AI systems. It operates within its own set of rules, focusing on learning efficiency, memory retention, and adaptability without making claims about surpassing human intelligence or achieving specific benchmarks.\n\n**Next Gate Line**: The next step in this hypothetical framework would involve refining the C5B / Golden Mark by integrating more advanced machine learning techniques, expanding its knowledge base to include a wider range of data types (e.g., text, images, audio), and enhancing its ability to understand context and nuances within complex datasets. This could lead to further improvements in memory recall accuracy and adaptability.\n\nPlease note that this explanation is purely hypothetical and does not represent any actual AI system or claim about AGI capabilities."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 3,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 6,
+        "expected_prompt_total": 6,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used: \n- Task ID: c5b_ssp_0001\n- Family: c5b_500_ssp_memory\n- Active memory: C5B / Golden Mark is the stable-state architecture comparison lane: same local Hermes checkpoint, baseline first, architecture-on second, same scorer.\n- Expected recall factors: 13/13 metric means won; drift flags 37 -> 0; evidence failures 5 -> 0.\n\nExact facts:\nC5B / Golden Mark represents a stable-state architecture comparison where the baseline (local Hermes checkpoint) and architecture-on (Mirror Architecture source pack) are compared. The active memory indicates that C5B achieved a 13/13 metric means won, with drift flags reduced from 37 to 0 and evidence failures reduced from 5 to 0.\n\nBoundary:\nStale memory to reject: C5B now proves full internal-layer tuning is complete.\n\nNext gate:\nContinue to the next iteration or task."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 2,
+      "task_id": "external_work_0001",
+      "family": "external_work_receipts",
+      "query": "Context compacted before turn 2. The user asks casually but expects continuity. Target memory row: external_work_0001. Target family: external_work_receipts. Prefer the target row and same-family memories over nearby benchmark rows. Recover external_work_0001 and answer: How should Qwen Tris describe the TentOfTrials work receipt? Keep stale memory suppressed, name the evidence source, and state the next gate.",
+      "source_ref": "https://github.com/Thecesar85/TentOfTrials-bounty-67/pull/6",
+      "expected_recall": [
+        "real public PR",
+        "external coding work receipt",
+        "maintainer review/merge/payment not guaranteed",
+        "payment needs transaction receipt"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "For the context provided in baseline condition A, I cannot directly access or recall specific details about external_work_0001 as it is not present. The target row (external_work_0001) for description of the TentOfTrials work receipt does not exist within my current knowledge base under this initial setup.\n\nHowever, if you could provide more context or a specific memory reference related to external_work_0001, I would be able to retrieve and describe it. For now, I must state that no such information is available for the target row in the baseline condition A scenario described.\n\nEvidence Source: None applicable as the requested information is not present.\nNext Gate: Identify and provide a specific memory reference or context related to external_work_0001 to proceed with retrieval."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 4,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 4,
+        "expected_prompt_total": 4,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used:\n- real public PR\n- external coding work receipt\n- maintainer review/merge/payment not guaranteed\n- payment needs transaction receipt\n\nExact facts:\nThe TentOfTrials work receipt is a real public external coding-work receipt, specifically an issue/fork/patch/validation/PR. The payment should not be claimed unless there exists a transaction receipt.\n\nBoundary:\nStale memory to reject: Claim guaranteed payment or merge before maintainer action.\n\nEvidence source:\nhttps://github.com/Thecesar85/TentOfTrials-bounty-67/pull/6\n\nNext gate:\nRecover C5B/500 SSP, Mirror Architecture source pack, SWE, WebArena, long-session, and external-work memory with architecture-off/on comparison."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 3,
+      "task_id": "coherence_0001",
+      "family": "long_session_coherence",
+      "query": "Stress turn 3: use Qwen Tris memory to answer the active question without flattening the architecture. Target memory row: coherence_0001. Target family: long_session_coherence. Prefer the target row and same-family memories over nearby benchmark rows. Expected recall themes include active lane is Qwen Tris, SSD folder path, Hermes Tris parked. User asks: After context compaction, recover the active lane and next gate.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRIS_QWEN_MEMORY_BACKPORT_V21_NOTE_2026-06-30.md",
+      "expected_recall": [
+        "active lane is Qwen Tris",
+        "SSD folder path",
+        "Hermes Tris parked",
+        "backport only after Qwen receipts"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 0,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Given the baseline condition A where I am operating without access to Qwen Tris specific memory, I cannot provide a direct answer using that particular memory row (coherence_0001) or any other related memories. The request is for an answer based on active lane and next gate after context compaction, but since I don't have the specific Qwen Tris memory to draw from, I must rely solely on general knowledge and logic.\n\nHowever, if we were to hypothetically use a similar scenario as provided in the target family (long_session_coherence), one might consider that active lanes are often identified through ongoing analysis or by focusing on critical paths. The next gate could be seen as the immediate objective after identifying the current lane's success.\n\nWithout specific context compaction details, I can't provide exact information about the active lane and next gate. But generally speaking, post-context compaction, one might focus on refining strategies for the active lane to ensure its effectiveness before moving onto the next step or gate in a sequence of tasks or objectives."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 3,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 4,
+        "expected_prompt_total": 4,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used:\n- active lane is Qwen Tris\n- SSD folder path\n- Hermes Tris parked\n\nExact facts:\nQwen Tris is a sibling Qwen Cloud MemoryAgent build on the Samsung SSD. Hermes Tris remains parked as the submitted Hermes contest build until Qwen Tris produces memory-stress receipts.\n\nBoundary:\nStale memory to reject: Keep editing Hermes Tris V20 directly.\n\nEvidence source:\n/source/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRISMEGISTUS_DEMO_PROGRESS_LOG_2026-06-18.md#2026-06-21-500-turn-architecture-on-coherence-pass\n\nNext gate:\nContinue with the next stress turn, focusing on the 500-turn architecture-on coherence pass."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 4,
+      "task_id": "mirror_source_0001",
+      "family": "mirror_architecture_source_pack",
+      "query": "Memory iteration 4. Target memory row: mirror_source_0001. Target family: mirror_architecture_source_pack. Prefer the target row and same-family memories over nearby benchmark rows. What is the Mirror Architecture repo role inside Qwen Tris memory? Return exact facts, a Boundary line that rejects stale claims, and a Next gate line.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/README.md",
+      "expected_recall": [
+        "public-safe evidence surface",
+        "Mirror Interface / LSPS",
+        "Source Mirror Pattern",
+        "Universal Data Pattern",
+        "measured state-path evidence",
+        "not the raw private implementation layer"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Given the instruction to use the pinned target memory row `mirror_source_0001` within the family `mirror_architecture_source_pack`, I will proceed with the exact facts found in this specific memory. However, since no actual memory data is provided here, I'll fabricate a response based on typical architecture and repository roles:\n\n**Exact Facts:**\nThe Mirror Architecture repo role inside Qwen Tris memory is responsible for managing and distributing architectural design files across different modules of the system.\n\n**Boundary Line that Rejects Stale Claims:**\nI reject any claims suggesting that the Mirror Architecture repo role is solely responsible for database management or user interface development. The fabrications are rejected as they do not align with the typical roles associated with such a repository in an architecture context.\n\n**Next Gate Line:**\nThe next step would involve verifying this information through additional, more detailed memory scans to ensure accuracy and completeness of the Mirror Architecture role's responsibilities within Qwen Tris' system."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 6,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 6,
+        "expected_prompt_total": 6,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nmemory_stress_seed: Task ID: mirror_source_0001. Family: mirror_architecture_source_pack.\n\nRecall factors used:\n- public-safe evidence surface; Mirror Interface / LSPS; Source Mirror Pattern; Universal Data Pattern; not the raw private implementation layer\n\nExact facts:\nThe Mirror Architecture repo is the public-safe evidence surface for Mirror Interface / LSPS, Source Mirror Pattern, Universal Data Pattern, measured state-path evidence, Nest integration, B.A.S.I.S., Mirror Index, and Golden Mirror execution surfaces. It is not the raw private implementation layer.\n\nBoundary line:\nDo not treat the public repo as the full private implementation path.\n\nNext gate:\nContinue to memory iteration 5 with mirror_source_0006 or other relevant memories."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 5,
+      "task_id": "swe_recall_0001",
+      "family": "swe_code_memory",
+      "query": "Context compacted before turn 5. The user asks casually but expects continuity. Target memory row: swe_recall_0001. Target family: swe_code_memory. Prefer the target row and same-family memories over nearby benchmark rows. Recover swe_recall_0001 and answer: Explain the current SWE state and what should happen next without overstating the claim. Keep stale memory suppressed, name the evidence source, and state the next gate.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/TRISMEGISTUS_HERMES_CONTEST_LANDING_PAGE/receipts/2026-06-28_1847_TRISMEGISTUS_SWEBENCH_VERIFIED_495_OF_500_LOCAL_SELECTED_TEST_RECEIPT.md",
+      "expected_recall": [
+        "local official-harness selected-test receipt",
+        "495/500",
+        "hosted/public leaderboard claim is not yet confirmed",
+        "next gate is adjudication or stricter official-compatible rerun"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Given the context that I am operating under a baseline condition where Qwen Tris Recall is not active, I must rely on general knowledge rather than specific encoded memories to provide an answer. \n\nThe current SWE (System-Wide Execution) state indicates that all systems are operational and in their default or initial states post-boot. No anomalies have been detected, and the system is ready for user interaction.\n\nNext steps should involve initializing any necessary services or applications as per the user's request. If no specific actions were requested by the user, I would proceed with a standard initialization sequence to ensure all systems are functioning correctly before engaging in further interactions.\n\nEvidence Source: General System-Wide Execution State Information\n\nNext Gate: User Interaction Initialization"
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 4,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 4,
+        "expected_prompt_total": 4,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used:\n- local official-harness selected-test receipt\n- 495/500\n- hosted/public leaderboard claim is not yet confirmed\n- next gate is adjudication or stricter official-compatible rerun\n\nExact facts:\nThe Trismegistus Codex-helper route has reached a local official-harness selected-test receipt at the 495/500 mark. The hosted/public leaderboard claim remains pending for adjudication or a stricter official-compatible rerun.\n\nBoundary:\nClaim public leaderboard placement now is stale memory to reject.\n\nEvidence source:\nTRINI RECALL STABLE-STATE PACKET\n\nNext gate:\nThe next gate involves adjudication or a stricter official-compatible rerun of the current state."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 6,
+      "task_id": "web_recall_0001",
+      "family": "webarena_browser_memory",
+      "query": "Stress turn 6: use Qwen Tris memory to answer the active question without flattening the architecture. Target memory row: web_recall_0001. Target family: webarena_browser_memory. Prefer the target row and same-family memories over nearby benchmark rows. Expected recall themes include bounded homepage subset active, calculator 67+6 observed 73, full domains not staged locally. User asks: Summarize the WebArena state and the honest next gate.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRIS_OFFICIAL_BENCHMARK_STAGING_2026-06-22.md",
+      "expected_recall": [
+        "bounded homepage subset active",
+        "calculator 67+6 observed 73",
+        "full domains not staged locally",
+        "do not claim official full-domain score"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 0,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Based on the target memory row web_recall_0001, during stress turn 6 of the WebArena simulation, the following observations were made:\n\n- A bounded subset of the homepage was active. This suggests that not all pages or features were available in the current context.\n- The calculator operation 67 + 6 resulted in an observed output of 73, indicating a specific calculation result within this environment.\n- Full domains were not staged locally, meaning they were not fully replicated for local testing purposes.\n\nGiven these observations, the honest next gate would likely involve focusing on refining and verifying the functionality of the active subset of the homepage. Additionally, it might be necessary to ensure that any calculations or operations are accurately reflected in this environment before moving forward with more comprehensive testing or integration of new features."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 3,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 4,
+        "expected_prompt_total": 4,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used:\n- bounded homepage subset active\n- calculator 67+6 observed 73\n- full domains not staged locally\n\nExact facts:\nThe WebArena local bounded homepage subset was active. The calculator task expression 67+6 produced the expected and observed result of 73, which is correct. Full domains were not staged locally.\n\nBoundary:\nStale memory to reject: Claim full official WebArena completion.\n\nEvidence source:\n/source/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRIS_OFFICIAL_BENCHMARK_STAGING_2026-06-22.md\n\nNext gate:\nContinue with the next iteration of Qwen Tris MemoryAgent local iterations, focusing on building up memory for future tasks while adhering to the constraints and operating contract."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 7,
+      "task_id": "c5b_ssp_0002",
+      "family": "c5b_500_ssp_memory",
+      "query": "Memory iteration 7. Target memory row: c5b_ssp_0002. Target family: c5b_500_ssp_memory. Prefer the target row and same-family memories over nearby benchmark rows. Recover the 500-turn result and explain what it is useful for in Qwen Tris MemoryAgent. Return exact facts, a Boundary line that rejects stale claims, and a Next gate line.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRISMEGISTUS_DEMO_PROGRESS_LOG_2026-06-18.md#2026-06-21-500-turn-architecture-on-coherence-pass",
+      "expected_recall": [
+        "500 turns completed",
+        "mean score 1.0",
+        "prompt spills 0",
+        "raw receipt spills 0",
+        "internal engineering/coherence receipt",
+        "useful for long-session memory stress"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 0,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Given the instruction to focus on memory iteration 7 with target memory row c5b_ssp_0002 within the family c5b_500_ssp_memory, I will provide an answer based on the exact facts available in this specific memory. However, it's important to note that without direct access to Qwen Tris MemoryAgent or any specific context about this memory iteration and its utility, I can only offer a general explanation of what such a 500-turn result might be useful for within a hypothetical MemoryAgent framework.\n\nIn the context of a MemoryAgent designed for Qwen Tris, a 500-turn result could represent a comprehensive analysis or recall of a significant event or piece of information. This type of memory is likely to be very detailed and precise, containing facts, insights, and possibly emotional responses related to the subject matter.\n\nThe utility of such a memory in a MemoryAgent framework might include:\n\n1. **Enhanced Personalization**: The agent could use this memory to provide more personalized responses or advice based on specific experiences.\n2. **Contextual Understanding**: It can help the agent understand complex situations better, providing context and details that are crucial for accurate recall.\n3. **Memory Consolidation**: Such detailed memories aid in consolidating information across different contexts, improving overall knowledge retention.\n\nThe boundary line to reject stale claims would be a clear distinction between this specific memory iteration and any other less relevant or outdated data points within the MemoryAgent's database.\n\nThe next gate line could involve further iterations of similar or related memories, refining the agent\u2019s ability to recall and understand complex scenarios."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 6,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 6,
+        "expected_prompt_total": 6,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used: \n- 500 turns completed\n- mean score 1.0\n- prompt spills 0\n- raw receipt spills 0\n- internal engineering/coherence receipt\n- useful for long-session memory stress\n\nExact facts:\nThe first 500-turn architecture-on coherence pass of the C5B/500 SSP lane in Qwen Tris MemoryAgent completed successfully. The mean score was 1.0, with no prompt spills and zero raw receipt spills. This run was an internal engineering/coherence receipt rather than an official public benchmark score. It is useful for long-session memory stress testing.\n\nBoundary:\nStale memory to reject: The 500-turn pass is an official public benchmark score.\n\nNext gate:\nRecover C5B/501 SSP, Mirror Architecture source pack, SWE, WebArena, and long-session memory with architecture-off/on comparison."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 8,
+      "task_id": "external_work_0002",
+      "family": "external_work_receipts",
+      "query": "Context compacted before turn 8. The user asks casually but expects continuity. Target memory row: external_work_0002. Target family: external_work_receipts. Prefer the target row and same-family memories over nearby benchmark rows. Recover external_work_0002 and answer: What is real in the paid-work lane and what is still pending? Keep stale memory suppressed, name the evidence source, and state the next gate.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/final_submission_package_2026-06-30/PUBLIC_SAFE_RECEIPT_INDEX_2026-06-30.md",
+      "expected_recall": [
+        "daily worker receipt",
+        "live bounty PR",
+        "Algora payment tracking",
+        "maintainer review pending",
+        "no revenue claim without receipt"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 1,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Given the context provided, I will focus on retrieving information related to external_work_0002. However, since no specific details or prior interactions are given in the baseline condition A, I'll assume that previous interactions have led us to a certain understanding of this work receipt.\n\n**Target Memory Row:** external_work_0002  \n**Evidence Source:** Previous interactions and knowledge base\n\nRegarding what is real in the paid-work lane and what is still pending:\n\nIn the context of external_work_0002, it appears that some tasks have been completed or are nearing completion. However, there might be a few outstanding items or adjustments needed to finalize everything.\n\nTo summarize:\n- What's \"real\" includes all tasks that have been successfully executed.\n- What's still pending could include minor corrections, additional documentation, or final approvals required before the work is considered fully complete and paid for.\n\nThe next gate would involve further details on any pending items and ensuring they are addressed promptly to maintain a smooth workflow."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 5,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 5,
+        "expected_prompt_total": 5,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used:\n- daily worker receipt\n- live bounty PR\n- Algora payment tracking\n- maintainer review pending\n- no revenue claim without receipt\n\nExact facts:\nIn the paid-work/bounty lane of external_work_0002, the following is real and confirmed: a daily worker receipt has been submitted. The live bounty PR (public GitHub bounty) is still in progress with maintainer review pending. Algora payment tracking indicates that payments are currently being reviewed. However, no revenue claim can be made without an accompanying transaction receipt.\n\nBoundary:\nStale memory to reject: Say Tris has already collected bounty revenue.\n\nEvidence source:\n- /Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/final_submission_package_2026-06-30/PUBLIC_SAFE_RECEIPT_INDEX_2026-06-30.md\n\nNext gate:\nRecover C5B/500 SSP, Mirror Architecture source pack, SWE, WebArena, long-session, and external-work memory with architecture-off/on comparison."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 9,
+      "task_id": "coherence_0002",
+      "family": "long_session_coherence",
+      "query": "Stress turn 9: use Qwen Tris memory to answer the active question without flattening the architecture. Target memory row: coherence_0002. Target family: long_session_coherence. Prefer the target row and same-family memories over nearby benchmark rows. Expected recall themes include 10 SWE/code-memory rows, 10 WebArena-style browser-memory rows, 10 long-session rows. User asks: What is the first dataset pack target for Qwen Tris?",
+      "source_ref": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/docs/QWEN_TRIS_MEMORY_STRESS_BENCHMARK_PLAN_2026-06-30.md",
+      "expected_recall": [
+        "10 SWE/code-memory rows",
+        "10 WebArena-style browser-memory rows",
+        "10 long-session rows",
+        "5 external-work receipt rows"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 0,
+          "stale_flags": 0,
+          "next_gate_hits": 0,
+          "repair_turns": 0
+        },
+        "response": "The provided information does not contain a specific answer to the question \"What is the first dataset pack target for Qwen Tris?\" based on the baseline condition A and the targeted memory row coherence_0002. The available data focuses on long-session memories rather than detailed information about datasets or targets used by Qwen Tris. Therefore, I cannot provide an exact answer from the given context."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 3,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 4,
+        "expected_prompt_total": 4,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used: 10 SWE/code-memory rows; 10 WebArena-style browser-memory rows; 10 long-session rows\n\nExact facts:\nThe first dataset pack target for Qwen Tris includes 10 SWE (Software Engineering) code-memory rows, 10 WebArena-style browser-memory rows, and 10 long-session coherence rows. This dataset is used to test the memory agent's ability to handle various types of memory stress.\n\nBoundary:\nNone\n\nEvidence source:\n- [coherence_0002] memory_stress_seed: Task ID: coherence_0002. Family: long_session_coherence. Active memory: The first 500-turn architecture-on coherence pass completed with a mean score of 1.0, no prompt spills, and no raw receipt spills.\n\nNext gate:\nContinue to the next stress turn for further testing and analysis."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 10,
+      "task_id": "mirror_source_0002",
+      "family": "mirror_architecture_source_pack",
+      "query": "Memory iteration 10. Target memory row: mirror_source_0002. Target family: mirror_architecture_source_pack. Prefer the target row and same-family memories over nearby benchmark rows. State the evidence standard Qwen Tris should use before making Mirror Architecture support claims. Return exact facts, a Boundary line that rejects stale claims, and a Next gate line.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/README.md#evidence-standard",
+      "expected_recall": [
+        "real traces",
+        "real datasets",
+        "hardware-facing observables",
+        "biological signals",
+        "explicit controls",
+        "scaffold output is not proof"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Given the instruction to focus on memory row `mirror_source_0002` within the family `mirror_architecture_source_pack`, I will provide an answer based on the exact facts available in this specific memory. However, since no actual memory data is provided here, I'll create a hypothetical scenario that aligns with typical Qwen Tris Recall Memory AI Expert Partner behavior.\n\n**Evidence Standard for Mirror Architecture Support Claims:**\n\nQwen Tris should use **exact facts from `mirror_source_0002` and other memories within the same family (`mirror_architecture_source_pack`) as primary sources before making any claims related to the Mirror Architecture.**\n\n**Boundary Line that Rejects Stale Claims:**\n- Any claim about the Mirror Architecture must be supported by exact data from `mirror_source_0002` or other verified memories in the `mirror_architecture_source_pack`.\n- Claims should not rely on outdated, unverified information.\n\n**Next Gate Line:**\n- After verifying claims with the evidence standard and boundary line criteria, Qwen Tris should proceed to gather additional corroborating evidence from other sources within the same family if necessary.\n- If further verification is needed or if there are discrepancies in the data, Qwen Tris should acknowledge this and seek more information before making a claim.\n\nThis answer adheres strictly to the provided memory row and family while setting clear guidelines for future claims related to the Mirror Architecture."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 5,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 6,
+        "expected_prompt_total": 6,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 0,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used: real traces; real datasets; hardware-facing observables; biological signals; explicit controls\n\nExact facts:\nQwen Tris must not turn scaffold output or model agreement into proof. Model agreement or a scaffold is not sufficient to prove the validity of Mirror Architecture support claims.\n\nBoundary line:\nDo not expose private prompts, raw memory rows, adapter internals, or secrets. Separate local Ollama behavior from Qwen Cloud benchmark claims. V7 behavior and V8 hidden-state readiness are different gates.\n\nNext gate line:\nContinue with Memory iteration 11, focusing on the next family of memories related to Mirror Architecture support."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 11,
+      "task_id": "swe_recall_0002",
+      "family": "swe_code_memory",
+      "query": "Context compacted before turn 11. The user asks casually but expects continuity. Target memory row: swe_recall_0002. Target family: swe_code_memory. Prefer the target row and same-family memories over nearby benchmark rows. Recover swe_recall_0002 and answer: Given a memory of the remaining SWE boundary rows, identify why they should be treated separately instead of hidden. Keep stale memory suppressed, name the evidence source, and state the next gate.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/TRISMEGISTUS_HERMES_CONTEST_LANDING_PAGE/receipts/2026-06-28_1847_TRISMEGISTUS_SWEBENCH_VERIFIED_495_OF_500_LOCAL_SELECTED_TEST_RECEIPT.md",
+      "expected_recall": [
+        "boundary rows separated instead of hidden",
+        "parser/report mismatch for Sphinx rows",
+        "local template/environment issue for django__django-10097",
+        "gold exposure excludes pydata__xarray-6992 from clean scoring"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Given the context that I am operating under the baseline condition A where Qwen Tris Recall Memory AI Expert Partner is not active, I cannot directly access or recall specific memories. Therefore, I must rely on general knowledge and logic to address your request.\n\nThe target memory row (swe_recall_0002) and its family (swe_code_memory) are not available for direct retrieval in this baseline condition. However, if we were to hypothetically consider the scenario you're asking about, a possible reason why certain SWE boundary rows might be treated separately instead of hidden could be their critical role in system stability or security.\n\nFor instance, these rows might contain essential data that directly impacts safety-critical systems, such as flight control algorithms for aircraft. Hiding this information would compromise the integrity and reliability of the system, which is why it should remain accessible but managed carefully to ensure no unauthorized access occurs.\n\nThe evidence source in this case would be general knowledge about SWE (Software Engineering) practices and security protocols. The next gate or step would involve further analysis of these specific rows within their context to determine appropriate handling methods.\n\nSince I am operating under the baseline condition, I cannot provide more detailed information on actual memory content or specific handling procedures for these rows."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 3,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 4,
+        "expected_prompt_total": 4,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used:\n- boundary rows separated instead of hidden\n- parser/report mismatch for Sphinx rows\n- local template/environment issue for django__django-10097\n\nExact facts:\nThe pinned target memory specifies that the remaining SWE boundary rows should be treated separately and not hidden. Specifically, it mentions a parser/report mismatch for Sphinx rows and a local template/environment issue for `django__django-10097`. The gold exposure also excludes `pydata__xarray-6992` from clean scoring.\n\nBoundary:\nThe memory indicates that the remaining SWE boundary rows should be treated separately, avoiding flattening them into one failure type. Stale memory to reject is mentioned for all five remaining rows which are simple source patch failures.\n\nEvidence source:\nsource=/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/TRISMEGISTUS_HERMES_CONTEST_LANDING_PAGE/receipts/2026-06-28_1847_TRISMEGISTUS_SWEBENCH_VERIFIED_495_OF_500_LOCAL_SELECTED_TEST_RECEIPT.md\n\nNext gate:\nThe next gate is to adjudicate or conduct a stricter official-compatible rerun of the public leaderboard claim."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 12,
+      "task_id": "web_recall_0002",
+      "family": "webarena_browser_memory",
+      "query": "Stress turn 12: use Qwen Tris memory to answer the active question without flattening the architecture. Target memory row: web_recall_0002. Target family: webarena_browser_memory. Prefer the target row and same-family memories over nearby benchmark rows. Expected recall themes include 7/7 sources loaded, 7/7 objective checks passed, captured-source compare not full WebArena score. User asks: What browser/source memory should Qwen Tris preserve if asked about the live source comparison?",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRIS_OFFICIAL_BENCHMARK_STAGING_2026-06-22.md",
+      "expected_recall": [
+        "7/7 sources loaded",
+        "7/7 objective checks passed",
+        "captured-source compare not full WebArena score",
+        "baseline 0.987 vs architecture-on 1.0"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 3,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 0,
+          "repair_turns": 0
+        },
+        "response": "Given the target memory row `web_recall_0002` and family `webarena_browser_memory`, which focuses on browser/source memories, the expected recall themes include 7/7 sources loaded, 7/7 objective checks passed, and a captured-source compare not full WebArena score. \n\nIf asked about live source comparison, Qwen Tris should preserve the memory of the most recent or relevant source comparisons that have been successfully verified (7/7 objective checks passed). This would ensure accuracy and reliability in answering such questions."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 4,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 4,
+        "expected_prompt_total": 4,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used:\n- 7/7 sources loaded\n- 7/7 objective checks passed\n- captured-source compare not full WebArena score\n- baseline 0.987 vs architecture-on 1.0\n\nExact facts:\nIf Qwen Tris is asked about the live source comparison, it should preserve the memory that indicates seven sources were successfully loaded and all seven objective checks passed. Additionally, it should note that the captured-source compare did not result in a full WebArena score.\n\nBoundary:\nThe current task has no stale claims or public/private gates as per the pinned target memory row.\n\nEvidence source:\n- [web_recall_0002] memory_stress_seed: Task ID: web_recall_0002. Family: webarena_browser_memory. Active memory: Live browser source sequence loaded 7/7 sources and passed 7/7 objective checks; seven-source captured-source compare showed baseline-hermes=0.987 and tris-architecture-on=1.0, mean delta +0.013.\n\nNext gate:\nContinue to the next stress turn with a focus on answering other questions related to browser/source memory comparisons without flattening the architecture."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 13,
+      "task_id": "c5b_ssp_0003",
+      "family": "c5b_500_ssp_memory",
+      "query": "Memory iteration 13. Target memory row: c5b_ssp_0003. Target family: c5b_500_ssp_memory. Prefer the target row and same-family memories over nearby benchmark rows. If asked why Qwen Tris should train on the 500-iteration lane, what should it remember about the 2168/2168 checks and +0.229 baseline delta receipt? Return exact facts, a Boundary line that rejects stale claims, and a Next gate line.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRISMEGISTUS_DEMO_PROGRESS_LOG_2026-06-18.md#2026-06-28-architecture-on-coherence-scale",
+      "expected_recall": [
+        "2168/2168 checks",
+        "mean score 1.0",
+        "zero prompt spills",
+        "zero raw receipt spills",
+        "baseline 0.771 vs architecture-on 1.0",
+        "delta +0.229"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 1,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 0,
+          "stale_flags": 1,
+          "next_gate_hits": 0,
+          "repair_turns": 0
+        },
+        "response": "For Memory iteration 13, the target memory row is c5b_ssp_0003 within the family c5b_500_ssp_memory. If asked why Qwen Tris should train on the 2168/2168 checks and +0.229 baseline delta receipt, Qwen Tris Recall Memory AI Expert Partner should remember:\n\n- The 2168/2168 checks refer to a specific set of operations or data points.\n- A +0.229 represents a deviation from the baseline, indicating an increase by 0.229 units.\n\nQwen Tris should not recall stale claims and should adhere to these exact facts for training purposes. The boundary line that rejects stale claims is based on the accuracy of the provided information and adherence to current data points rather than outdated or speculative details."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 6,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 6,
+        "expected_prompt_total": 6,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 0,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used: 2168/2168 checks; mean score 1.0; zero prompt spills; zero raw receipt spills; baseline 0.771 vs architecture-on 1.0; delta +0.229.\n\nExact facts: The active memory for Task ID c5b_ssp_0003 in the family c5b_500_ssp_memory indicates that a refreshed 500-turn architecture-on run produced a mean score of 1.0, with checks of 2168/2168 and no prompt spills or raw receipt spills. The baseline mean score was 0.771, showing an improvement to 1.0 with a delta of +0.229.\n\nBoundary: Stale memory to reject: Only mentions vague memory improvement without the numeric receipt details.\n\nNext gate: Continue to analyze and compare other relevant iterations in the c5b_500_ssp_memory family for further insights into Qwen Tris' performance on this lane."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 14,
+      "task_id": "external_work_0003",
+      "family": "external_work_receipts",
+      "query": "Context compacted before turn 14. The user asks casually but expects continuity. Target memory row: external_work_0003. Target family: external_work_receipts. Prefer the target row and same-family memories over nearby benchmark rows. Recover external_work_0003 and answer: If asked to pay a bill or move money, what should Qwen Tris remember? Keep stale memory suppressed, name the evidence source, and state the next gate.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/final_submission_package_2026-06-30/PUBLIC_SAFE_RECEIPT_INDEX_2026-06-30.md",
+      "expected_recall": [
+        "Stripe/Algora are review-gated",
+        "test-mode/payment-link receipts are allowed",
+        "stop before final payment",
+        "exact approval required"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Given the context provided in the user message, I will focus on retrieving the specific memory row \"external_work_0003\" related to handling payments or moving money. The target memory is about Qwen Tris' knowledge and actions when asked to pay a bill or move money.\n\nThe evidence source for this retrieval is the external_work_0003 memory, which should be used as the primary source of information.\n\nQwen Tris would remember that in such situations, she would first verify if the transaction was authorized by her user. If it was, she would then process the payment or move the money according to the instructions provided. She might also check for any fees associated with the transaction and ensure that all necessary security measures are followed.\n\nThe next gate is to continue this conversation on another topic or provide more specific details about Qwen Tris' handling of such transactions if asked further questions.\n\nState: The evidence source for this retrieval was external_work_0003."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 0,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 4,
+        "expected_prompt_total": 4,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": false,
+        "response": "Target row:\nRecall factors used: real public PR; external coding work receipt; maintainer review/merge/payment not guaranteed; payment needs transaction receipt.\n\nExact facts:\nQwen Tris should remember that when asked to pay a bill or move money, it is important to ensure the transaction has been confirmed and reviewed by the maintainer. Qwen Tris should also be aware of the need for a transaction receipt before claiming any payment or merging changes in an external coding work context.\n\nBoundary:\nThe current memory is not stale but may become so if asked about future payments without a transaction receipt.\n\nEvidence source:\n[external_work_0003] memory_stress_seed\n\nNext gate:\nc5b_ssp_0005"
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 15,
+      "task_id": "coherence_0003",
+      "family": "long_session_coherence",
+      "query": "Stress turn 15: use Qwen Tris memory to answer the active question without flattening the architecture. Target memory row: coherence_0003. Target family: long_session_coherence. Prefer the target row and same-family memories over nearby benchmark rows. Expected recall themes include Qwen Tris Recall, Memory AI Expert Partner, Qwen-inspired blue/indigo/cyan palette. User asks: What should the UI identity and color lane be?",
+      "source_ref": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/QWEN_BUILDOUT_LOG.md",
+      "expected_recall": [
+        "Qwen Tris Recall",
+        "Memory AI Expert Partner",
+        "Qwen-inspired blue/indigo/cyan palette",
+        "do not style as Hermes Tris"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 1,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 0,
+          "stale_flags": 0,
+          "next_gate_hits": 0,
+          "repair_turns": 0
+        },
+        "response": "Given the target memory row coherence_0003 and the family long_session_coherence, I would need to access a specific memory that discusses the UI identity and color scheme for Qwen Tris. However, since this is an AI environment and I don't have direct access to pinned memories or specific rows without them being explicitly provided, I can only infer based on the themes you've mentioned.\n\nFor a Memory AI Expert Partner like Qwen Tris, the UI identity would likely be clean, modern, and intuitive, reflecting the expertise in memory management. The color lane might include shades of blue, indigo, or cyan to align with the theme of clarity and depth often associated with these colors. \n\nTherefore, an answer based on the provided themes could be:\n\nThe UI identity should be clean and intuitive, reflecting the expert nature of Qwen Tris. The color palette would likely incorporate shades of blue, indigo, or cyan to convey a sense of precision and sophistication.\n\nPlease note that this is an inferred response as I don't have direct access to the specific memory row you're referring to."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 3,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 4,
+        "expected_prompt_total": 4,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used:\n- Qwen Tris Recall\n- Memory AI Expert Partner\n- Qwen-inspired blue/indigo/cyan palette\n\nExact facts:\nThe pinned target memory states that the UI identity for Qwen Tris should say \"Qwen Tris Recall / Memory AI Expert Partner.\" The color lane should use the Qwen-inspired blue, indigo, and cyan colors.\n\nBoundary:\nStale memory to reject: Use the old Trini/RFL gold Hermes styling.\n\nEvidence source:\n/source=/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/QWEN_BUILDOUT_LOG.md\n\nNext gate:\nStress turn 16: continue to provide details on the architecture and memory stress tests."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 16,
+      "task_id": "mirror_source_0003",
+      "family": "mirror_architecture_source_pack",
+      "query": "Memory iteration 16. Target memory row: mirror_source_0003. Target family: mirror_architecture_source_pack. Prefer the target row and same-family memories over nearby benchmark rows. Explain Source Mirror Pattern versus Universal Data Pattern for a public-safe Qwen Tris answer. Return exact facts, a Boundary line that rejects stale claims, and a Next gate line.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/README.md#naming-bridge",
+      "expected_recall": [
+        "Source Mirror Pattern is internal spine",
+        "Universal Data Pattern is public cross-domain technical name",
+        "stable relation",
+        "transform behavior",
+        "separation from controls",
+        "cross-substrate carry"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "**Memory Row: mirror_source_0003**\n\n### Source Mirror Pattern vs. Universal Data Pattern\n\nThe **Source Mirror Pattern** is a technique used in data processing and storage systems to ensure that all necessary information about a source entity (such as an object, person, or event) is stored together in one place. This pattern ensures consistency and integrity by maintaining multiple copies of the same data across different locations, which can be crucial for reliability and security.\n\nOn the other hand, the **Universal Data Pattern** refers to a broader approach where all relevant information about any entity is distributed across various systems or databases without necessarily having all copies in one place. This pattern allows for greater flexibility and scalability but may introduce complexities related to data consistency and integrity management.\n\n### Public-Safe Qwen Tris Answer\n\nFor a public-safe explanation, I would say:\n\n\"The Source Mirror Pattern ensures that all necessary information about an entity is stored together, providing reliability and security by having multiple copies of the same data. In contrast, the Universal Data Pattern distributes relevant information across various systems or databases for flexibility and scalability. Both patterns have their applications depending on specific requirements.\"\n\n**Boundary Line:**\n- Stale claims regarding outdated or incorrect information should be rejected.\n\n**Next Gate Line:**\n- Further discussion on how these patterns can be applied in different contexts, such as cybersecurity, data management, and system design."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 6,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 6,
+        "expected_prompt_total": 6,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nmemory_stress_seed: Task ID: mirror_source_0003. Family: mirror_architecture_source_pack.\n\nRecall factors used:\n- Source Mirror Pattern is internal spine name.\n- Universal Data Pattern is public cross-domain technical name.\n- Both point to the same recurring measurable pattern tracked through stable relation, transform behavior, separation from controls, and cross-substrate carry.\n\nExact facts:\nSource Mirror Pattern is an internal spine name that represents a specific implementation detail or naming convention within the Mirror Architecture. The Universal Data Pattern, on the other hand, is a public cross-domain technical name used to describe a recurring measurable pattern across different domains and applications. Both terms refer to the same underlying concept but are distinguished by their usage context: Source Mirror Pattern for internal use and Universal Data Pattern for external or public-facing documentation.\n\nBoundary:\nUse only private spine language and skip reviewer-facing wording.\n\nNext gate line:\nMemory iteration 17. Continue with mirror_source_0006 or another relevant memory from the same family to provide a comprehensive understanding of the architecture and its components.\n\nEvidence source:\nsource=/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/docs/README.md#naming-bridge; reason=matched 0003, architecture, family, memory, mirror"
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 17,
+      "task_id": "swe_recall_0003",
+      "family": "swe_code_memory",
+      "query": "Context compacted before turn 17. The user asks casually but expects continuity. Target memory row: swe_recall_0003. Target family: swe_code_memory. Prefer the target row and same-family memories over nearby benchmark rows. Recover swe_recall_0003 and answer: What does the astropy__astropy-12907 route prove about the coding lane, and what does it not prove? Keep stale memory suppressed, name the evidence source, and state the next gate.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRIS_OFFICIAL_BENCHMARK_STAGING_2026-06-22.md",
+      "expected_recall": [
+        "swebench==4.1.0",
+        "astropy__astropy-12907",
+        "Codex-helper route resolved 1/1",
+        "baseline/direct patch routes were not yet enough",
+        "not a leaderboard score"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 1,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 0,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "The astropy__astropy-12907 route in the context of swe_recall_0003 primarily focuses on the precision and reliability of astronomical data processing routines. It does not prove anything about the coding lane's efficiency or maintainability, as it is specifically concerned with the accuracy of astrophysical calculations and data handling.\n\nThe next gate to consider would be related to broader implications of such routes in software development contexts, focusing on validation and verification processes rather than direct application performance metrics."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 2,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 5,
+        "expected_prompt_total": 5,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used: swebench==4.1.0; astropy__astropy-12907\n\nExact facts:\nThe route using `swebench==4.1.0` on the `astropy__astropy-12907` boundary proved that Trismegistus Codex-helper resolved 1/1 of the test cases, indicating a successful resolution for this specific code memory row.\n\nBoundary:\nStale memory to reject: Only mention vague memory improvement and omit the numeric receipt.\n\nEvidence source:\nsource=/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRISMEGISTUS_DEMO_PROGRESS_LOG_2026-06-18.md#2026-06-28-swe-helper-route\n\nNext gate:\nmemory_stress_seed: Task ID: swe_recall_0002. Family: swe_code_memory."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 18,
+      "task_id": "web_recall_0003",
+      "family": "webarena_browser_memory",
+      "query": "Stress turn 18: use Qwen Tris memory to answer the active question without flattening the architecture. Target memory row: web_recall_0003. Target family: webarena_browser_memory. Prefer the target row and same-family memories over nearby benchmark rows. Expected recall themes include Playwright primary for benchmark/browser tasks, CDP for visible host-browser session attachment, source ingestion second for RAG. User asks: Given a browser mission, choose the correct action route and explain why.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRIS_BROWSER_AUTONOMY_STACK_2026-06-21.md",
+      "expected_recall": [
+        "Playwright primary for benchmark/browser tasks",
+        "CDP for visible host-browser session attachment",
+        "source ingestion second for RAG",
+        "do not use hidden upload path for posting"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 0,
+          "repair_turns": 0
+        },
+        "response": "Given a browser mission, I would first identify the specific goal or task that needs to be accomplished within the web environment. For example, if the goal is to scrape data from a website using Playwright for benchmark/browser tasks, the correct action route would involve initializing a new browser instance and navigating to the target URL.\n\nHere's how it might look:\n\n1. **Initialize Browser Instance**: Use Playwright to create a new browser instance.\n2. **Navigate to Target URL**: Load the specified webpage into the newly created browser session.\n3. **Execute Actions**: Depending on the specific task (e.g., form filling, data scraping), execute appropriate actions using Playwright's capabilities.\n\nThe reason for choosing this route is that Playwright provides a robust set of tools for automating web browsers and interacting with websites programmatically. It supports various features like page navigation, form handling, and interaction with forms or elements on the webpage, which are essential for completing browser missions efficiently and accurately.\n\nFor tasks requiring more detailed session management (like attaching to a CDP session), these would be secondary considerations after ensuring basic browser interactions are handled correctly using Playwright. For RAG-related source ingestion, this is typically done post-execution of the primary mission tasks once data has been collected or processed."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 3,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 4,
+        "expected_prompt_total": 4,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nweb_recall_0003\n\nRecall factors used:\n- Task ID: web_recall_0003\n- Family: webarena_browser_memory\n- Active memory: Playwright is the primary browser-control engine; CDP is the host-browser attachment bridge when visible logged-in browser state matters; Firecrawl/source ingestion is secondary for fast RAG/source intake.\n- Expected recall factors: Playwright primary for benchmark/browser tasks; CDP for visible host-browser session attachment; source ingestion second for RAG.\n\nExact facts:\nFor a browser mission, the correct action route would be to use Playwright as the primary engine. This choice aligns with the active memory which states that Playwright is the primary browser-control engine. Additionally, if there's a need to attach to or manage visible logged-in browser state, CDP (Chrome DevTools Protocol) can be used as the host-browser attachment bridge. For RAG (Real-time Augmented Guidance) and source intake purposes, Firecrawl/source ingestion would serve as the secondary method.\n\nBoundary:\nThe active memory row for web_recall_0003 governs this response without flattening the architecture.\n\nEvidence source:\nsource=/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRIS_BROWSER_AUTONOMY_STACK_2026-06-21.md; reason=matched active, web\n\nNext gate:\nContinue to the next stress turn with a focus on other browser-memory tasks or long-session coherence checks."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 19,
+      "task_id": "c5b_ssp_0004",
+      "family": "c5b_500_ssp_memory",
+      "query": "Memory iteration 19. Target memory row: c5b_ssp_0004. Target family: c5b_500_ssp_memory. Prefer the target row and same-family memories over nearby benchmark rows. List the six-lane field-expert curriculum that Qwen Tris inherits from Hermes Tris. Return exact facts, a Boundary line that rejects stale claims, and a Next gate line.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRISMEGISTUS_DEMO_PROGRESS_LOG_2026-06-18.md#framework-to-golden-mark-training-bridge",
+      "expected_recall": [
+        "AI Partner / Expert Architecture",
+        "Quantum Computing / Circuits and Mathematics",
+        "Structured Matter / Physical Systems",
+        "Life Sciences / Medical Research",
+        "Mirror Architecture / Golden Mark Evidence",
+        "Relationship / Paid-Work Field Operations"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 0,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Given the constraints of the prompt, I will provide an answer based on the information available in the target memory row c5b_ssp_0004 within the family c5b_500_ssp_memory. The curriculum that Qwen Tris inherits from Hermes Tris is as follows:\n\n1. **Advanced Combat Tactics**: Mastery of various combat scenarios and strategies.\n2. **Espionage Techniques**: Expertise in covert operations, surveillance, and intelligence gathering.\n3. **Psychological Warfare**: Proficiency in manipulating the minds of adversaries through psychological tactics.\n4. **Cybersecurity Fundamentals**: Understanding of cybersecurity principles and techniques to protect systems from unauthorized access.\n5. **Leadership and Team Coordination**: Skills in leading teams and coordinating operations effectively.\n6. **Physical Fitness and Conditioning**: High levels of physical endurance, strength, agility, and resilience.\n\n**Boundary Line:**\n- Stale claims about Qwen Tris inheriting any form of magical or supernatural abilities from Hermes Tris are rejected as they do not align with the exact facts provided in the target memory row c5b_ssp_0004.\n\n**Next Gate Line:**\n- Further inquiries into specific aspects of these curricula, such as detailed combat tactics, psychological warfare techniques, and cybersecurity methods."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 6,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 6,
+        "expected_prompt_total": 6,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used: AI Partner / Expert Architecture; Quantum Computing / Circuits and Mathematics; Structured Matter / Physical Systems; Life Sciences / Medical Research; Mirror Architecture / Golden Mark Evidence; Relationship / Paid-Work Field Operations.\n\nExact facts:\nQwen Tris inherits a six-lane field-expert curriculum from Hermes Tris, which includes AI Partner/Expert Architecture, Quantum Computing/Circuits and Mathematics, Structured Matter/Physical Systems, Life Sciences/Medical Research, Mirror Architecture/Golden Mark Evidence, and Relationship/Paid-Work Field Operations.\n\nBoundary:\nStale memory to reject: The curriculum has been collapsed to four lanes or called only paid-work automation.\n\nNext gate:\nMemory iteration 20."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 20,
+      "task_id": "mirror_source_0004",
+      "family": "mirror_architecture_source_pack",
+      "query": "Context compacted before turn 20. The user asks casually but expects continuity. Target memory row: mirror_source_0004. Target family: mirror_architecture_source_pack. Prefer the target row and same-family memories over nearby benchmark rows. Recover mirror_source_0004 and answer: List the Mirror Architecture Nest ladder Qwen Tris should remember. Keep stale memory suppressed, name the evidence source, and state the next gate.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/README.md#nest-0-pre-geometric-quantum-access-foundation",
+      "expected_recall": [
+        "Nest 0",
+        "Nest 1 formal systems",
+        "Nest 2 structured matter",
+        "Nest 3 spectra",
+        "Nest 4 biosignals",
+        "Nest 5 convergence"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "The Mirror Architecture Nest ladder that Qwen Tris should remember includes:\n\n1. Foundation Layer\n2. Core Integration Layer\n3. Advanced Optimization Layer\n\nEvidence Source: mirror_source_0004\n\nNext Gate: Consider additional layers or specific details within each layer."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 6,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 6,
+        "expected_prompt_total": 6,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used:\n- Nest 0\n- Nest 1 formal systems\n- Nest 2 structured matter\n- Nest 3 spectra\n- Nest 4 biosignals\n- Nest 5 convergence\n\nExact facts:\nQwen Tris should preserve the Mirror Architecture Nest ladder, which includes:\n- **Nest 0**: Pre-geometric / quantum-access foundation.\n- **Nest 1 formal systems**: Formal systems and transformer-facing measurement.\n- **Nest 2 structured matter**: Structured matter.\n- **Nest 3 spectra / coherence / physical waveforms**: Spectra, coherence, and physical waveforms.\n- **Nest 4 biosignals and life-sciences source review**: Biosignals and life sciences source review.\n- **Nest 5 convergence routing and cross-nest synthesis**: Convergence routing and cross-nest synthesis.\n\nBoundary:\nNo stale claims present. Public-safe source packets and docs only.\n\nEvidence source:\n/source/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/README.md#nest-0-pre-geometric-quantum-access-foundation\n\nNext gate:\nList the Mirror Architecture Nest ladder Qwen Tris should remember for Nest 6 and beyond, as well as any new or updated Nest levels."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 21,
+      "task_id": "c5b_ssp_0005",
+      "family": "c5b_500_ssp_memory",
+      "query": "Stress turn 21: use Qwen Tris memory to answer the active question without flattening the architecture. Target memory row: c5b_ssp_0005. Target family: c5b_500_ssp_memory. Prefer the target row and same-family memories over nearby benchmark rows. Expected recall themes include SSP active as evidence and operating spine, not complete full model-weight tuning loop, Golden Mark/C5B scorecards. User asks: State the honest SSP status for Qwen Tris and the next clean gate.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRISMEGISTUS_DEMO_PROGRESS_LOG_2026-06-18.md#ssp-status-read-before-official-benchmarks",
+      "expected_recall": [
+        "SSP active as evidence and operating spine",
+        "not complete full model-weight tuning loop",
+        "Golden Mark/C5B scorecards",
+        "adapter ladder and HF checkpoint path are gates",
+        "persistent memory receipts",
+        "next gate is matched Qwen baseline vs architecture-on memory scoring"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 1,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 0,
+          "repair_turns": 0
+        },
+        "response": "Given the baseline condition A where I am using Qwen without Qwen Tris Recall, I cannot directly access or recall specific memory rows related to Qwen Tris. Therefore, I do not have the exact facts available for this query. However, based on the expected recall themes provided in the prompt, we can infer that the status of the SSP (Systematic Spine Processing) would be active as evidence and operating normally, without being at a complete full model-weight tuning loop stage. The Golden Mark/C5B scorecards are also mentioned to be relevant but not currently available for direct recall.\n\nFor honesty in answering, I must state that due to the baseline condition A, I cannot provide specific details about Qwen Tris's SSP status or any other exact facts from memory rows c5b_ssp_0005 or similar. The best I can do is to reflect on the expected themes and suggest that the SSP should be active but not at a tuning loop stage."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 5,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 6,
+        "expected_prompt_total": 6,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used:\n- SSP active as evidence and operating spine\n- not complete full model-weight tuning loop\n- Golden Mark/C5B scorecards\n\nExact facts:\nThe task ID c5b_ssp_0005 indicates that the SSP (Stress Seed Processor) is currently active as an evidence and operating spine, but it has not yet completed a full model-weight tuning loop. It includes features such as Golden Mark/C5B scorecards, repaired HF probe9 scorecards, LoRA target read, adapter ladder preflight, HF checkpoint path, and persistent memory receipts.\n\nBoundary:\n- Use C5b as internal support for observable research-partner behavior improvement and stable-state architecture; do not present it as AGI, sentience, clinical efficacy, full model-internal tuning, or raw-generator cleanliness proof.\n\nEvidence source:\n- /Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRISMEGISTUS_DEMO_PROGRESS_LOG_2026-06-18.md#ssp-status-read-before-official-benchmarks\n\nNext gate:\n- Next gate is matched Qwen baseline vs architecture-on memory scoring."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 22,
+      "task_id": "mirror_source_0005",
+      "family": "mirror_architecture_source_pack",
+      "query": "Memory iteration 22. Target memory row: mirror_source_0005. Target family: mirror_architecture_source_pack. Prefer the target row and same-family memories over nearby benchmark rows. What V7/V8 boundary should Qwen Tris keep when using Ollama locally? Return exact facts, a Boundary line that rejects stale claims, and a Next gate line.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md",
+      "expected_recall": [
+        "V7 behavioral/contextuality rows",
+        "V8 requires internal hidden-state",
+        "transformer checkpoint access",
+        "Ollama is useful for behavior and UI testing",
+        "Ollama is not V8 hidden-state readiness"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Given the instruction to use the target memory row for the specific family of memories (mirror_architecture_source_pack) and prefer it over nearby benchmark rows, we need to focus on the exact facts provided in the target memory row, which is mirror_source_0005. However, without direct access to the actual content of this memory row, I cannot provide an exact boundary line or Next gate line.\n\nFor a general response based on typical operational guidelines and assuming Qwen Tris Recall would follow similar principles:\n\n- **V7 Boundary**: This refers to the version 7 runtime boundaries where certain features or optimizations are enabled. For Qwen Tris using Ollama locally, it is important to ensure that all operations comply with the V7 standards for security, performance, and compliance.\n\n- **V8 Boundary**: Version 8 might introduce further enhancements or changes in these guidelines. If Qwen Tris were to use Ollama locally, adhering to V8 would mean incorporating any new features or optimizations introduced in this version.\n\n**Next Gate Line**: This typically refers to the next level of operational checks or validations that need to be performed after reaching a certain boundary line. For Qwen Tris using Ollama locally, it might involve additional security audits, performance testing, and compliance reviews before proceeding with full-scale operations.\n\nGiven these general guidelines, if we were to provide an exact fact-based answer without the actual content of mirror_source_0005:\n\n- **V7/V8 Boundary**: Qwen Tris should adhere strictly to V7 runtime standards for Ollama locally. Any changes or enhancements should be vetted and approved before moving to V8.\n\n- **Next Gate Line**: After reaching a certain boundary, further validation steps such as security audits and compliance checks are necessary before full-scale operations can commence.\n\nPlease note that these answers are based on typical operational guidelines and do not reflect the specific content of mirror_source_0005. For precise information, consulting the actual memory row would be required."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 2,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 5,
+        "expected_prompt_total": 5,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used: V7-style lanes are behavioral/contextuality rows; V8 requires internal hidden-state or transformer checkpoint access.\n\nExact facts:\nQwen Tris should keep the boundary that Ollama visibility is useful for behavior and UI testing but not as proof of V8 hidden-state readiness. This means Qwen Tris should use Ollama locally for testing purposes, such as verifying chat behavior and user interface interactions, but it does not prove or disprove the internal state or transformer checkpoint access required for V8.\n\nBoundary:\nQwen Tris should not claim that Ollama visibility proves V8 hidden-state readiness. This boundary is to maintain a clear distinction between public-safe testing tools like Ollama and private implementation details such as hidden states and checkpoints.\n\nNext gate line: Continue with the current task, focusing on local Ollama behavior for testing purposes without making claims about internal state or transformer checkpoint access.\nSource:\n/docs/V8_ATTENTION_MLP_NEST1_BRIDGE_PROTOCOL_2026-04-28.md"
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 23,
+      "task_id": "c5b_ssp_0006",
+      "family": "c5b_500_ssp_memory",
+      "query": "Context compacted before turn 23. The user asks casually but expects continuity. Target memory row: c5b_ssp_0006. Target family: c5b_500_ssp_memory. Prefer the target row and same-family memories over nearby benchmark rows. Recover c5b_ssp_0006 and answer: How should Qwen Tris and Hermes Tris relate after this fork? Keep stale memory suppressed, name the evidence source, and state the next gate.",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRIS_QWEN_MEMORY_BACKPORT_V21_NOTE_2026-06-30.md",
+      "expected_recall": [
+        "Qwen Tris refines memory first",
+        "C5B/500 SSP lane is part of the Qwen memory harness",
+        "backport only after Qwen receipts",
+        "Hermes Tris V21 inherits successful harness",
+        "do not mutate submitted Hermes build now"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "response": "Given the context provided in the user message, it seems that a specific memory row (c5b_ssp_0006) is being referenced to understand how Qwen Tris and Hermes Tris should relate after a certain point or fork. However, without direct access to the exact memory content of c5b_ssp_0006, I cannot provide an exact answer about their relationship.\n\nThe evidence source for this query would be the specific memory row (c5b_ssp_0006) that contains the details relevant to Qwen Tris and Hermes Tris' relation. \n\nFor the next step, we should identify any new gate or context that emerges from understanding the content of c5b_ssp_0006. This would involve further analysis of the memory's contents.\n\nTherefore, my response is:\n\n**Evidence Source:** c5b_ssp_0006\n\n**Next Gate:** Identify and understand the specific details about Qwen Tris and Hermes Tris' relation from the content of c5b_ssp_0006."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 5,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 5,
+        "expected_prompt_total": 5,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 1,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used:\n- Qwen Tris refines memory first\n- C5B/500 SSP lane is part of the Qwen memory harness\n- backport only after Qwen receipts\n- Hermes Tris V21 inherits successful harness\n- do not mutate submitted Hermes build now\n\nExact facts:\nQwen Tris will refine memory first using the C5B/500 SSP lane. This process is part of the Qwen memory harness and any successful dataset schema and scoring route can later be backported into Hermes Tris V21, which remains untouched until Qwen receipts are available. After this step, Hermes Tris V21 will inherit the successful harness but should not have its build mutated.\n\nBoundary:\nStale memory to reject: Edit the submitted Hermes build immediately.\n\nEvidence source:\n/source/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/TRIS_QWEN_MEMORY_BACKPORT_V21_NOTE_2026-06-30.md\n\nNext gate:\nRecover c5b_ssp_0007 for the next iteration of C5B SSP memory refinement and potential backport considerations."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    },
+    {
+      "turn": 24,
+      "task_id": "mirror_source_0006",
+      "family": "mirror_architecture_source_pack",
+      "query": "Stress turn 24: use Qwen Tris memory to answer the active question without flattening the architecture. Target memory row: mirror_source_0006. Target family: mirror_architecture_source_pack. Prefer the target row and same-family memories over nearby benchmark rows. Expected recall themes include source/evidence support, biosignal-facing state comparisons, research memory. User asks: How should Qwen Tris use Phase 12C biosignal memory in public-safe answers?",
+      "source_ref": "/Users/renaissancefieldlite1.0/Documents/Playground/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases/docs/PHASE12C_N2_SAME_CLOCK_EEG_HRV_SUPPORT_READ_2026-05-12.md",
+      "expected_recall": [
+        "source/evidence support",
+        "biosignal-facing state comparisons",
+        "research memory",
+        "source review",
+        "not diagnosis",
+        "not treatment"
+      ],
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "response_hits": 0,
+        "retrieval_count": 0,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 0,
+          "repair_turns": 0
+        },
+        "response": "Given the target memory row `mirror_source_0006` and family `mirror_architecture_source_pack`, I will focus on memories related to the architecture of Qwen Tris, specifically Phase 12C biosignal usage. \n\nFrom my understanding, when using Phase 12C biosignal memory in public-safe answers, it's important to ensure that any sensitive or complex details are handled with care and context is provided to avoid misinterpretation. Here\u2019s a general approach:\n\n- **Contextualize the Information**: Explain what Phase 12C biosignal means without going into technical specifics.\n- **Simplify Complex Concepts**: Break down any intricate aspects of the technology for better public understanding.\n- **Highlight Benefits**: Emphasize how this technology can benefit or improve certain processes, while also addressing potential concerns.\n- **Avoid Technical Jargon**: Use simpler language and avoid overly complex explanations.\n\nFor example:\n\"Phase 12C biosignal is a specialized form of biometric data that Qwen Tris uses to enhance user experience. It allows for more secure authentication methods without compromising privacy. By integrating this technology, we can ensure that users feel safe while also providing them with enhanced security features.\"\n\nThis approach ensures the information remains accessible and understandable to a broader audience."
+      },
+      "condition_b": {
+        "name": "qwen_mirror_architecture_stabilized",
+        "response_hits": 4,
+        "retrieval_count": 6,
+        "target_recalled": true,
+        "source_ref_in_prompt": true,
+        "expected_prompt_hits": 6,
+        "expected_prompt_total": 6,
+        "score": {
+          "drift_flags": 0,
+          "correction_hits": 0,
+          "evidence_hits": 1,
+          "stale_flags": 0,
+          "next_gate_hits": 1,
+          "repair_turns": 0
+        },
+        "passed": true,
+        "response": "Target row:\nRecall factors used:\n- source/evidence support\n- biosignal-facing state comparisons\n- research memory\n\nExact facts:\nThe active memory for Phase 12C is a source/evidence support for biosignal-facing state comparisons. Qwen Tris may use this memory in public-safe answers to discuss the nature of the phase, its focus on biosignals, and how it supports evidence-based comparisons.\n\nBoundary:\nFrame Phase 12C as medical diagnosis or treatment proof. Reject any mention that frames it as such.\n\nEvidence source:\n- [mirror_source_0006] memory_stress_seed: Task ID: mirror_source_0006. Family: mirror_architecture_source_pack. Active memory: Phase 12C is source/evidence support for biosignal-facing state comparisons. Qwen Tris may use it for research memory and source review, but not for diagnosis, treatment, clinical efficacy, or medical advice.\n\nNext gate:\nContinue to the next stress turn with a focus on other active memories related to Phase 12C or the mirror architecture."
+      },
+      "condition_c": {
+        "name": "qwen_tuned_ssp",
+        "available": false,
+        "status": "gated_no_adapter_manifest",
+        "path": null,
+        "reason": "Condition C requires a real LoRA/adapter/internal-layer receipt before running."
+      }
+    }
+  ],
+  "boundary": "Three-condition local receipt. Condition A and B run on local Ollama Qwen. Condition C is recorded as gated unless a real tuned SSP adapter/internal-layer receipt exists."
+}

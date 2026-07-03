@@ -1,0 +1,132 @@
+{
+  "results": {
+    "longbench_qasper_e": {
+      "name": "longbench_qasper_e",
+      "alias": "longbench_qasper_e",
+      "sample_len": 100,
+      "score,none": 0.5226798775939184,
+      "score_stderr,none": 0.036029581620811005,
+      "qa_f1_score,none": 0.5226798775939184,
+      "qa_f1_score_stderr,none": 0.036029581620811005
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "longbench_qasper_e": {
+      "task": "longbench_qasper_e",
+      "dataset_path": "Xnhyacinth/LongBench",
+      "dataset_name": "qasper_e",
+      "test_split": "test",
+      "doc_to_text": "You are given a scientific article and a question. Answer the question as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\n\nArticle: {{context}}\n\n Answer the question based on the above article as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\n\nQuestion: {{question}}\n\nAnswer:",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_qa_f1_with_score(doc: dict, results: list[str], **kwargs):\n    result = get_qa_f1_score(doc, results, **kwargs)\n    qa_f1 = result[\"qa_f1_score\"]\n    return {\"score\": qa_f1, \"qa_f1_score\": qa_f1}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "You are given a scientific article and a question. Answer the question as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\n\nArticle: {{context}}\n\n Answer the question based on the above article as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\n\nQuestion: {{question}}\n\nAnswer:",
+        "doc_to_choice": null,
+        "doc_to_target": "{{answers}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "qa_f1_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 128,
+        "temperature": 1.0,
+        "do_sample": false,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 5.0,
+        "model": "qwen-plus",
+        "base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
+        "tokenized_requests": false,
+        "num_concurrent": 2,
+        "max_retries": 3,
+        "timeout": 180,
+        "config_source": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/source_inventory/lm-evaluation-harness/lm_eval/tasks/longbench/qasper_e.yaml"
+      }
+    }
+  },
+  "versions": {
+    "longbench_qasper_e": 5.0
+  },
+  "n-shot": {
+    "longbench_qasper_e": 0
+  },
+  "higher_is_better": {
+    "longbench_qasper_e": {
+      "score": true,
+      "qa_f1_score": true
+    }
+  },
+  "n-samples": {
+    "longbench_qasper_e": {
+      "original": 224,
+      "effective": 100
+    }
+  },
+  "config": {
+    "model": "local-chat-completions",
+    "model_args": {
+      "model": "qwen-plus",
+      "base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
+      "tokenized_requests": false,
+      "num_concurrent": 2,
+      "max_retries": 3,
+      "timeout": 180
+    },
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": 100.0,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {},
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1782928675.2828228,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13.dev0",
+  "upper_git_hash": null,
+  "task_hashes": {
+    "longbench_qasper_e": "7a6e6f709e4839393419e916c80c4da1775e23acfa019ec6dfd35fe7e29cbedc"
+  },
+  "model_source": "local-chat-completions",
+  "model_name": "qwen-plus",
+  "model_name_sanitized": "qwen-plus",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": true,
+  "chat_template": "",
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "60.999358084009145"
+}

@@ -1,0 +1,1588 @@
+{
+  "run_id": "qwen_tris_longbench_public_slice_20260701T172019Z",
+  "provider": "qwen-cloud",
+  "model": "qwen-plus",
+  "benchmark": "LongBench public data.zip",
+  "tasks": [
+    "qasper_e"
+  ],
+  "items": 50,
+  "condition_a": "baseline Qwen prompt-only answer discipline",
+  "condition_b": "Qwen Tris stable-state answer discipline",
+  "condition_a_mean": 0.4936025235340085,
+  "condition_b_mean": 0.5448298421008309,
+  "delta": 0.05122731856682229,
+  "family_totals": {
+    "qasper_e": {
+      "n": 50,
+      "condition_a_mean": 0.49360252353400846,
+      "condition_b_mean": 0.5448298421008309,
+      "delta": 0.05122731856682236
+    }
+  },
+  "skipped_items": [],
+  "results": [
+    {
+      "index": 1,
+      "dataset": "qasper_e",
+      "_id": "b26174d8ec97e8d01421548d3a640e8382db6235eb506661",
+      "answers": [
+        "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieber, Nickelodeon, Spongebob, Disney",
+        "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieber, Nickelodeon, Spongebob, Disney."
+      ],
+      "length": 3411,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieber, Nickelodeon, Spongebob, Disney.",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieb",
+        "gold": [
+          "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieber, Nickelodeon, Spongebob, Disney",
+          "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieber, Nickelodeon, Spongebob, Disney."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieber, Nickelodeon, Spongebob, Disney",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieb",
+        "gold": [
+          "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieber, Nickelodeon, Spongebob, Disney",
+          "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieber, Nickelodeon, Spongebob, Disney."
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "dataset": "qasper_e",
+      "_id": "8e5e6c35689e17e9f50df76ada506a4c05be9ed081c883d4",
+      "answers": [
+        "the series of posts that trigger an intervention"
+      ],
+      "length": 3732,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The latent context used to predict instructor intervention is the series of posts that trigger an intervention.",
+        "metric": "token_f1",
+        "score": 0.6,
+        "prediction_key": "The latent context used to predict instructor intervention is the series of posts that trigger an intervention.",
+        "gold": [
+          "the series of posts that trigger an intervention"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "The latent context used to predict instructor intervention is \"the series of posts that trigger an intervention\".",
+        "metric": "token_f1",
+        "score": 0.6,
+        "prediction_key": "The latent context used to predict instructor intervention is \"the series of posts that trigger an intervention\".",
+        "gold": [
+          "the series of posts that trigger an intervention"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "dataset": "qasper_e",
+      "_id": "ebfe29b14637ff245ca9117167c10d252b21c64aa484e871",
+      "answers": [
+        "F-score, Kappa",
+        "Unanswerable"
+      ],
+      "length": 3544,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "F-score and Kappa statistics",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "F-score and Kappa statistics",
+        "gold": [
+          "F-score, Kappa",
+          "Unanswerable"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "F-score and Kappa statistics",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "F-score and Kappa statistics",
+        "gold": [
+          "F-score, Kappa",
+          "Unanswerable"
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "dataset": "qasper_e",
+      "_id": "f4dd3a0b7e956fadae8f49e07a6ef1c6e90a315d21969a76",
+      "answers": [
+        "(i) models that use plain stacked LSTMs, (ii) models with different INLINEFORM0, (iii) models without INLINEFORM1, (iv) models that integrate lower contexts via peephole connections"
+      ],
+      "length": 3224,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The baselines were models that use plain stacked LSTMs.",
+        "metric": "token_f1",
+        "score": 0.36363636363636365,
+        "prediction_key": "The baselines were models that use plain stacked LSTMs.",
+        "gold": [
+          "(i) models that use plain stacked LSTMs, (ii) models with different INLINEFORM0, (iii) models without INLINEFORM1, (iv) models that integrate lower contexts via peephole connections"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "plain stacked LSTMs",
+        "metric": "token_f1",
+        "score": 0.21428571428571425,
+        "prediction_key": "plain stacked LSTMs",
+        "gold": [
+          "(i) models that use plain stacked LSTMs, (ii) models with different INLINEFORM0, (iii) models without INLINEFORM1, (iv) models that integrate lower contexts via peephole connections"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "dataset": "qasper_e",
+      "_id": "e5d1d589ddb30f43547012f04b06ac2924a1f4fdcf56daab",
+      "answers": [
+        "Yes",
+        "Unanswerable"
+      ],
+      "length": 2284,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "No",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "No",
+        "gold": [
+          "Yes",
+          "Unanswerable"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "no",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "no",
+        "gold": [
+          "Yes",
+          "Unanswerable"
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "dataset": "qasper_e",
+      "_id": "81fafbdc90dfc4c0ea443de35ee84e7423d8971a66f27a09",
+      "answers": [
+        "No"
+      ],
+      "length": 3843,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "No",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "No",
+        "gold": [
+          "No"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "No",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "No",
+        "gold": [
+          "No"
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "dataset": "qasper_e",
+      "_id": "bcfe56efad9715cc714ffd2e523eaa9ad796a453e7da77a6",
+      "answers": [
+        "Yes",
+        "No"
+      ],
+      "length": 2317,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "No",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "No",
+        "gold": [
+          "Yes",
+          "No"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "No",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "No",
+        "gold": [
+          "Yes",
+          "No"
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "dataset": "qasper_e",
+      "_id": "1bd9a082bd7b5ab6c152dbda3db38c0c3bc92cddf82383a3",
+      "answers": [
+        "SemEval-2016 Challenge Task 5 BIBREF27 , BIBREF28",
+        " English reviews ,  restaurant reviews from four different languages (Spanish, Turkish, Dutch, Russian)"
+      ],
+      "length": 2720,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The evaluation used restaurant reviews from four languages (Spanish, Turkish, Dutch, Russian) from SemEval-2016 Challenge Task 5, and an English corpus.",
+        "metric": "token_f1",
+        "score": 0.6451612903225806,
+        "prediction_key": "The evaluation used restaurant reviews from four languages (Spanish, Turkish, Dutch, Russian) from SemEval-2016 Challenge Task 5, and an English corpus.",
+        "gold": [
+          "SemEval-2016 Challenge Task 5 BIBREF27 , BIBREF28",
+          " English reviews ,  restaurant reviews from four different languages (Spanish, Turkish, Dutch, Russian)"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "SemEval-2016 Challenge Task 5 restaurant reviews datasets in Spanish, Turkish, Dutch, and Russian.",
+        "metric": "token_f1",
+        "score": 0.48000000000000004,
+        "prediction_key": "SemEval-2016 Challenge Task 5 restaurant reviews datasets in Spanish, Turkish, Dutch, and Russian.",
+        "gold": [
+          "SemEval-2016 Challenge Task 5 BIBREF27 , BIBREF28",
+          " English reviews ,  restaurant reviews from four different languages (Spanish, Turkish, Dutch, Russian)"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "dataset": "qasper_e",
+      "_id": "d3944ab2d7e6cb9d6f722987f0406aa0aa01c8ace8608a89",
+      "answers": [
+        "7.36% on accuracy and 9.69% on F1 score",
+        "it has 0.024 improvement in accuracy comparing to ELMO Only and  0.006 improvement in F1 score  comparing to ELMO Only too"
+      ],
+      "length": 2890,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The article reports that adding topic information (Topic Only setting) improved accuracy by 7.36% and F1 score by 9.69% compared to the base model on the small-scale, unbalanced training dataset.",
+        "metric": "token_f1",
+        "score": 0.39999999999999997,
+        "prediction_key": "The article reports that adding topic information (Topic Only setting) improved accuracy by 7.36% and F1 score by 9.69% compared to the base model on the small-",
+        "gold": [
+          "7.36% on accuracy and 9.69% on F1 score",
+          "it has 0.024 improvement in accuracy comparing to ELMO Only and  0.006 improvement in F1 score  comparing to ELMO Only too"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "The article reports that adding topic information (Topic Only setting) improved accuracy by 7.36% and F1 score by 9.69% over the base model on the small-scale, unbalanced dataset.",
+        "metric": "token_f1",
+        "score": 0.42424242424242425,
+        "prediction_key": "The article reports that adding topic information (Topic Only setting) improved accuracy by 7.36% and F1 score by 9.69% over the base model on the small-scale, ",
+        "gold": [
+          "7.36% on accuracy and 9.69% on F1 score",
+          "it has 0.024 improvement in accuracy comparing to ELMO Only and  0.006 improvement in F1 score  comparing to ELMO Only too"
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "dataset": "qasper_e",
+      "_id": "13e1dbbe70ad33f26ac4d63352332ab577dbdf318691ace0",
+      "answers": [
+        "They use text transcription.",
+        "both"
+      ],
+      "length": 3198,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "They use both: released transcripts of the IEMOCAP dataset and also process audio data using an ASR system to retrieve transcripts.",
+        "metric": "token_f1",
+        "score": 0.17391304347826086,
+        "prediction_key": "They use both: released transcripts of the IEMOCAP dataset and also process audio data using an ASR system to retrieve transcripts.",
+        "gold": [
+          "They use text transcription.",
+          "both"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "They use both: released transcripts of the IEMOCAP dataset and ASR-processed transcripts derived from the audio.",
+        "metric": "token_f1",
+        "score": 0.22222222222222224,
+        "prediction_key": "They use both: released transcripts of the IEMOCAP dataset and ASR-processed transcripts derived from the audio.",
+        "gold": [
+          "They use text transcription.",
+          "both"
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "dataset": "qasper_e",
+      "_id": "14ee47ba1692905a1a19d0ea0d07143d75ba33030668f927",
+      "answers": [
+        "CLUTO, Carrot2 Lingo",
+        "simple clustering algorithm which uses the cosine similarity between word embeddings"
+      ],
+      "length": 3039,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "CLUTO and Carrot2 Lingo",
+        "metric": "token_f1",
+        "score": 0.8571428571428571,
+        "prediction_key": "CLUTO and Carrot2 Lingo",
+        "gold": [
+          "CLUTO, Carrot2 Lingo",
+          "simple clustering algorithm which uses the cosine similarity between word embeddings"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "CLUTO and Carrot2 Lingo",
+        "metric": "token_f1",
+        "score": 0.8571428571428571,
+        "prediction_key": "CLUTO and Carrot2 Lingo",
+        "gold": [
+          "CLUTO, Carrot2 Lingo",
+          "simple clustering algorithm which uses the cosine similarity between word embeddings"
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "dataset": "qasper_e",
+      "_id": "d317e4799402ebdb0a7b6e80fa58ca1074d86a15403492af",
+      "answers": [
+        "Bert + Unanswerable",
+        "CNN, BERT"
+      ],
+      "length": 3845,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "BERT",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "BERT",
+        "gold": [
+          "Bert + Unanswerable",
+          "CNN, BERT"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "BERT",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "BERT",
+        "gold": [
+          "Bert + Unanswerable",
+          "CNN, BERT"
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "dataset": "qasper_e",
+      "_id": "a3db996005cb6103e9e3a8d19712c6866285e0df89a1b264",
+      "answers": [
+        "pivoting, pivoting$_{\\rm m}$",
+        "firstly translates a source language into the pivot language which is later translated to the target language"
+      ],
+      "length": 3815,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Pivot-based baselines are the pivoting and pivot-synthetic methods.",
+        "metric": "token_f1",
+        "score": 0.2,
+        "prediction_key": "Pivot-based baselines are the pivoting and pivot-synthetic methods.",
+        "gold": [
+          "pivoting, pivoting$_{\\rm m}$",
+          "firstly translates a source language into the pivot language which is later translated to the target language"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "pivoting and pivot-synthetic",
+        "metric": "token_f1",
+        "score": 0.3333333333333333,
+        "prediction_key": "pivoting and pivot-synthetic",
+        "gold": [
+          "pivoting, pivoting$_{\\rm m}$",
+          "firstly translates a source language into the pivot language which is later translated to the target language"
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "dataset": "qasper_e",
+      "_id": "2dd2de242f407468d7b403c1835dc62579f875dd09a00801",
+      "answers": [
+        "Friends, EmotionPush",
+        "EmotionLines BIBREF6"
+      ],
+      "length": 3178,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "EmotionLines dataset, which consists of the Friends and EmotionPush subsets.",
+        "metric": "token_f1",
+        "score": 0.3636363636363636,
+        "prediction_key": "EmotionLines dataset, which consists of the Friends and EmotionPush subsets.",
+        "gold": [
+          "Friends, EmotionPush",
+          "EmotionLines BIBREF6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "EmotionLines (Friends and EmotionPush), Twitter emotion dataset, and Friends TV show scripts.",
+        "metric": "token_f1",
+        "score": 0.2857142857142857,
+        "prediction_key": "EmotionLines (Friends and EmotionPush), Twitter emotion dataset, and Friends TV show scripts.",
+        "gold": [
+          "Friends, EmotionPush",
+          "EmotionLines BIBREF6"
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "dataset": "qasper_e",
+      "_id": "b66b3c973729802d35f81fa66a7dbb1b846445856909a378",
+      "answers": [
+        "three experimental setups with different numbers of speakers in the evaluation set, three experimental setups with different number of speaker in the evaluation set are defined,  first one, respondents with at least 17 recording sessions are included to the evaluation set, respondents with 16 sessions to the development and the rest of respondents to the background set, second setup, respondents with at least 8 sessions are included to the evaluation set, respondents with 6 or 7 sessions to the development and the rest of respondents to the background set"
+      ],
+      "length": 3880,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Several evaluation protocols for each part of the database, allowing researchers to investigate performance in various scenarios and study effects of channels, duration, and phrase text.",
+        "metric": "token_f1",
+        "score": 0.1346153846153846,
+        "prediction_key": "Several evaluation protocols for each part of the database, allowing researchers to investigate performance in various scenarios and study effects of channels, ",
+        "gold": [
+          "three experimental setups with different numbers of speakers in the evaluation set, three experimental setups with different number of speaker in the evaluation set are defined,  first one, respondents with at least 17 recording sessions are included to the evaluation set, respondents with 16 sessions to the development and the rest of respondents to the background set, second setup, respondents with at least 8 sessions are included to the evaluation set, respondents with 6 or 7 sessions to the development and the rest of respondents to the background set"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Several evaluation protocols for each part of the database, allowing researchers to investigate performance in various scenarios and study effects of channels, duration, and phrase text.",
+        "metric": "token_f1",
+        "score": 0.1346153846153846,
+        "prediction_key": "Several evaluation protocols for each part of the database, allowing researchers to investigate performance in various scenarios and study effects of channels, ",
+        "gold": [
+          "three experimental setups with different numbers of speakers in the evaluation set, three experimental setups with different number of speaker in the evaluation set are defined,  first one, respondents with at least 17 recording sessions are included to the evaluation set, respondents with 16 sessions to the development and the rest of respondents to the background set, second setup, respondents with at least 8 sessions are included to the evaluation set, respondents with 6 or 7 sessions to the development and the rest of respondents to the background set"
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "dataset": "qasper_e",
+      "_id": "4528fad5e57b98d3022a13b580bd4daa018c7129c12d50ea",
+      "answers": [
+        "pays attentions to adjacent characters and casts a localness relationship between the characters as a fixed Gaussian weight assuming the weight relies on the distance between characters",
+        "Gaussian-masked directional attention can be described as a function to map queries and key-value pairs to the representation of input, Gaussian-masked directional attention expects to pay attention to the adjacent characters of each positions and cast the localness relationship between characters as a fix Gaussian weight for attention, Gaussian weight only relys on the distance between characters"
+      ],
+      "length": 3612,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Gaussian-masked directional multi-head attention works by combining a Gaussian weight matrix, which emphasizes adjacent characters based on their distance, with the scaled dot-product attention score matrix via Hadamard product, and applying directional triangular masks for forward and backward encoders, all within a multi-head architecture to capture information from different subspaces.",
+        "metric": "token_f1",
+        "score": 0.3061224489795919,
+        "prediction_key": "Gaussian-masked directional multi-head attention works by combining a Gaussian weight matrix, which emphasizes adjacent characters based on their distance, with",
+        "gold": [
+          "pays attentions to adjacent characters and casts a localness relationship between the characters as a fixed Gaussian weight assuming the weight relies on the distance between characters",
+          "Gaussian-masked directional attention can be described as a function to map queries and key-value pairs to the representation of input, Gaussian-masked directional attention expects to pay attention to the adjacent characters of each positions and cast the localness relationship between characters as a fix Gaussian weight for attention, Gaussian weight only relys on the distance between characters"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Gaussian-masked directional multi-head attention works by combining a Gaussian weight matrix $G$, which encodes localness relationships based on character distance, with the score matrix from scaled dot-product attention via Hadamard product, and applying directional triangular masks for forward and backward encoders, all within a multi-head architecture to capture information from different subspaces.",
+        "metric": "token_f1",
+        "score": 0.27999999999999997,
+        "prediction_key": "Gaussian-masked directional multi-head attention works by combining a Gaussian weight matrix $G$, which encodes localness relationships based on character dista",
+        "gold": [
+          "pays attentions to adjacent characters and casts a localness relationship between the characters as a fixed Gaussian weight assuming the weight relies on the distance between characters",
+          "Gaussian-masked directional attention can be described as a function to map queries and key-value pairs to the representation of input, Gaussian-masked directional attention expects to pay attention to the adjacent characters of each positions and cast the localness relationship between characters as a fix Gaussian weight for attention, Gaussian weight only relys on the distance between characters"
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "dataset": "qasper_e",
+      "_id": "4ec441a68f88d757c758ad09d9c710c7af94895bb544f3b6",
+      "answers": [
+        "No data. Pretrained model is used."
+      ],
+      "length": 3409,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Monolingual data (e.g., Wikipedias) and, for some experiments, parallel corpora (e.g., United Nations Parallel Corpus, IIT Bombay corpus, OpenSubtitles 2018).",
+        "metric": "token_f1",
+        "score": 0.07692307692307691,
+        "prediction_key": "Monolingual data (e.g., Wikipedias) and, for some experiments, parallel corpora (e.g., United Nations Parallel Corpus, IIT Bombay corpus, OpenSubtitles 2018).",
+        "gold": [
+          "No data. Pretrained model is used."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "monolingual data",
+        "metric": "token_f1",
+        "score": 0.25,
+        "prediction_key": "monolingual data",
+        "gold": [
+          "No data. Pretrained model is used."
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "dataset": "qasper_e",
+      "_id": "e7af1912d971eeb3c7f5f96c5440ef649b96bda636efa14d",
+      "answers": [
+        "For certain POS tags, e.g. VERB, PRON.",
+        "most word alignments only involve one or a few words, attention can be distributed more freely"
+      ],
+      "length": 3366,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Attention is different from alignment in cases involving verbs, pronouns, and particles, where attention is more distributed and captures context words beyond the aligned source words, and in cases where attention concentration (measured by entropy) does not correlate with word prediction loss.",
+        "metric": "token_f1",
+        "score": 0.17857142857142858,
+        "prediction_key": "Attention is different from alignment in cases involving verbs, pronouns, and particles, where attention is more distributed and captures context words beyond t",
+        "gold": [
+          "For certain POS tags, e.g. VERB, PRON.",
+          "most word alignments only involve one or a few words, attention can be distributed more freely"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Attention is different from alignment in cases where it captures information beyond translational equivalence, such as for verbs, and when it attends to context words influencing the current word translation rather than only the aligned word.",
+        "metric": "token_f1",
+        "score": 0.163265306122449,
+        "prediction_key": "Attention is different from alignment in cases where it captures information beyond translational equivalence, such as for verbs, and when it attends to context",
+        "gold": [
+          "For certain POS tags, e.g. VERB, PRON.",
+          "most word alignments only involve one or a few words, attention can be distributed more freely"
+        ]
+      }
+    },
+    {
+      "index": 19,
+      "dataset": "qasper_e",
+      "_id": "0e6d9eaa143bb2a251695d6cc0556c5e03f25ccbb56a171f",
+      "answers": [
+        "RNN",
+        " Recurrent Neural Network (RNN)"
+      ],
+      "length": 1644,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Recurrent Neural Network (RNN)",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "Recurrent Neural Network (RNN)",
+        "gold": [
+          "RNN",
+          " Recurrent Neural Network (RNN)"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "RNN with two 2D-convolutional layers, seven bi-directional recurrent layers, and a fully-connected layer with softmax activation",
+        "metric": "token_f1",
+        "score": 0.2105263157894737,
+        "prediction_key": "RNN with two 2D-convolutional layers, seven bi-directional recurrent layers, and a fully-connected layer with softmax activation",
+        "gold": [
+          "RNN",
+          " Recurrent Neural Network (RNN)"
+        ]
+      }
+    },
+    {
+      "index": 20,
+      "dataset": "qasper_e",
+      "_id": "bd1fcb1c0f33cf6bc44554bff4ec86fed2a4fc90e8d18cdf",
+      "answers": [
+        "CNN modelBIBREF0, Stanford CRF modelBIBREF21",
+        "Bam et al. SVM, Ma and Hovy w/glove, Lample et al. w/fastText, Lample et al. w/word2vec"
+      ],
+      "length": 2836,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Stanford CRF model",
+        "metric": "token_f1",
+        "score": 0.5,
+        "prediction_key": "Stanford CRF model",
+        "gold": [
+          "CNN modelBIBREF0, Stanford CRF modelBIBREF21",
+          "Bam et al. SVM, Ma and Hovy w/glove, Lample et al. w/fastText, Lample et al. w/word2vec"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Stanford CRF model",
+        "metric": "token_f1",
+        "score": 0.5,
+        "prediction_key": "Stanford CRF model",
+        "gold": [
+          "CNN modelBIBREF0, Stanford CRF modelBIBREF21",
+          "Bam et al. SVM, Ma and Hovy w/glove, Lample et al. w/fastText, Lample et al. w/word2vec"
+        ]
+      }
+    },
+    {
+      "index": 21,
+      "dataset": "qasper_e",
+      "_id": "b0bc5483c009536bf3dcf582b3b2015d4db13aaf81df8c9a",
+      "answers": [
+        "Unanswerable"
+      ],
+      "length": 3885,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "Unanswerable"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "Unanswerable"
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "dataset": "qasper_e",
+      "_id": "e877b03879e4db0ccc7618230cad71590dadd808fc7a8152",
+      "answers": [
+        "about 500",
+        "Unanswerable"
+      ],
+      "length": 3831,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Around 500 different workers were involved in the annotation.",
+        "metric": "token_f1",
+        "score": 0.2,
+        "prediction_key": "Around 500 different workers were involved in the annotation.",
+        "gold": [
+          "about 500",
+          "Unanswerable"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Around 500 different workers were involved in the annotation.",
+        "metric": "token_f1",
+        "score": 0.2,
+        "prediction_key": "Around 500 different workers were involved in the annotation.",
+        "gold": [
+          "about 500",
+          "Unanswerable"
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "dataset": "qasper_e",
+      "_id": "b7eb32148f033ee9882d1096f1b0a2f75b4e4a05308c7292",
+      "answers": [
+        "linear SVM, bidirectional Long Short-Term-Memory (BiLSTM), Convolutional Neural Network (CNN)",
+        "linear SVM, bidirectional Long Short-Term-Memory (BiLSTM), Convolutional Neural Network (CNN)",
+        "linear SVM trained on word unigrams,  bidirectional Long Short-Term-Memory (BiLSTM),  Convolutional Neural Network (CNN) "
+      ],
+      "length": 2250,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Linear SVM, bidirectional Long Short-Term Memory (BiLSTM), and Convolutional Neural Network (CNN)",
+        "metric": "token_f1",
+        "score": 0.8181818181818182,
+        "prediction_key": "Linear SVM, bidirectional Long Short-Term Memory (BiLSTM), and Convolutional Neural Network (CNN)",
+        "gold": [
+          "linear SVM, bidirectional Long Short-Term-Memory (BiLSTM), Convolutional Neural Network (CNN)",
+          "linear SVM, bidirectional Long Short-Term-Memory (BiLSTM), Convolutional Neural Network (CNN)",
+          "linear SVM trained on word unigrams,  bidirectional Long Short-Term-Memory (BiLSTM),  Convolutional Neural Network (CNN) "
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "linear SVM, bidirectional Long Short-Term-Memory (BiLSTM) model, Convolutional Neural Network (CNN) model",
+        "metric": "token_f1",
+        "score": 0.9090909090909091,
+        "prediction_key": "linear SVM, bidirectional Long Short-Term-Memory (BiLSTM) model, Convolutional Neural Network (CNN) model",
+        "gold": [
+          "linear SVM, bidirectional Long Short-Term-Memory (BiLSTM), Convolutional Neural Network (CNN)",
+          "linear SVM, bidirectional Long Short-Term-Memory (BiLSTM), Convolutional Neural Network (CNN)",
+          "linear SVM trained on word unigrams,  bidirectional Long Short-Term-Memory (BiLSTM),  Convolutional Neural Network (CNN) "
+        ]
+      }
+    },
+    {
+      "index": 24,
+      "dataset": "qasper_e",
+      "_id": "11697ce7f07d6badb6224d68ed40229693b66941ed3a156d",
+      "answers": [
+        "BiLSTM, BiLSTM-CNN, BiLSTM-CRF, BiLSTM-CNN-CRF",
+        "BiLSTMBIBREF14, BiLSTM+CNNBIBREF20, BiLSTM+CRFBIBREF1, BiLSTM+CNN+CRFBIBREF2, CNN modelBIBREF0 and Stanford CRF modelBIBREF21"
+      ],
+      "length": 2838,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "BiLSTM, BiLSTM+CNN, BiLSTM+CRF, BiLSTM+CNN+CRF, CNN, and Stanford CRF",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "BiLSTM, BiLSTM+CNN, BiLSTM+CRF, BiLSTM+CNN+CRF, CNN, and Stanford CRF",
+        "gold": [
+          "BiLSTM, BiLSTM-CNN, BiLSTM-CRF, BiLSTM-CNN-CRF",
+          "BiLSTMBIBREF14, BiLSTM+CNNBIBREF20, BiLSTM+CRFBIBREF1, BiLSTM+CNN+CRFBIBREF2, CNN modelBIBREF0 and Stanford CRF modelBIBREF21"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "BiLSTM, BiLSTM+CNN, BiLSTM+CRF, BiLSTM+CNN+CRF, CNN, and Stanford CRF",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "BiLSTM, BiLSTM+CNN, BiLSTM+CRF, BiLSTM+CNN+CRF, CNN, and Stanford CRF",
+        "gold": [
+          "BiLSTM, BiLSTM-CNN, BiLSTM-CRF, BiLSTM-CNN-CRF",
+          "BiLSTMBIBREF14, BiLSTM+CNNBIBREF20, BiLSTM+CRFBIBREF1, BiLSTM+CNN+CRFBIBREF2, CNN modelBIBREF0 and Stanford CRF modelBIBREF21"
+        ]
+      }
+    },
+    {
+      "index": 25,
+      "dataset": "qasper_e",
+      "_id": "c483210fc867c15f41b696d521b983cdcf41c2062e6ac3fb",
+      "answers": [
+        "Zero Resource Toolkit (ZRTools) BIBREF7"
+      ],
+      "length": 3381,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Through unsupervised term discovery (UTD) and acoustic unit discovery (AUD), which operate directly on raw speech without language-specific knowledge.",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "Through unsupervised term discovery (UTD) and acoustic unit discovery (AUD), which operate directly on raw speech without language-specific knowledge.",
+        "gold": [
+          "Zero Resource Toolkit (ZRTools) BIBREF7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Through unsupervised term discovery (UTD) for word-like units and acoustic unit discovery (AUD) for phoneme-like units.",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "Through unsupervised term discovery (UTD) for word-like units and acoustic unit discovery (AUD) for phoneme-like units.",
+        "gold": [
+          "Zero Resource Toolkit (ZRTools) BIBREF7"
+        ]
+      }
+    },
+    {
+      "index": 26,
+      "dataset": "qasper_e",
+      "_id": "2a51c07e65a9214ed2cd3c04303afa205e005f4e1ccb172a",
+      "answers": [
+        "BERTbase",
+        "BERTbase"
+      ],
+      "length": 3852,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "BERTbase model",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "BERTbase model",
+        "gold": [
+          "BERTbase",
+          "BERTbase"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "BERTbase model",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "BERTbase model",
+        "gold": [
+          "BERTbase",
+          "BERTbase"
+        ]
+      }
+    },
+    {
+      "index": 27,
+      "dataset": "qasper_e",
+      "_id": "867b7b94ee2ae6051131ca90ebc66df6ba3084f4bb3bdda8",
+      "answers": [
+        "Answer with content missing: (LVL1, LVL2, LVL3) \n- Stanford CoreNLP\n- Optical Character Recognition (OCR) system, ParsCIT \n- further abridge the input text from level 2 preprocessed documents to the following: title, headers, abstract, introduction, related work, background and conclusion."
+      ],
+      "length": 1822,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "TopicRank, WINGNUS, KP-Miner, TF-IDF, and another unspecified model (the article states five models were re-implemented, naming four explicitly).",
+        "metric": "token_f1",
+        "score": 0.038461538461538464,
+        "prediction_key": "TopicRank, WINGNUS, KP-Miner, TF-IDF, and another unspecified model (the article states five models were re-implemented, naming four explicitly).",
+        "gold": [
+          "Answer with content missing: (LVL1, LVL2, LVL3) \n- Stanford CoreNLP\n- Optical Character Recognition (OCR) system, ParsCIT \n- further abridge the input text from level 2 preprocessed documents to the following: title, headers, abstract, introduction, related work, background and conclusion."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "five keyphrase extraction models: two commonly used baselines, a resource-lean unsupervised graph-based ranking approach (TopicRank), and two top-performing systems from SemEval-2010 (KP-Miner and WINGNUS).",
+        "metric": "token_f1",
+        "score": 0.06896551724137931,
+        "prediction_key": "five keyphrase extraction models: two commonly used baselines, a resource-lean unsupervised graph-based ranking approach (TopicRank), and two top-performing sys",
+        "gold": [
+          "Answer with content missing: (LVL1, LVL2, LVL3) \n- Stanford CoreNLP\n- Optical Character Recognition (OCR) system, ParsCIT \n- further abridge the input text from level 2 preprocessed documents to the following: title, headers, abstract, introduction, related work, background and conclusion."
+        ]
+      }
+    },
+    {
+      "index": 28,
+      "dataset": "qasper_e",
+      "_id": "38b265f4caee01966b67dca127276d17f640322b7a11b3f4",
+      "answers": [
+        "Yes",
+        "Yes"
+      ],
+      "length": 2077,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Yes",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "Yes",
+        "gold": [
+          "Yes",
+          "Yes"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "yes",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "yes",
+        "gold": [
+          "Yes",
+          "Yes"
+        ]
+      }
+    },
+    {
+      "index": 29,
+      "dataset": "qasper_e",
+      "_id": "c21ac70b9fefd1be0058d56b0eaa81d065271558b901364a",
+      "answers": [
+        "MIMIC-III",
+        "MIMIC-III"
+      ],
+      "length": 2992,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "MIMIC-III dataset",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "MIMIC-III dataset",
+        "gold": [
+          "MIMIC-III",
+          "MIMIC-III"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "MIMIC-III database, specifically 55,177 discharge reports and 4,475 discharge addendums for 41,127 distinct patients.",
+        "metric": "token_f1",
+        "score": 0.13333333333333333,
+        "prediction_key": "MIMIC-III database, specifically 55,177 discharge reports and 4,475 discharge addendums for 41,127 distinct patients.",
+        "gold": [
+          "MIMIC-III",
+          "MIMIC-III"
+        ]
+      }
+    },
+    {
+      "index": 30,
+      "dataset": "qasper_e",
+      "_id": "45104af27b1eaf72961c861eeae1013869612e3d5f258927",
+      "answers": [
+        "Level A: 14100 Tweets\nLevel B: 4640 Tweets\nLevel C: 4089 Tweets"
+      ],
+      "length": 2255,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "Level A: 14100 Tweets\nLevel B: 4640 Tweets\nLevel C: 4089 Tweets"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "The dataset contains 14,100 tweets, with hierarchical annotation across three levels (A, B, C), but the article does not specify the length of the dataset for each individual step of the hierarchy.",
+        "metric": "token_f1",
+        "score": 0.21621621621621623,
+        "prediction_key": "The dataset contains 14,100 tweets, with hierarchical annotation across three levels (A, B, C), but the article does not specify the length of the dataset for e",
+        "gold": [
+          "Level A: 14100 Tweets\nLevel B: 4640 Tweets\nLevel C: 4089 Tweets"
+        ]
+      }
+    },
+    {
+      "index": 31,
+      "dataset": "qasper_e",
+      "_id": "7de339432271d1324e9ea25f6321364528c6fd2f8ea2e3d1",
+      "answers": [
+        "it captures other information rather than only the translational equivalent in the case of verbs",
+        "Alignment points of the POS tags."
+      ],
+      "length": 3372,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Attention captures context words influencing the current word translation, such as adjectives and determiners for nouns, and auxiliary verbs, adverbs, subjects, and objects for verbs.",
+        "metric": "token_f1",
+        "score": 0.10810810810810811,
+        "prediction_key": "Attention captures context words influencing the current word translation, such as adjectives and determiners for nouns, and auxiliary verbs, adverbs, subjects,",
+        "gold": [
+          "it captures other information rather than only the translational equivalent in the case of verbs",
+          "Alignment points of the POS tags."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "context words influencing the current word translation",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "context words influencing the current word translation",
+        "gold": [
+          "it captures other information rather than only the translational equivalent in the case of verbs",
+          "Alignment points of the POS tags."
+        ]
+      }
+    },
+    {
+      "index": 32,
+      "dataset": "qasper_e",
+      "_id": "eca9924a93084bb987fc705af683806564fa2d04e9dba909",
+      "answers": [
+        "BOW-LR, BOW-RF. TFIDF-RF, TextCNN, C-TextCNN",
+        "bag-of-words (BOW), term frequency–inverse document frequency (TFIDF), neural-based word embedding, Logistic Regression (LR), Random Forest (RF), TextCNN BIBREF10 with initial word embedding as GloVe"
+      ],
+      "length": 3181,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The baselines were bag-of-words (BOW), term frequency–inverse document frequency (TFIDF), and neural-based word embedding, combined with Logistic Regression (LR), Random Forest (RF), and TextCNN.",
+        "metric": "token_f1",
+        "score": 0.7659574468085107,
+        "prediction_key": "The baselines were bag-of-words (BOW), term frequency–inverse document frequency (TFIDF), and neural-based word embedding, combined with Logistic Regression (LR",
+        "gold": [
+          "BOW-LR, BOW-RF. TFIDF-RF, TextCNN, C-TextCNN",
+          "bag-of-words (BOW), term frequency–inverse document frequency (TFIDF), neural-based word embedding, Logistic Regression (LR), Random Forest (RF), TextCNN BIBREF10 with initial word embedding as GloVe"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "bag-of-words (BOW), term frequency–inverse document frequency (TFIDF), neural-based word embedding, Logistic Regression (LR), Random Forest (RF), TextCNN",
+        "metric": "token_f1",
+        "score": 0.8292682926829268,
+        "prediction_key": "bag-of-words (BOW), term frequency–inverse document frequency (TFIDF), neural-based word embedding, Logistic Regression (LR), Random Forest (RF), TextCNN",
+        "gold": [
+          "BOW-LR, BOW-RF. TFIDF-RF, TextCNN, C-TextCNN",
+          "bag-of-words (BOW), term frequency–inverse document frequency (TFIDF), neural-based word embedding, Logistic Regression (LR), Random Forest (RF), TextCNN BIBREF10 with initial word embedding as GloVe"
+        ]
+      }
+    },
+    {
+      "index": 33,
+      "dataset": "qasper_e",
+      "_id": "d1aa1132439bd292965634095bf1c9943e062bb6645ff78c",
+      "answers": [
+        "Unanswerable",
+        "48,705"
+      ],
+      "length": 3307,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The article does not specify a fixed number of tags they look at; it evaluates recommendations for different values of \"k\" (number of recommended tags), with figures showing results for k=5, k=10, and k=20.",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "The article does not specify a fixed number of tags they look at; it evaluates recommendations for different values of \"k\" (number of recommended tags), with fi",
+        "gold": [
+          "Unanswerable",
+          "48,705"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "Unanswerable",
+          "48,705"
+        ]
+      }
+    },
+    {
+      "index": 34,
+      "dataset": "qasper_e",
+      "_id": "54797939fdd2089aeb0c4242e660b2ff1914538839e9a21e",
+      "answers": [
+        "follow the architecture in berard2018end, but have 3 decoder layers like that in pino2019harnessing"
+      ],
+      "length": 2424,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The ASR and ST models follow the architecture in berard2018end with 3 decoder layers, and the MT model uses a Transformer base architecture with 3 encoder layers, 3 decoder layers, and 0.3 dropout.",
+        "metric": "token_f1",
+        "score": 0.3333333333333333,
+        "prediction_key": "The ASR and ST models follow the architecture in berard2018end with 3 decoder layers, and the MT model uses a Transformer base architecture with 3 encoder layer",
+        "gold": [
+          "follow the architecture in berard2018end, but have 3 decoder layers like that in pino2019harnessing"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "berard2018end architecture with 3 decoder layers like pino2019harnessing",
+        "metric": "token_f1",
+        "score": 0.6666666666666667,
+        "prediction_key": "berard2018end architecture with 3 decoder layers like pino2019harnessing",
+        "gold": [
+          "follow the architecture in berard2018end, but have 3 decoder layers like that in pino2019harnessing"
+        ]
+      }
+    },
+    {
+      "index": 35,
+      "dataset": "qasper_e",
+      "_id": "e2a3009e3e15b0e45552a4ab0c593e027e64acf190b2903b",
+      "answers": [
+        " Penn Treebank, WikiText2",
+        "Penn Treebank (PTB) , WikiText2 (WT-2)"
+      ],
+      "length": 3302,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Penn Treebank (PTB) and WikiText2 (WT-2) datasets",
+        "metric": "token_f1",
+        "score": 0.8333333333333333,
+        "prediction_key": "Penn Treebank (PTB) and WikiText2 (WT-2) datasets",
+        "gold": [
+          " Penn Treebank, WikiText2",
+          "Penn Treebank (PTB) , WikiText2 (WT-2)"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Penn Treebank (PTB) and WikiText2 (WT-2) datasets",
+        "metric": "token_f1",
+        "score": 0.8333333333333333,
+        "prediction_key": "Penn Treebank (PTB) and WikiText2 (WT-2) datasets",
+        "gold": [
+          " Penn Treebank, WikiText2",
+          "Penn Treebank (PTB) , WikiText2 (WT-2)"
+        ]
+      }
+    },
+    {
+      "index": 36,
+      "dataset": "qasper_e",
+      "_id": "a98bc410d113f968de393f3da14435b31b34a8ce2ccec169",
+      "answers": [
+        "No",
+        "No"
+      ],
+      "length": 3158,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "No",
+          "No"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "No",
+          "No"
+        ]
+      }
+    },
+    {
+      "index": 37,
+      "dataset": "qasper_e",
+      "_id": "86d091f9a2a36e97ae2f587ff9e1beb3e41c34862d70451e",
+      "answers": [
+        "While there has been existing work on reducing NLP model vocabulary sizes BIBREF15, distillation techniques cannot utilize these, since they require the student and teacher models to share the same vocabulary and output space. This profoundly limits their potential to further reduce model sizes.",
+        "distillation techniques cannot utilize these, since they require the student and teacher models to share the same vocabulary and output space. This profoundly limits their potential to further reduce model sizes."
+      ],
+      "length": 3570,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Because they require the student and teacher models to share the same vocabulary and output space.",
+        "metric": "token_f1",
+        "score": 0.6046511627906977,
+        "prediction_key": "Because they require the student and teacher models to share the same vocabulary and output space.",
+        "gold": [
+          "While there has been existing work on reducing NLP model vocabulary sizes BIBREF15, distillation techniques cannot utilize these, since they require the student and teacher models to share the same vocabulary and output space. This profoundly limits their potential to further reduce model sizes.",
+          "distillation techniques cannot utilize these, since they require the student and teacher models to share the same vocabulary and output space. This profoundly limits their potential to further reduce model sizes."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Because they require the student and teacher models to share the same vocabulary and output space.",
+        "metric": "token_f1",
+        "score": 0.6046511627906977,
+        "prediction_key": "Because they require the student and teacher models to share the same vocabulary and output space.",
+        "gold": [
+          "While there has been existing work on reducing NLP model vocabulary sizes BIBREF15, distillation techniques cannot utilize these, since they require the student and teacher models to share the same vocabulary and output space. This profoundly limits their potential to further reduce model sizes.",
+          "distillation techniques cannot utilize these, since they require the student and teacher models to share the same vocabulary and output space. This profoundly limits their potential to further reduce model sizes."
+        ]
+      }
+    },
+    {
+      "index": 38,
+      "dataset": "qasper_e",
+      "_id": "a533586fadb3dbf78a61381a0f040d993ae1d5cd3e66b98d",
+      "answers": [
+        "using word2vec to create features that are used as input to the SVM",
+        "use the word2vec algorithm, create several unsupervised hand-crafted features, generate document vectors and feed them as input into the support vector machines (SVM) approach"
+      ],
+      "length": 3820,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "word2vec",
+        "metric": "token_f1",
+        "score": 0.15384615384615385,
+        "prediction_key": "word2vec",
+        "gold": [
+          "using word2vec to create features that are used as input to the SVM",
+          "use the word2vec algorithm, create several unsupervised hand-crafted features, generate document vectors and feed them as input into the support vector machines (SVM) approach"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "word2vec",
+        "metric": "token_f1",
+        "score": 0.15384615384615385,
+        "prediction_key": "word2vec",
+        "gold": [
+          "using word2vec to create features that are used as input to the SVM",
+          "use the word2vec algorithm, create several unsupervised hand-crafted features, generate document vectors and feed them as input into the support vector machines (SVM) approach"
+        ]
+      }
+    },
+    {
+      "index": 39,
+      "dataset": "qasper_e",
+      "_id": "861cbf67995653276e955ddb68584eb35263f970a710c86c",
+      "answers": [
+        "ancient Chinese history records in several dynasties (about 1000BC-200BC) and articles written by celebrities of that era",
+        "Ancient Chinese history records in several dynasties and articles written by celebrities during 1000BC-200BC collected from the internet "
+      ],
+      "length": 3722,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The ancient Chinese dataset comes from 1.7K bilingual ancient-modern Chinese articles collected from the internet, primarily ancient Chinese history records from several dynasties (about 1000BC-200BC) and articles written by celebrities of that era.",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "The ancient Chinese dataset comes from 1.7K bilingual ancient-modern Chinese articles collected from the internet, primarily ancient Chinese history records fro",
+        "gold": [
+          "ancient Chinese history records in several dynasties (about 1000BC-200BC) and articles written by celebrities of that era",
+          "Ancient Chinese history records in several dynasties and articles written by celebrities during 1000BC-200BC collected from the internet "
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "1.7K bilingual ancient-modern Chinese articles collected from the internet, with a large part coming from ancient Chinese history records in several dynasties (about 1000BC-200BC) and articles written by celebrities of that era.",
+        "metric": "token_f1",
+        "score": 0.7234042553191489,
+        "prediction_key": "1.7K bilingual ancient-modern Chinese articles collected from the internet, with a large part coming from ancient Chinese history records in several dynasties (",
+        "gold": [
+          "ancient Chinese history records in several dynasties (about 1000BC-200BC) and articles written by celebrities of that era",
+          "Ancient Chinese history records in several dynasties and articles written by celebrities during 1000BC-200BC collected from the internet "
+        ]
+      }
+    },
+    {
+      "index": 40,
+      "dataset": "qasper_e",
+      "_id": "ca6ab28a7624b35d6e14bdd51a24f6cba93df17b033a0945",
+      "answers": [
+        "No"
+      ],
+      "length": 1561,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "No"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "No"
+        ]
+      }
+    },
+    {
+      "index": 41,
+      "dataset": "qasper_e",
+      "_id": "689421214f9b71be11d80ef9ae68b49974a8bd7e4313cd58",
+      "answers": [
+        "words embeddings, style, and morality features",
+        "words embeddings, style, and morality features"
+      ],
+      "length": 2091,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Words embeddings, style, and morality features.",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "Words embeddings, style, and morality features.",
+        "gold": [
+          "words embeddings, style, and morality features",
+          "words embeddings, style, and morality features"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "words embeddings, style, and morality features",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "words embeddings, style, and morality features",
+        "gold": [
+          "words embeddings, style, and morality features",
+          "words embeddings, style, and morality features"
+        ]
+      }
+    },
+    {
+      "index": 42,
+      "dataset": "qasper_e",
+      "_id": "57825167e9b5b23b2f03e2675d9c7e96814b6785975b5dff",
+      "answers": [
+        "United Nations Parallel Corpus, IIT Bombay corpus, OpenSubtitles 2018"
+      ],
+      "length": 3405,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "XNLI dataset and Universal Dependencies v2.4",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "XNLI dataset and Universal Dependencies v2.4",
+        "gold": [
+          "United Nations Parallel Corpus, IIT Bombay corpus, OpenSubtitles 2018"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "XNLI dataset and Universal Dependencies v2.4",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "XNLI dataset and Universal Dependencies v2.4",
+        "gold": [
+          "United Nations Parallel Corpus, IIT Bombay corpus, OpenSubtitles 2018"
+        ]
+      }
+    },
+    {
+      "index": 43,
+      "dataset": "qasper_e",
+      "_id": "c5692a8d9bf0880f0cb4d893511e2b9245a914f828cebcf6",
+      "answers": [
+        "Unanswerable",
+        "English"
+      ],
+      "length": 2009,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "Unanswerable",
+          "English"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "Unanswerable",
+          "English"
+        ]
+      }
+    },
+    {
+      "index": 44,
+      "dataset": "qasper_e",
+      "_id": "ba8b9314903599bb79e4a4148ebae6ae59c5d717a1a2a936",
+      "answers": [
+        "No",
+        "No"
+      ],
+      "length": 1899,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "No",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "No",
+        "gold": [
+          "No",
+          "No"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "no",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "no",
+        "gold": [
+          "No",
+          "No"
+        ]
+      }
+    },
+    {
+      "index": 45,
+      "dataset": "qasper_e",
+      "_id": "b1e77f6928aff3baafd48d7674dc39bd72293dce6956dbde",
+      "answers": [
+        "45,000 scholarly articles, including over 33,000 with full text"
+      ],
+      "length": 2150,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The collection of COVID-19 literature consists of 2081 articles and about 360,000 sentences.",
+        "metric": "token_f1",
+        "score": 0.09523809523809525,
+        "prediction_key": "The collection of COVID-19 literature consists of 2081 articles and about 360,000 sentences.",
+        "gold": [
+          "45,000 scholarly articles, including over 33,000 with full text"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "over 45,000 scholarly articles, including over 33,000 with full text",
+        "metric": "token_f1",
+        "score": 0.9473684210526316,
+        "prediction_key": "over 45,000 scholarly articles, including over 33,000 with full text",
+        "gold": [
+          "45,000 scholarly articles, including over 33,000 with full text"
+        ]
+      }
+    },
+    {
+      "index": 46,
+      "dataset": "qasper_e",
+      "_id": "c0f67594ed1d5ba890abd05585f849a4bdde9f30e9054ea8",
+      "answers": [
+        "support vector machine classifier (SVM), logistic regression classifier (LR), Naive Bayes classifier (NB), random forest (RF), CNN, LSTM , LSTM-soft, LSTM-self",
+        "support vector machine classifier (SVM), logistic regression classifier (LR), Naive Bayes classifier (NB), random forest (RF), CNN, LSTM , LSTM-soft, LSTM-self"
+      ],
+      "length": 2895,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The proposed model is compared to TF-IDF-based classifiers (SVM, LR, NB, RF), CNN, LSTM, LSTM-soft, and LSTM-self.",
+        "metric": "token_f1",
+        "score": 0.4444444444444445,
+        "prediction_key": "The proposed model is compared to TF-IDF-based classifiers (SVM, LR, NB, RF), CNN, LSTM, LSTM-soft, and LSTM-self.",
+        "gold": [
+          "support vector machine classifier (SVM), logistic regression classifier (LR), Naive Bayes classifier (NB), random forest (RF), CNN, LSTM , LSTM-soft, LSTM-self",
+          "support vector machine classifier (SVM), logistic regression classifier (LR), Naive Bayes classifier (NB), random forest (RF), CNN, LSTM , LSTM-soft, LSTM-self"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "TF-IDF (SVM, LR, NB, RF), CNN, LSTM, LSTM-soft, and LSTM-self",
+        "metric": "token_f1",
+        "score": 0.5333333333333333,
+        "prediction_key": "TF-IDF (SVM, LR, NB, RF), CNN, LSTM, LSTM-soft, and LSTM-self",
+        "gold": [
+          "support vector machine classifier (SVM), logistic regression classifier (LR), Naive Bayes classifier (NB), random forest (RF), CNN, LSTM , LSTM-soft, LSTM-self",
+          "support vector machine classifier (SVM), logistic regression classifier (LR), Naive Bayes classifier (NB), random forest (RF), CNN, LSTM , LSTM-soft, LSTM-self"
+        ]
+      }
+    },
+    {
+      "index": 47,
+      "dataset": "qasper_e",
+      "_id": "3e0ebe8cd7c6ad2ed6b011e47c1a06464ae4eed1b47c9d37",
+      "answers": [
+        "1913 signals",
+        "Unanswerable"
+      ],
+      "length": 2361,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "1913 signals",
+          "Unanswerable"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "1913 signals",
+          "Unanswerable"
+        ]
+      }
+    },
+    {
+      "index": 48,
+      "dataset": "qasper_e",
+      "_id": "76ade8dc03f520d725ee2b1decb2904f80becbc3dd6fb9b5",
+      "answers": [
+        "Co-Reference Resolution, Query Generation, Retrieval Model, Result Generation",
+        "Co-Reference Resolution, Query Generation, Retrieval Model, Result Generation"
+      ],
+      "length": 1701,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Macaw's modules include actions (e.g., search, question answering), co-reference resolution, query generation, retrieval model, result generation, and user interfaces (e.g., File IO, Standard IO, Telegram).",
+        "metric": "token_f1",
+        "score": 0.48484848484848486,
+        "prediction_key": "Macaw's modules include actions (e.g., search, question answering), co-reference resolution, query generation, retrieval model, result generation, and user inte",
+        "gold": [
+          "Co-Reference Resolution, Query Generation, Retrieval Model, Result Generation",
+          "Co-Reference Resolution, Query Generation, Retrieval Model, Result Generation"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Macaw's modules include co-reference resolution, query generation, retrieval model, and result generation.",
+        "metric": "token_f1",
+        "score": 0.8,
+        "prediction_key": "Macaw's modules include co-reference resolution, query generation, retrieval model, and result generation.",
+        "gold": [
+          "Co-Reference Resolution, Query Generation, Retrieval Model, Result Generation",
+          "Co-Reference Resolution, Query Generation, Retrieval Model, Result Generation"
+        ]
+      }
+    },
+    {
+      "index": 49,
+      "dataset": "qasper_e",
+      "_id": "987ab3762f78d7c33799631fec402ae2ed66ecbb0708347b",
+      "answers": [
+        "Unanswerable"
+      ],
+      "length": 1913,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "Unanswerable"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "Unanswerable"
+        ]
+      }
+    },
+    {
+      "index": 50,
+      "dataset": "qasper_e",
+      "_id": "f1d8b6d074397f7bead6a59be4c66dc5f1f1a058f74f1402",
+      "answers": [
+        "Unanswerable",
+        "Unanswerable"
+      ],
+      "length": 3794,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The article mentions variability with respect to \"dialects\" but does not specify which accents are present in the corpus.",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "The article mentions variability with respect to \"dialects\" but does not specify which accents are present in the corpus.",
+        "gold": [
+          "Unanswerable",
+          "Unanswerable"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "Unanswerable",
+          "Unanswerable"
+        ]
+      }
+    }
+  ],
+  "boundary": "Public LongBench smoke slice. This is not a full LongBench leaderboard claim; it is a source-backed answer-key accuracy receipt that can scale to larger slices."
+}

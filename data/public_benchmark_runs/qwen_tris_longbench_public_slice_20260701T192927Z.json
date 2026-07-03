@@ -1,0 +1,56 @@
+{
+  "run_id": "qwen_tris_longbench_public_slice_20260701T192927Z",
+  "provider": "qwen-cloud",
+  "model": "qwen-plus",
+  "benchmark": "LongBench public data.zip",
+  "tasks": [
+    "hotpotqa_e"
+  ],
+  "items": 1,
+  "condition_a": "baseline Qwen prompt-only answer discipline",
+  "condition_b": "Qwen Tris stable-state answer discipline",
+  "condition_a_mean": 0.1904761904761905,
+  "condition_b_mean": 0.1904761904761905,
+  "delta": 0.0,
+  "family_totals": {
+    "hotpotqa_e": {
+      "n": 1,
+      "condition_a_mean": 0.1904761904761905,
+      "condition_b_mean": 0.1904761904761905,
+      "delta": 0.0
+    }
+  },
+  "skipped_items": [],
+  "results": [
+    {
+      "index": 1,
+      "dataset": "hotpotqa_e",
+      "_id": "4f578bedb58906daa59e91baacc5d3c4b5d68d82e086891d",
+      "answers": [
+        "George Clooney, Thekla Reuten, Violante Placido, Irina Björklund, and Paolo Bonacelli"
+      ],
+      "length": 3790,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "George Clooney, Ray Smith, Cyril Luckham, Derek Godfrey, John Neville",
+        "metric": "token_f1",
+        "score": 0.1904761904761905,
+        "prediction_key": "George Clooney, Ray Smith, Cyril Luckham, Derek Godfrey, John Neville",
+        "gold": [
+          "George Clooney, Thekla Reuten, Violante Placido, Irina Björklund, and Paolo Bonacelli"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "George Clooney, Ray Smith, Cyril Luckham, Derek Godfrey, John Neville",
+        "metric": "token_f1",
+        "score": 0.1904761904761905,
+        "prediction_key": "George Clooney, Ray Smith, Cyril Luckham, Derek Godfrey, John Neville",
+        "gold": [
+          "George Clooney, Thekla Reuten, Violante Placido, Irina Björklund, and Paolo Bonacelli"
+        ]
+      }
+    }
+  ],
+  "boundary": "Public LongBench smoke slice. This is not a full LongBench leaderboard claim; it is a source-backed answer-key accuracy receipt that can scale to larger slices."
+}

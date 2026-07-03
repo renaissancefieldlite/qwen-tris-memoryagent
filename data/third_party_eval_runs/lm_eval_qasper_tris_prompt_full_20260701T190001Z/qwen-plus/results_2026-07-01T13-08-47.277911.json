@@ -1,0 +1,132 @@
+{
+  "results": {
+    "qwen_tris_qasper_e": {
+      "name": "qwen_tris_qasper_e",
+      "alias": "qwen_tris_qasper_e",
+      "sample_len": 224,
+      "score,none": 0.48259642030075983,
+      "score_stderr,none": 0.024899377106654862,
+      "qa_f1_score,none": 0.48259642030075983,
+      "qa_f1_score_stderr,none": 0.024899377106654862
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "qwen_tris_qasper_e": {
+      "task": "qwen_tris_qasper_e",
+      "dataset_path": "Xnhyacinth/LongBench",
+      "dataset_name": "qasper_e",
+      "test_split": "test",
+      "doc_to_text": "Qwen Tris public benchmark discipline: use only the article; return the shortest complete answer span that satisfies the question. If the question asks for a dataset, corpus, size, count, performance, results, languages, baselines, methods, or a definition of what something is, preserve the required numbers, units, codes, parenthetical labels, list items, and defining clause from the article. Do not collapse a dataset or method answer to only a generic name when the question asks what it is, how big it is, what it contains, or which items are included. If the question asks only for a specific name, label, acronym, yes/no, or unanswerable status, answer only that exact item. Do not add commentary.\n\nYou are given a scientific article and a question. Answer the question as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\n\nArticle: {{context}}\n\n Answer the question based on the above article as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\n\nQuestion: {{question}}\n\nAnswer:",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_qa_f1_with_score(doc: dict, results: list[str], **kwargs):\n    result = get_qa_f1_score(doc, results, **kwargs)\n    qa_f1 = result[\"qa_f1_score\"]\n    return {\"score\": qa_f1, \"qa_f1_score\": qa_f1}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "Qwen Tris public benchmark discipline: use only the article; return the shortest complete answer span that satisfies the question. If the question asks for a dataset, corpus, size, count, performance, results, languages, baselines, methods, or a definition of what something is, preserve the required numbers, units, codes, parenthetical labels, list items, and defining clause from the article. Do not collapse a dataset or method answer to only a generic name when the question asks what it is, how big it is, what it contains, or which items are included. If the question asks only for a specific name, label, acronym, yes/no, or unanswerable status, answer only that exact item. Do not add commentary.\n\nYou are given a scientific article and a question. Answer the question as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\n\nArticle: {{context}}\n\n Answer the question based on the above article as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\n\nQuestion: {{question}}\n\nAnswer:",
+        "doc_to_choice": null,
+        "doc_to_target": "{{answers}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "qa_f1_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 128,
+        "temperature": 1.0,
+        "do_sample": false,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "base_task": "longbench_qasper_e",
+        "prompt_variant": "qwen_tris_repaired_qasper_answer_discipline",
+        "model": "qwen-plus",
+        "base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
+        "tokenized_requests": false,
+        "num_concurrent": 1,
+        "max_retries": 6,
+        "timeout": 180,
+        "config_source": "eval_tasks/longbench_qwen_tris/qasper_e_tris.yaml"
+      }
+    }
+  },
+  "versions": {
+    "qwen_tris_qasper_e": 1.0
+  },
+  "n-shot": {
+    "qwen_tris_qasper_e": 0
+  },
+  "higher_is_better": {
+    "qwen_tris_qasper_e": {
+      "score": true,
+      "qa_f1_score": true
+    }
+  },
+  "n-samples": {
+    "qwen_tris_qasper_e": {
+      "original": 224,
+      "effective": 224
+    }
+  },
+  "config": {
+    "model": "local-chat-completions",
+    "model_args": {
+      "model": "qwen-plus",
+      "base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
+      "tokenized_requests": false,
+      "num_concurrent": 1,
+      "max_retries": 6,
+      "timeout": 180
+    },
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {},
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1782932406.634015,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13.dev0",
+  "upper_git_hash": null,
+  "task_hashes": {},
+  "model_source": "local-chat-completions",
+  "model_name": "qwen-plus",
+  "model_name_sanitized": "qwen-plus",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": true,
+  "chat_template": "",
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "524.7485711249901"
+}

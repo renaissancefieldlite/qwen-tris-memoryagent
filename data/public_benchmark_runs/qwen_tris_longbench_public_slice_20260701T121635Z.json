@@ -1,0 +1,55 @@
+{
+  "run_id": "qwen_tris_longbench_public_slice_20260701T121635Z",
+  "provider": "qwen-cloud",
+  "model": "qwen-plus",
+  "benchmark": "LongBench public data.zip",
+  "tasks": [
+    "passage_retrieval_en_e"
+  ],
+  "items": 1,
+  "condition_a": "baseline Qwen prompt-only answer discipline",
+  "condition_b": "Qwen Tris stable-state answer discipline",
+  "condition_a_mean": 1.0,
+  "condition_b_mean": 1.0,
+  "delta": 0.0,
+  "family_totals": {
+    "passage_retrieval_en_e": {
+      "n": 1,
+      "condition_a_mean": 1.0,
+      "condition_b_mean": 1.0,
+      "delta": 0.0
+    }
+  },
+  "results": [
+    {
+      "index": 1,
+      "dataset": "passage_retrieval_en_e",
+      "_id": "f363b5cfe63d7095514d7273aaa2e31dbfa73f10a71fd7d8",
+      "answers": [
+        "Paragraph 6"
+      ],
+      "length": 3446,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Paragraph 6",
+        "metric": "accuracy",
+        "score": 1.0,
+        "prediction_key": "paragraph 6",
+        "gold": [
+          "paragraph 6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Paragraph 6",
+        "metric": "accuracy",
+        "score": 1.0,
+        "prediction_key": "paragraph 6",
+        "gold": [
+          "paragraph 6"
+        ]
+      }
+    }
+  ],
+  "boundary": "Public LongBench smoke slice. This is not a full LongBench leaderboard claim; it is a source-backed answer-key accuracy receipt that can scale to larger slices."
+}

@@ -1,0 +1,1477 @@
+{
+  "run_id": "qwen_tris_longbench_public_slice_20260701T154752Z",
+  "provider": "qwen-cloud",
+  "model": "qwen-plus",
+  "benchmark": "LongBench public data.zip",
+  "tasks": [
+    "passage_count_e"
+  ],
+  "items": 50,
+  "condition_a": "baseline Qwen prompt-only answer discipline",
+  "condition_b": "Qwen Tris stable-state answer discipline",
+  "condition_a_mean": 0.340655737704918,
+  "condition_b_mean": 0.34167875192265434,
+  "delta": 0.0010230142177363177,
+  "family_totals": {
+    "passage_count_e": {
+      "n": 50,
+      "condition_a_mean": 0.340655737704918,
+      "condition_b_mean": 0.3416787519226544,
+      "delta": 0.0010230142177363889
+    }
+  },
+  "skipped_items": [],
+  "results": [
+    {
+      "index": 1,
+      "dataset": "passage_count_e",
+      "_id": "0358aa51ab38acc1b97405f4307203e982cbb19500435368",
+      "answers": [
+        "6"
+      ],
+      "length": 3615,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "dataset": "passage_count_e",
+      "_id": "ec5670be0aea90e8e1a05d687158371f45f64a07f6177b69",
+      "answers": [
+        "10"
+      ],
+      "length": 3667,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "10"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "10"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "dataset": "passage_count_e",
+      "_id": "1a276604ab10692c64480e83d99a53c121f3dca26d05e5ff",
+      "answers": [
+        "4"
+      ],
+      "length": 1973,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "4"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "4"
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "dataset": "passage_count_e",
+      "_id": "60608c75686cb0a1d59dd3b64ccec4655757bfaf1b54ee03",
+      "answers": [
+        "6"
+      ],
+      "length": 3503,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "dataset": "passage_count_e",
+      "_id": "7d28069ded012b00d0d149edb38235620f24e7edb3bcdb74",
+      "answers": [
+        "12"
+      ],
+      "length": 3053,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Let's go through the 18 paragraphs and identify duplicates.\n\nWe need to compare them **textually**, exactly — even minor differences matter, but note that some paragraphs have identical wording (including spacing and punctuation), while others may appear similar but are not exact matches.\n\nLet’s group identical paragraphs:\n\n- **Paragraph 1**: Vaqueiro exonym paragraph  \n- **Paragraph 3**: Identical to Paragraph 1  \n- **Paragraph 12**: Identical to Paragraph 1  \n- **Paragraph 16**: Identical to Paragraph 1  \n\n✅ So Paragraphs 1, 3, 12, 16 are all the same → counts as **1 unique**\n\n- **Paragraph 2**: Hiri Motu dialects  \n- **Paragraph 7**: Identical to Paragraph 2  \n- **Paragraph 10**: Identical  \n- **Paragraph 11**: Identical  \n- **Paragraph 13**: Identical  \n\n✅ Paragraphs 2, 7, 10, 11, 13 → **1 unique**\n\n- **Paragraph 4**: Julius Jones NFL season (2005?) — mentions week 5 vs Eagles, ankle sprain, Barber III, Lions 1-yard line, Panthers 194 yards, Aikman comment, Rams loss, 9–7, 7 yards short of 1000  \n- **Paragraph 8**: Identical to Paragraph 4  \n- **Paragraph 9**: Identical to Paragraph 4  \n\n✅ Paragraphs 4, 8, 9 → **1 unique**\n\n- **Paragraph 5**: Priory cloister/church description  \n- **Paragraph 15**: Identical to Paragraph 5  \n\n✅ Paragraphs 5, 15 → **1 unique**\n\n- **Paragraph 6**: Shamita Shetty bio — debut in Mohabbatein (2000), IIFA 2001, dance numbers, Zeher (2005), Sify quote, Fareb, Bewafaa, Cash, Bigg Boss 3 (2009), left after 42 days for sister’s wedding, never nominated  \n- **Paragraph 14**: Identical to Paragraph 6  \n\n✅ Paragraphs 6, 14 → **1 unique**\n\nNow list the remaining paragraphs that have **no duplicates**:\n\n- Paragraph 17: Moyola Park football club history — junior league, championships, Billy Lennox, etc.  \n→ No other paragraph matches this. ✅ unique\n\n- Paragraph 18: CETB / OUTr upgrade process — BPUT, NBA visit, memo to CM, Cabinet approval, Odisha Assembly bill 2021  \n→ No duplicate. ✅ unique\n\nSo far, unique groups:\n\n- Group A (Vaqueiro): P1, P3, P12, P16 → 1  \n- Group B (Hiri Motu): P2, P7, P10, P11, P13 → 1  \n- Group C (Jones): P4, P8, P9 → 1  \n- Group D (Priory): P5, P15 → 1  \n- Group E (Shetty): P6, P14 → 1  \n- P17 → 1  \n- P18 → 1  \n\nThat’s **7 unique paragraphs**.\n\nLet’s double-check no accidental omissions or misgroupings.\n\nList all paragraph numbers and their content themes:\n\n1. Vaqueiro — exonym, Jovellanos, brañas  \n2. Hiri Motu dialects  \n3. Same as 1  \n4. Julius Jones (2005 season)  \n5. Priory ruins description  \n6. Shamita Shetty bio  \n7. Same as 2  \n8. Same as 4  \n9. Same as 4  \n10. Same as 2  \n11. Same as 2  \n12. Same as 1  \n13. Same as 2  \n14. Same as 6  \n15. Same as 5  \n16. Same as 1  \n17. Moyola Park football club history  \n18. CETB → OUTr upgrade  \n\nYes — only 7 distinct contents.\n\n✅ Final count = **7**\n\nThe final answer is:  \n7",
+        "metric": "official_numeric_fraction",
+        "score": 0.03278688524590164,
+        "prediction_key": "18,1,3,1,12,1,16,1,1,3,12,16,1,2,7,2,10,11,13,2,7,10,11,13,1,4,2005,5,1,194,9,7,7,1000,8,4,9,4,4,8,9,1,5,15,5,5,15,1,6,2000,2001,2005,3,2009,42,14,6,6,14,1,17,18,2021,1,3,12,16,1,2,7,10,11,13,1,4,8,9,1,5,15,1,6,14,1,17,1,18,1,7,1,2,3,1,4,2005,5,6,7,2,8,4,9,4,10,2,11,2,12,1,13,2,14,6,15,5,16,1,17,18,7,7,7",
+        "gold": [
+          "12"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Let's carefully compare all 18 paragraphs to identify duplicates.\n\nWe'll group identical paragraphs by content. Note: Paragraphs are considered duplicates if they are *textually identical*, including spacing and punctuation — even if some contain blank spaces or missing words (e.g., “The word  is an exonym…” with blank before “is”), as long as the strings match exactly.\n\nLet’s list and compare:\n\n- **Paragraph 1**:  \n  \"The word  is an exonym and until more recent years, this term was not frequently used by Vaqueiros themselves. In Vaqueiro Territory and surrounding areas, the term Vaqueiro is used exclusively to refer to the Vaqueiros de Alzada and has connotations of race and ethnicity instead of a profession.  was added by Gaspar Melchor de Jovellanos to help distinguish the Vaqueiros from the non-Vaqueiro cattle herding population. It comes from the Asturian verb , to raise or to go up, after Jovellanos observed that the Vaqueiros raised, or brought their homes up, every summer to the higher summer brañas. The full name , which is used most often in outside sources, is not often used in Asturias and León.\"\n\n- **Paragraph 3**: Identical to Paragraph 1 → duplicate.\n\n- **Paragraph 12**: Identical to Paragraph 1 → duplicate.\n\n- **Paragraph 16**: Identical to Paragraph 1 → duplicate.\n\n✅ So Paragraphs 1, 3, 12, 16 are identical → count as **1 unique**.\n\n- **Paragraph 2**: Hiri Motu dialects.\n\n- **Paragraph 7**: Identical to Paragraph 2.\n\n- **Paragraph 10**: Identical to Paragraph 2.\n\n- **Paragraph 11**: Identical to Paragraph 2.\n\n- **Paragraph 13**: Identical to Paragraph 2.\n\n✅ So Paragraphs 2, 7, 10, 11, 13 → **1 unique**.\n\n- **Paragraph 4**: Julius Jones NFL season.\n\n- **Paragraph 8**: Identical to Paragraph 4.\n\n- **Paragraph 9**: Identical to Paragraph 4.\n\n✅ So Paragraphs 4, 8, 9 → **1 unique**.\n\n- **Paragraph 5**: Priory cloister/church description.\n\n- **Paragraph 15**: Identical to Paragraph 5.\n\n✅ So Paragraphs 5, 15 → **1 unique**.\n\n- **Paragraph 6**: Shamita Shetty bio.\n\n- **Paragraph 14**: Identical to Paragraph 6.\n\n✅ So Paragraphs 6, 14 → **1 unique**.\n\nNow remaining paragraphs:\n\n- **Paragraph 17**: Moyola Park football club history → no duplicate found.\n\n- **Paragraph 18**: CETB / OUTr upgrade → no duplicate found.\n\nLet’s verify uniqueness of each:\n\n- P17: Only appears once.\n\n- P18: Only appears once.\n\nAlso check if any of these match others — clearly not; topics are distinct (football club history vs university legislation), and wording is unique.\n\nSo far, unique groups:\n\n1. Vaqueiro paragraph → appears in P1, P3, P12, P16 → 1 unique  \n2. Hiri Motu dialects → P2, P7, P10, P11, P13 → 1 unique  \n3. Julius Jones → P4, P8, P9 → 1 unique  \n4. Priory church → P5, P15 → 1 unique  \n5. Shamita Shetty → P6, P14 → 1 unique  \n6. Moyola Park → P17 → 1 unique  \n7. CETB/OUTr → P18 → 1 unique  \n\nThat’s **7 unique paragraphs**.\n\nDouble-check: Total paragraphs = 18  \nDuplicates accounted for:\n\n- Vaqueiro: 4 copies → contributes 1  \n- Hiri Motu: 5 copies → contributes 1  \n- Jones: 3 copies → contributes 1  \n- Priory: 2 copies → contributes 1  \n- Shetty: 2 copies → contributes 1  \n→ So far: 4+5+3+2+2 = 16 paragraphs covered in duplicates  \nLeaving P17 and P18 → 2 more, both unique and distinct.\n\n16 + 2 = 18 ✔️\n\nSo total unique = 7.\n\nFinal answer:  \n7",
+        "metric": "official_numeric_fraction",
+        "score": 0.02702702702702703,
+        "prediction_key": "18,1,3,1,12,1,16,1,1,3,12,16,1,2,7,2,10,2,11,2,13,2,2,7,10,11,13,1,4,8,4,9,4,4,8,9,1,5,15,5,5,15,1,6,14,6,6,14,1,17,18,17,18,1,1,3,12,16,1,2,2,7,10,11,13,1,3,4,8,9,1,4,5,15,1,5,6,14,1,6,17,1,7,18,1,7,18,4,1,5,1,3,1,2,1,2,1,4,5,3,2,2,16,17,18,2,16,2,18,7,7",
+        "gold": [
+          "12"
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "dataset": "passage_count_e",
+      "_id": "8319b481fb2b8c0c4ab4903f7418b4086c3b0a2860906fa1",
+      "answers": [
+        "8"
+      ],
+      "length": 3034,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "8"
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "dataset": "passage_count_e",
+      "_id": "5c1ef546343d32b3fc2d85aa5578d7560c255fb44141cede",
+      "answers": [
+        "9"
+      ],
+      "length": 3299,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "dataset": "passage_count_e",
+      "_id": "90444c751218b9ac6717a3ae82579e53476b085ae47887fa",
+      "answers": [
+        "7"
+      ],
+      "length": 3757,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "7",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "7",
+        "gold": [
+          "7"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "dataset": "passage_count_e",
+      "_id": "0d42be0ec18776870876934959bda7c4a4856061bc7cb427",
+      "answers": [
+        "3"
+      ],
+      "length": 3328,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "dataset": "passage_count_e",
+      "_id": "974b68875af8d477173b49c00c716b7003a35b345f7d5a62",
+      "answers": [
+        "9"
+      ],
+      "length": 3758,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "dataset": "passage_count_e",
+      "_id": "6eba84932b263f1702cf77340cfaac4dbba70f3fa8cedb80",
+      "answers": [
+        "7"
+      ],
+      "length": 2179,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "7",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "7",
+        "gold": [
+          "7"
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "dataset": "passage_count_e",
+      "_id": "ee7eb82c5b9d3d6ae888089f6fc6975ab3aa99eb06d029f5",
+      "answers": [
+        "7"
+      ],
+      "length": 3450,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "dataset": "passage_count_e",
+      "_id": "f9fc0cddc210b1dfb44bfd42b9f94e64fec43cce04e69d64",
+      "answers": [
+        "6"
+      ],
+      "length": 3293,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "dataset": "passage_count_e",
+      "_id": "a7a94aecaea08f0d2799fe3ca3af73a9fc5317a7860d7909",
+      "answers": [
+        "2"
+      ],
+      "length": 3849,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "dataset": "passage_count_e",
+      "_id": "bf7fc7dae69baf3f18bcc7a2d0c7a975730fd7ab04b028cb",
+      "answers": [
+        "6"
+      ],
+      "length": 3450,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "6",
+        "gold": [
+          "6"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "6"
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "dataset": "passage_count_e",
+      "_id": "1795269f5f7efef8da447c1797cfe8082c5fec5fbc13a587",
+      "answers": [
+        "2"
+      ],
+      "length": 1940,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "2"
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "dataset": "passage_count_e",
+      "_id": "0b87678ce1ae85acc57a914550242f987932afd1abda2831",
+      "answers": [
+        "4"
+      ],
+      "length": 3746,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "4",
+        "gold": [
+          "4"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "4",
+        "gold": [
+          "4"
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "dataset": "passage_count_e",
+      "_id": "1aa7aac093fccb8c81b386b732131d7369ea691d6fde9a49",
+      "answers": [
+        "2"
+      ],
+      "length": 2906,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      }
+    },
+    {
+      "index": 19,
+      "dataset": "passage_count_e",
+      "_id": "6dc5076fc7d36d9f827f67041432c34085c45dd86395bdb1",
+      "answers": [
+        "8"
+      ],
+      "length": 2855,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "8"
+        ]
+      }
+    },
+    {
+      "index": 20,
+      "dataset": "passage_count_e",
+      "_id": "de5a944fe7d91577daaf979663b17492c26441b905456c63",
+      "answers": [
+        "4"
+      ],
+      "length": 3857,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "4",
+        "gold": [
+          "4"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "4",
+        "gold": [
+          "4"
+        ]
+      }
+    },
+    {
+      "index": 21,
+      "dataset": "passage_count_e",
+      "_id": "558eb0f077b73689c0ebdecd6835412bea8d7c84cba3e834",
+      "answers": [
+        "9"
+      ],
+      "length": 3516,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "8",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "8",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "dataset": "passage_count_e",
+      "_id": "c728edcdddef5c2dcb6df4bf4531ddddb351f094ff62b5ec",
+      "answers": [
+        "3"
+      ],
+      "length": 2138,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "dataset": "passage_count_e",
+      "_id": "288f4e37f101d146d77c62f996e4e9570b2771c27bc81979",
+      "answers": [
+        "7"
+      ],
+      "length": 2375,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      }
+    },
+    {
+      "index": 24,
+      "dataset": "passage_count_e",
+      "_id": "b840b98f785681073e1294d070f22aef0fbffd88593251b7",
+      "answers": [
+        "10"
+      ],
+      "length": 2028,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "10"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "10"
+        ]
+      }
+    },
+    {
+      "index": 25,
+      "dataset": "passage_count_e",
+      "_id": "79a3950607bd55a0c9d640bca5e886ecef6b8c1548d72010",
+      "answers": [
+        "3"
+      ],
+      "length": 3076,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "3"
+        ]
+      }
+    },
+    {
+      "index": 26,
+      "dataset": "passage_count_e",
+      "_id": "0e4b6fd7e9532b62224647c07b72d1ef61b5442a96507314",
+      "answers": [
+        "5"
+      ],
+      "length": 3830,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      }
+    },
+    {
+      "index": 27,
+      "dataset": "passage_count_e",
+      "_id": "ce3b44c862cb686ac5aa193be6ded32cab696d2caf89ba48",
+      "answers": [
+        "13"
+      ],
+      "length": 2836,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "8",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "13"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "8",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "13"
+        ]
+      }
+    },
+    {
+      "index": 28,
+      "dataset": "passage_count_e",
+      "_id": "bc84939098d7b7b2a9281c2d3285c4c14fc400828c526597",
+      "answers": [
+        "2"
+      ],
+      "length": 2567,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      }
+    },
+    {
+      "index": 29,
+      "dataset": "passage_count_e",
+      "_id": "89d39f31cc4adedb47a9e9308e30a02cb7fb96d0ce18e69e",
+      "answers": [
+        "3"
+      ],
+      "length": 2609,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      }
+    },
+    {
+      "index": 30,
+      "dataset": "passage_count_e",
+      "_id": "bfce730da941bc2f088c4d892f9ba2628c380a9e88d8e773",
+      "answers": [
+        "8"
+      ],
+      "length": 2971,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "8"
+        ]
+      }
+    },
+    {
+      "index": 31,
+      "dataset": "passage_count_e",
+      "_id": "adcc795638d85833e743ac9d8b1eb6ee866f03c43a1b5bff",
+      "answers": [
+        "5"
+      ],
+      "length": 2753,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      }
+    },
+    {
+      "index": 32,
+      "dataset": "passage_count_e",
+      "_id": "159da58eb5686ecce86672c0afccf29e6cd388280a01846f",
+      "answers": [
+        "4"
+      ],
+      "length": 2914,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "4"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "3",
+        "gold": [
+          "4"
+        ]
+      }
+    },
+    {
+      "index": 33,
+      "dataset": "passage_count_e",
+      "_id": "415813a9629f6a8b5f0a2741d906b989493b55d9bc52d04d",
+      "answers": [
+        "2"
+      ],
+      "length": 3169,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      }
+    },
+    {
+      "index": 34,
+      "dataset": "passage_count_e",
+      "_id": "2d2848f2540d8bd30f8c7a45ec7d9bc501aad849fd70854b",
+      "answers": [
+        "10"
+      ],
+      "length": 2879,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "10"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "10"
+        ]
+      }
+    },
+    {
+      "index": 35,
+      "dataset": "passage_count_e",
+      "_id": "66ad65384cc56d1cc0248007f6ae4e1153ebad02c3ca86d6",
+      "answers": [
+        "16"
+      ],
+      "length": 3773,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "9",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "9",
+        "gold": [
+          "16"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "9",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "9",
+        "gold": [
+          "16"
+        ]
+      }
+    },
+    {
+      "index": 36,
+      "dataset": "passage_count_e",
+      "_id": "d6da336516d72144d20a564e479f9df7af8801b04ed93750",
+      "answers": [
+        "5"
+      ],
+      "length": 2737,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      }
+    },
+    {
+      "index": 37,
+      "dataset": "passage_count_e",
+      "_id": "935778f03f2632c87b080ee9b2f452ea83fbbfb5c77332a2",
+      "answers": [
+        "5"
+      ],
+      "length": 1851,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "5"
+        ]
+      }
+    },
+    {
+      "index": 38,
+      "dataset": "passage_count_e",
+      "_id": "dcab2f7f14e5de08bfa5baf40fb4ab0d455ff613cd8651fa",
+      "answers": [
+        "5"
+      ],
+      "length": 2055,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "5"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "5",
+        "gold": [
+          "5"
+        ]
+      }
+    },
+    {
+      "index": 39,
+      "dataset": "passage_count_e",
+      "_id": "93ef798766f5c0b64ef9f76af5df9443006d742ffddaca69",
+      "answers": [
+        "9"
+      ],
+      "length": 3324,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 40,
+      "dataset": "passage_count_e",
+      "_id": "2d42519cde960e97c7fbac956fb3de191fe12ce75dd5576a",
+      "answers": [
+        "9"
+      ],
+      "length": 3202,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 41,
+      "dataset": "passage_count_e",
+      "_id": "a5b91208502dbf155e966bc108c0f5c639f2302b3daf397e",
+      "answers": [
+        "11"
+      ],
+      "length": 2257,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "11"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "11"
+        ]
+      }
+    },
+    {
+      "index": 42,
+      "dataset": "passage_count_e",
+      "_id": "91403e4f72e0fbbd112e8fe689ca5de5b0abb5aa0a2cd94c",
+      "answers": [
+        "11"
+      ],
+      "length": 3487,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "8",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "11"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "8",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "8",
+        "gold": [
+          "11"
+        ]
+      }
+    },
+    {
+      "index": 43,
+      "dataset": "passage_count_e",
+      "_id": "f136b8a5c0e851a6991647b31ae9f9fd0344ac054d8350a9",
+      "answers": [
+        "8"
+      ],
+      "length": 2904,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "7",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "7",
+        "gold": [
+          "8"
+        ]
+      }
+    },
+    {
+      "index": 44,
+      "dataset": "passage_count_e",
+      "_id": "3e1812cd381a9bf8ed824129c7f5573a38750f193f53259c",
+      "answers": [
+        "3"
+      ],
+      "length": 1488,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "3",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "3",
+        "gold": [
+          "3"
+        ]
+      }
+    },
+    {
+      "index": 45,
+      "dataset": "passage_count_e",
+      "_id": "eaa6f4f5a40f8dc1fbeba6b1a529af732b893f94cf07b2d1",
+      "answers": [
+        "8"
+      ],
+      "length": 3080,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "8"
+        ]
+      }
+    },
+    {
+      "index": 46,
+      "dataset": "passage_count_e",
+      "_id": "4fb0504b375e752cdb7a29672e54edaee0637d835c0d519d",
+      "answers": [
+        "2"
+      ],
+      "length": 3453,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "2",
+        "metric": "official_numeric_fraction",
+        "score": 1.0,
+        "prediction_key": "2",
+        "gold": [
+          "2"
+        ]
+      }
+    },
+    {
+      "index": 47,
+      "dataset": "passage_count_e",
+      "_id": "3efa1632c6c972106fdbc825cb4f48bb326dea5b7cceacc7",
+      "answers": [
+        "9"
+      ],
+      "length": 3911,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "4",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 48,
+      "dataset": "passage_count_e",
+      "_id": "a1e7977a29492b5e0d19bc3bc169fdb536104e36675be0ad",
+      "answers": [
+        "9"
+      ],
+      "length": 2291,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "6",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "6",
+        "gold": [
+          "9"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "9"
+        ]
+      }
+    },
+    {
+      "index": 49,
+      "dataset": "passage_count_e",
+      "_id": "9dd6dce168fd5151a9c1f8a776fbce5e92b85611edbdfb5f",
+      "answers": [
+        "17"
+      ],
+      "length": 3923,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "12",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "12",
+        "gold": [
+          "17"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Let's carefully compare all 17 paragraphs to identify duplicates.\n\nWe'll go paragraph by paragraph and group identical ones.\n\n**Paragraph 1**: About Robbie Davis-Floyd’s awards and honors.\n\n**Paragraph 2**: About Vega’s acting roles.\n\n**Paragraph 3**: About Anthony Davis’s NBA performance in 2013–14 season.\n\n**Paragraph 4**: *Identical to Paragraph 1* — copy-paste match (same wording, punctuation, spacing, even the extra space before “and is now supported…”). ✅ Duplicate.\n\n**Paragraph 5**: About Centers’ football background.\n\n**Paragraph 6**: About the uncut film parodying Fantasia (describes live-action sequences, Presenter, Orchestra Master, Animator, etc.).\n\n**Paragraph 7**: About Little Armenia’s founding in 2000.\n\n**Paragraph 8**: *Identical to Paragraph 7* — same text word-for-word. ✅ Duplicate.\n\n**Paragraph 9**: Scene from Angel TV series — Jhiera the demon princess.\n\n**Paragraph 10**: About learning organizations and systems thinking.\n\n**Paragraph 11**: *Identical to Paragraph 5* — same text about Centers’ birthplace, football history, brother, etc. ✅ Duplicate.\n\n**Paragraph 12**: About Reuleaux polygons in geometry.\n\n**Paragraph 13**: *Identical to Paragraph 2* — same list of Vega’s roles, same phrasing, punctuation, capitalization (e.g., “runnningback” typo appears in both). ✅ Duplicate.\n\n**Paragraph 14**: About Anglo-Catholic ritualism and SSC.\n\n**Paragraph 15**: *Identical to Paragraph 7 and 8* — same text. So Paragraphs 7, 8, and 15 are all identical. ✅ Duplicate.\n\n**Paragraph 16**: *Identical to Paragraph 14* — same content, same wording, same punctuation, same line breaks (if any), same details (e.g., “beginning in 1856”). ✅ Duplicate.\n\n**Paragraph 17**: Plot summary of *What a Girl Wants* or similar teen film (Chase, Nicole, Dulcie, Alicia, Brad) — appears to be a synopsis of the film *What a Boy Wants?* or misattributed; but regardless, unique content.\n\nNow let’s list the *unique* base paragraphs:\n\n- P1/P4 → 1 unique  \n- P2/P13 → 1 unique  \n- P3 → 1 unique  \n- P5/P11 → 1 unique  \n- P6 → 1 unique  \n- P7/P8/P15 → 1 unique  \n- P9 → 1 unique  \n- P10 → 1 unique  \n- P12 → 1 unique  \n- P14/P16 → 1 unique  \n- P17 → 1 unique  \n\nThat’s 11 groups.\n\nLet’s count explicitly:\n\n1. Davis-Floyd (P1, P4) → 1  \n2. Vega’s filmography (P2, P13) → 1  \n3. Anthony Davis NBA stats (P3) → 1  \n4. Centers’ bio (P5, P11) → 1  \n5. Fantasia parody film (P6) → 1  \n6. Little Armenia founding (P7, P8, P15) → 1  \n7. Angel episode (P9) → 1  \n8. Learning organization (P10) → 1  \n9. Reuleaux polygon (P12) → 1  \n10. Anglo-Catholic ritualism (P14, P16) → 1  \n11. Chase/Nicole plot (P17) → 1  \n\nTotal = **11**\n\nDouble-check no others were missed:\n\n- P1–P17: all accounted for.  \n- P1 = P4  \n- P2 = P13  \n- P3 = only one  \n- P5 = P11  \n- P6 = only one  \n- P7 = P8 = P15  \n- P9 = only one  \n- P10 = only one  \n- P12 = only one  \n- P14 = P16  \n- P17 = only one  \n\nYes: 17 paragraphs, with duplicates reducing to 11 unique.\n\n✅ Final answer: **11**",
+        "metric": "official_numeric_fraction",
+        "score": 0.056910569105691054,
+        "prediction_key": "17,1,2,3,2013,14,4,1,5,6,7,2000,8,7,9,10,11,5,12,13,2,14,15,7,8,7,8,15,16,14,1856,17,1,4,1,2,13,1,3,1,5,11,1,6,1,7,8,15,1,9,1,10,1,12,1,14,16,1,17,1,11,1,1,4,1,2,2,13,1,3,3,1,4,5,11,1,5,6,1,6,7,8,15,1,7,9,1,8,10,1,9,12,1,10,14,16,1,11,17,1,11,1,17,1,4,2,13,3,5,11,6,7,8,15,9,10,12,14,16,17,17,11,11",
+        "gold": [
+          "17"
+        ]
+      }
+    },
+    {
+      "index": 50,
+      "dataset": "passage_count_e",
+      "_id": "4f33f4d1d7d8ae1101daea37320fc52e5df9fec8d8d544bf",
+      "answers": [
+        "7"
+      ],
+      "length": 3413,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "5",
+        "metric": "official_numeric_fraction",
+        "score": 0.0,
+        "prediction_key": "5",
+        "gold": [
+          "7"
+        ]
+      }
+    }
+  ],
+  "boundary": "Public LongBench smoke slice. This is not a full LongBench leaderboard claim; it is a source-backed answer-key accuracy receipt that can scale to larger slices."
+}

@@ -1,0 +1,1600 @@
+{
+  "run_id": "qwen_tris_longbench_public_slice_20260701T171030Z",
+  "provider": "qwen-cloud",
+  "model": "qwen-plus",
+  "benchmark": "LongBench public data.zip",
+  "tasks": [
+    "qasper_e"
+  ],
+  "items": 50,
+  "condition_a": "baseline Qwen prompt-only answer discipline",
+  "condition_b": "Qwen Tris stable-state answer discipline",
+  "condition_a_mean": 0.47647220187497025,
+  "condition_b_mean": 0.46677577168409523,
+  "delta": -0.009696430190875063,
+  "family_totals": {
+    "qasper_e": {
+      "n": 50,
+      "condition_a_mean": 0.4764722018749701,
+      "condition_b_mean": 0.46677577168409534,
+      "delta": -0.009696430190874707
+    }
+  },
+  "skipped_items": [],
+  "results": [
+    {
+      "index": 1,
+      "dataset": "qasper_e",
+      "_id": "fa1c557ea338532fb1c34125934ce83b2b70e02dd12931d3",
+      "answers": [
+        "SQuAD",
+        "SQuAD"
+      ],
+      "length": 3757,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "SQuAD dataset",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "SQuAD dataset",
+        "gold": [
+          "SQuAD",
+          "SQuAD"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "SQuAD",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "SQuAD",
+        "gold": [
+          "SQuAD",
+          "SQuAD"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "dataset": "qasper_e",
+      "_id": "d95b33cbe3496fb98638b3c3b1a956847b6472aa8d18a5cc",
+      "answers": [
+        "relation classification dataset of the SemEval 2010 task 8",
+        "SemEval 2010 task 8 BIBREF8"
+      ],
+      "length": 2393,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "SemEval 2010 task 8 dataset",
+        "metric": "token_f1",
+        "score": 0.8000000000000002,
+        "prediction_key": "SemEval 2010 task 8 dataset",
+        "gold": [
+          "relation classification dataset of the SemEval 2010 task 8",
+          "SemEval 2010 task 8 BIBREF8"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "SemEval 2010 task 8",
+        "metric": "token_f1",
+        "score": 0.888888888888889,
+        "prediction_key": "SemEval 2010 task 8",
+        "gold": [
+          "relation classification dataset of the SemEval 2010 task 8",
+          "SemEval 2010 task 8 BIBREF8"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "dataset": "qasper_e",
+      "_id": "704c0c46089ffbd8f6c94c06071a440d930d82a59a1d4edc",
+      "answers": [
+        "2174000000, 989000000",
+        "2174 million tokens for English and 989 million tokens for Russian"
+      ],
+      "length": 2958,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The English training corpus was the English Wikipedia dump from February 2017; the Russian training corpus was a concatenation of the Russian Wikipedia dump from December 2018 and the full Russian National Corpus (RNC).",
+        "metric": "token_f1",
+        "score": 0.15384615384615383,
+        "prediction_key": "The English training corpus was the English Wikipedia dump from February 2017; the Russian training corpus was a concatenation of the Russian Wikipedia dump fro",
+        "gold": [
+          "2174000000, 989000000",
+          "2174 million tokens for English and 989 million tokens for Russian"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "English Wikipedia dump from February 2017; Russian Wikipedia dump from December 2018 plus full Russian National Corpus",
+        "metric": "token_f1",
+        "score": 0.14285714285714285,
+        "prediction_key": "English Wikipedia dump from February 2017; Russian Wikipedia dump from December 2018 plus full Russian National Corpus",
+        "gold": [
+          "2174000000, 989000000",
+          "2174 million tokens for English and 989 million tokens for Russian"
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "dataset": "qasper_e",
+      "_id": "c32bcab75bbb243cbd0fa7d6cea385a9aa1220c9fb455f09",
+      "answers": [
+        "Spearman correlation values of GM_KL model evaluated on the benchmark word similarity datasets.\nEvaluation results of GM_KL model on the entailment datasets such as entailment pairs dataset created from WordNet, crowdsourced dataset of 79 semantic relations labelled as entailed or not and annotated distributionally similar nouns dataset.",
+        "Given a query word and component id, the set of nearest neighbours along with their respective component ids are listed"
+      ],
+      "length": 2220,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The qualitative experiments involved listing nearest neighbors for query words and their component IDs to demonstrate sense capture (e.g., 'plane' with geometry and vehicle senses).",
+        "metric": "token_f1",
+        "score": 0.3333333333333333,
+        "prediction_key": "The qualitative experiments involved listing nearest neighbors for query words and their component IDs to demonstrate sense capture (e.g., 'plane' with geometry",
+        "gold": [
+          "Spearman correlation values of GM_KL model evaluated on the benchmark word similarity datasets.\nEvaluation results of GM_KL model on the entailment datasets such as entailment pairs dataset created from WordNet, crowdsourced dataset of 79 semantic relations labelled as entailed or not and annotated distributionally similar nouns dataset.",
+          "Given a query word and component id, the set of nearest neighbours along with their respective component ids are listed"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "Spearman correlation values of GM_KL model evaluated on the benchmark word similarity datasets.\nEvaluation results of GM_KL model on the entailment datasets such as entailment pairs dataset created from WordNet, crowdsourced dataset of 79 semantic relations labelled as entailed or not and annotated distributionally similar nouns dataset.",
+          "Given a query word and component id, the set of nearest neighbours along with their respective component ids are listed"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "dataset": "qasper_e",
+      "_id": "b959a2ca0687fbe1c4f11a6fda00eb9341525f1502c9afc6",
+      "answers": [
+        "Using DSC loss improves the F1 score by +0.58 for MRPC and +0.73 for QQP",
+        "+0.58"
+      ],
+      "length": 3566,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "+0.58 for MRPC and +0.73 for QQP",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "+0.58 for MRPC and +0.73 for QQP",
+        "gold": [
+          "Using DSC loss improves the F1 score by +0.58 for MRPC and +0.73 for QQP",
+          "+0.58"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "+0.58 for MRPC and +0.73 for QQP",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "+0.58 for MRPC and +0.73 for QQP",
+        "gold": [
+          "Using DSC loss improves the F1 score by +0.58 for MRPC and +0.73 for QQP",
+          "+0.58"
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "dataset": "qasper_e",
+      "_id": "83246d680e84d965de12202eeca2955546e9261630d543c5",
+      "answers": [
+        "reducing the variance of an estimator,  EGL method in BIBREF3 is almost the same as Eq. ( EQREF8 ), except the gradient's norm is not squared in BIBREF3",
+        " Fisher Information Ratio"
+      ],
+      "length": 1671,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "They calculate variance from the model outputs using the Fisher Information Matrix, where the asymptotic variance of the parameter estimator is given by the inverse of the Fisher Information Matrix.",
+        "metric": "token_f1",
+        "score": 0.17391304347826086,
+        "prediction_key": "They calculate variance from the model outputs using the Fisher Information Matrix, where the asymptotic variance of the parameter estimator is given by the inv",
+        "gold": [
+          "reducing the variance of an estimator,  EGL method in BIBREF3 is almost the same as Eq. ( EQREF8 ), except the gradient's norm is not squared in BIBREF3",
+          " Fisher Information Ratio"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "They calculate variance from the model outputs using the Fisher Information Matrix, as shown in the asymptotic distribution of the parameter estimator: the expected variance is minimized by maximizing the trace of the Fisher Information Matrix.",
+        "metric": "token_f1",
+        "score": 0.23529411764705882,
+        "prediction_key": "They calculate variance from the model outputs using the Fisher Information Matrix, as shown in the asymptotic distribution of the parameter estimator: the expe",
+        "gold": [
+          "reducing the variance of an estimator,  EGL method in BIBREF3 is almost the same as Eq. ( EQREF8 ), except the gradient's norm is not squared in BIBREF3",
+          " Fisher Information Ratio"
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "dataset": "qasper_e",
+      "_id": "181a2d144f719517ed2033408c263c328c3c7eb9cddc78c6",
+      "answers": [
+        "LSTM",
+        "LSTM"
+      ],
+      "length": 2289,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "LSTM",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "LSTM",
+        "gold": [
+          "LSTM",
+          "LSTM"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "LSTM",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "LSTM",
+        "gold": [
+          "LSTM",
+          "LSTM"
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "dataset": "qasper_e",
+      "_id": "006bf0292d7a46cfbe4bc50f63e92d34411ea060f5b547ec",
+      "answers": [
+        "These 8 tasks require different competencies and a different level of understanding of the document to be well answered"
+      ],
+      "length": 3817,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Natural language questions about hotel reviews that challenge relational reasoning competencies.",
+        "metric": "token_f1",
+        "score": 0.07142857142857142,
+        "prediction_key": "Natural language questions about hotel reviews that challenge relational reasoning competencies.",
+        "gold": [
+          "These 8 tasks require different competencies and a different level of understanding of the document to be well answered"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Natural language questions",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "Natural language questions",
+        "gold": [
+          "These 8 tasks require different competencies and a different level of understanding of the document to be well answered"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "dataset": "qasper_e",
+      "_id": "35be0474e7f491742c4f764a3ed5fc174465bf0ba26ebff0",
+      "answers": [
+        "SVM, No-Answer Baseline (NA) , Word Count Baseline, Human Performance",
+        "No-Answer Baseline (NA), Word Count Baseline, Human Performance"
+      ],
+      "length": 3855,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Yes",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "Yes",
+        "gold": [
+          "SVM, No-Answer Baseline (NA) , Word Count Baseline, Human Performance",
+          "No-Answer Baseline (NA), Word Count Baseline, Human Performance"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Yes",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "Yes",
+        "gold": [
+          "SVM, No-Answer Baseline (NA) , Word Count Baseline, Human Performance",
+          "No-Answer Baseline (NA), Word Count Baseline, Human Performance"
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "dataset": "qasper_e",
+      "_id": "128f8753d02c6777ce3244345d4799613c188be0b6b66b7a",
+      "answers": [
+        "53 documents",
+        "53 documents"
+      ],
+      "length": 2667,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "53",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "53",
+        "gold": [
+          "53 documents",
+          "53 documents"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "53",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "53",
+        "gold": [
+          "53 documents",
+          "53 documents"
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "dataset": "qasper_e",
+      "_id": "c3694e336a5431082844e851d3bf6ca4b1d21ce87665281e",
+      "answers": [
+        "from Food.com"
+      ],
+      "length": 2649,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Food.com",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "Food.com",
+        "gold": [
+          "from Food.com"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Food.com",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "Food.com",
+        "gold": [
+          "from Food.com"
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "dataset": "qasper_e",
+      "_id": "1443430475309d05eb23043251943ee0b3c3ade6f0730fdc",
+      "answers": [
+        "We also evaluate all five models on downstream tasks from the VecEval suite BIBREF13 , using only the tasks for which training and evaluation data is freely available: chunking, sentiment and question classification, and natural language identification (NLI). The default settings from the suite are used, but we run only the fixed settings, where the embeddings themselves are not tunable parameters of the models, forcing the system to use only the information already in the embeddings."
+      ],
+      "length": 2083,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "They evaluate their resulting word embeddings using intrinsic evaluations (word similarity and word analogy tasks), downstream tasks from the VecEval suite (chunking, sentiment and question classification, and natural language identification), and qualitative nearest-neighbor analysis for OOV words.",
+        "metric": "token_f1",
+        "score": 0.396039603960396,
+        "prediction_key": "They evaluate their resulting word embeddings using intrinsic evaluations (word similarity and word analogy tasks), downstream tasks from the VecEval suite (chu",
+        "gold": [
+          "We also evaluate all five models on downstream tasks from the VecEval suite BIBREF13 , using only the tasks for which training and evaluation data is freely available: chunking, sentiment and question classification, and natural language identification (NLI). The default settings from the suite are used, but we run only the fixed settings, where the embeddings themselves are not tunable parameters of the models, forcing the system to use only the information already in the embeddings."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "They evaluate their resulting word embeddings using intrinsic evaluations (word similarity and word analogy tasks), downstream tasks from the VecEval suite (chunking, sentiment and question classification, natural language identification), and qualitative nearest-neighbor analysis for OOV words.",
+        "metric": "token_f1",
+        "score": 0.4,
+        "prediction_key": "They evaluate their resulting word embeddings using intrinsic evaluations (word similarity and word analogy tasks), downstream tasks from the VecEval suite (chu",
+        "gold": [
+          "We also evaluate all five models on downstream tasks from the VecEval suite BIBREF13 , using only the tasks for which training and evaluation data is freely available: chunking, sentiment and question classification, and natural language identification (NLI). The default settings from the suite are used, but we run only the fixed settings, where the embeddings themselves are not tunable parameters of the models, forcing the system to use only the information already in the embeddings."
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "dataset": "qasper_e",
+      "_id": "0b04d1a3009c6f4f4502defd297b37bb756f8e5e904d2449",
+      "answers": [
+        "Adv. Heart Disease, Adv. Lung Disease, Alcohol Abuse, Chronic Neurologic Dystrophies, Dementia, Depression, Developmental Delay, Obesity, Psychiatric disorders and Substance Abuse"
+      ],
+      "length": 1651,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "Adv. Heart Disease, Adv. Lung Disease, Alcohol Abuse, Chronic Neurologic Dystrophies, Dementia, Depression, Developmental Delay, Obesity, Psychiatric disorders and Substance Abuse"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "Adv. Heart Disease, Adv. Lung Disease, Alcohol Abuse, Chronic Neurologic Dystrophies, Dementia, Depression, Developmental Delay, Obesity, Psychiatric disorders and Substance Abuse"
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "dataset": "qasper_e",
+      "_id": "78ec8052a16e28c7c9da9d61bfd7b70c05ada0efa5169524",
+      "answers": [
+        "204 tokens",
+        "Most texts, however, range roughly from 150 to 250 tokens."
+      ],
+      "length": 1898,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Most essays range roughly from 150 to 250 tokens.",
+        "metric": "token_f1",
+        "score": 0.8421052631578948,
+        "prediction_key": "Most essays range roughly from 150 to 250 tokens.",
+        "gold": [
+          "204 tokens",
+          "Most texts, however, range roughly from 150 to 250 tokens."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Most texts range roughly from 150 to 250 tokens.",
+        "metric": "token_f1",
+        "score": 0.9473684210526316,
+        "prediction_key": "Most texts range roughly from 150 to 250 tokens.",
+        "gold": [
+          "204 tokens",
+          "Most texts, however, range roughly from 150 to 250 tokens."
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "dataset": "qasper_e",
+      "_id": "3eb54f9ba615e042408b8ddafcbd4d41db0f1e72c8eedca8",
+      "answers": [
+        "(VVD shop_VV0 II, VVD shopping_VVG II)",
+        "patterns for generating all types of errors"
+      ],
+      "length": 2133,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Patterns over words and part-of-speech (POS) tags, in the form of (incorrect phrase, correct phrase), including up to one token of context on both sides.",
+        "metric": "token_f1",
+        "score": 0.12903225806451613,
+        "prediction_key": "Patterns over words and part-of-speech (POS) tags, in the form of (incorrect phrase, correct phrase), including up to one token of context on both sides.",
+        "gold": [
+          "(VVD shop_VV0 II, VVD shopping_VVG II)",
+          "patterns for generating all types of errors"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "patterns over words and part-of-speech (POS) tags",
+        "metric": "token_f1",
+        "score": 0.14285714285714285,
+        "prediction_key": "patterns over words and part-of-speech (POS) tags",
+        "gold": [
+          "(VVD shop_VV0 II, VVD shopping_VVG II)",
+          "patterns for generating all types of errors"
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "dataset": "qasper_e",
+      "_id": "ba4d8e9921bcc53ce93a458307141bc528d92addb66cbc95",
+      "answers": [
+        "No",
+        "No"
+      ],
+      "length": 3974,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "No",
+          "No"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "No",
+          "No"
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "dataset": "qasper_e",
+      "_id": "1ef257d8f567afd7d7057d678d14d28941a912b4df8b5775",
+      "answers": [
+        "Random Kitchen Sink method uses a kernel function to map data vectors to a space where linear separation is possible.",
+        "explicitly maps data vectors to a space where linear separation is possible, RKS method provides an approximate kernel function via explicit mapping"
+      ],
+      "length": 2361,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The Random Kitchen Sink (RKS) approach is a method that explicitly maps data vectors to a space where linear separation is possible, providing an approximate kernel function via explicit mapping.",
+        "metric": "token_f1",
+        "score": 0.8260869565217392,
+        "prediction_key": "The Random Kitchen Sink (RKS) approach is a method that explicitly maps data vectors to a space where linear separation is possible, providing an approximate ke",
+        "gold": [
+          "Random Kitchen Sink method uses a kernel function to map data vectors to a space where linear separation is possible.",
+          "explicitly maps data vectors to a space where linear separation is possible, RKS method provides an approximate kernel function via explicit mapping"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "The Random Kitchen Sink (RKS) approach is a method that explicitly maps data vectors to a space where linear separation is possible, providing an approximate kernel function via explicit mapping.",
+        "metric": "token_f1",
+        "score": 0.8260869565217392,
+        "prediction_key": "The Random Kitchen Sink (RKS) approach is a method that explicitly maps data vectors to a space where linear separation is possible, providing an approximate ke",
+        "gold": [
+          "Random Kitchen Sink method uses a kernel function to map data vectors to a space where linear separation is possible.",
+          "explicitly maps data vectors to a space where linear separation is possible, RKS method provides an approximate kernel function via explicit mapping"
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "dataset": "qasper_e",
+      "_id": "5a66bf2184751add62aab933cf9076dc61faf39f716d2e72",
+      "answers": [
+        "BIBREF11 , BIBREF26 "
+      ],
+      "length": 1912,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "BIBREF26",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "BIBREF26",
+        "gold": [
+          "BIBREF11 , BIBREF26 "
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "BIBREF26",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "BIBREF26",
+        "gold": [
+          "BIBREF11 , BIBREF26 "
+        ]
+      }
+    },
+    {
+      "index": 19,
+      "dataset": "qasper_e",
+      "_id": "59589a5aa08f01c9772844cd16cf3a57aaf9567123ba2154",
+      "answers": [
+        "Combining  pattern based and Machine translation approaches gave the best overall F0.5 scores. It was 49.11 for FCE dataset  , 21.87 for the first annotation of  CoNLL-14, and 30.13 for the second annotation of CoNLL-14. "
+      ],
+      "length": 2164,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The results show that each method provides significant improvements over using only the available training set, and a combination of both gives an absolute improvement of 4.3% in F0.5, without requiring any additional annotated data.",
+        "metric": "token_f1",
+        "score": 0.12903225806451613,
+        "prediction_key": "The results show that each method provides significant improvements over using only the available training set, and a combination of both gives an absolute impr",
+        "gold": [
+          "Combining  pattern based and Machine translation approaches gave the best overall F0.5 scores. It was 49.11 for FCE dataset  , 21.87 for the first annotation of  CoNLL-14, and 30.13 for the second annotation of CoNLL-14. "
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "The combination of both methods gives an absolute improvement of 4.3% in F_0.5, without requiring any additional annotated data.",
+        "metric": "token_f1",
+        "score": 0.125,
+        "prediction_key": "The combination of both methods gives an absolute improvement of 4.3% in F_0.5, without requiring any additional annotated data.",
+        "gold": [
+          "Combining  pattern based and Machine translation approaches gave the best overall F0.5 scores. It was 49.11 for FCE dataset  , 21.87 for the first annotation of  CoNLL-14, and 30.13 for the second annotation of CoNLL-14. "
+        ]
+      }
+    },
+    {
+      "index": 20,
+      "dataset": "qasper_e",
+      "_id": "31a683b8dfd8036c61d738d6bd75c5c6d7e627ba61634b20",
+      "answers": [
+        "None"
+      ],
+      "length": 2473,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The article does not mention testing the method on any tasks other than hashtag prediction.",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "The article does not mention testing the method on any tasks other than hashtag prediction.",
+        "gold": [
+          "None"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "None"
+        ]
+      }
+    },
+    {
+      "index": 21,
+      "dataset": "qasper_e",
+      "_id": "33c06a5e9eb93d7a970d8e42e3ab04467182eef7113c5c5f",
+      "answers": [
+        "Individuals with legal training",
+        "Yes"
+      ],
+      "length": 3846,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Experts with legal training.",
+        "metric": "token_f1",
+        "score": 0.75,
+        "prediction_key": "Experts with legal training.",
+        "gold": [
+          "Individuals with legal training",
+          "Yes"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Experts with legal training",
+        "metric": "token_f1",
+        "score": 0.75,
+        "prediction_key": "Experts with legal training",
+        "gold": [
+          "Individuals with legal training",
+          "Yes"
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "dataset": "qasper_e",
+      "_id": "69e126e9192d0ccc3669d9214ad94883c63d5cc1609e85b4",
+      "answers": [
+        "Maximum Entropy, Weighted Finite State Transducer (WFST),  support vector machines (SVM), conditional random fields (CRF)",
+        "Maximum matching, Hidden Markov model , Maximum Entropy, Conditional Random Fields , Support Vector Machines"
+      ],
+      "length": 3471,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Lexicon-based approaches (e.g., Maximum Matching), machine learning-based methods (e.g., Support Vector Machines, Conditional Random Fields, Hidden Markov Models, Maximum Entropy, Neural Networks, Weighted Finite State Transducers).",
+        "metric": "token_f1",
+        "score": 0.6153846153846155,
+        "prediction_key": "Lexicon-based approaches (e.g., Maximum Matching), machine learning-based methods (e.g., Support Vector Machines, Conditional Random Fields, Hidden Markov Model",
+        "gold": [
+          "Maximum Entropy, Weighted Finite State Transducer (WFST),  support vector machines (SVM), conditional random fields (CRF)",
+          "Maximum matching, Hidden Markov model , Maximum Entropy, Conditional Random Fields , Support Vector Machines"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Weighted Finite State Transducer (WFST), Neural Network, Support Vector Machine (SVM), Conditional Random Fields (CRF), Maximum Matching (MM), Hidden Markov Model (HMM), N-gram language modeling, Maximum Entropy (ME)",
+        "metric": "token_f1",
+        "score": 0.6511627906976745,
+        "prediction_key": "Weighted Finite State Transducer (WFST), Neural Network, Support Vector Machine (SVM), Conditional Random Fields (CRF), Maximum Matching (MM), Hidden Markov Mod",
+        "gold": [
+          "Maximum Entropy, Weighted Finite State Transducer (WFST),  support vector machines (SVM), conditional random fields (CRF)",
+          "Maximum matching, Hidden Markov model , Maximum Entropy, Conditional Random Fields , Support Vector Machines"
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "dataset": "qasper_e",
+      "_id": "a62a087ff34f25cc4f76205a1431eb4c2254d4ad01c630d4",
+      "answers": [
+        "Stanford NER, spaCy 2.0 , recurrent model with a CRF top layer",
+        "Stanford NER, spaCy 2.0, recurrent model with a CRF top layer"
+      ],
+      "length": 2759,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Stanford NER, spaCy 2.0, and a recurrent model similar to BIBREF13/BIBREF14 using bidirectional LSTM cells for character-based feature extraction and CRF.",
+        "metric": "token_f1",
+        "score": 0.4666666666666667,
+        "prediction_key": "Stanford NER, spaCy 2.0, and a recurrent model similar to BIBREF13/BIBREF14 using bidirectional LSTM cells for character-based feature extraction and CRF.",
+        "gold": [
+          "Stanford NER, spaCy 2.0 , recurrent model with a CRF top layer",
+          "Stanford NER, spaCy 2.0, recurrent model with a CRF top layer"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Stanford NER, spaCy 2.0, and a recurrent model similar to BIBREF13/BIBREF14 with bidirectional LSTM and CRF.",
+        "metric": "token_f1",
+        "score": 0.64,
+        "prediction_key": "Stanford NER, spaCy 2.0, and a recurrent model similar to BIBREF13/BIBREF14 with bidirectional LSTM and CRF.",
+        "gold": [
+          "Stanford NER, spaCy 2.0 , recurrent model with a CRF top layer",
+          "Stanford NER, spaCy 2.0, recurrent model with a CRF top layer"
+        ]
+      }
+    },
+    {
+      "index": 24,
+      "dataset": "qasper_e",
+      "_id": "741e32f2f93410bcffc12553b94d72b680db834ee5a45669",
+      "answers": [
+        "WordNet BIBREF0, Freebase BIBREF1, WN18 (a subset of WordNet) BIBREF24 , FB15K (a subset of Freebase) BIBREF2"
+      ],
+      "length": 3367,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "WN18 and FB15K",
+        "metric": "token_f1",
+        "score": 0.23529411764705882,
+        "prediction_key": "WN18 and FB15K",
+        "gold": [
+          "WordNet BIBREF0, Freebase BIBREF1, WN18 (a subset of WordNet) BIBREF24 , FB15K (a subset of Freebase) BIBREF2"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "WN18 and FB15K",
+        "metric": "token_f1",
+        "score": 0.23529411764705882,
+        "prediction_key": "WN18 and FB15K",
+        "gold": [
+          "WordNet BIBREF0, Freebase BIBREF1, WN18 (a subset of WordNet) BIBREF24 , FB15K (a subset of Freebase) BIBREF2"
+        ]
+      }
+    },
+    {
+      "index": 25,
+      "dataset": "qasper_e",
+      "_id": "7dbc40699fa6742050f798cfeea408507ca4b90811be532d",
+      "answers": [
+        " LastStateRNN, AvgRNN, AttentionRNN",
+        "LastStateRNN, AvgRNN, AttentionRNN "
+      ],
+      "length": 2823,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "LastStateRNN",
+        "metric": "token_f1",
+        "score": 0.5,
+        "prediction_key": "LastStateRNN",
+        "gold": [
+          " LastStateRNN, AvgRNN, AttentionRNN",
+          "LastStateRNN, AvgRNN, AttentionRNN "
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "LastStateRNN",
+        "metric": "token_f1",
+        "score": 0.5,
+        "prediction_key": "LastStateRNN",
+        "gold": [
+          " LastStateRNN, AvgRNN, AttentionRNN",
+          "LastStateRNN, AvgRNN, AttentionRNN "
+        ]
+      }
+    },
+    {
+      "index": 26,
+      "dataset": "qasper_e",
+      "_id": "b1fdb80cd96f455762f4f3be78a4932e7ae5edb2802d9e5c",
+      "answers": [
+        "personal attack, racism, and sexism",
+        "racism, sexism, personal attack, not specifically about any single topic"
+      ],
+      "length": 3244,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Personal attack, racism, and sexism",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "Personal attack, racism, and sexism",
+        "gold": [
+          "personal attack, racism, and sexism",
+          "racism, sexism, personal attack, not specifically about any single topic"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "personal attack, racism, and sexism",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "personal attack, racism, and sexism",
+        "gold": [
+          "personal attack, racism, and sexism",
+          "racism, sexism, personal attack, not specifically about any single topic"
+        ]
+      }
+    },
+    {
+      "index": 27,
+      "dataset": "qasper_e",
+      "_id": "9559dbefad997c0a896d9cae62aeeb1703add67a670930fb",
+      "answers": [
+        "Yes",
+        "Yes"
+      ],
+      "length": 3634,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Yes",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "Yes",
+        "gold": [
+          "Yes",
+          "Yes"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Yes",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "Yes",
+        "gold": [
+          "Yes",
+          "Yes"
+        ]
+      }
+    },
+    {
+      "index": 28,
+      "dataset": "qasper_e",
+      "_id": "3ead7355dc4b6356c66ae3a8cffe00652a7d35a899dcb316",
+      "answers": [
+        "BIBREF12 , BIBREF13",
+        "an existing, annotated Twitter dataset that was constructed based on a hierarchical model of depression-related symptoms BIBREF12 , BIBREF13"
+      ],
+      "length": 1939,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "An existing, annotated Twitter dataset constructed based on a hierarchical model of depression-related symptoms, containing 9,473 annotations for 9,300 tweets.",
+        "metric": "token_f1",
+        "score": 0.7058823529411765,
+        "prediction_key": "An existing, annotated Twitter dataset constructed based on a hierarchical model of depression-related symptoms, containing 9,473 annotations for 9,300 tweets.",
+        "gold": [
+          "BIBREF12 , BIBREF13",
+          "an existing, annotated Twitter dataset that was constructed based on a hierarchical model of depression-related symptoms BIBREF12 , BIBREF13"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "annotated Twitter dataset",
+        "metric": "token_f1",
+        "score": 0.3157894736842105,
+        "prediction_key": "annotated Twitter dataset",
+        "gold": [
+          "BIBREF12 , BIBREF13",
+          "an existing, annotated Twitter dataset that was constructed based on a hierarchical model of depression-related symptoms BIBREF12 , BIBREF13"
+        ]
+      }
+    },
+    {
+      "index": 29,
+      "dataset": "qasper_e",
+      "_id": "5c576f06ce64e385da68b3465a0e077c81651dfbc19c72a4",
+      "answers": [
+        "Nguni languages (zul, xho, nbl, ssw), Sotho languages (nso, sot, tsn)",
+        "The Nguni languages are similar to each other, The same is true of the Sotho languages"
+      ],
+      "length": 1877,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The Nguni languages (zul, xho, nbl, ssw) are similar to each other, and the Sotho languages (nso, sot, tsn) are similar to each other.",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "The Nguni languages (zul, xho, nbl, ssw) are similar to each other, and the Sotho languages (nso, sot, tsn) are similar to each other.",
+        "gold": [
+          "Nguni languages (zul, xho, nbl, ssw), Sotho languages (nso, sot, tsn)",
+          "The Nguni languages are similar to each other, The same is true of the Sotho languages"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Nguni languages and Sotho languages",
+        "metric": "token_f1",
+        "score": 0.5000000000000001,
+        "prediction_key": "Nguni languages and Sotho languages",
+        "gold": [
+          "Nguni languages (zul, xho, nbl, ssw), Sotho languages (nso, sot, tsn)",
+          "The Nguni languages are similar to each other, The same is true of the Sotho languages"
+        ]
+      }
+    },
+    {
+      "index": 30,
+      "dataset": "qasper_e",
+      "_id": "5fa58c27137b7ed6888f0d3c5b3450aee78a7d479d98672c",
+      "answers": [
+        "IMDb dataset of movie reviews",
+        "IMDb"
+      ],
+      "length": 2327,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "IMDb dataset",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "IMDb dataset",
+        "gold": [
+          "IMDb dataset of movie reviews",
+          "IMDb"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "IMDb dataset",
+        "metric": "token_f1",
+        "score": 0.6666666666666666,
+        "prediction_key": "IMDb dataset",
+        "gold": [
+          "IMDb dataset of movie reviews",
+          "IMDb"
+        ]
+      }
+    },
+    {
+      "index": 31,
+      "dataset": "qasper_e",
+      "_id": "40490daeb7eba9f934f4613aac7ec5d957d1482bce802c8a",
+      "answers": [
+        "accuracy and F1-score of 89.6% and 89.2%, respectively",
+        "accuracy and F1-score of 89.6% and 89.2%, respectively"
+      ],
+      "length": 3313,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The system's performance was an accuracy and F1-score of 89.6% and 89.2%, respectively.",
+        "metric": "token_f1",
+        "score": 0.8421052631578948,
+        "prediction_key": "The system's performance was an accuracy and F1-score of 89.6% and 89.2%, respectively.",
+        "gold": [
+          "accuracy and F1-score of 89.6% and 89.2%, respectively",
+          "accuracy and F1-score of 89.6% and 89.2%, respectively"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "89.6% accuracy and 89.2% F1-score",
+        "metric": "token_f1",
+        "score": 0.7692307692307693,
+        "prediction_key": "89.6% accuracy and 89.2% F1-score",
+        "gold": [
+          "accuracy and F1-score of 89.6% and 89.2%, respectively",
+          "accuracy and F1-score of 89.6% and 89.2%, respectively"
+        ]
+      }
+    },
+    {
+      "index": 32,
+      "dataset": "qasper_e",
+      "_id": "973f0a7a906c8f84200007bfe0c611f041fe389c316707b7",
+      "answers": [
+        "K-means, LEM BIBREF13, DPEMM BIBREF14",
+        "K-means, LEM, DPEMM"
+      ],
+      "length": 3841,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "K-means, LEM, and DPEMM",
+        "metric": "token_f1",
+        "score": 0.8571428571428571,
+        "prediction_key": "K-means, LEM, and DPEMM",
+        "gold": [
+          "K-means, LEM BIBREF13, DPEMM BIBREF14",
+          "K-means, LEM, DPEMM"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "K-means, LEM, and DPEMM",
+        "metric": "token_f1",
+        "score": 0.8571428571428571,
+        "prediction_key": "K-means, LEM, and DPEMM",
+        "gold": [
+          "K-means, LEM BIBREF13, DPEMM BIBREF14",
+          "K-means, LEM, DPEMM"
+        ]
+      }
+    },
+    {
+      "index": 33,
+      "dataset": "qasper_e",
+      "_id": "fb7bbe83a369588ad73dd99826afd3c20d38769f5b0c2a31",
+      "answers": [
+        "English, German, Spanish, Mandarin, Polish, Russian, Korean and Serbian",
+        "English (Edinburgh), German (Berlin), Spanish (Madrid), Mandarin (Taipei), Polish (Warsaw), Russian (Moscow), Korean (Seoul), and Serbian (Belgrade)"
+      ],
+      "length": 2754,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "English, German, Spanish, Mandarin, Polish, Russian, Korean, and Serbian.",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "English, German, Spanish, Mandarin, Polish, Russian, Korean, and Serbian.",
+        "gold": [
+          "English, German, Spanish, Mandarin, Polish, Russian, Korean and Serbian",
+          "English (Edinburgh), German (Berlin), Spanish (Madrid), Mandarin (Taipei), Polish (Warsaw), Russian (Moscow), Korean (Seoul), and Serbian (Belgrade)"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "English, German, Spanish, Mandarin, Polish, Russian, Korean, Serbian",
+        "metric": "token_f1",
+        "score": 0.9411764705882353,
+        "prediction_key": "English, German, Spanish, Mandarin, Polish, Russian, Korean, Serbian",
+        "gold": [
+          "English, German, Spanish, Mandarin, Polish, Russian, Korean and Serbian",
+          "English (Edinburgh), German (Berlin), Spanish (Madrid), Mandarin (Taipei), Polish (Warsaw), Russian (Moscow), Korean (Seoul), and Serbian (Belgrade)"
+        ]
+      }
+    },
+    {
+      "index": 34,
+      "dataset": "qasper_e",
+      "_id": "37c0ca334bad96a1cf17879108e112591f7088f3794b6533",
+      "answers": [
+        "rupnik2016news",
+        "rupnik2016news, Deutsche Welle's news website"
+      ],
+      "length": 3160,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The datasets include a cluster-linking dataset adapted from rupnik2016news, and IDF scores were computed using a larger dataset collected from Deutsche Welle's news website.",
+        "metric": "token_f1",
+        "score": 0.3846153846153846,
+        "prediction_key": "The datasets include a cluster-linking dataset adapted from rupnik2016news, and IDF scores were computed using a larger dataset collected from Deutsche Welle's ",
+        "gold": [
+          "rupnik2016news",
+          "rupnik2016news, Deutsche Welle's news website"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Deutsche Welle's news website, TDT, Reuters, Event Registry",
+        "metric": "token_f1",
+        "score": 0.6153846153846154,
+        "prediction_key": "Deutsche Welle's news website, TDT, Reuters, Event Registry",
+        "gold": [
+          "rupnik2016news",
+          "rupnik2016news, Deutsche Welle's news website"
+        ]
+      }
+    },
+    {
+      "index": 35,
+      "dataset": "qasper_e",
+      "_id": "f183167177d0ddfc059aff91b6bd78bd5e9861b998261a2d",
+      "answers": [
+        "Yes",
+        "Yes"
+      ],
+      "length": 1868,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "No",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "No",
+        "gold": [
+          "Yes",
+          "Yes"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "No",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "No",
+        "gold": [
+          "Yes",
+          "Yes"
+        ]
+      }
+    },
+    {
+      "index": 36,
+      "dataset": "qasper_e",
+      "_id": "a3a74b9eba905def46e1b99988f18ad74a451de8a53b1b15",
+      "answers": [
+        "GloVe, BERT, Universal Sentence Encoder, TF-IDF, InferSent",
+        "Avg. GloVe embeddings, Avg. fast-text embeddings, Avg. BERT embeddings, BERT CLS-vector, InferSent - GloVe and Universal Sentence Encoder."
+      ],
+      "length": 3862,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "InferSent, Universal Sentence Encoder, average GloVe embeddings, average BERT embeddings, and BERT CLS-token output.",
+        "metric": "token_f1",
+        "score": 0.6451612903225806,
+        "prediction_key": "InferSent, Universal Sentence Encoder, average GloVe embeddings, average BERT embeddings, and BERT CLS-token output.",
+        "gold": [
+          "GloVe, BERT, Universal Sentence Encoder, TF-IDF, InferSent",
+          "Avg. GloVe embeddings, Avg. fast-text embeddings, Avg. BERT embeddings, BERT CLS-vector, InferSent - GloVe and Universal Sentence Encoder."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "InferSent, Universal Sentence Encoder, average GloVe embeddings, BERT embeddings (averaged and CLS-token), Skip-Thought, poly-encoders, BiLSTM.",
+        "metric": "token_f1",
+        "score": 0.5625,
+        "prediction_key": "InferSent, Universal Sentence Encoder, average GloVe embeddings, BERT embeddings (averaged and CLS-token), Skip-Thought, poly-encoders, BiLSTM.",
+        "gold": [
+          "GloVe, BERT, Universal Sentence Encoder, TF-IDF, InferSent",
+          "Avg. GloVe embeddings, Avg. fast-text embeddings, Avg. BERT embeddings, BERT CLS-vector, InferSent - GloVe and Universal Sentence Encoder."
+        ]
+      }
+    },
+    {
+      "index": 37,
+      "dataset": "qasper_e",
+      "_id": "214680ec183fe8bec3a65633d71c3690f5c3b35e5e8e41a6",
+      "answers": [
+        "MR, CR, SUBJ, MPQA, SST, TREC, MRPC",
+        "MR: Sentiment prediction for movie reviews snippets on a five start scale BIBREF25.\n\nCR: Sentiment prediction of customer product reviews BIBREF26.\n\nSUBJ: Subjectivity prediction of sentences from movie reviews and plot summaries BIBREF27.\n\nMPQA: Phrase level opinion polarity classification from newswire BIBREF28.\n\nSST: Stanford Sentiment Treebank with binary labels BIBREF29.\n\nTREC: Fine grained question-type classification from TREC BIBREF30.\n\nMRPC: Microsoft Research Paraphrase Corpus from parallel news sources BIBREF31.",
+        "Semantic Textual Similarity, sentiment prediction, subjectivity prediction, phrase level opinion polarity classification, Stanford Sentiment Treebank, fine grained question-type classification."
+      ],
+      "length": 3861,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "MR, CR, SUBJ, MPQA, SST, TREC, and MRPC.",
+        "metric": "token_f1",
+        "score": 0.9333333333333333,
+        "prediction_key": "MR, CR, SUBJ, MPQA, SST, TREC, and MRPC.",
+        "gold": [
+          "MR, CR, SUBJ, MPQA, SST, TREC, MRPC",
+          "MR: Sentiment prediction for movie reviews snippets on a five start scale BIBREF25.\n\nCR: Sentiment prediction of customer product reviews BIBREF26.\n\nSUBJ: Subjectivity prediction of sentences from movie reviews and plot summaries BIBREF27.\n\nMPQA: Phrase level opinion polarity classification from newswire BIBREF28.\n\nSST: Stanford Sentiment Treebank with binary labels BIBREF29.\n\nTREC: Fine grained question-type classification from TREC BIBREF30.\n\nMRPC: Microsoft Research Paraphrase Corpus from parallel news sources BIBREF31.",
+          "Semantic Textual Similarity, sentiment prediction, subjectivity prediction, phrase level opinion polarity classification, Stanford Sentiment Treebank, fine grained question-type classification."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "MR, CR, SUBJ, MPQA, SST, TREC, MRPC",
+        "metric": "token_f1",
+        "score": 1.0,
+        "prediction_key": "MR, CR, SUBJ, MPQA, SST, TREC, MRPC",
+        "gold": [
+          "MR, CR, SUBJ, MPQA, SST, TREC, MRPC",
+          "MR: Sentiment prediction for movie reviews snippets on a five start scale BIBREF25.\n\nCR: Sentiment prediction of customer product reviews BIBREF26.\n\nSUBJ: Subjectivity prediction of sentences from movie reviews and plot summaries BIBREF27.\n\nMPQA: Phrase level opinion polarity classification from newswire BIBREF28.\n\nSST: Stanford Sentiment Treebank with binary labels BIBREF29.\n\nTREC: Fine grained question-type classification from TREC BIBREF30.\n\nMRPC: Microsoft Research Paraphrase Corpus from parallel news sources BIBREF31.",
+          "Semantic Textual Similarity, sentiment prediction, subjectivity prediction, phrase level opinion polarity classification, Stanford Sentiment Treebank, fine grained question-type classification."
+        ]
+      }
+    },
+    {
+      "index": 38,
+      "dataset": "qasper_e",
+      "_id": "7b4d3a64f9dd6e23da5f1530bd92ced5c5adf84ce3c1e2ee",
+      "answers": [
+        "33,663",
+        "33,663 distinct review keywords "
+      ],
+      "length": 3305,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "33,663",
+          "33,663 distinct review keywords "
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "33,663",
+          "33,663 distinct review keywords "
+        ]
+      }
+    },
+    {
+      "index": 39,
+      "dataset": "qasper_e",
+      "_id": "cd873a30eb42011afd9007db9d38aad584c2734f48330dce",
+      "answers": [
+        "using tweets that one has replied or quoted to as contextual information",
+        "text sequences of context tweets"
+      ],
+      "length": 2060,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Context tweets are proposed as additional features, where the text sequences of context tweets are directly used and concatenated with outputs of labeled tweets for neural network models.",
+        "metric": "token_f1",
+        "score": 0.3125,
+        "prediction_key": "Context tweets are proposed as additional features, where the text sequences of context tweets are directly used and concatenated with outputs of labeled tweets",
+        "gold": [
+          "using tweets that one has replied or quoted to as contextual information",
+          "text sequences of context tweets"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Context tweets",
+        "metric": "token_f1",
+        "score": 0.5714285714285715,
+        "prediction_key": "Context tweets",
+        "gold": [
+          "using tweets that one has replied or quoted to as contextual information",
+          "text sequences of context tweets"
+        ]
+      }
+    },
+    {
+      "index": 40,
+      "dataset": "qasper_e",
+      "_id": "088e3b32e2812d8fcca9f4fad976de94317893b5cb210f4a",
+      "answers": [
+        "No",
+        "No"
+      ],
+      "length": 1906,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Yes",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "Yes",
+        "gold": [
+          "No",
+          "No"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Yes",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "Yes",
+        "gold": [
+          "No",
+          "No"
+        ]
+      }
+    },
+    {
+      "index": 41,
+      "dataset": "qasper_e",
+      "_id": "ecdc1201351d1467d8b55b82ce8e54846f36e141284db44e",
+      "answers": [
+        "No",
+        "No"
+      ],
+      "length": 1443,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "No",
+          "No"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "unanswerable",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "unanswerable",
+        "gold": [
+          "No",
+          "No"
+        ]
+      }
+    },
+    {
+      "index": 42,
+      "dataset": "qasper_e",
+      "_id": "e2b21e6c72b2a258c8d8dd7b7f94ee08b4a1edd012ccce04",
+      "answers": [
+        "For SLC task, the \"ltuorp\" team  has the best performing  model (0.6323/0.6028/0.6649 for F1/P/R  respectively) and for FLC task the \"newspeak\" team  has the best performing  model (0.2488/0.2863/0.2201 for F1/P/R respectively)."
+      ],
+      "length": 1541,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The best-performing model among the authors' submissions is the ensemble+ of (r4, r7, r12) for SLC and ensemble+ of (II and IV) for FLC, achieving 4th place (SLC) and 3rd place (FLC) rankings; specific performance scores are not provided in the article.",
+        "metric": "token_f1",
+        "score": 0.18461538461538463,
+        "prediction_key": "The best-performing model among the authors' submissions is the ensemble+ of (r4, r7, r12) for SLC and ensemble+ of (II and IV) for FLC, achieving 4th place (SL",
+        "gold": [
+          "For SLC task, the \"ltuorp\" team  has the best performing  model (0.6323/0.6028/0.6649 for F1/P/R  respectively) and for FLC task the \"newspeak\" team  has the best performing  model (0.2488/0.2863/0.2201 for F1/P/R respectively)."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "MIC-CIS, ranked 3rd in FLC and 4th in SLC",
+        "metric": "token_f1",
+        "score": 0.16666666666666666,
+        "prediction_key": "MIC-CIS, ranked 3rd in FLC and 4th in SLC",
+        "gold": [
+          "For SLC task, the \"ltuorp\" team  has the best performing  model (0.6323/0.6028/0.6649 for F1/P/R  respectively) and for FLC task the \"newspeak\" team  has the best performing  model (0.2488/0.2863/0.2201 for F1/P/R respectively)."
+        ]
+      }
+    },
+    {
+      "index": 43,
+      "dataset": "qasper_e",
+      "_id": "b89bb41df843f9c8c292df5290d3e62e2ac62171991d5fbf",
+      "answers": [
+        "DTA18, DTA19",
+        "Diachronic Usage Relatedness (DURel) gold standard data set"
+      ],
+      "length": 1908,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The corpus used for the task is the diachronic corpus pair DTA18 and DTA19 from the DTA corpus.",
+        "metric": "token_f1",
+        "score": 0.25,
+        "prediction_key": "The corpus used for the task is the diachronic corpus pair DTA18 and DTA19 from the DTA corpus.",
+        "gold": [
+          "DTA18, DTA19",
+          "Diachronic Usage Relatedness (DURel) gold standard data set"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "DTA18 and DTA19",
+        "metric": "token_f1",
+        "score": 0.8,
+        "prediction_key": "DTA18 and DTA19",
+        "gold": [
+          "DTA18, DTA19",
+          "Diachronic Usage Relatedness (DURel) gold standard data set"
+        ]
+      }
+    },
+    {
+      "index": 44,
+      "dataset": "qasper_e",
+      "_id": "a7281359720bac697e8f2d18c8d460b238d46b17205a5f4a",
+      "answers": [
+        "13,757",
+        "10,898 articles, 17,794 tweets, and 13,757 crowdsourced question-answer pairs"
+      ],
+      "length": 3704,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The dataset includes 10,898 articles, 17,794 tweets, and 13,757 crowdsourced question-answer pairs.",
+        "metric": "token_f1",
+        "score": 0.9,
+        "prediction_key": "The dataset includes 10,898 articles, 17,794 tweets, and 13,757 crowdsourced question-answer pairs.",
+        "gold": [
+          "13,757",
+          "10,898 articles, 17,794 tweets, and 13,757 crowdsourced question-answer pairs"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "13,757 crowdsourced question-answer pairs",
+        "metric": "token_f1",
+        "score": 0.6153846153846153,
+        "prediction_key": "13,757 crowdsourced question-answer pairs",
+        "gold": [
+          "13,757",
+          "10,898 articles, 17,794 tweets, and 13,757 crowdsourced question-answer pairs"
+        ]
+      }
+    },
+    {
+      "index": 45,
+      "dataset": "qasper_e",
+      "_id": "56600b6a10fb297db2b0c15a21c2d49f7a0a90f927387e3b",
+      "answers": [
+        "KNN\nRF\nSVM\nMLP",
+        " K Nearest Neighbors (KNN), Random Forest (RF), Support Vector Machine (SVM), Multi-layer Perceptron (MLP)"
+      ],
+      "length": 1639,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "K Nearest Neighbors (KNN), Random Forest (RF), Support Vector Machine (SVM), and Multi-layer Perceptron (MLP)",
+        "metric": "token_f1",
+        "score": 0.9655172413793104,
+        "prediction_key": "K Nearest Neighbors (KNN), Random Forest (RF), Support Vector Machine (SVM), and Multi-layer Perceptron (MLP)",
+        "gold": [
+          "KNN\nRF\nSVM\nMLP",
+          " K Nearest Neighbors (KNN), Random Forest (RF), Support Vector Machine (SVM), Multi-layer Perceptron (MLP)"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "K Nearest Neighbors (KNN), Random Forest (RF), Support Vector Machine (SVM), and Multi-layer Perceptron (MLP)",
+        "metric": "token_f1",
+        "score": 0.9655172413793104,
+        "prediction_key": "K Nearest Neighbors (KNN), Random Forest (RF), Support Vector Machine (SVM), and Multi-layer Perceptron (MLP)",
+        "gold": [
+          "KNN\nRF\nSVM\nMLP",
+          " K Nearest Neighbors (KNN), Random Forest (RF), Support Vector Machine (SVM), Multi-layer Perceptron (MLP)"
+        ]
+      }
+    },
+    {
+      "index": 46,
+      "dataset": "qasper_e",
+      "_id": "ab031ab8495d8200afcf794d5368ed54353ec254b176d190",
+      "answers": [
+        "They use two independent convolutional and max-pooling layers on (1) a combination of the left context, the left entity and the middle context; and (2) a combination of the middle context, the right entity and the right context. They concatenated the two results after pooling to get the new context representation."
+      ],
+      "length": 2435,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "They obtain the new context representation by splitting the contexts into three disjoint regions (left, middle, right) based on the two relation arguments and proposing an extended middle context that combines the left context with the left entity and middle context, and the middle context with the right entity and right context, thereby repeating the middle context to force attention to it.",
+        "metric": "token_f1",
+        "score": 0.4893617021276596,
+        "prediction_key": "They obtain the new context representation by splitting the contexts into three disjoint regions (left, middle, right) based on the two relation arguments and p",
+        "gold": [
+          "They use two independent convolutional and max-pooling layers on (1) a combination of the left context, the left entity and the middle context; and (2) a combination of the middle context, the right entity and the right context. They concatenated the two results after pooling to get the new context representation."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "They obtain the new context representation by splitting the contexts into three disjoint regions (left, middle, right) based on the two relation arguments and proposing an extended middle context that combines (1) the left context, left entity, and middle context, and (2) the middle context, right entity, and right context, with repetition of the middle context to emphasize it.",
+        "metric": "token_f1",
+        "score": 0.5591397849462365,
+        "prediction_key": "They obtain the new context representation by splitting the contexts into three disjoint regions (left, middle, right) based on the two relation arguments and p",
+        "gold": [
+          "They use two independent convolutional and max-pooling layers on (1) a combination of the left context, the left entity and the middle context; and (2) a combination of the middle context, the right entity and the right context. They concatenated the two results after pooling to get the new context representation."
+        ]
+      }
+    },
+    {
+      "index": 47,
+      "dataset": "qasper_e",
+      "_id": "aefe71d17866995c454d51362893d2fb48de1a3d55d3cdb0",
+      "answers": [
+        "An output layer for each task",
+        "Multi-tasking is addressed by neural sequence tagger based on LSTM-CRF and linguistic features, while multi-granularity is addressed by ensemble of LSTM-CRF and BERT."
+      ],
+      "length": 1514,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "Multi-granularity architecture jointly performs sentence-level and fragment-level classification with weighted loss, while multi-tasking architecture jointly performs propagandistic fragment detection and fragment-level classification (19-way).",
+        "metric": "token_f1",
+        "score": 0.21739130434782608,
+        "prediction_key": "Multi-granularity architecture jointly performs sentence-level and fragment-level classification with weighted loss, while multi-tasking architecture jointly pe",
+        "gold": [
+          "An output layer for each task",
+          "Multi-tasking is addressed by neural sequence tagger based on LSTM-CRF and linguistic features, while multi-granularity is addressed by ensemble of LSTM-CRF and BERT."
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "Multi-granularity: jointly performing FLC and SLC with weighted sentence classification loss; Multi-tasking: jointly performing propagandistic span/fragment detection (PFD) and FLC.",
+        "metric": "token_f1",
+        "score": 0.18604651162790697,
+        "prediction_key": "Multi-granularity: jointly performing FLC and SLC with weighted sentence classification loss; Multi-tasking: jointly performing propagandistic span/fragment det",
+        "gold": [
+          "An output layer for each task",
+          "Multi-tasking is addressed by neural sequence tagger based on LSTM-CRF and linguistic features, while multi-granularity is addressed by ensemble of LSTM-CRF and BERT."
+        ]
+      }
+    },
+    {
+      "index": 48,
+      "dataset": "qasper_e",
+      "_id": "48fc8f0bab4c2e63d0703b11d8902a4082d9d77eb8ef611c",
+      "answers": [
+        "which contains over 45,000 scholarly articles, including over 33,000 with full text, about COVID-19, SARS-CoV-2, and related coronaviruses",
+        "contains over 45,000 scholarly articles, including over 33,000 with full text, about COVID-19, SARS-CoV-2, and related coronaviruses"
+      ],
+      "length": 2156,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The CORD-19 dataset is the COVID-19 Open Research Dataset, containing over 45,000 scholarly articles, including over 33,000 with full text, about COVID-19, SARS-CoV-2, and related coronaviruses.",
+        "metric": "token_f1",
+        "score": 0.7804878048780487,
+        "prediction_key": "The CORD-19 dataset is the COVID-19 Open Research Dataset, containing over 45,000 scholarly articles, including over 33,000 with full text, about COVID-19, SARS",
+        "gold": [
+          "which contains over 45,000 scholarly articles, including over 33,000 with full text, about COVID-19, SARS-CoV-2, and related coronaviruses",
+          "contains over 45,000 scholarly articles, including over 33,000 with full text, about COVID-19, SARS-CoV-2, and related coronaviruses"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "COVID-19 Open Research Dataset",
+        "metric": "token_f1",
+        "score": 0.09523809523809523,
+        "prediction_key": "COVID-19 Open Research Dataset",
+        "gold": [
+          "which contains over 45,000 scholarly articles, including over 33,000 with full text, about COVID-19, SARS-CoV-2, and related coronaviruses",
+          "contains over 45,000 scholarly articles, including over 33,000 with full text, about COVID-19, SARS-CoV-2, and related coronaviruses"
+        ]
+      }
+    },
+    {
+      "index": 49,
+      "dataset": "qasper_e",
+      "_id": "e88c5e44dbf7203c800c503bdfddb020c564fc323deff33c",
+      "answers": [
+        "26972",
+        "26972 sentences"
+      ],
+      "length": 3040,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The real-life dataset consists of supervisor assessment text from 4528 employees, containing 26972 sentences.",
+        "metric": "token_f1",
+        "score": 0.2666666666666667,
+        "prediction_key": "The real-life dataset consists of supervisor assessment text from 4528 employees, containing 26972 sentences.",
+        "gold": [
+          "26972",
+          "26972 sentences"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "4528 employees",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "4528 employees",
+        "gold": [
+          "26972",
+          "26972 sentences"
+        ]
+      }
+    },
+    {
+      "index": 50,
+      "dataset": "qasper_e",
+      "_id": "d9c7574b1ed1ebd6eb755e6bbeee3513c9c912771059348c",
+      "answers": [
+        "Unanswerable",
+        "Unanswerable"
+      ],
+      "length": 2533,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "The state of the art methods are neural network-based approaches to grammar induction, including models that learn tree structures through soft gating layers within neural language models, combine recursive autoencoders with the inside-outside algorithm, train unsupervised recurrent neural network grammars with structured inference networks, and utilize image captions to identify and ground constituents.",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "The state of the art methods are neural network-based approaches to grammar induction, including models that learn tree structures through soft gating layers wi",
+        "gold": [
+          "Unanswerable",
+          "Unanswerable"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "neural network-based approaches to grammar induction",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "neural network-based approaches to grammar induction",
+        "gold": [
+          "Unanswerable",
+          "Unanswerable"
+        ]
+      }
+    }
+  ],
+  "boundary": "Public LongBench smoke slice. This is not a full LongBench leaderboard claim; it is a source-backed answer-key accuracy receipt that can scale to larger slices."
+}

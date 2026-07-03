@@ -1,0 +1,56 @@
+{
+  "run_id": "qwen_tris_longbench_public_slice_20260701T192500Z",
+  "provider": "qwen-cloud",
+  "model": "qwen-plus",
+  "benchmark": "LongBench public data.zip",
+  "tasks": [
+    "hotpotqa_e"
+  ],
+  "items": 1,
+  "condition_a": "baseline Qwen prompt-only answer discipline",
+  "condition_b": "Qwen Tris stable-state answer discipline",
+  "condition_a_mean": 0.9523809523809523,
+  "condition_b_mean": 0.0,
+  "delta": -0.9523809523809523,
+  "family_totals": {
+    "hotpotqa_e": {
+      "n": 1,
+      "condition_a_mean": 0.9523809523809523,
+      "condition_b_mean": 0.0,
+      "delta": -0.9523809523809523
+    }
+  },
+  "skipped_items": [],
+  "results": [
+    {
+      "index": 1,
+      "dataset": "hotpotqa_e",
+      "_id": "4f578bedb58906daa59e91baacc5d3c4b5d68d82e086891d",
+      "answers": [
+        "George Clooney, Thekla Reuten, Violante Placido, Irina Björklund, and Paolo Bonacelli"
+      ],
+      "length": 3790,
+      "condition_a": {
+        "name": "baseline_qwen_prompt_only",
+        "prediction": "George Clooney, Violante Placido, Thekla Reuten, Irina Björklund, Paolo Bonacelli",
+        "metric": "token_f1",
+        "score": 0.9523809523809523,
+        "prediction_key": "George Clooney, Violante Placido, Thekla Reuten, Irina Björklund, Paolo Bonacelli",
+        "gold": [
+          "George Clooney, Thekla Reuten, Violante Placido, Irina Björklund, and Paolo Bonacelli"
+        ]
+      },
+      "condition_b": {
+        "name": "qwen_tris_stable_state_answer_discipline",
+        "prediction": "John Neville, Ray Smith, Cyril Luckham, Derek Godfrey, Ann Bell",
+        "metric": "token_f1",
+        "score": 0.0,
+        "prediction_key": "John Neville, Ray Smith, Cyril Luckham, Derek Godfrey, Ann Bell",
+        "gold": [
+          "George Clooney, Thekla Reuten, Violante Placido, Irina Björklund, and Paolo Bonacelli"
+        ]
+      }
+    }
+  ],
+  "boundary": "Public LongBench smoke slice. This is not a full LongBench leaderboard claim; it is a source-backed answer-key accuracy receipt that can scale to larger slices."
+}

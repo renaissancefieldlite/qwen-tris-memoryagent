@@ -1,0 +1,23 @@
+[project]
+name = "qwen-agent-buildout"
+version = "0.1.0"
+description = "Standalone Qwen Cloud agent hackathon buildout coordinator"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=1.3.9",
+    "langchain-core>=1.4.7",
+    "langchain-community>=0.4.2",
+    "langchain-text-splitters>=1.1.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+audio = [
+    "av",
+    "faster-whisper",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
