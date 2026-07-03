@@ -42,7 +42,7 @@ VOICE_SPEED = 1.0
 VOICE_GAIN = 10 ** (1.8 / 20.0)
 MUSIC_GAIN = 0.15
 
-OUT_BASE = "USE_THIS_QWEN_TRIS_MEMORYAGENT_COMMERCIAL_2026-07-02_v06_SSP_MEMORY_EXPLAINER"
+OUT_BASE = "USE_THIS_QWEN_TRIS_MEMORYAGENT_COMMERCIAL_2026-07-03_v07_MIRROR_LAYER_SSP_CLARITY"
 OUT_VIDEO = OUT_DIR / f"{OUT_BASE}.mp4"
 OUT_AUDIO = OUT_DIR / f"{OUT_BASE}_AUDIO_MIX.wav"
 OUT_VOICE = OUT_DIR / f"{OUT_BASE}_VOICE.wav"
@@ -241,7 +241,7 @@ def draw_bridge(scene: Scene) -> Image.Image:
     wrapped(draw, (92, 198), scene.subtitle, F_BODY, MUTED, max_width=1080)
     cards = [
         ("TRIS", "Hermes / Nemo route", QWEN_PURPLE),
-        ("SPINE", "SQLite + JSONL + RAG", QWEN_CYAN),
+        ("MIRROR", "interaction-state signal", QWEN_CYAN),
         ("SSP", "Stable-State Path", GOLD),
         ("QWEN", "Cloud MemoryAgent", QWEN_BLUE),
         ("RECEIPT", "500-turn run", GREEN),
@@ -293,7 +293,7 @@ def draw_conditions(scene: Scene) -> Image.Image:
     wrapped(draw, (92, 194), scene.subtitle, F_BODY, MUTED, max_width=1040)
     cards = [
         ("A", "BASELINE QWEN", "prompt-only answer discipline", MUTED),
-        ("B", "QWEN TRIS", "Mirror Architecture memory / RAG / SSP", QWEN_CYAN),
+        ("B", "QWEN TRIS", "Mirror Layer + measured SSP / memory rails", QWEN_CYAN),
         ("C", "TUNED SSP", "gated until real adapter or internal-layer receipt", GOLD),
     ]
     for i, (tag, head, body, color) in enumerate(cards):
@@ -481,16 +481,16 @@ SCENES = [
     Scene(
         "Three-condition test.",
         "Baseline, architecture-on, and the future tuned SSP lane.",
-        "We test it simply. First, plain Qwen. Second, Qwen with Mirror Architecture memory and SSP. Third, the tuned lane stays gated until a real adapter receipt exists.",
+        "We test it simply. First, plain Qwen. Second, Qwen with Mirror Layer routing, measured SSP, and memory rails. Third, the tuned lane stays gated until a real adapter receipt exists.",
         "conditions",
         12.4,
     ),
     Scene(
-        "SSP is the memory stabilizer.",
-        "Stable-State Path keeps the job, evidence, memory, route, and next gate lined up.",
-        "SSP means Stable-State Path. It is the reason the memory gets stronger: Qwen Tris is not just holding more text. It keeps the right state of the work, so recall stays tied to the mission instead of drifting with the last prompt.",
+        "Mirror Layer drives SSP.",
+        "Interaction-state signal first. Stable-State Path second.",
+        "Mirror Layer is the patent-spine subsystem. It reads language, phrase patterns, sequence timing, continuity context, tone or proxy-tone, and emotional pattern into an interaction-state signal. SSP is the measured path that tests whether that state holds across the task.",
         "bridge",
-        14.0,
+        17.0,
     ),
     Scene(
         "Five hundred turns.",
@@ -704,7 +704,7 @@ def write_docs(duration: float, sample_rate: int) -> None:
 
         Qwen Tris Recall is the Qwen Cloud memory build of the RFL Trismegistus stack.
 
-        The commercial shows the bridge from Tris into Qwen Tris: the Hermes/Nemo-era operator spine, SQLite memory, JSONL audit receipts, RAG retrieval, Mirror Architecture / SSP, hosted Qwen Cloud route, live UI screenshots, and public benchmark receipts.
+        The commercial shows the bridge from Tris into Qwen Tris: the Hermes/Nemo-era operator spine, SQLite memory, JSONL audit receipts, RAG retrieval, Mirror Layer interaction-state routing, measured SSP, hosted Qwen Cloud route, live UI screenshots, and public benchmark receipts.
 
         Public-safe receipts highlighted:
         - Hosted Qwen Cloud 500-turn run: 500/500 turns, 2168/2168 checks, zero prompt spills, zero raw receipt spills.
@@ -723,7 +723,7 @@ def write_docs(duration: float, sample_rate: int) -> None:
         f"""\
         # Qwen Tris MemoryAgent Commercial Receipt
 
-        Created: 2026-07-02
+        Created: 2026-07-03
 
         Video:
         `{OUT_VIDEO}`

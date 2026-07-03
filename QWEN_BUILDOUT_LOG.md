@@ -2169,3 +2169,48 @@ Boundary:
 Public copy now states the mechanism clearly without exposing private/raw
 operator-state mechanics or tuned adapter internals.
 ```
+
+## 2026-07-03 - Qwen Tris MemoryAgent Commercial V07 Mirror Layer / SSP Clarity
+
+Rendered V07 after the Mirror Layer patent-spine clarity pass so the video no
+longer treats SSP as generic memory. The updated narration explains:
+
+- Mirror Layer is the patent-spine subsystem.
+- It derives an interaction-state signal from language, phrase patterns,
+  sequence timing, continuity context, tone/proxy-tone, and emotional-pattern
+  features.
+- SSP is the measured path that tests whether that state holds across the task.
+
+Video:
+
+```text
+commercial_exports/2026-07-02_QWEN_TRIS_MEMORYAGENT_COMMERCIAL/USE_THIS_QWEN_TRIS_MEMORYAGENT_COMMERCIAL_2026-07-03_v07_MIRROR_LAYER_SSP_CLARITY.mp4
+```
+
+Script:
+
+```text
+commercial_exports/2026-07-02_QWEN_TRIS_MEMORYAGENT_COMMERCIAL/USE_THIS_QWEN_TRIS_MEMORYAGENT_COMMERCIAL_2026-07-03_v07_MIRROR_LAYER_SSP_CLARITY_SCRIPT.md
+```
+
+Receipt:
+
+```text
+commercial_exports/2026-07-02_QWEN_TRIS_MEMORYAGENT_COMMERCIAL/USE_THIS_QWEN_TRIS_MEMORYAGENT_COMMERCIAL_2026-07-03_v07_MIRROR_LAYER_SSP_CLARITY_RECEIPT.md
+```
+
+Contact sheet:
+
+```text
+commercial_exports/2026-07-02_QWEN_TRIS_MEMORYAGENT_COMMERCIAL/USE_THIS_QWEN_TRIS_MEMORYAGENT_COMMERCIAL_2026-07-03_v07_MIRROR_LAYER_SSP_CLARITY_CONTACT_SHEET.jpg
+```
+
+Verification:
+
+```text
+ffprobe confirmed 174.568 seconds, under the 3-minute cap.
+Text grep confirmed the generated V07 script contains Mirror Layer,
+interaction-state signal, SSP, and the corrected Qwen version of Trismegistus
+closing line.
+Contact sheet inspected for slide overlap.
+```
