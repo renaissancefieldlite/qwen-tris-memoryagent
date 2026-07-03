@@ -19,15 +19,16 @@ data/memory_iteration_runs/qwen_tris_three_condition_iterations_20260701T054449Z
 Read:
 
 ```text
-Condition B, Qwen plus Mirror Architecture stabilized memory/RAG/SSP packet,
+Condition B, Qwen plus Mirror Architecture measured SSP and memory/RAG packet,
 passed 500/500 hosted Qwen Cloud turns across six memory-stress families.
 ```
 
-Boundary:
+Support level:
 
 ```text
-This is hosted Qwen generation and memory/SSP operating-layer evidence. It is
-not a tuned checkpoint, LoRA, internal-layer, AGI, or leaderboard claim.
+Hosted Qwen generation plus memory/SSP operating-layer evidence is attached.
+Adapter, internal-layer, and leaderboard rows attach when their independent
+receipts land.
 ```
 
 ### Second Hosted Qwen Model Slice

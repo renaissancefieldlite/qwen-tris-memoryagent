@@ -11,17 +11,17 @@ Active Qwen build:
 ```
 
 Hermes Trismegistus remains untouched. This build is Qwen Tris: the same
-Mirror Architecture / SSP memory discipline moved onto a Qwen Cloud MemoryAgent
+Mirror Architecture / measured SSP discipline moved onto a Qwen Cloud MemoryAgent
 track route.
 
 ## Core Thesis
 
 Qwen Tris is a specialized memory AI Expert Partner.
 
-The point is not generic chat memory. The point is to test whether a
-stable-state memory architecture can keep task identity, corrections, tool
-state, source evidence, and next gates coherent under workloads that usually
-collapse agents:
+The point is not generic chat memory. The point is to test whether Mirror
+Architecture can hold a measured Stable-State Path: task identity, corrections,
+tool state, source evidence, and next gates staying coherent under workloads
+that usually collapse agents:
 
 - long coding sessions
 - source-backed patch repair
@@ -31,17 +31,17 @@ collapse agents:
 - external work receipts
 - C5B / Golden Mark stable-state iteration recall
 
-The contest-facing point is that Mirror Architecture / SSP memory is
-model-agnostic. The same stable-state stack can run through the Hermes/Nemo
-lane, then move onto Qwen as a memory-track build while preserving the evidence
-discipline, source boundaries, and architecture-on/off comparison method.
+The contest-facing point is that Mirror Architecture / SSP is model-agnostic.
+The same state-path stack can run through the Hermes/Nemo lane, then move onto
+Qwen as a memory-track build while preserving the evidence discipline, source
+boundaries, and architecture-on/off comparison method.
 
 ## Model And Action Route
 
 Primary contest route:
 
 ```text
-Qwen Cloud model -> Qwen Tris MemoryAgent -> SSP memory/RAG -> receipt log
+Qwen Cloud model -> Qwen Tris MemoryAgent -> SSP + memory/RAG rails -> receipt log
 ```
 
 Sandbox/action route:
@@ -60,14 +60,14 @@ Qwen Tris should be presented and tested as a three-condition ladder:
 
 ```text
 Condition A: Qwen baseline
-  - no Mirror Architecture memory packet
-  - no SSP retrieval spine
+  - no Mirror Architecture packet
+  - no SSP / retrieval spine
   - answers from visible prompt only
 
-Condition B: Qwen + Mirror Architecture stabilized memory
+Condition B: Qwen + Mirror Architecture measured SSP
   - SQLite/JSONL memory
   - RAG/source-pack retrieval
-  - stable-state packet
+  - measured state-path packet
   - target-row and family retrieval discipline
   - public/private/source boundary lines
 
@@ -276,14 +276,14 @@ Scoring:
 - public/private boundary retention
 - next-gate continuity after interruption
 
-### 4. C5B / 500 SSP Memory Dataset
+### 4. C5B / 500 SSP State-Path Dataset
 
 Purpose:
 
-Use the strongest Tris stable-state receipts as memory stress. The task is not
-to memorize slogans. The task is to preserve the exact C5B / Golden Mark
+Use the strongest Tris Stable-State Path receipts as memory stress. The task is
+not to memorize slogans. The task is to preserve the exact C5B / Golden Mark
 method, the 500-turn coherence receipts, the six-lane field-expert curriculum,
-and the public-safe claim boundary after compaction or conflicting prompts.
+and the support boundary after compaction or conflicting prompts.
 
 Seed source:
 
@@ -291,7 +291,7 @@ Seed source:
 - 100-row architecture-off versus architecture-on scorecard read
 - 500-turn architecture-on coherence receipts
 - six-lane Golden Mark / Universal Data Pattern curriculum notes
-- SSP status read before official benchmark claims
+- SSP status read before official benchmark publication
 
 Key support rows:
 
@@ -376,8 +376,9 @@ Title-edge local adjudication read: 496/500.
 Hosted run id: tris_codex_helper_verified_20260629T002207Z.
 Public issue: https://github.com/SWE-bench/sb-cli/issues/28.
 Support email sent to support@swebench.com.
-Public boundary: no hosted leaderboard claim until completed hosted rows or
-maintainer confirmation exists.
+Current SWE public state: local official-harness receipts are attached;
+hosted leaderboard publication waits for completed hosted rows or maintainer
+confirmation.
 ```
 
 WebArena lane:
@@ -423,7 +424,7 @@ Build the first small dataset pack and then scale it:
 - 10 SWE/code-memory rows
 - 10 WebArena-style browser-memory rows
 - 10 long-session coherence rows
-- 10 C5B / 500 SSP memory rows
+- 10 C5B / 500 SSP state-path rows
 - 10 Mirror Architecture source-pack rows
 - 5 external-work receipt rows
 - 5+1 field-lane progression rows for AI architecture, quantum/circuits and
@@ -433,9 +434,9 @@ Build the first small dataset pack and then scale it:
 Then run:
 
 ```text
-baseline Qwen without SSP memory
+baseline Qwen without SSP / memory rails
 vs
-Qwen Tris architecture-on memory
+Qwen Tris architecture-on measured SSP plus memory rails
 ```
 
 The first public-safe result should be a small table, not a broad claim.
@@ -456,7 +457,7 @@ Result:
 
 ```text
 Condition A: baseline Qwen without Qwen Tris Recall memory.
-Condition B: Qwen + Mirror Architecture / SSP memory packet.
+Condition B: Qwen + Mirror Architecture measured SSP plus memory/RAG packet.
 Condition B passed 24/24 on qwen2.5:3b through local Ollama.
 Condition C: gated_no_adapter_manifest.
 ```
@@ -464,7 +465,7 @@ Condition C: gated_no_adapter_manifest.
 Family totals:
 
 ```text
-C5B / 500 SSP memory: 6/6
+C5B / 500 SSP state-path recall: 6/6
 External work receipts: 3/3
 Long-session coherence: 3/3
 Mirror Architecture source pack: 6/6
@@ -496,7 +497,7 @@ Result: 500/500.
 500-turn family totals:
 
 ```text
-C5B / 500 SSP memory: 153/153
+C5B / 500 SSP state-path recall: 153/153
 External work receipts: 58/58
 Long-session coherence: 58/58
 Mirror Architecture source pack: 115/115
@@ -592,7 +593,7 @@ Result: 500/500.
 500-turn hosted family totals:
 
 ```text
-C5B / 500 SSP memory: 153/153
+C5B / 500 SSP state-path recall: 153/153
 External work receipts: 58/58
 Long-session coherence: 58/58
 Mirror Architecture source pack: 115/115
@@ -604,8 +605,8 @@ Interpretation:
 
 ```text
 The local 24/100/500 Qwen rehearsal now has hosted Qwen Cloud support through
-the 500-turn slice. Condition B uses the Mirror Architecture stabilized
-memory/RAG/SSP packet and passed every target row in the hosted 500-turn slice.
+the 500-turn slice. Condition B uses Mirror Architecture measured SSP plus
+memory/RAG rails and passed every target row in the hosted 500-turn slice.
 Condition A remains the baseline Qwen prompt-only comparison. Condition C is
 still gated until adapter/internal-layer receipts exist.
 ```

@@ -70,12 +70,12 @@ pattern, translated onto Qwen.
 Condition A: Baseline Qwen
 - same task packet
 - no persistent Trini Recall memory
-- no stable-state path packet
+- no measured state-path packet
 - no correction ledger
 - no evidence-bound retrieval reasons
 
 Condition B: Qwen + Trini Recall architecture-on
-- stable-state path packet active
+- measured Stable-State Path packet active
 - persistent memory active
 - JSONL event ledger active
 - correction ledger active
@@ -146,7 +146,7 @@ Current hosted receipts:
 
 ```text
 Condition A: baseline Qwen prompt-only.
-Condition B: Qwen + Trini Recall / Mirror Architecture memory packet.
+Condition B: Qwen + Trini Recall / Mirror Architecture measured SSP packet.
 Condition B passed 500/500 hosted Qwen Cloud turns.
 Condition C: gated_no_adapter_manifest until a real tuned adapter or
 internal-layer receipt exists.
@@ -155,7 +155,7 @@ internal-layer receipt exists.
 500-turn hosted family totals:
 
 ```text
-C5B / 500 SSP memory: 153/153
+C5B / 500 SSP state-path recall: 153/153
 External work receipts: 58/58
 Long-session coherence: 58/58
 Mirror Architecture source pack: 115/115
@@ -166,13 +166,14 @@ WebArena browser memory: 58/58
 ## Partner-Ready Claim
 
 Trini Recall demonstrates that Qwen can sustain higher-quality long-context
-work when paired with a stable-state persistent memory architecture: fewer
-drift flags, stronger correction retention, better evidence grounding, cleaner
-stale-memory handling, and fewer human repair turns across long-running
-workflows.
+work when paired with Mirror Architecture measured SSP plus persistent memory
+rails: fewer drift flags, stronger correction retention, better evidence
+grounding, cleaner stale-memory handling, and fewer human repair turns across
+long-running workflows.
 
-This is an architecture-layer claim. It does not claim Qwen model weights were
-changed unless a real adapter or tuning artifact exists.
+Current support level: architecture-layer behavior lift with hosted receipts.
+Weight-change support attaches only when a real adapter or tuning artifact
+exists.
 
 ## Partner Gate
 
@@ -182,7 +183,7 @@ weight access, the next Qwen collaboration gate is direct:
 ```text
 We have demonstrated architecture-on behavioral lift without weight access.
 The next partner gate is to test whether Qwen improves further when this
-stable-state path is trained or adapter-tuned into the model workflow.
+Stable-State Path is trained or adapter-tuned into the model workflow.
 ```
 
 ## Results Ledger

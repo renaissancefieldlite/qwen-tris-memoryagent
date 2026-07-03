@@ -3,8 +3,14 @@
 Track: MemoryAgent
 
 Qwen Tris Recall is a Qwen Cloud Memory AI Expert Partner. The core comparison
-is baseline Qwen prompt-only versus Qwen with the Mirror Architecture stabilized
-memory/RAG/SSP packet.
+is baseline Qwen prompt-only versus Qwen with Mirror Architecture measured SSP
+plus memory/RAG rails. Memory and retrieval preserve the route; SSP is the
+measured architecture trajectory being tested.
+
+Mirror Architecture starts with Codex 67 input cohesion: operator signal,
+source context, task gate, evidence spine, memory route, and model route aligned
+into one coherent input field. The backend turns that input field into a
+baseline/off versus architecture-on test route with saved receipts.
 
 ```mermaid
 flowchart LR
@@ -13,7 +19,7 @@ flowchart LR
     API --> MEM["SQLite memory store<br/>MemoryStore"]
     API --> AUDIT["JSONL audit receipts"]
     API --> RAG["Source/RAG retrieval<br/>SQLite FTS + LangChain if available"]
-    API --> SSP["Mirror Architecture<br/>stable-state memory packet"]
+    API --> SSP["Mirror Architecture<br/>measured Stable-State Path"]
     API --> QWEN["Alibaba Cloud Model Studio<br/>Qwen Cloud API<br/>dashscope-intl.aliyuncs.com"]
     API --> LOCAL["Local fallback<br/>Ollama Qwen / Nemotron"]
     SSP --> PROMPT["Architecture-on prompt assembly"]

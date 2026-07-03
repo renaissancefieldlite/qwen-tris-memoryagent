@@ -21,7 +21,7 @@ Source overlap:
 
 - Golden Field Lite persistent memory.
 - Quadro SQLite/FTS memory.
-- Playground memory discipline and locked-source continuity logs.
+- Playground continuity discipline and locked-source recovery logs.
 
 Owned files:
 
@@ -195,4 +195,3 @@ Main repo steward owns:
 - `docs/LOCKED_LANGUAGE_AND_BOUNDARIES.md`
 - `source_inventory/PLAYGROUND_SOURCE_MAP.md`
 - final README/submission assembly
-

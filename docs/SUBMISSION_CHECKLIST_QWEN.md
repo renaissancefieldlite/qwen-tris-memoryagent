@@ -84,17 +84,18 @@ Short description:
 
 ```text
 Qwen Tris Recall is a Memory AI Expert Partner that compares baseline Qwen
-prompt-only behavior against Qwen with a stable-state memory/RAG architecture.
+prompt-only behavior against Qwen with Mirror Architecture measured SSP plus
+memory/RAG rails.
 It keeps persistent SQLite memory, JSONL audit receipts, source-backed recall,
 and benchmark receipts across hosted Qwen Cloud memory turns, LongBench-E
 public answer-key slices, and Qasper evaluator checks.
 ```
 
-Claim boundary:
+Support state:
 
 ```text
-This is a public-safe MemoryAgent benchmark and demo package. It does not claim
-official LongBench/SWE/WebArena leaderboard placement, AGI/ASI, or unsupported
-production deployment. Claims are tied to the included receipts and the Alibaba
-Cloud deployment recording once captured.
+This is a public-safe MemoryAgent benchmark and demo package. Included claims
+are tied to attached receipts and the Alibaba Cloud deployment recording once
+captured. Official LongBench/SWE/WebArena leaderboard rows attach when their
+external publication receipts land.
 ```

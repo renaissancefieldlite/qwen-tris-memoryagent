@@ -121,7 +121,7 @@ Trini Recall should translate this pattern onto Qwen Cloud as:
 
 ```text
 Condition A: baseline Qwen, prompt-only
-Condition B: Qwen + Trini Recall stable-state memory
+Condition B: Qwen + Trini Recall measured Stable-State Path plus memory rails
 Condition C: Qwen + Trini Recall + real adapter/tuning artifact, if available
 Condition D: adapter-off or wrong-adapter control, only if C lands
 ```

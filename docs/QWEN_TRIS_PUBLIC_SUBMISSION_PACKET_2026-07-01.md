@@ -6,8 +6,8 @@ Qwen Tris Recall Memory AI Partner is the Qwen Cloud MemoryAgent version of the
 Renaissance Field Lite Trismegistus / Mirror Architecture stack.
 
 The build tests whether a Qwen model becomes more reliable over long technical
-work when paired with a stable-state memory architecture instead of a generic
-prompt-only memory surface.
+work when paired with Mirror Architecture measured Stable-State Path plus
+memory/RAG rails instead of a generic prompt-only memory surface.
 
 ## Track
 
@@ -113,7 +113,7 @@ Baseline Qwen, prompt-only.
 Condition B:
 
 ```text
-Qwen + Mirror Architecture stabilized memory/RAG/SSP packet.
+Qwen + Mirror Architecture measured SSP plus memory/RAG packet.
 ```
 
 Condition C:
@@ -189,7 +189,7 @@ Condition B passed 500/500 hosted Qwen Cloud turns.
 500-turn family totals:
 
 ```text
-C5B / 500 SSP memory: 153/153
+C5B / 500 SSP state-path recall: 153/153
 External work receipts: 58/58
 Long-session coherence: 58/58
 Mirror Architecture source pack: 115/115
@@ -210,7 +210,7 @@ default route for longer runs.
 The memory test is not an easy chatbot recall demo. It uses collapse-prone
 state:
 
-- C5B / Golden Mark stable-state memory.
+- C5B / Golden Mark Stable-State Path lane.
 - Mirror Architecture source-pack recall.
 - SWE-style code memory.
 - WebArena-style browser memory.
@@ -220,8 +220,9 @@ state:
 The public-safe read is:
 
 ```text
-Qwen prompt-only is the baseline. Qwen with the Mirror Architecture stabilized
-memory packet preserved target recall across the hosted 500-turn stress run.
+Qwen prompt-only is the baseline. Qwen with Mirror Architecture measured SSP
+plus memory/RAG rails preserved target recall across the hosted 500-turn stress
+run.
 ```
 
 ## Public Boundary

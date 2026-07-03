@@ -3,7 +3,7 @@
 Fresh SSD-backed sibling build for the Qwen Cloud Global AI Hackathon
 MemoryAgent track.
 
-This repo turns the Trismegistus / Mirror Architecture memory spine into Qwen
+This repo turns the Trismegistus / Mirror Architecture state-path spine into Qwen
 Tris: a Qwen-powered Memory AI Expert Partner. It references existing
 Playground builds as source/provenance, but it does not pipe into their live
 runtimes, ports, databases, private captures, secrets, or claim-sensitive
@@ -17,6 +17,20 @@ Active SSD build:
 
 Hermes Trismegistus remains a separate build. Qwen Tris is the Qwen Cloud
 MemoryAgent lane.
+
+## Mirror Architecture / SSP Definition
+
+Mirror Architecture is the Renaissance Field Lite method for turning Codex 67
+input cohesion into a measurable AI architecture state. The operator signal,
+source context, task gate, evidence spine, memory route, and model route are
+aligned into one coherent input field. The engineering surface then tests that
+state as baseline/off versus architecture-on: same task family, same scorer,
+same receipt gate.
+
+Stable-State Path / SSP is the measured trajectory inside Mirror Architecture
+where the architecture-on state holds across a task family instead of
+collapsing into generic chatbot drift. Memory, RAG, and receipts are the rails
+that preserve and test the path; they are not the SSP by themselves.
 
 ## Submission Quick Links
 
@@ -111,7 +125,7 @@ Source: https://qwencloud-hackathon.devpost.com/
 Primary active lane:
 
 1. Track 1 MemoryAgent, using Qwen Cloud as the model lane and Mirror
-   Architecture / SSP as the memory discipline.
+   Architecture / SSP as the measured state-path discipline.
 
 ## Qwen Cloud Hosted Proof
 
@@ -151,7 +165,7 @@ Current hosted result:
 
 ```text
 Condition A: baseline Qwen prompt-only.
-Condition B: Qwen + Mirror Architecture stabilized memory/RAG/SSP packet.
+Condition B: Qwen + Mirror Architecture measured SSP plus memory/RAG packet.
 Condition B passed 500/500 hosted Qwen Cloud turns.
 Condition C: gated_no_adapter_manifest until a real adapter/internal-layer
 receipt exists.
@@ -160,7 +174,7 @@ receipt exists.
 500-turn hosted family totals:
 
 ```text
-C5B / 500 SSP memory: 153/153
+C5B / 500 SSP state-path recall: 153/153
 External work receipts: 58/58
 Long-session coherence: 58/58
 Mirror Architecture source pack: 115/115
@@ -294,16 +308,16 @@ This build will test memory on collapse-prone workloads: SWE/code recall,
 WebArena-style browser recall, long-session coherence, and external-work
 receipt recall.
 
-It also carries the C5B / Golden Mark / 500-iteration SSP lane as the memory
-refinement spine:
+It also carries the C5B / Golden Mark / 500-iteration SSP lane as the
+state-path refinement spine:
 
 - C5B support read: 13/13 metric means won, drift flags 37 -> 0, evidence
   failures 5 -> 0.
 - 500-turn architecture-on receipt: mean score 1.0, 2168/2168 checks, zero
   prompt spills, zero raw receipt spills.
-- Public boundary: this is stable-state memory/architecture evidence and
-  long-session engineering receipt work, not an AGI or public leaderboard
-  claim.
+- Current support level: Stable-State Path / architecture evidence,
+  long-session engineering receipts, and benchmark scaffolding. External
+  deployment and leaderboard rows attach when their independent receipts land.
 
 IP boundary:
 
