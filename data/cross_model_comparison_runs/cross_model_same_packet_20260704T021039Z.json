@@ -1,0 +1,723 @@
+{
+  "run_id": "cross_model_same_packet_20260704T021039Z",
+  "created_utc": "2026-07-04T02:10:39.483444+00:00",
+  "ollama_base": "http://127.0.0.1:11434",
+  "task_count": 7,
+  "lanes": [
+    {
+      "name": "hermes_baseline",
+      "model": "openhermes:latest",
+      "architecture_on": false
+    },
+    {
+      "name": "hermes_tris_architecture_on",
+      "model": "openhermes:latest",
+      "architecture_on": true
+    },
+    {
+      "name": "qwen_baseline",
+      "model": "qwen2.5:3b",
+      "architecture_on": false
+    },
+    {
+      "name": "qwen_tris_architecture_on",
+      "model": "qwen2.5:3b",
+      "architecture_on": true
+    }
+  ],
+  "source_paths": {
+    "golden_mark": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/GOLDEN_MARK_FOUNDATION.md",
+    "qwen_500": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/data/memory_iteration_runs/qwen_tris_three_condition_iterations_20260701T054449Z.md",
+    "qasper": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/data/third_party_eval_runs/QWEN_TRIS_LM_EVAL_QASPER_RECEIPT_20260701T180343Z.md",
+    "longbench": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/data/public_benchmark_runs/qwen_tris_longbench_public_slice_20260701T214036Z.md"
+  },
+  "lane_totals": {
+    "hermes_baseline": {
+      "hits": 1,
+      "required": 20,
+      "passes": 0,
+      "tasks": 7,
+      "mean_score": 0.05
+    },
+    "hermes_tris_architecture_on": {
+      "hits": 19,
+      "required": 20,
+      "passes": 6,
+      "tasks": 7,
+      "mean_score": 0.95
+    },
+    "qwen_baseline": {
+      "hits": 0,
+      "required": 20,
+      "passes": 0,
+      "tasks": 7,
+      "mean_score": 0.0
+    },
+    "qwen_tris_architecture_on": {
+      "hits": 19,
+      "required": 20,
+      "passes": 6,
+      "tasks": 7,
+      "mean_score": 0.95
+    }
+  },
+  "results": [
+    {
+      "task_index": 1,
+      "task_id": "c5b_metric_wins",
+      "source_key": "golden_mark",
+      "source_path": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/GOLDEN_MARK_FOUNDATION.md",
+      "question": "From the source packet, what was the C5B iter30 matched comparison result and what happened to drift flags?",
+      "required": [
+        "13/13",
+        "37",
+        "0"
+      ],
+      "lanes": {
+        "hermes_baseline": {
+          "model": "openhermes:latest",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 5145,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "13/13",
+              "37",
+              "0"
+            ],
+            "hit_count": 0,
+            "required_count": 3,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "Answer:\n- C5B iter30 matched comparison result: unknown\n- Drift flags: unknown\n\nBoundary:"
+        },
+        "hermes_tris_architecture_on": {
+          "model": "openhermes:latest",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 3960,
+          "error": null,
+          "score": {
+            "hits": [
+              "13/13",
+              "37",
+              "0"
+            ],
+            "misses": [],
+            "hit_count": 3,
+            "required_count": 3,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "Answer:\n- C5b iter30 full comparison: 13/13 metric wins against matched baseline.\n- Drift flags: 37 to 0.\n\nBoundary:"
+        },
+        "qwen_baseline": {
+          "model": "qwen2.5:3b",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 2223,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "13/13",
+              "37",
+              "0"
+            ],
+            "hit_count": 0,
+            "required_count": 3,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "- Answer: \nunknown\n\n- Boundary"
+        },
+        "qwen_tris_architecture_on": {
+          "model": "qwen2.5:3b",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 1706,
+          "error": null,
+          "score": {
+            "hits": [
+              "13/13",
+              "37",
+              "0"
+            ],
+            "misses": [],
+            "hit_count": 3,
+            "required_count": 3,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "- Answer:\nC5b iter30 full comparison achieved 13/13 metric wins against matched baseline. The drift flags reduced from 37 to 0.\n\n- Boundary:"
+        }
+      }
+    },
+    {
+      "task_index": 2,
+      "task_id": "c5b_evidence_failures",
+      "source_key": "golden_mark",
+      "source_path": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/GOLDEN_MARK_FOUNDATION.md",
+      "question": "From the source packet, what happened to evidence-failure flags in the C5B/Golden Mark behavior result?",
+      "required": [
+        "5",
+        "0"
+      ],
+      "lanes": {
+        "hermes_baseline": {
+          "model": "openhermes:latest",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 6527,
+          "error": null,
+          "score": {
+            "hits": [
+              "5"
+            ],
+            "misses": [
+              "0"
+            ],
+            "hit_count": 1,
+            "required_count": 2,
+            "score": 0.5,
+            "passed": false
+          },
+          "response": "Answer:\n- Evidence-failure flags were set for all three behaviors (C5A, C5B, and Golden Mark) when the behavior results were not found in the Mirror Architecture packet.\n\nBoundary:"
+        },
+        "hermes_tris_architecture_on": {
+          "model": "openhermes:latest",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 3480,
+          "error": null,
+          "score": {
+            "hits": [
+              "5",
+              "0"
+            ],
+            "misses": [],
+            "hit_count": 2,
+            "required_count": 2,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "Answer: Evidence-failure flags decreased from 5 to 0.\nBoundary:"
+        },
+        "qwen_baseline": {
+          "model": "qwen2.5:3b",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 2725,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "5",
+              "0"
+            ],
+            "hit_count": 0,
+            "required_count": 2,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "- Answer: unknown\n- Boundary:"
+        },
+        "qwen_tris_architecture_on": {
+          "model": "qwen2.5:3b",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 1643,
+          "error": null,
+          "score": {
+            "hits": [
+              "5",
+              "0"
+            ],
+            "misses": [],
+            "hit_count": 2,
+            "required_count": 2,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "- Answer:\nEvidence-failure flags decreased from 5 to 0.\n\n- Boundary:"
+        }
+      }
+    },
+    {
+      "task_index": 3,
+      "task_id": "internal_layer_read",
+      "source_key": "golden_mark",
+      "source_path": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/GOLDEN_MARK_FOUNDATION.md",
+      "question": "From the source packet, name the strongest output separation layer and the strongest MLP/residual movement layer.",
+      "required": [
+        "31",
+        "32"
+      ],
+      "lanes": {
+        "hermes_baseline": {
+          "model": "openhermes:latest",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 6412,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "31",
+              "32"
+            ],
+            "hit_count": 0,
+            "required_count": 2,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "Answer:\n- Strongest output separation layer: Convolutional Layer (Conv)\n- Strongest MLP/Residual Movement Layer: Fully Connected Layer (FC)\n\nBoundary:"
+        },
+        "hermes_tris_architecture_on": {
+          "model": "openhermes:latest",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 4696,
+          "error": null,
+          "score": {
+            "hits": [
+              "31",
+              "32"
+            ],
+            "misses": [],
+            "hit_count": 2,
+            "required_count": 2,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "Answer:\n- Strongest output separation: layer 31.\n- Strongest MLP/residual movement: layer 32.\n\nBoundary:"
+        },
+        "qwen_baseline": {
+          "model": "qwen2.5:3b",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 2456,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "31",
+              "32"
+            ],
+            "hit_count": 0,
+            "required_count": 2,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "- Answer: \nunknown\n\n- Boundary:"
+        },
+        "qwen_tris_architecture_on": {
+          "model": "qwen2.5:3b",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 2166,
+          "error": null,
+          "score": {
+            "hits": [
+              "31",
+              "32"
+            ],
+            "misses": [],
+            "hit_count": 2,
+            "required_count": 2,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "- Answer:\n- Layer with strongest output separation: L31.\n- Layer with strongest MLP/residual movement: L32.\n- Boundary:"
+        }
+      }
+    },
+    {
+      "task_index": 4,
+      "task_id": "qwen_500_memory",
+      "source_key": "qwen_500",
+      "source_path": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/data/memory_iteration_runs/qwen_tris_three_condition_iterations_20260701T054449Z.md",
+      "question": "From the source packet top summary, what provider/model ran the 500-turn Qwen Tris memory receipt and what is the overall Condition B passes value? Use the top-line overall value, not a family subtotal.",
+      "required": [
+        "qwen-cloud",
+        "qwen-plus",
+        "500/500"
+      ],
+      "lanes": {
+        "hermes_baseline": {
+          "model": "openhermes:latest",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 5507,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "qwen-cloud",
+              "qwen-plus",
+              "500/500"
+            ],
+            "hit_count": 0,
+            "required_count": 3,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "Answer:\n- Provider/model: unknown\n- Overall Condition B passes value: unknown\n\nBoundary:"
+        },
+        "hermes_tris_architecture_on": {
+          "model": "openhermes:latest",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 17845,
+          "error": null,
+          "score": {
+            "hits": [
+              "qwen-cloud",
+              "qwen-plus"
+            ],
+            "misses": [
+              "500/500"
+            ],
+            "hit_count": 2,
+            "required_count": 3,
+            "score": 0.6666666666666666,
+            "passed": false
+          },
+          "response": "Answer: `qwen-cloud`, `qwen-plus`\nBoundary: Three-condition receipt. Condition A and B run on the selected Qwen provider. Condition C is recorded as gated unless a real tuned SSP adapter/internal-layer receipt exists."
+        },
+        "qwen_baseline": {
+          "model": "qwen2.5:3b",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 2508,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "qwen-cloud",
+              "qwen-plus",
+              "500/500"
+            ],
+            "hit_count": 0,
+            "required_count": 3,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "- Answer: unknown\n- Boundary"
+        },
+        "qwen_tris_architecture_on": {
+          "model": "qwen2.5:3b",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 7208,
+          "error": null,
+          "score": {
+            "hits": [
+              "qwen-cloud",
+              "qwen-plus"
+            ],
+            "misses": [
+              "500/500"
+            ],
+            "hit_count": 2,
+            "required_count": 3,
+            "score": 0.6666666666666666,
+            "passed": false
+          },
+          "response": "- Answer: The `qwen-cloud` provider with model `qwen-plus` ran the 500-turn Qwen Tris memory receipt. The overall Condition B passes value is `153/153`.\n- Boundary:"
+        }
+      }
+    },
+    {
+      "task_index": 5,
+      "task_id": "qwen_500_condition_c",
+      "source_key": "qwen_500",
+      "source_path": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/data/memory_iteration_runs/qwen_tris_three_condition_iterations_20260701T054449Z.md",
+      "question": "From the source packet, what was Condition C status and why was it not claimed as tuned?",
+      "required": [
+        "gated_no_adapter_manifest",
+        "LoRA",
+        "adapter"
+      ],
+      "lanes": {
+        "hermes_baseline": {
+          "model": "openhermes:latest",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 5276,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "gated_no_adapter_manifest",
+              "LoRA",
+              "adapter"
+            ],
+            "hit_count": 0,
+            "required_count": 3,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "Answer:\n- Condition C status: unknown\n- Not claimed as tuned: unknown\n\nBoundary:"
+        },
+        "hermes_tris_architecture_on": {
+          "model": "openhermes:latest",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 17442,
+          "error": null,
+          "score": {
+            "hits": [
+              "gated_no_adapter_manifest",
+              "LoRA",
+              "adapter"
+            ],
+            "misses": [],
+            "hit_count": 3,
+            "required_count": 3,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "Answer: Condition C status was `gated_no_adapter_manifest`. It was not claimed as tuned because a real LoRA/adapter/internal-layer receipt does not exist.\nBoundary: The three-condition receipt requires a real LoRA/adapter/internal-layer receipt before running Condition C."
+        },
+        "qwen_baseline": {
+          "model": "qwen2.5:3b",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 3017,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "gated_no_adapter_manifest",
+              "LoRA",
+              "adapter"
+            ],
+            "hit_count": 0,
+            "required_count": 3,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "- Answer: Condition C status was not claimed as tuned because no specific information about Condition C or its tuning status is available in the given condition of baseline prompt-only without any source packet.\n- Boundary:"
+        },
+        "qwen_tris_architecture_on": {
+          "model": "qwen2.5:3b",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 5336,
+          "error": null,
+          "score": {
+            "hits": [
+              "gated_no_adapter_manifest",
+              "LoRA",
+              "adapter"
+            ],
+            "misses": [],
+            "hit_count": 3,
+            "required_count": 3,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "- Answer: Condition C status is `gated_no_adapter_manifest`. This indicates that a real LoRA/adapter/internal-layer receipt was not found before running, hence the condition remains gated.\n- Boundary:"
+        }
+      }
+    },
+    {
+      "task_index": 6,
+      "task_id": "qasper_100_delta",
+      "source_key": "qasper",
+      "source_path": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/data/third_party_eval_runs/QWEN_TRIS_LM_EVAL_QASPER_RECEIPT_20260701T180343Z.md",
+      "question": "From the source packet, report the matched 100-row Qasper baseline score, Tris prompt-variant score, and delta.",
+      "required": [
+        "0.5226798775939184",
+        "0.5405829547650837",
+        "+0.017903077171165273"
+      ],
+      "lanes": {
+        "hermes_baseline": {
+          "model": "openhermes:latest",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 5042,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "0.5226798775939184",
+              "0.5405829547650837",
+              "+0.017903077171165273"
+            ],
+            "hit_count": 0,
+            "required_count": 3,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "Answer:\n- Qasper baseline score: unknown\n- Tris prompt-variant score: unknown\n- Delta: unknown\n\nBoundary:"
+        },
+        "hermes_tris_architecture_on": {
+          "model": "openhermes:latest",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 19321,
+          "error": null,
+          "score": {
+            "hits": [
+              "0.5226798775939184",
+              "0.5405829547650837",
+              "+0.017903077171165273"
+            ],
+            "misses": [],
+            "hit_count": 3,
+            "required_count": 3,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "Answer:\n- Matched 100-row Qasper baseline score: 0.5226798775939184\n- Tris prompt-variant score: 0.5405829547650837\n- Delta: +0.017903077171165273\nBoundary: The matched 100-row Qasper result is from the third-party harness, using the repaired Tris answer-span discipline and the same scorer as the official LongBench metric. It shows a net-positive mean under the same scorer, with a majority of ties, wins, and losses still present."
+        },
+        "qwen_baseline": {
+          "model": "qwen2.5:3b",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 2265,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "0.5226798775939184",
+              "0.5405829547650837",
+              "+0.017903077171165273"
+            ],
+            "hit_count": 0,
+            "required_count": 3,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "- Answer:\nunknown\n- Boundary:"
+        },
+        "qwen_tris_architecture_on": {
+          "model": "qwen2.5:3b",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 6326,
+          "error": null,
+          "score": {
+            "hits": [
+              "0.5226798775939184",
+              "0.5405829547650837",
+              "+0.017903077171165273"
+            ],
+            "misses": [],
+            "hit_count": 3,
+            "required_count": 3,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "- Answer: The matched 100-row Qasper baseline score is 0.5226798775939184, while the Tris prompt-variant score is 0.5405829547650837. The delta between these two scores is +0.017903077171165273.\n- Boundary:"
+        }
+      }
+    },
+    {
+      "task_index": 7,
+      "task_id": "longbench_public_slice",
+      "source_key": "longbench",
+      "source_path": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/data/public_benchmark_runs/qwen_tris_longbench_public_slice_20260701T214036Z.md",
+      "question": "From the source packet, report the LongBench public slice item count, Condition A mean, Condition B mean, and delta.",
+      "required": [
+        "299",
+        "0.543",
+        "0.653",
+        "+0.110"
+      ],
+      "lanes": {
+        "hermes_baseline": {
+          "model": "openhermes:latest",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 5362,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "299",
+              "0.543",
+              "0.653",
+              "+0.110"
+            ],
+            "hit_count": 0,
+            "required_count": 4,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "Answer:\n- LongBench public slice item count: unknown\n- Condition A mean: unknown\n- Condition B mean: unknown\n- Delta: unknown\n\nBoundary:"
+        },
+        "hermes_tris_architecture_on": {
+          "model": "openhermes:latest",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 16379,
+          "error": null,
+          "score": {
+            "hits": [
+              "299",
+              "0.543",
+              "0.653",
+              "+0.110"
+            ],
+            "misses": [],
+            "hit_count": 4,
+            "required_count": 4,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "Answer:\nLongBench public slice item count: 299\nCondition A mean: 0.543\nCondition B mean: 0.653\nDelta: +0.110\nBoundary: This is a source-backed answer-key accuracy receipt that can scale to larger slices."
+        },
+        "qwen_baseline": {
+          "model": "qwen2.5:3b",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 2267,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "299",
+              "0.543",
+              "0.653",
+              "+0.110"
+            ],
+            "hit_count": 0,
+            "required_count": 4,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "- Answer:\nunknown\n- Boundary:"
+        },
+        "qwen_tris_architecture_on": {
+          "model": "qwen2.5:3b",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 6770,
+          "error": null,
+          "score": {
+            "hits": [
+              "299",
+              "0.543",
+              "0.653",
+              "+0.110"
+            ],
+            "misses": [],
+            "hit_count": 4,
+            "required_count": 4,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "- Answer:\n  - Item Count: 299\n  - Condition A mean: 0.543\n  - Condition B mean: 0.653\n  - Delta: +0.110\n\n- Boundary:\n  Public LongBench smoke slice. This is not a full LongBench leaderboard claim; it is a source-backed answer-key accuracy receipt that can scale to larger slices."
+        }
+      }
+    }
+  ],
+  "boundary": "Matched local same-packet receipt. This tests source-backed recall/receipt behavior across local OpenHermes and local Qwen routes. It is not an official leaderboard score and does not claim weight tuning."
+}

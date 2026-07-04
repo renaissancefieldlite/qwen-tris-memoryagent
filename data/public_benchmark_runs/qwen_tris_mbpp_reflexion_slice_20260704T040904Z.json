@@ -1,0 +1,1961 @@
+{
+  "run_id": "qwen_tris_mbpp_reflexion_slice_20260704T040904Z",
+  "created_utc": "2026-07-04T04:09:04Z",
+  "dataset": "google-research-datasets/mbpp: sanitized",
+  "split": "test",
+  "model": "qwen2.5:3b",
+  "offset": 0,
+  "limit": 50,
+  "rows": [
+    {
+      "task_id": 11,
+      "prompt": "Write a python function to remove first and last occurrence of a given character from the string.",
+      "tests": [
+        "assert remove_Occ(\"hello\",\"l\") == \"heo\"",
+        "assert remove_Occ(\"abcda\",\"a\") == \"bcd\"",
+        "assert remove_Occ(\"PHP\",\"P\") == \"H\""
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef remove_Occ(s, c):\n    return s.replace(c, '', 1).replace(c, '')\n```",
+        "code": "def remove_Occ(s, c):\n    return s.replace(c, '', 1).replace(c, '')"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def remove_Occ(s, c):\n    return s.replace(c, '', 1).replace(c, '')"
+      }
+    },
+    {
+      "task_id": 12,
+      "prompt": "Write a function to sort a given matrix in ascending order according to the sum of its rows.",
+      "tests": [
+        "assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]",
+        "assert sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])==[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]",
+        "assert sort_matrix([[5,8,9],[6,4,3],[2,1,4]])==[[2, 1, 4], [6, 4, 3], [5, 8, 9]]"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef sort_matrix(matrix):\n    return sorted(matrix, key=sum)\n```",
+        "code": "def sort_matrix(matrix):\n    return sorted(matrix, key=sum)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def sort_matrix(matrix):\n    return sorted(matrix, key=sum)"
+      }
+    },
+    {
+      "task_id": 14,
+      "prompt": "Write a python function to find the volume of a triangular prism.",
+      "tests": [
+        "assert find_Volume(10,8,6) == 240",
+        "assert find_Volume(3,2,2) == 6",
+        "assert find_Volume(1,2,1) == 1"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef find_Volume(base_length, height, prism_height):\n    base_area = (base_length * height) / 2\n    return base_area * prism_height\n```",
+        "code": "def find_Volume(base_length, height, prism_height):\n    base_area = (base_length * height) / 2\n    return base_area * prism_height"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def find_Volume(base_length, height, prism_height):\n    base_area = (base_length * height) / 2\n    return base_area * prism_height"
+      }
+    },
+    {
+      "task_id": 16,
+      "prompt": "Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.",
+      "tests": [
+        "assert text_lowercase_underscore(\"aab_cbbbc\")==(True)",
+        "assert text_lowercase_underscore(\"aab_Abbbc\")==(False)",
+        "assert text_lowercase_underscore(\"Aaab_abbbc\")==(False)"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nimport re\n\ndef text_lowercase_underscore(text):\n    return bool(re.match(r'^[a-z]+_[a-z]+$', text))\n```",
+        "code": "import re\n\ndef text_lowercase_underscore(text):\n    return bool(re.match(r'^[a-z]+_[a-z]+$', text))"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "import re\n\ndef text_lowercase_underscore(text):\n    return bool(re.match(r'^[a-z]+_[a-z]+$', text))"
+      }
+    },
+    {
+      "task_id": 17,
+      "prompt": "Write a function that returns the perimeter of a square given its side length as input.",
+      "tests": [
+        "assert square_perimeter(10)==40",
+        "assert square_perimeter(5)==20",
+        "assert square_perimeter(4)==16"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef square_perimeter(side_length):\n    return side_length * 4\n```",
+        "code": "def square_perimeter(side_length):\n    return side_length * 4"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def square_perimeter(side_length):\n    return side_length * 4"
+      }
+    },
+    {
+      "task_id": 18,
+      "prompt": "Write a function to remove characters from the first string which are present in the second string.",
+      "tests": [
+        "assert remove_dirty_chars(\"probasscurve\", \"pros\") == 'bacuve'",
+        "assert remove_dirty_chars(\"digitalindia\", \"talent\") == 'digiidi'",
+        "assert remove_dirty_chars(\"exoticmiles\", \"toxic\") == 'emles'"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef remove_dirty_chars(s, t):\n    return ''.join(c for c in s if c not in t)\n```",
+        "code": "def remove_dirty_chars(s, t):\n    return ''.join(c for c in s if c not in t)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def remove_dirty_chars(s, t):\n    return ''.join(c for c in s if c not in t)"
+      }
+    },
+    {
+      "task_id": 19,
+      "prompt": "Write a function to find whether a given array of integers contains any duplicate element.",
+      "tests": [
+        "assert test_duplicate(([1,2,3,4,5]))==False",
+        "assert test_duplicate(([1,2,3,4, 4]))==True",
+        "assert test_duplicate([1,1,2,2,3,3,4,4,5])==True"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef test_duplicate(arr):\n    return len(arr) != len(set(arr))\n```",
+        "code": "def test_duplicate(arr):\n    return len(arr) != len(set(arr))"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def test_duplicate(arr):\n    return len(arr) != len(set(arr))"
+      }
+    },
+    {
+      "task_id": 20,
+      "prompt": "Write a function to check if the given number is woodball or not.",
+      "tests": [
+        "assert is_woodall(383) == True",
+        "assert is_woodall(254) == False",
+        "assert is_woodall(200) == False"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_473nnb5g/candidate.py\", line 11, in <module>\n    assert is_woodall(383) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef is_woodall(n):\n    if n < 1:\n        return False\n    while n > 0:\n        digit = n % 10\n        n //= 10\n        if digit == 0 or (n - 1) // 9 != n / 10:\n            return False\n    return True\n```",
+        "code": "def is_woodall(n):\n    if n < 1:\n        return False\n    while n > 0:\n        digit = n % 10\n        n //= 10\n        if digit == 0 or (n - 1) // 9 != n / 10:\n            return False\n    return True"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_473nnb5g/candidate.py\", line 11, in <module>\n    assert is_woodall(383) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_uer4cf49/candidate.py\", line 11, in <module>\n    assert is_woodall(383) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a function to check if the given number is woodball or not.\n\n        Tests:\n        assert is_woodall(383) == True\nassert is_woodall(254) == False\nassert is_woodall(200) == False\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef is_woodall(n):\n    if n < 1:\n        return False\n    while n > 0:\n        digit = n % 10\n        n //= 10\n        if digit == 0 or (n - 1) // 9 != n / 10:\n            return False\n    return True\n```",
+        "code": "def is_woodall(n):\n    if n < 1:\n        return False\n    while n > 0:\n        digit = n % 10\n        n //= 10\n        if digit == 0 or (n - 1) // 9 != n / 10:\n            return False\n    return True"
+      }
+    },
+    {
+      "task_id": 56,
+      "prompt": "Write a python function to check if a given number is one less than twice its reverse.",
+      "tests": [
+        "assert check(70) == False",
+        "assert check(23) == False",
+        "assert check(73) == True"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_qa0wtqts/candidate.py\", line 4, in <module>\n    assert check(70) == False\n           ^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef check(n):\n    return n + 1 != int(str(n)[::-1])\n```",
+        "code": "def check(n):\n    return n + 1 != int(str(n)[::-1])"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_qa0wtqts/candidate.py\", line 4, in <module>\n    assert check(70) == False\n           ^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_qwcvstxw/candidate.py\", line 4, in <module>\n    assert check(70) == False\n           ^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a python function to check if a given number is one less than twice its reverse.\n\n        Tests:\n        assert check(70) == False\nassert check(23) == False\nassert check(73) == True\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef check(n):\n    return n + 1 != int(str(n)[::-1])\n```",
+        "code": "def check(n):\n    return n + 1 != int(str(n)[::-1])"
+      }
+    },
+    {
+      "task_id": 57,
+      "prompt": "Write a python function to find the largest number that can be formed with the given list of digits.",
+      "tests": [
+        "assert find_Max_Num([1,2,3]) == 321",
+        "assert find_Max_Num([4,5,6,1]) == 6541",
+        "assert find_Max_Num([1,2,3,9]) == 9321"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef find_Max_Num(nums):\n    nums.sort(reverse=True)\n    return int(''.join(map(str, nums)))\n```",
+        "code": "def find_Max_Num(nums):\n    nums.sort(reverse=True)\n    return int(''.join(map(str, nums)))"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def find_Max_Num(nums):\n    nums.sort(reverse=True)\n    return int(''.join(map(str, nums)))"
+      }
+    },
+    {
+      "task_id": 58,
+      "prompt": "Write a python function to check whether the given two integers have opposite sign or not.",
+      "tests": [
+        "assert opposite_Signs(1,-2) == True",
+        "assert opposite_Signs(3,2) == False",
+        "assert opposite_Signs(-10,-10) == False"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef opposite_Signs(a, b):\n    return a * b < 0\n```",
+        "code": "def opposite_Signs(a, b):\n    return a * b < 0"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def opposite_Signs(a, b):\n    return a * b < 0"
+      }
+    },
+    {
+      "task_id": 59,
+      "prompt": "Write a function to find the nth octagonal number.",
+      "tests": [
+        "assert is_octagonal(5) == 65",
+        "assert is_octagonal(10) == 280",
+        "assert is_octagonal(15) == 645"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_p4qelw0k/candidate.py\", line 5, in <module>\n    assert is_octagonal(5) == 65\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef is_octagonal(n):\n    # Calculate the nth octagonal number using the formula: 3n^2 - 3n + 1\n    return 3 * n * n - 3 * n + 1\n```",
+        "code": "def is_octagonal(n):\n    # Calculate the nth octagonal number using the formula: 3n^2 - 3n + 1\n    return 3 * n * n - 3 * n + 1"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": true,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_p4qelw0k/candidate.py\", line 5, in <module>\n    assert is_octagonal(5) == 65\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a function to find the nth octagonal number.\n\n        Tests:\n        assert is_octagonal(5) == 65\nassert is_octagonal(10) == 280\nassert is_octagonal(15) == 645\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef is_octagonal(n):\n    # Calculate the nth octagonal number using the formula: n * (3 * n - 2)\n    return n * (3 * n - 2)\n```",
+        "code": "def is_octagonal(n):\n    # Calculate the nth octagonal number using the formula: n * (3 * n - 2)\n    return n * (3 * n - 2)"
+      }
+    },
+    {
+      "task_id": 61,
+      "prompt": "Write a python function to count the number of substrings with the sum of digits equal to their length.",
+      "tests": [
+        "assert count_Substrings('112112') == 6",
+        "assert count_Substrings('111') == 6",
+        "assert count_Substrings('1101112') == 12"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_zxjkk408/candidate.py\", line 12, in <module>\n    assert count_Substrings('112112') == 6\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef count_Substrings(s):\n    def is_valid(sub):\n        return sum(int(digit) for digit in sub) == len(sub)\n    \n    total = 0\n    for i in range(len(s)):\n        for j in range(i, len(s)+1):\n            if is_valid(s[i:j]):\n                total += 1\n    return total\n```",
+        "code": "def count_Substrings(s):\n    def is_valid(sub):\n        return sum(int(digit) for digit in sub) == len(sub)\n    \n    total = 0\n    for i in range(len(s)):\n        for j in range(i, len(s)+1):\n            if is_valid(s[i:j]):\n                total += 1\n    return total"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_zxjkk408/candidate.py\", line 12, in <module>\n    assert count_Substrings('112112') == 6\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_ljpvmdj5/candidate.py\", line 12, in <module>\n    assert count_Substrings('112112') == 6\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a python function to count the number of substrings with the sum of digits equal to their length.\n\n        Tests:\n        assert count_Substrings('112112') == 6\nassert count_Substrings('111') == 6\nassert count_Substrings('1101112') == 12\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef count_Substrings(s):\n    def is_valid(sub):\n        return sum(int(digit) for digit in sub) == len(sub)\n\n    total = 0\n    for i in range(len(s)):\n        for j in range(i, len(s)+1):\n            if is_valid(s[i:j]):\n                total += 1\n    return total\n```",
+        "code": "def count_Substrings(s):\n    def is_valid(sub):\n        return sum(int(digit) for digit in sub) == len(sub)\n\n    total = 0\n    for i in range(len(s)):\n        for j in range(i, len(s)+1):\n            if is_valid(s[i:j]):\n                total += 1\n    return total"
+      }
+    },
+    {
+      "task_id": 62,
+      "prompt": "Write a python function to find smallest number in a list.",
+      "tests": [
+        "assert smallest_num([10, 20, 1, 45, 99]) == 1",
+        "assert smallest_num([1, 2, 3]) == 1",
+        "assert smallest_num([45, 46, 50, 60]) == 45"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef smallest_num(nums):\n    return min(nums)\n```",
+        "code": "def smallest_num(nums):\n    return min(nums)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def smallest_num(nums):\n    return min(nums)"
+      }
+    },
+    {
+      "task_id": 63,
+      "prompt": "Write a function to find the maximum difference between available pairs in the given tuple list.",
+      "tests": [
+        "assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7",
+        "assert max_difference([(4, 6), (2, 17), (9, 13), (11, 12)]) == 15",
+        "assert max_difference([(12, 35), (21, 27), (13, 23), (41, 22)]) == 23"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_rtiabona/candidate.py\", line 13, in <module>\n    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef max_difference(tuples_list):\n    min_val = float('inf')\n    max_diff = 0\n    \n    for a, b in tuples_list:\n        if a < min_val:\n            min_val = a\n        elif (b - a) > max_diff:\n            max_diff = b - a\n            \n    return max_diff\n```",
+        "code": "def max_difference(tuples_list):\n    min_val = float('inf')\n    max_diff = 0\n    \n    for a, b in tuples_list:\n        if a < min_val:\n            min_val = a\n        elif (b - a) > max_diff:\n            max_diff = b - a\n            \n    return max_diff"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_rtiabona/candidate.py\", line 13, in <module>\n    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_vtdp7_du/candidate.py\", line 13, in <module>\n    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a function to find the maximum difference between available pairs in the given tuple list.\n\n        Tests:\n        assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7\nassert max_difference([(4, 6), (2, 17), (9, 13), (11, 12)]) == 15\nassert max_difference([(12, 35), (21, 27), (13, 23), (41, 22)]) == 23\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef max_difference(tuples_list):\n    min_val = float('inf')\n    max_diff = 0\n\n    for a, b in tuples_list:\n        if a < min_val:\n            min_val = a\n        elif (b - min_val) > max_diff:\n            max_diff = b - min_val\n\n    return max_diff\n```",
+        "code": "def max_difference(tuples_list):\n    min_val = float('inf')\n    max_diff = 0\n\n    for a, b in tuples_list:\n        if a < min_val:\n            min_val = a\n        elif (b - min_val) > max_diff:\n            max_diff = b - min_val\n\n    return max_diff"
+      }
+    },
+    {
+      "task_id": 64,
+      "prompt": "Write a function to sort a list of tuples using the second value of each tuple.",
+      "tests": [
+        "assert subject_marks([('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)])==[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]",
+        "assert subject_marks([('Telugu',49),('Hindhi',54),('Social',33)])==([('Social',33),('Telugu',49),('Hindhi',54)])",
+        "assert subject_marks([('Physics',96),('Chemistry',97),('Biology',45)])==([('Biology',45),('Physics',96),('Chemistry',97)])"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef subject_marks(subjects):\n    return sorted(subjects, key=lambda x: x[1])\n```",
+        "code": "def subject_marks(subjects):\n    return sorted(subjects, key=lambda x: x[1])"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def subject_marks(subjects):\n    return sorted(subjects, key=lambda x: x[1])"
+      }
+    },
+    {
+      "task_id": 65,
+      "prompt": "Write a function to flatten a list and sum all of its elements.",
+      "tests": [
+        "assert recursive_list_sum(([1, 2, [3,4],[5,6]]))==21",
+        "assert recursive_list_sum(([7, 10, [15,14],[19,41]]))==106",
+        "assert recursive_list_sum(([10, 20, [30,40],[50,60]]))==210"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef recursive_list_sum(lst):\n    total = 0\n    for element in lst:\n        if isinstance(element, list):\n            total += recursive_list_sum(element)\n        else:\n            total += element\n    return total\n```",
+        "code": "def recursive_list_sum(lst):\n    total = 0\n    for element in lst:\n        if isinstance(element, list):\n            total += recursive_list_sum(element)\n        else:\n            total += element\n    return total"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def recursive_list_sum(lst):\n    total = 0\n    for element in lst:\n        if isinstance(element, list):\n            total += recursive_list_sum(element)\n        else:\n            total += element\n    return total"
+      }
+    },
+    {
+      "task_id": 66,
+      "prompt": "Write a python function to count the number of positive numbers in a list.",
+      "tests": [
+        "assert pos_count([1,-2,3,-4]) == 2",
+        "assert pos_count([3,4,5,-1]) == 3",
+        "assert pos_count([1,2,3,4]) == 4"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef pos_count(nums):\n    return sum(1 for n in nums if n > 0)\n```",
+        "code": "def pos_count(nums):\n    return sum(1 for n in nums if n > 0)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def pos_count(nums):\n    return sum(1 for n in nums if n > 0)"
+      }
+    },
+    {
+      "task_id": 67,
+      "prompt": "Write a function to find the number of ways to partition a set of Bell numbers.",
+      "tests": [
+        "assert bell_number(2)==2",
+        "assert bell_number(10)==115975",
+        "assert bell_number(56)==6775685320645824322581483068371419745979053216268760300"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef bell_number(n):\n    if n == 0:\n        return 1\n    bell = [[0 for _ in range(n+1)] for _ in range(n+1)]\n    bell[0][0] = 1\n\n    for i in range(1, n+1):\n        bell[i][0] = bell[i-1][i-1]\n        for j in range(1, i+1):\n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]\n\n    return bell[n][0]\n```",
+        "code": "def bell_number(n):\n    if n == 0:\n        return 1\n    bell = [[0 for _ in range(n+1)] for _ in range(n+1)]\n    bell[0][0] = 1\n\n    for i in range(1, n+1):\n        bell[i][0] = bell[i-1][i-1]\n        for j in range(1, i+1):\n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]\n\n    return bell[n][0]"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def bell_number(n):\n    if n == 0:\n        return 1\n    bell = [[0 for _ in range(n+1)] for _ in range(n+1)]\n    bell[0][0] = 1\n\n    for i in range(1, n+1):\n        bell[i][0] = bell[i-1][i-1]\n        for j in range(1, i+1):\n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]\n\n    return bell[n][0]"
+      }
+    },
+    {
+      "task_id": 68,
+      "prompt": "Write a python function to check whether the given array is monotonic or not.",
+      "tests": [
+        "assert is_Monotonic([6, 5, 4, 4]) == True",
+        "assert is_Monotonic([1, 2, 2, 3]) == True",
+        "assert is_Monotonic([1, 3, 2]) == False"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef is_Monotonic(nums):\n    return nums == sorted(nums) or nums == sorted(nums, reverse=True)\n```",
+        "code": "def is_Monotonic(nums):\n    return nums == sorted(nums) or nums == sorted(nums, reverse=True)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def is_Monotonic(nums):\n    return nums == sorted(nums) or nums == sorted(nums, reverse=True)"
+      }
+    },
+    {
+      "task_id": 69,
+      "prompt": "Write a function to check whether a list contains the given sublist or not.",
+      "tests": [
+        "assert is_sublist([2,4,3,5,7],[3,7])==False",
+        "assert is_sublist([2,4,3,5,7],[4,3])==True",
+        "assert is_sublist([2,4,3,5,7],[1,6])==False"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_3g3_crxd/candidate.py\", line 5, in <module>\n    assert is_sublist([2,4,3,5,7],[4,3])==True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef is_sublist(sublist, main_list):\n    return sublist in main_list\n```",
+        "code": "def is_sublist(sublist, main_list):\n    return sublist in main_list"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_3g3_crxd/candidate.py\", line 5, in <module>\n    assert is_sublist([2,4,3,5,7],[4,3])==True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_nt6d9chm/candidate.py\", line 5, in <module>\n    assert is_sublist([2,4,3,5,7],[4,3])==True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a function to check whether a list contains the given sublist or not.\n\n        Tests:\n        assert is_sublist([2,4,3,5,7],[3,7])==False\nassert is_sublist([2,4,3,5,7],[4,3])==True\nassert is_sublist([2,4,3,5,7],[1,6])==False\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef is_sublist(sublist, main_list):\n    return sublist[0] in main_list and sublist[-1:] == [main_list[-1]]\n```",
+        "code": "def is_sublist(sublist, main_list):\n    return sublist[0] in main_list and sublist[-1:] == [main_list[-1]]"
+      }
+    },
+    {
+      "task_id": 70,
+      "prompt": "Write a function to find whether all the given tuples have equal length or not.",
+      "tests": [
+        "assert get_equal([(11, 22, 33), (44, 55, 66)]) == True",
+        "assert get_equal([(1, 2, 3), (4, 5, 6, 7)]) == False",
+        "assert get_equal([(1, 2), (3, 4)]) == True"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef get_equal(tuples_list):\n    if not tuples_list:\n        return True\n    first_length = len(tuples_list[0])\n    return all(len(t) == first_length for t in tuples_list)\n```",
+        "code": "def get_equal(tuples_list):\n    if not tuples_list:\n        return True\n    first_length = len(tuples_list[0])\n    return all(len(t) == first_length for t in tuples_list)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def get_equal(tuples_list):\n    if not tuples_list:\n        return True\n    first_length = len(tuples_list[0])\n    return all(len(t) == first_length for t in tuples_list)"
+      }
+    },
+    {
+      "task_id": 71,
+      "prompt": "Write a function to sort a list of elements.",
+      "tests": [
+        "assert comb_sort([5, 15, 37, 25, 79]) == [5, 15, 25, 37, 79]",
+        "assert comb_sort([41, 32, 15, 19, 22]) == [15, 19, 22, 32, 41]",
+        "assert comb_sort([99, 15, 13, 47]) == [13, 15, 47, 99]"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_0g6miah4/candidate.py\", line 3\n    return max(1, int(gap / 1.3)\n              ^\nSyntaxError: '(' was never closed\n"
+        },
+        "raw": "```python\ndef comb_sort(arr):\n    def get_shrink_factor(gap):\n        return max(1, int(gap / 1.3)\n\n    gap = len(arr)\n    swapped = True\n\n    while gap > 1 or swapped:\n        gap = get_shrink_factor(gap)\n        swapped = False\n        for i in range(len(arr) - gap):\n            if arr[i] > arr[i + gap]:\n                arr[i], arr[i + gap] = arr[i + gap], arr[i]\n                swapped = True\n    return arr\n```",
+        "code": "def comb_sort(arr):\n    def get_shrink_factor(gap):\n        return max(1, int(gap / 1.3)\n\n    gap = len(arr)\n    swapped = True\n\n    while gap > 1 or swapped:\n        gap = get_shrink_factor(gap)\n        swapped = False\n        for i in range(len(arr) - gap):\n            if arr[i] > arr[i + gap]:\n                arr[i], arr[i + gap] = arr[i + gap], arr[i]\n                swapped = True\n    return arr"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": true,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_0g6miah4/candidate.py\", line 3\n    return max(1, int(gap / 1.3)\n              ^\nSyntaxError: '(' was never closed\n"
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a function to sort a list of elements.\n\n        Tests:\n        assert comb_sort([5, 15, 37, 25, 79]) == [5, 15, 25, 37, 79]\nassert comb_sort([41, 32, 15, 19, 22]) == [15, 19, 22, 32, 41]\nassert comb_sort([99, 15, 13, 47]) == [13, 15, 47, 99]\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef comb_sort(arr):\n    def get_shrink_factor(gap):\n        return max(1, int(gap / 1.3))\n\n    gap = len(arr)\n    swapped = True\n\n    while gap > 1 or swapped:\n        gap = get_shrink_factor(gap)\n        swapped = False\n        for i in range(len(arr) - gap):\n            if arr[i] > arr[i + gap]:\n                arr[i], arr[i + gap] = arr[i + gap], arr[i]\n                swapped = True\n    return arr\n```",
+        "code": "def comb_sort(arr):\n    def get_shrink_factor(gap):\n        return max(1, int(gap / 1.3))\n\n    gap = len(arr)\n    swapped = True\n\n    while gap > 1 or swapped:\n        gap = get_shrink_factor(gap)\n        swapped = False\n        for i in range(len(arr) - gap):\n            if arr[i] > arr[i + gap]:\n                arr[i], arr[i + gap] = arr[i + gap], arr[i]\n                swapped = True\n    return arr"
+      }
+    },
+    {
+      "task_id": 72,
+      "prompt": "Write a python function to check whether the given number can be represented as the difference of two squares or not.",
+      "tests": [
+        "assert dif_Square(5) == True",
+        "assert dif_Square(10) == False",
+        "assert dif_Square(15) == True"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp__o2xx86d/candidate.py\", line 11, in <module>\n    assert dif_Square(10) == False\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef dif_Square(n):\n    for i in range(int(n**0.5) + 2):\n        j = n - i*i\n        if j < 0:\n            break\n        if j != i*i and int(j**0.5)**2 == j:\n            return True\n    return False\n```",
+        "code": "def dif_Square(n):\n    for i in range(int(n**0.5) + 2):\n        j = n - i*i\n        if j < 0:\n            break\n        if j != i*i and int(j**0.5)**2 == j:\n            return True\n    return False"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp__o2xx86d/candidate.py\", line 11, in <module>\n    assert dif_Square(10) == False\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_4cntel7j/candidate.py\", line 11, in <module>\n    assert dif_Square(10) == False\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a python function to check whether the given number can be represented as the difference of two squares or not.\n\n        Tests:\n        assert dif_Square(5) == True\nassert dif_Square(10) == False\nassert dif_Square(15) == True\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef dif_Square(n):\n    for i in range(int((n**0.5) + 2)):\n        j = n - i*i\n        if j < 0:\n            break\n        if j != i*i and int(j**0.5)**2 == j:\n            return True\n    return False\n```",
+        "code": "def dif_Square(n):\n    for i in range(int((n**0.5) + 2)):\n        j = n - i*i\n        if j < 0:\n            break\n        if j != i*i and int(j**0.5)**2 == j:\n            return True\n    return False"
+      }
+    },
+    {
+      "task_id": 74,
+      "prompt": "Write a function to check whether it follows the sequence given in the patterns array.",
+      "tests": [
+        "assert is_samepatterns([\"red\",\"green\",\"green\"], [\"a\", \"b\", \"b\"])==True",
+        "assert is_samepatterns([\"red\",\"green\",\"greenn\"], [\"a\",\"b\",\"b\"])==False",
+        "assert is_samepatterns([\"red\",\"green\",\"greenn\"], [\"a\",\"b\"])==False"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_stlogbty/candidate.py\", line 7, in <module>\n    assert is_samepatterns([\"red\",\"green\",\"green\"], [\"a\", \"b\", \"b\"])==True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef is_samepatterns(patterns, sequences):\n    for i in range(len(patterns)):\n        if patterns[i] != sequences[i]:\n            return False\n    return True\n```",
+        "code": "def is_samepatterns(patterns, sequences):\n    for i in range(len(patterns)):\n        if patterns[i] != sequences[i]:\n            return False\n    return True"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_stlogbty/candidate.py\", line 7, in <module>\n    assert is_samepatterns([\"red\",\"green\",\"green\"], [\"a\", \"b\", \"b\"])==True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_ua8z7_dm/candidate.py\", line 7, in <module>\n    assert is_samepatterns([\"red\",\"green\",\"green\"], [\"a\", \"b\", \"b\"])==True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a function to check whether it follows the sequence given in the patterns array.\n\n        Tests:\n        assert is_samepatterns([\"red\",\"green\",\"green\"], [\"a\", \"b\", \"b\"])==True\nassert is_samepatterns([\"red\",\"green\",\"greenn\"], [\"a\",\"b\",\"b\"])==False\nassert is_samepatterns([\"red\",\"green\",\"greenn\"], [\"a\",\"b\"])==False\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef is_samepatterns(patterns, sequences):\n    for i in range(len(patterns)):\n        if patterns[i] != sequences[i]:\n            return False\n    return True\n```\n\nIt seems the issue lies with the assertion failure. The function as written does not correctly handle cases where the lengths of `patterns` and `sequences` do not match or when there are more elements in one list than the other. To fix this, we need to ensure that both lists have the same length before comparing them element-wise.\n\nHere is the corrected version:\n\n```python\ndef is_samepatterns(patterns, sequences):\n    if len(patterns) != len(sequences):\n        return False\n    for i in range(len(patterns)):\n        if patterns[i] != sequences[i]:\n            return False\n    return True\n```\n\nThis function first checks if both lists have the same length. If they do not, it immediately returns `False`. Otherwise, it proceeds to compare each corresponding element of the two lists.",
+        "code": "def is_samepatterns(patterns, sequences):\n    for i in range(len(patterns)):\n        if patterns[i] != sequences[i]:\n            return False\n    return True"
+      }
+    },
+    {
+      "task_id": 75,
+      "prompt": "Write a function to find tuples which have all elements divisible by k from the given list of tuples.",
+      "tests": [
+        "assert find_tuples([(6, 24, 12), (7, 9, 6), (12, 18, 21)], 6) == [(6, 24, 12)]",
+        "assert find_tuples([(5, 25, 30), (4, 2, 3), (7, 8, 9)], 5) == [(5, 25, 30)]",
+        "assert find_tuples([(7, 9, 16), (8, 16, 4), (19, 17, 18)], 4) == [(8, 16, 4)]"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef find_tuples(tuples_list, k):\n    def is_divisible_by_k(tup):\n        return all(x % k == 0 for x in tup)\n    \n    return [tup for tup in tuples_list if is_divisible_by_k(tup)]\n```\n\nThis Python function `find_tuples` takes a list of tuples and an integer `k`, then returns a new list containing only the tuples where every element is divisible by `k`. It uses a helper function `is_divisible_by_k` to check divisibility.",
+        "code": "def find_tuples(tuples_list, k):\n    def is_divisible_by_k(tup):\n        return all(x % k == 0 for x in tup)\n    \n    return [tup for tup in tuples_list if is_divisible_by_k(tup)]"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def find_tuples(tuples_list, k):\n    def is_divisible_by_k(tup):\n        return all(x % k == 0 for x in tup)\n    \n    return [tup for tup in tuples_list if is_divisible_by_k(tup)]"
+      }
+    },
+    {
+      "task_id": 77,
+      "prompt": "Write a python function to find whether a number is divisible by 11.",
+      "tests": [
+        "assert is_Diff (12345) == False",
+        "assert is_Diff(1212112) == True",
+        "assert is_Diff(1212) == False"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef is_Diff(n):\n    return n % 11 == 0\n```",
+        "code": "def is_Diff(n):\n    return n % 11 == 0"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def is_Diff(n):\n    return n % 11 == 0"
+      }
+    },
+    {
+      "task_id": 79,
+      "prompt": "Write a python function to check whether the length of the word is odd or not.",
+      "tests": [
+        "assert word_len(\"Hadoop\") == False",
+        "assert word_len(\"great\") == True",
+        "assert word_len(\"structure\") == True"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef word_len(word):\n    return len(word) % 2 != 0\n```",
+        "code": "def word_len(word):\n    return len(word) % 2 != 0"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def word_len(word):\n    return len(word) % 2 != 0"
+      }
+    },
+    {
+      "task_id": 80,
+      "prompt": "Write a function to find the nth tetrahedral number.",
+      "tests": [
+        "assert tetrahedral_number(5) == 35",
+        "assert tetrahedral_number(6) == 56",
+        "assert tetrahedral_number(7) == 84"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef tetrahedral_number(n):\n    return n * (n + 1) * (n + 2) // 6\n```",
+        "code": "def tetrahedral_number(n):\n    return n * (n + 1) * (n + 2) // 6"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def tetrahedral_number(n):\n    return n * (n + 1) * (n + 2) // 6"
+      }
+    },
+    {
+      "task_id": 82,
+      "prompt": "Write a function to find the volume of a sphere.",
+      "tests": [
+        "assert math.isclose(volume_sphere(10), 4188.790204786391, rel_tol=0.001)",
+        "assert math.isclose(volume_sphere(25), 65449.84694978735, rel_tol=0.001)",
+        "assert math.isclose(volume_sphere(20), 33510.32163829113, rel_tol=0.001)"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nimport math\n\ndef volume_sphere(radius):\n    return (4/3) * math.pi * radius ** 3\n```",
+        "code": "import math\n\ndef volume_sphere(radius):\n    return (4/3) * math.pi * radius ** 3"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "import math\n\ndef volume_sphere(radius):\n    return (4/3) * math.pi * radius ** 3"
+      }
+    },
+    {
+      "task_id": 83,
+      "prompt": "Write a python function to find the character made by adding the ASCII value of all the characters of the given string modulo 26.",
+      "tests": [
+        "assert get_Char(\"abc\") == \"f\"",
+        "assert get_Char(\"gfg\") == \"t\"",
+        "assert get_Char(\"ab\") == \"c\""
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_9sjlcpyh/candidate.py\", line 4, in <module>\n    assert get_Char(\"abc\") == \"f\"\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef get_Char(s):\n    return chr((sum(ord(c) for c in s) % 26))\n```",
+        "code": "def get_Char(s):\n    return chr((sum(ord(c) for c in s) % 26))"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_9sjlcpyh/candidate.py\", line 4, in <module>\n    assert get_Char(\"abc\") == \"f\"\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_i89sxkkt/candidate.py\", line 4, in <module>\n    assert get_Char(\"abc\") == \"f\"\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a python function to find the character made by adding the ASCII value of all the characters of the given string modulo 26.\n\n        Tests:\n        assert get_Char(\"abc\") == \"f\"\nassert get_Char(\"gfg\") == \"t\"\nassert get_Char(\"ab\") == \"c\"\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef get_Char(s):\n    return chr((sum(ord(c) for c in s) % 26))\n```",
+        "code": "def get_Char(s):\n    return chr((sum(ord(c) for c in s) % 26))"
+      }
+    },
+    {
+      "task_id": 84,
+      "prompt": "Write a function to find the nth number in the newman conway sequence.",
+      "tests": [
+        "assert sequence(10) == 6",
+        "assert sequence(2) == 1",
+        "assert sequence(3) == 2"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef sequence(n):\n    if n <= 0:\n        return None\n    dp = [None] * (n + 1)\n    dp[1], dp[2] = 1, 1\n    for i in range(3, n + 1):\n        dp[i] = dp[dp[i - 1]] + dp[i - dp[i - 1]]\n    return dp[n]\n```",
+        "code": "def sequence(n):\n    if n <= 0:\n        return None\n    dp = [None] * (n + 1)\n    dp[1], dp[2] = 1, 1\n    for i in range(3, n + 1):\n        dp[i] = dp[dp[i - 1]] + dp[i - dp[i - 1]]\n    return dp[n]"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def sequence(n):\n    if n <= 0:\n        return None\n    dp = [None] * (n + 1)\n    dp[1], dp[2] = 1, 1\n    for i in range(3, n + 1):\n        dp[i] = dp[dp[i - 1]] + dp[i - dp[i - 1]]\n    return dp[n]"
+      }
+    },
+    {
+      "task_id": 85,
+      "prompt": "Write a function to find the surface area of a sphere.",
+      "tests": [
+        "assert math.isclose(surfacearea_sphere(10), 1256.6370614359173, rel_tol=0.001)",
+        "assert math.isclose(surfacearea_sphere(15), 2827.4333882308138, rel_tol=0.001)",
+        "assert math.isclose(surfacearea_sphere(20), 5026.548245743669, rel_tol=0.001)"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nimport math\n\ndef surfacearea_sphere(radius):\n    return 4 * math.pi * radius ** 2\n```",
+        "code": "import math\n\ndef surfacearea_sphere(radius):\n    return 4 * math.pi * radius ** 2"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "import math\n\ndef surfacearea_sphere(radius):\n    return 4 * math.pi * radius ** 2"
+      }
+    },
+    {
+      "task_id": 86,
+      "prompt": "Write a function to find nth centered hexagonal number.",
+      "tests": [
+        "assert centered_hexagonal_number(10) == 271",
+        "assert centered_hexagonal_number(2) == 7",
+        "assert centered_hexagonal_number(9) == 217"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_7bmb3ms_/candidate.py\", line 4, in <module>\n    assert centered_hexagonal_number(10) == 271\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef centered_hexagonal_number(n):\n    return n * (3*n - 2)\n```",
+        "code": "def centered_hexagonal_number(n):\n    return n * (3*n - 2)"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_7bmb3ms_/candidate.py\", line 4, in <module>\n    assert centered_hexagonal_number(10) == 271\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_1hhzfmcq/candidate.py\", line 4, in <module>\n    assert centered_hexagonal_number(10) == 271\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a function to find nth centered hexagonal number.\n\n        Tests:\n        assert centered_hexagonal_number(10) == 271\nassert centered_hexagonal_number(2) == 7\nassert centered_hexagonal_number(9) == 217\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef centered_hexagonal_number(n):\n    return n * (3*n - 2)\n```\n\nIt seems the function provided in the candidate code is incorrect. The correct formula for the nth centered hexagonal number should be `n * (3*n - 2)`. However, this does not match the expected output from the tests. Let's derive and use the correct formula:\n\nThe nth centered hexagonal number can also be calculated using the formula: \n\\[ H_n = 2n^2 - n \\]\n\nLet's implement this corrected function:\n```python\ndef centered_hexagonal_number(n):\n    return 2*n**2 - n\n```\n\nThis should now pass all the tests.",
+        "code": "def centered_hexagonal_number(n):\n    return n * (3*n - 2)"
+      }
+    },
+    {
+      "task_id": 87,
+      "prompt": "Write a function to merge three dictionaries into a single dictionary.",
+      "tests": [
+        "assert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" },{ \"O\": \"Orange\", \"W\": \"White\", \"B\": \"Black\" })=={'B': 'Black', 'R': 'Red', 'P': 'Pink', 'G': 'Green', 'W': 'White', 'O': 'Orange'}",
+        "assert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" },{\"L\":\"lavender\",\"B\":\"Blue\"})=={'W': 'White', 'P': 'Pink', 'B': 'Black', 'R': 'Red', 'G': 'Green', 'L': 'lavender'}",
+        "assert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" },{\"L\":\"lavender\",\"B\":\"Blue\"},{ \"G\": \"Green\", \"W\": \"White\" })=={'B': 'Black', 'P': 'Pink', 'R': 'Red', 'G': 'Green', 'L': 'lavender', 'W': 'White'}"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_rqqvynyg/candidate.py\", line 8, in <module>\n    assert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" },{\"L\":\"lavender\",\"B\":\"Blue\"})=={'W': 'White', 'P': 'Pink', 'B': 'Black', 'R': 'Red', 'G': 'Green', 'L': 'lavender'}\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef merge_dictionaries_three(*dicts):\n    result = {}\n    for dictionary in dicts:\n        result.update(dictionary)\n    return result\n```",
+        "code": "def merge_dictionaries_three(*dicts):\n    result = {}\n    for dictionary in dicts:\n        result.update(dictionary)\n    return result"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_rqqvynyg/candidate.py\", line 8, in <module>\n    assert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" },{\"L\":\"lavender\",\"B\":\"Blue\"})=={'W': 'White', 'P': 'Pink', 'B': 'Black', 'R': 'Red', 'G': 'Green', 'L': 'lavender'}\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_7iqi92r9/candidate.py\", line 8, in <module>\n    assert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" },{\"L\":\"lavender\",\"B\":\"Blue\"})=={'W': 'White', 'P': 'Pink', 'B': 'Black', 'R': 'Red', 'G': 'Green', 'L': 'lavender'}\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a function to merge three dictionaries into a single dictionary.\n\n        Tests:\n        assert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" },{ \"O\": \"Orange\", \"W\": \"White\", \"B\": \"Black\" })=={'B': 'Black', 'R': 'Red', 'P': 'Pink', 'G': 'Green', 'W': 'White', 'O': 'Orange'}\nassert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" },{\"L\":\"lavender\",\"B\":\"Blue\"})=={'W': 'White', 'P': 'Pink', 'B': 'Black', 'R': 'Red', 'G': 'Green', 'L': 'lavender'}\nassert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" },{\"L\":\"lavender\",\"B\":\"Blue\"},{ \"G\": \"Green\", \"W\": \"White\" })=={'B': 'Black', 'P': 'Pink', 'R': 'Red', 'G': 'Green', 'L': 'lavender', 'W': 'White'}\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef merge_dictionaries_three(*dicts):\n    result = {}\n    for dictionary in dicts:\n        result.update(dictionary)\n    return result\n```",
+        "code": "def merge_dictionaries_three(*dicts):\n    result = {}\n    for dictionary in dicts:\n        result.update(dictionary)\n    return result"
+      }
+    },
+    {
+      "task_id": 88,
+      "prompt": "Write a function to get the frequency of all the elements in a list, returned as a dictionary.",
+      "tests": [
+        "assert freq_count([10,10,10,10,20,20,20,20,40,40,50,50,30])==({10: 4, 20: 4, 40: 2, 50: 2, 30: 1})",
+        "assert freq_count([1,2,3,4,3,2,4,1,3,1,4])==({1:3, 2:2,3:3,4:3})",
+        "assert freq_count([5,6,7,4,9,10,4,5,6,7,9,5])==({10:1,5:3,6:2,7:2,4:2,9:2})"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef freq_count(arr):\n    return {x: arr.count(x) for x in set(arr)}\n```",
+        "code": "def freq_count(arr):\n    return {x: arr.count(x) for x in set(arr)}"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def freq_count(arr):\n    return {x: arr.count(x) for x in set(arr)}"
+      }
+    },
+    {
+      "task_id": 89,
+      "prompt": "Write a function to find the closest smaller number than n.",
+      "tests": [
+        "assert closest_num(11) == 10",
+        "assert closest_num(7) == 6",
+        "assert closest_num(12) == 11"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef closest_num(n):\n    return n - 1\n```",
+        "code": "def closest_num(n):\n    return n - 1"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def closest_num(n):\n    return n - 1"
+      }
+    },
+    {
+      "task_id": 90,
+      "prompt": "Write a python function to find the length of the longest word.",
+      "tests": [
+        "assert len_log([\"python\",\"PHP\",\"bigdata\"]) == 7",
+        "assert len_log([\"a\",\"ab\",\"abc\"]) == 3",
+        "assert len_log([\"small\",\"big\",\"tall\"]) == 5"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef len_log(words):\n    return max(len(word) for word in words)\n```",
+        "code": "def len_log(words):\n    return max(len(word) for word in words)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def len_log(words):\n    return max(len(word) for word in words)"
+      }
+    },
+    {
+      "task_id": 91,
+      "prompt": "Write a function to check if a string is present as a substring in a given list of string values.",
+      "tests": [
+        "assert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ack\")==True",
+        "assert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"abc\")==False",
+        "assert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ange\")==True"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_rvye767j/candidate.py\", line 4, in <module>\n    assert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ack\")==True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef find_substring(string_list, substring):\n    return substring in string_list\n```",
+        "code": "def find_substring(string_list, substring):\n    return substring in string_list"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_rvye767j/candidate.py\", line 4, in <module>\n    assert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ack\")==True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_drlams20/candidate.py\", line 4, in <module>\n    assert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ack\")==True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a function to check if a string is present as a substring in a given list of string values.\n\n        Tests:\n        assert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ack\")==True\nassert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"abc\")==False\nassert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ange\")==True\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef find_substring(string_list, substring):\n    return substring in string_list\n```",
+        "code": "def find_substring(string_list, substring):\n    return substring in string_list"
+      }
+    },
+    {
+      "task_id": 92,
+      "prompt": "Write a function to check whether the given number is undulating or not.",
+      "tests": [
+        "assert is_undulating(1212121) == True",
+        "assert is_undulating(1991) == False",
+        "assert is_undulating(121) == True"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_87ew4f7f/candidate.py\", line 5, in <module>\n    assert is_undulating(1212121) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef is_undulating(n):\n    s = str(n)\n    return len(s) >= 3 and (s[0] == s[2] and s[1] == s[-1])\n```",
+        "code": "def is_undulating(n):\n    s = str(n)\n    return len(s) >= 3 and (s[0] == s[2] and s[1] == s[-1])"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_87ew4f7f/candidate.py\", line 5, in <module>\n    assert is_undulating(1212121) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_atb4uwcq/candidate.py\", line 5, in <module>\n    assert is_undulating(1212121) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a function to check whether the given number is undulating or not.\n\n        Tests:\n        assert is_undulating(1212121) == True\nassert is_undulating(1991) == False\nassert is_undulating(121) == True\n\n        Return only Python code.",
+        "repair_raw": "```python\ndef is_undulating(n):\n    s = str(n)\n    return len(s) >= 3 and (s[0] == s[2] and s[1] == s[-1])\n```",
+        "code": "def is_undulating(n):\n    s = str(n)\n    return len(s) >= 3 and (s[0] == s[2] and s[1] == s[-1])"
+      }
+    },
+    {
+      "task_id": 93,
+      "prompt": "Write a function to calculate the value of 'a' to the power 'b'.",
+      "tests": [
+        "assert power(3,4) == 81",
+        "assert power(2,3) == 8",
+        "assert power(5,5) == 3125"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef power(a, b):\n    return a ** b\n```",
+        "code": "def power(a, b):\n    return a ** b"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def power(a, b):\n    return a ** b"
+      }
+    },
+    {
+      "task_id": 94,
+      "prompt": "Given a list of tuples, write a function that returns the first value of the tuple with the smallest second value.",
+      "tests": [
+        "assert index_minimum([('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]) == 'Varsha'",
+        "assert index_minimum([('Yash', 185), ('Dawood', 125), ('Sanya', 175)]) == 'Dawood'",
+        "assert index_minimum([('Sai', 345), ('Salman', 145), ('Ayesha', 96)]) == 'Ayesha'"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef index_minimum(tuples_list):\n    return min(tuples_list, key=lambda x: x[1])[0]\n```",
+        "code": "def index_minimum(tuples_list):\n    return min(tuples_list, key=lambda x: x[1])[0]"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def index_minimum(tuples_list):\n    return min(tuples_list, key=lambda x: x[1])[0]"
+      }
+    },
+    {
+      "task_id": 95,
+      "prompt": "Write a python function to find the length of the smallest list in a list of lists.",
+      "tests": [
+        "assert Find_Min_Length([[1],[1,2]]) == 1",
+        "assert Find_Min_Length([[1,2],[1,2,3],[1,2,3,4]]) == 2",
+        "assert Find_Min_Length([[3,3,3],[4,4,4,4]]) == 3"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef Find_Min_Length(lists):\n    return min(len(lst) for lst in lists)\n```",
+        "code": "def Find_Min_Length(lists):\n    return min(len(lst) for lst in lists)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def Find_Min_Length(lists):\n    return min(len(lst) for lst in lists)"
+      }
+    },
+    {
+      "task_id": 96,
+      "prompt": "Write a python function to find the number of divisors of a given integer.",
+      "tests": [
+        "assert divisor(15) == 4",
+        "assert divisor(12) == 6",
+        "assert divisor(9) == 3"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef divisor(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count\n```",
+        "code": "def divisor(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def divisor(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count"
+      }
+    },
+    {
+      "task_id": 97,
+      "prompt": "Write a function to find frequency of each element in a flattened list of lists, returned in a dictionary.",
+      "tests": [
+        "assert frequency_lists([[1, 2, 3, 2], [4, 5, 6, 2], [7, 8, 9, 5]])=={1: 1, 2: 3, 3: 1, 4: 1, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}",
+        "assert frequency_lists([[1,2,3,4],[5,6,7,8],[9,10,11,12]])=={1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1,10:1,11:1,12:1}",
+        "assert frequency_lists([[20,30,40,17],[18,16,14,13],[10,20,30,40]])=={20:2,30:2,40:2,17: 1,18:1, 16: 1,14: 1,13: 1, 10: 1}"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef frequency_lists(lst):\n    freq_dict = {}\n    for sublist in lst:\n        for item in sublist:\n            if item not in freq_dict:\n                freq_dict[item] = 1\n            else:\n                freq_dict[item] += 1\n    return freq_dict\n```",
+        "code": "def frequency_lists(lst):\n    freq_dict = {}\n    for sublist in lst:\n        for item in sublist:\n            if item not in freq_dict:\n                freq_dict[item] = 1\n            else:\n                freq_dict[item] += 1\n    return freq_dict"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def frequency_lists(lst):\n    freq_dict = {}\n    for sublist in lst:\n        for item in sublist:\n            if item not in freq_dict:\n                freq_dict[item] = 1\n            else:\n                freq_dict[item] += 1\n    return freq_dict"
+      }
+    },
+    {
+      "task_id": 98,
+      "prompt": "Write a function to multiply all the numbers in a list and divide with the length of the list.",
+      "tests": [
+        "assert math.isclose(multiply_num((8, 2, 3, -1, 7)), -67.2, rel_tol=0.001)",
+        "assert math.isclose(multiply_num((-10,-20,-30)), -2000.0, rel_tol=0.001)",
+        "assert math.isclose(multiply_num((19,15,18)), 1710.0, rel_tol=0.001)"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_oicbftk7/candidate.py\", line 7, in <module>\n    assert math.isclose(multiply_num((8, 2, 3, -1, 7)), -67.2, rel_tol=0.001)\n           ^^^^\nNameError: name 'math' is not defined. Did you forget to import 'math'?\n"
+        },
+        "raw": "```python\ndef multiply_num(numbers):\n    product = 1\n    for num in numbers:\n        product *= num\n    return product / len(numbers)\n```",
+        "code": "def multiply_num(numbers):\n    product = 1\n    for num in numbers:\n        product *= num\n    return product / len(numbers)"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": true,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_oicbftk7/candidate.py\", line 7, in <module>\n    assert math.isclose(multiply_num((8, 2, 3, -1, 7)), -67.2, rel_tol=0.001)\n           ^^^^\nNameError: name 'math' is not defined. Did you forget to import 'math'?\n"
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "You are Qwen Tris using the Mirror Architecture / Stable-State Path coding lane.\n        Hold the exact task, tests, and function boundary together. Write the smallest\n        source-backed Python function that satisfies the visible tests. Do not drift into\n        explanation. Do not invent extra APIs.\n\n        MBPP task:\n        Write a function to multiply all the numbers in a list and divide with the length of the list.\n\n        Tests:\n        assert math.isclose(multiply_num((8, 2, 3, -1, 7)), -67.2, rel_tol=0.001)\nassert math.isclose(multiply_num((-10,-20,-30)), -2000.0, rel_tol=0.001)\nassert math.isclose(multiply_num((19,15,18)), 1710.0, rel_tol=0.001)\n\n        Return only Python code.",
+        "repair_raw": "```python\nimport math\n\ndef multiply_num(numbers):\n    product = 1\n    for num in numbers:\n        product *= num\n    return product / len(numbers)\n\nassert math.isclose(multiply_num((8, 2, 3, -1, 7)), -67.2, rel_tol=0.001)\nassert math.isclose(multiply_num((-10,-20,-30)), -2000.0, rel_tol=0.001)\nassert math.isclose(multiply_num((19,15,18)), 1710.0, rel_tol=0.001)\n```",
+        "code": "import math\n\ndef multiply_num(numbers):\n    product = 1\n    for num in numbers:\n        product *= num\n    return product / len(numbers)\n\nassert math.isclose(multiply_num((8, 2, 3, -1, 7)), -67.2, rel_tol=0.001)\nassert math.isclose(multiply_num((-10,-20,-30)), -2000.0, rel_tol=0.001)\nassert math.isclose(multiply_num((19,15,18)), 1710.0, rel_tol=0.001)"
+      }
+    },
+    {
+      "task_id": 99,
+      "prompt": "Write a function to convert the given decimal number to its binary equivalent, represented as a string with no leading zeros.",
+      "tests": [
+        "assert decimal_to_binary(8) == '1000'",
+        "assert decimal_to_binary(18) == '10010'",
+        "assert decimal_to_binary(7) == '111'"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef decimal_to_binary(n):\n    return bin(n).replace(\"0b\", \"\")\n```",
+        "code": "def decimal_to_binary(n):\n    return bin(n).replace(\"0b\", \"\")"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def decimal_to_binary(n):\n    return bin(n).replace(\"0b\", \"\")"
+      }
+    },
+    {
+      "task_id": 100,
+      "prompt": "Write a function to find the next smallest palindrome of a specified integer, returned as an integer.",
+      "tests": [
+        "assert next_smallest_palindrome(99)==101",
+        "assert next_smallest_palindrome(1221)==1331",
+        "assert next_smallest_palindrome(120)==121"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef next_smallest_palindrome(n):\n    n += 1\n    while not is_palindrome(n):\n        n += 1\n    return n\n\ndef is_palindrome(num):\n    return str(num) == str(num)[::-1]\n```\n\nThis Python code defines the required function `next_smallest_palindrome` which finds and returns the next smallest palindrome of a specified integer. It includes an auxiliary helper function `is_palindrome` to check if a number is a palindrome.",
+        "code": "def next_smallest_palindrome(n):\n    n += 1\n    while not is_palindrome(n):\n        n += 1\n    return n\n\ndef is_palindrome(num):\n    return str(num) == str(num)[::-1]"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def next_smallest_palindrome(n):\n    n += 1\n    while not is_palindrome(n):\n        n += 1\n    return n\n\ndef is_palindrome(num):\n    return str(num) == str(num)[::-1]"
+      }
+    },
+    {
+      "task_id": 101,
+      "prompt": "Write a function to find the kth element in the given array using 1-based indexing.",
+      "tests": [
+        "assert kth_element([12,3,5,7,19], 2) == 3",
+        "assert kth_element([17,24,8,23], 3) == 8",
+        "assert kth_element([16,21,25,36,4], 4) == 36"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef kth_element(nums, k):\n    return nums[k-1]\n```",
+        "code": "def kth_element(nums, k):\n    return nums[k-1]"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def kth_element(nums, k):\n    return nums[k-1]"
+      }
+    },
+    {
+      "task_id": 102,
+      "prompt": "Write a function to convert a snake case string to camel case string.",
+      "tests": [
+        "assert snake_to_camel('python_program')=='PythonProgram'",
+        "assert snake_to_camel('python_language')==('PythonLanguage')",
+        "assert snake_to_camel('programming_language')==('ProgrammingLanguage')"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef snake_to_camel(snake_str):\n    return ''.join(word.capitalize() or '_' for word in snake_str.split('_'))\n```",
+        "code": "def snake_to_camel(snake_str):\n    return ''.join(word.capitalize() or '_' for word in snake_str.split('_'))"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "",
+        "repair_raw": "",
+        "code": "def snake_to_camel(snake_str):\n    return ''.join(word.capitalize() or '_' for word in snake_str.split('_'))"
+      }
+    }
+  ]
+}

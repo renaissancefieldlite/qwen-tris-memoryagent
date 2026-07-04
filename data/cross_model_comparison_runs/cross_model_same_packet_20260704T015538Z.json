@@ -1,0 +1,251 @@
+{
+  "run_id": "cross_model_same_packet_20260704T015538Z",
+  "created_utc": "2026-07-04T01:55:38.177961+00:00",
+  "ollama_base": "http://127.0.0.1:11434",
+  "task_count": 2,
+  "lanes": [
+    {
+      "name": "hermes_baseline",
+      "model": "openhermes:latest",
+      "architecture_on": false
+    },
+    {
+      "name": "hermes_tris_architecture_on",
+      "model": "openhermes:latest",
+      "architecture_on": true
+    },
+    {
+      "name": "qwen_baseline",
+      "model": "qwen2.5:3b",
+      "architecture_on": false
+    },
+    {
+      "name": "qwen_tris_architecture_on",
+      "model": "qwen2.5:3b",
+      "architecture_on": true
+    }
+  ],
+  "source_paths": {
+    "golden_mark": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/GOLDEN_MARK_FOUNDATION.md",
+    "qwen_500": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/data/memory_iteration_runs/qwen_tris_three_condition_iterations_20260701T054449Z.md",
+    "qasper": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/data/third_party_eval_runs/QWEN_TRIS_LM_EVAL_QASPER_RECEIPT_20260701T180343Z.md",
+    "longbench": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/data/public_benchmark_runs/qwen_tris_longbench_public_slice_20260701T214036Z.md"
+  },
+  "lane_totals": {
+    "hermes_baseline": {
+      "hits": 1,
+      "required": 5,
+      "passes": 0,
+      "tasks": 2,
+      "mean_score": 0.2
+    },
+    "hermes_tris_architecture_on": {
+      "hits": 5,
+      "required": 5,
+      "passes": 2,
+      "tasks": 2,
+      "mean_score": 1.0
+    },
+    "qwen_baseline": {
+      "hits": 0,
+      "required": 5,
+      "passes": 0,
+      "tasks": 2,
+      "mean_score": 0.0
+    },
+    "qwen_tris_architecture_on": {
+      "hits": 5,
+      "required": 5,
+      "passes": 2,
+      "tasks": 2,
+      "mean_score": 1.0
+    }
+  },
+  "results": [
+    {
+      "task_index": 1,
+      "task_id": "c5b_metric_wins",
+      "source_key": "golden_mark",
+      "source_path": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/GOLDEN_MARK_FOUNDATION.md",
+      "question": "From the source packet, what was the C5B iter30 matched comparison result and what happened to drift flags?",
+      "required": [
+        "13/13",
+        "37",
+        "0"
+      ],
+      "lanes": {
+        "hermes_baseline": {
+          "model": "openhermes:latest",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 13862,
+          "error": null,
+          "score": {
+            "hits": [
+              "0"
+            ],
+            "misses": [
+              "13/13",
+              "37"
+            ],
+            "hit_count": 1,
+            "required_count": 3,
+            "score": 0.3333333333333333,
+            "passed": false
+          },
+          "response": "Answer: Unknown\nBoundary: Since there is no source packet available in this prompt, we cannot determine the C5B iter30 matched comparison result or what happened to drift flags."
+        },
+        "hermes_tris_architecture_on": {
+          "model": "openhermes:latest",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 5083,
+          "error": null,
+          "score": {
+            "hits": [
+              "13/13",
+              "37",
+              "0"
+            ],
+            "misses": [],
+            "hit_count": 3,
+            "required_count": 3,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "Answer:\n- C5b iter30 full comparison: 13/13 metric wins against matched baseline.\n- Drift flags: 37 to 0.\n\nBoundary:"
+        },
+        "qwen_baseline": {
+          "model": "qwen2.5:3b",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 3151,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "13/13",
+              "37",
+              "0"
+            ],
+            "hit_count": 0,
+            "required_count": 3,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "- Answer: unknown\n- Boundary:"
+        },
+        "qwen_tris_architecture_on": {
+          "model": "qwen2.5:3b",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 3400,
+          "error": null,
+          "score": {
+            "hits": [
+              "13/13",
+              "37",
+              "0"
+            ],
+            "misses": [],
+            "hit_count": 3,
+            "required_count": 3,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "- Answer: The C5b iter30 full comparison resulted in 13/13 metric wins against a matched baseline.\n- Drift flags decreased from 37 to 0.\n- Evidence-failure flags were reduced from 5 to 0.\n- Repaired HF probe9 matched-turn drift was resolved with 5 to 0 outcomes.\n- Repaired HF probe9 evidence failures were also resolved with 2 to 0 results.\n\n- Boundary:"
+        }
+      }
+    },
+    {
+      "task_index": 2,
+      "task_id": "c5b_evidence_failures",
+      "source_key": "golden_mark",
+      "source_path": "/Users/renaissancefieldlite1.0/Documents/Playground/trismegistus/docs/GOLDEN_MARK_FOUNDATION.md",
+      "question": "From the source packet, what happened to evidence-failure flags in the C5B/Golden Mark behavior result?",
+      "required": [
+        "5",
+        "0"
+      ],
+      "lanes": {
+        "hermes_baseline": {
+          "model": "openhermes:latest",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 7645,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "5",
+              "0"
+            ],
+            "hit_count": 0,
+            "required_count": 2,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "Answer: Unknown\nBoundary: Since there is no source packet available for this question, it is impossible to provide a specific answer."
+        },
+        "hermes_tris_architecture_on": {
+          "model": "openhermes:latest",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 5309,
+          "error": null,
+          "score": {
+            "hits": [
+              "5",
+              "0"
+            ],
+            "misses": [],
+            "hit_count": 2,
+            "required_count": 2,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "Answer: Evidence-failure flags decreased from 5 to 0.\nBoundary: The number of evidence-failure flags changed from a count of 5 to a count of 0."
+        },
+        "qwen_baseline": {
+          "model": "qwen2.5:3b",
+          "architecture_on": false,
+          "ok": true,
+          "latency_ms": 2931,
+          "error": null,
+          "score": {
+            "hits": [],
+            "misses": [
+              "5",
+              "0"
+            ],
+            "hit_count": 0,
+            "required_count": 2,
+            "score": 0.0,
+            "passed": false
+          },
+          "response": "- Answer: unknown\n- Boundary:"
+        },
+        "qwen_tris_architecture_on": {
+          "model": "qwen2.5:3b",
+          "architecture_on": true,
+          "ok": true,
+          "latency_ms": 1504,
+          "error": null,
+          "score": {
+            "hits": [
+              "5",
+              "0"
+            ],
+            "misses": [],
+            "hit_count": 2,
+            "required_count": 2,
+            "score": 1.0,
+            "passed": true
+          },
+          "response": "- Answer: The number of evidence-failure flags decreased from 5 to 0.\n- Boundary:"
+        }
+      }
+    }
+  ],
+  "boundary": "Matched local same-packet receipt. This tests source-backed recall/receipt behavior across local OpenHermes and local Qwen routes. It is not an official leaderboard score and does not claim weight tuning."
+}

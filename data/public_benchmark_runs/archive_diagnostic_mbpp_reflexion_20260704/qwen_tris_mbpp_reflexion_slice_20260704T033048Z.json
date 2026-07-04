@@ -1,0 +1,791 @@
+{
+  "run_id": "qwen_tris_mbpp_reflexion_slice_20260704T033048Z",
+  "created_utc": "2026-07-04T03:31:55Z",
+  "dataset": "google-research-datasets/mbpp: sanitized",
+  "split": "test",
+  "model": "qwen2.5:3b",
+  "offset": 0,
+  "limit": 20,
+  "rows": [
+    {
+      "task_id": 11,
+      "prompt": "Write a python function to remove first and last occurrence of a given character from the string.",
+      "tests": [
+        "assert remove_Occ(\"hello\",\"l\") == \"heo\"",
+        "assert remove_Occ(\"abcda\",\"a\") == \"bcd\"",
+        "assert remove_Occ(\"PHP\",\"P\") == \"H\""
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef remove_Occ(s, c):\n    return s.replace(c, '', 1).replace(c, '')\n```",
+        "code": "def remove_Occ(s, c):\n    return s.replace(c, '', 1).replace(c, '')"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef remove_Occ(s, c):\n    return s.replace(c, '', 1).replace(c, '', 1)\n```",
+        "repair_raw": "",
+        "code": "def remove_Occ(s, c):\n    return s.replace(c, '', 1).replace(c, '', 1)"
+      }
+    },
+    {
+      "task_id": 12,
+      "prompt": "Write a function to sort a given matrix in ascending order according to the sum of its rows.",
+      "tests": [
+        "assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]",
+        "assert sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])==[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]",
+        "assert sort_matrix([[5,8,9],[6,4,3],[2,1,4]])==[[2, 1, 4], [6, 4, 3], [5, 8, 9]]"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef sort_matrix(matrix):\n    return sorted(matrix, key=sum)\n```",
+        "code": "def sort_matrix(matrix):\n    return sorted(matrix, key=sum)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef sort_matrix(matrix):\n    return sorted(matrix, key=sum)\n```",
+        "repair_raw": "",
+        "code": "def sort_matrix(matrix):\n    return sorted(matrix, key=sum)"
+      }
+    },
+    {
+      "task_id": 14,
+      "prompt": "Write a python function to find the volume of a triangular prism.",
+      "tests": [
+        "assert find_Volume(10,8,6) == 240",
+        "assert find_Volume(3,2,2) == 6",
+        "assert find_Volume(1,2,1) == 1"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef find_Volume(base_length, height, prism_height):\n    base_area = (base_length * height) / 2\n    return base_area * prism_height\n```",
+        "code": "def find_Volume(base_length, height, prism_height):\n    base_area = (base_length * height) / 2\n    return base_area * prism_height"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef find_Volume(base_length, height, prism_height):\n    base_area = (base_length * height) / 2\n    return base_area * prism_height\n```",
+        "repair_raw": "",
+        "code": "def find_Volume(base_length, height, prism_height):\n    base_area = (base_length * height) / 2\n    return base_area * prism_height"
+      }
+    },
+    {
+      "task_id": 16,
+      "prompt": "Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.",
+      "tests": [
+        "assert text_lowercase_underscore(\"aab_cbbbc\")==(True)",
+        "assert text_lowercase_underscore(\"aab_Abbbc\")==(False)",
+        "assert text_lowercase_underscore(\"Aaab_abbbc\")==(False)"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nimport re\n\ndef text_lowercase_underscore(text):\n    return bool(re.match(r'^[a-z]+_[a-z]+$', text))\n```",
+        "code": "import re\n\ndef text_lowercase_underscore(text):\n    return bool(re.match(r'^[a-z]+_[a-z]+$', text))"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nimport re\n\ndef text_lowercase_underscore(text):\n    return bool(re.match(r'^[a-z]+_[a-z]+$', text))\n```",
+        "repair_raw": "",
+        "code": "import re\n\ndef text_lowercase_underscore(text):\n    return bool(re.match(r'^[a-z]+_[a-z]+$', text))"
+      }
+    },
+    {
+      "task_id": 17,
+      "prompt": "Write a function that returns the perimeter of a square given its side length as input.",
+      "tests": [
+        "assert square_perimeter(10)==40",
+        "assert square_perimeter(5)==20",
+        "assert square_perimeter(4)==16"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef square_perimeter(side_length):\n    return side_length * 4\n```",
+        "code": "def square_perimeter(side_length):\n    return side_length * 4"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef square_perimeter(side_length):\n    return 4 * side_length\n```",
+        "repair_raw": "",
+        "code": "def square_perimeter(side_length):\n    return 4 * side_length"
+      }
+    },
+    {
+      "task_id": 18,
+      "prompt": "Write a function to remove characters from the first string which are present in the second string.",
+      "tests": [
+        "assert remove_dirty_chars(\"probasscurve\", \"pros\") == 'bacuve'",
+        "assert remove_dirty_chars(\"digitalindia\", \"talent\") == 'digiidi'",
+        "assert remove_dirty_chars(\"exoticmiles\", \"toxic\") == 'emles'"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef remove_dirty_chars(s, t):\n    return ''.join(c for c in s if c not in t)\n```",
+        "code": "def remove_dirty_chars(s, t):\n    return ''.join(c for c in s if c not in t)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef remove_dirty_chars(s, t):\n    return ''.join(c for c in s if c not in t)\n```",
+        "repair_raw": "",
+        "code": "def remove_dirty_chars(s, t):\n    return ''.join(c for c in s if c not in t)"
+      }
+    },
+    {
+      "task_id": 19,
+      "prompt": "Write a function to find whether a given array of integers contains any duplicate element.",
+      "tests": [
+        "assert test_duplicate(([1,2,3,4,5]))==False",
+        "assert test_duplicate(([1,2,3,4, 4]))==True",
+        "assert test_duplicate([1,1,2,2,3,3,4,4,5])==True"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef test_duplicate(arr):\n    return len(arr) != len(set(arr))\n```",
+        "code": "def test_duplicate(arr):\n    return len(arr) != len(set(arr))"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef test_duplicate(arr):\n    return len(arr) != len(set(arr))\n```",
+        "repair_raw": "",
+        "code": "def test_duplicate(arr):\n    return len(arr) != len(set(arr))"
+      }
+    },
+    {
+      "task_id": 20,
+      "prompt": "Write a function to check if the given number is woodball or not.",
+      "tests": [
+        "assert is_woodall(383) == True",
+        "assert is_woodall(254) == False",
+        "assert is_woodall(200) == False"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_p3xuwefv/candidate.py\", line 11, in <module>\n    assert is_woodall(383) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef is_woodall(n):\n    if n < 1:\n        return False\n    while n > 0:\n        digit = n % 10\n        n //= 10\n        if digit == 0 or (n - 1) // 9 != n / 10:\n            return False\n    return True\n```",
+        "code": "def is_woodall(n):\n    if n < 1:\n        return False\n    while n > 0:\n        digit = n % 10\n        n //= 10\n        if digit == 0 or (n - 1) // 9 != n / 10:\n            return False\n    return True"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_lv6thwqm/candidate.py\", line 4, in <module>\n    assert is_woodall(383) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_25g7q_0e/candidate.py\", line 5, in <module>\n    assert is_woodall(254) == False\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef is_woodall(n):\n    return n == sum(int(d) * 2 ** i for i, d in enumerate(reversed(str(n))) if d != '0')\n```",
+        "repair_raw": "```python\ndef is_woodall(n):\n    return n > 0 and sum(int(d) * 2 ** i for i, d in enumerate(reversed(str(n))) if d != '0') % 3 == 1\n```",
+        "code": "def is_woodall(n):\n    return n > 0 and sum(int(d) * 2 ** i for i, d in enumerate(reversed(str(n))) if d != '0') % 3 == 1"
+      }
+    },
+    {
+      "task_id": 56,
+      "prompt": "Write a python function to check if a given number is one less than twice its reverse.",
+      "tests": [
+        "assert check(70) == False",
+        "assert check(23) == False",
+        "assert check(73) == True"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_wk9j0ui_/candidate.py\", line 4, in <module>\n    assert check(70) == False\n           ^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef check(n):\n    return n + 1 != int(str(n)[::-1])\n```",
+        "code": "def check(n):\n    return n + 1 != int(str(n)[::-1])"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_9jxnasu_/candidate.py\", line 4, in <module>\n    assert check(70) == False\n           ^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_5ordn1rr/candidate.py\", line 4, in <module>\n    assert check(70) == False\n           ^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef check(n):\n    return n + 1 != int(str(n)[::-1])\n```",
+        "repair_raw": "```python\ndef check(n):\n    return n + 1 != int(str(n)[::-1])\n```",
+        "code": "def check(n):\n    return n + 1 != int(str(n)[::-1])"
+      }
+    },
+    {
+      "task_id": 57,
+      "prompt": "Write a python function to find the largest number that can be formed with the given list of digits.",
+      "tests": [
+        "assert find_Max_Num([1,2,3]) == 321",
+        "assert find_Max_Num([4,5,6,1]) == 6541",
+        "assert find_Max_Num([1,2,3,9]) == 9321"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef find_Max_Num(nums):\n    nums.sort(reverse=True)\n    return int(''.join(map(str, nums)))\n```",
+        "code": "def find_Max_Num(nums):\n    nums.sort(reverse=True)\n    return int(''.join(map(str, nums)))"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": true,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_s4dqsemy/candidate.py\", line 4, in <module>\n    assert find_Max_Num([1,2,3]) == 321\n           ~~~~~~~~~~~~^^^^^^^^^\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_s4dqsemy/candidate.py\", line 2, in find_Max_Num\n    return int(\"\".join(sorted(digits, reverse=True)))\n               ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: sequence item 0: expected str instance, int found\n"
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef find_Max_Num(digits):\n    return int(\"\".join(sorted(digits, reverse=True)))\n```",
+        "repair_raw": "```python\ndef find_Max_Num(digits):\n    return int(\"\".join(str(d) for d in sorted(digits, reverse=True)))\n```",
+        "code": "def find_Max_Num(digits):\n    return int(\"\".join(str(d) for d in sorted(digits, reverse=True)))"
+      }
+    },
+    {
+      "task_id": 58,
+      "prompt": "Write a python function to check whether the given two integers have opposite sign or not.",
+      "tests": [
+        "assert opposite_Signs(1,-2) == True",
+        "assert opposite_Signs(3,2) == False",
+        "assert opposite_Signs(-10,-10) == False"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef opposite_Signs(a, b):\n    return a * b < 0\n```",
+        "code": "def opposite_Signs(a, b):\n    return a * b < 0"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef opposite_Signs(a, b):\n    return a * b < 0\n```",
+        "repair_raw": "",
+        "code": "def opposite_Signs(a, b):\n    return a * b < 0"
+      }
+    },
+    {
+      "task_id": 59,
+      "prompt": "Write a function to find the nth octagonal number.",
+      "tests": [
+        "assert is_octagonal(5) == 65",
+        "assert is_octagonal(10) == 280",
+        "assert is_octagonal(15) == 645"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_mfg8qir4/candidate.py\", line 5, in <module>\n    assert is_octagonal(5) == 65\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef is_octagonal(n):\n    # Calculate the nth octagonal number using the formula: 3n^2 - 3n + 1\n    return 3 * n * n - 3 * n + 1\n```",
+        "code": "def is_octagonal(n):\n    # Calculate the nth octagonal number using the formula: 3n^2 - 3n + 1\n    return 3 * n * n - 3 * n + 1"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_jyzqw5io/candidate.py\", line 8, in <module>\n    assert is_octagonal(5) == 65\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_mmit_iy2/candidate.py\", line 8, in <module>\n    assert is_octagonal(5) == 65\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef is_octagonal(n):\n    # The formula to check if a number n is an octagonal number is derived from the equation:\n    # x = (sqrt(8*n + 1) - 1) / 2\n    # If x is an integer, then n is an octagonal number.\n    x = (n**0.5 - 1) / 2\n    return x.is_integer()\n```",
+        "repair_raw": "```python\ndef is_octagonal(n):\n    # The formula to check if a number n is an octagonal number is derived from the equation:\n    # x = (sqrt(8*n + 1) - 1) / 2\n    # If x is an integer, then n is an octagonal number.\n    x = ((8 * n + 1)**0.5 - 1) / 2\n    return x.is_integer()\n```",
+        "code": "def is_octagonal(n):\n    # The formula to check if a number n is an octagonal number is derived from the equation:\n    # x = (sqrt(8*n + 1) - 1) / 2\n    # If x is an integer, then n is an octagonal number.\n    x = ((8 * n + 1)**0.5 - 1) / 2\n    return x.is_integer()"
+      }
+    },
+    {
+      "task_id": 61,
+      "prompt": "Write a python function to count the number of substrings with the sum of digits equal to their length.",
+      "tests": [
+        "assert count_Substrings('112112') == 6",
+        "assert count_Substrings('111') == 6",
+        "assert count_Substrings('1101112') == 12"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_ibrak5g2/candidate.py\", line 12, in <module>\n    assert count_Substrings('112112') == 6\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef count_Substrings(s):\n    def is_valid(sub):\n        return sum(int(digit) for digit in sub) == len(sub)\n    \n    total = 0\n    for i in range(len(s)):\n        for j in range(i, len(s)+1):\n            if is_valid(s[i:j]):\n                total += 1\n    return total\n```",
+        "code": "def count_Substrings(s):\n    def is_valid(sub):\n        return sum(int(digit) for digit in sub) == len(sub)\n    \n    total = 0\n    for i in range(len(s)):\n        for j in range(i, len(s)+1):\n            if is_valid(s[i:j]):\n                total += 1\n    return total"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_v0rml8x2/candidate.py\", line 12, in <module>\n    assert count_Substrings('112112') == 6\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_kw1skgow/candidate.py\", line 12, in <module>\n    assert count_Substrings('112112') == 6\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef count_Substrings(s):\n    def is_valid(sub):\n        return sum(int(c) for c in sub) == len(sub)\n    \n    total = 0\n    for i in range(len(s)):\n        for j in range(i, len(s)+1):\n            if is_valid(s[i:j]):\n                total += 1\n    return total\n```",
+        "repair_raw": "```python\ndef count_Substrings(s):\n    def is_valid(sub):\n        return sum(int(c) for c in sub) == len(sub)\n\n    total = 0\n    for i in range(len(s)):\n        for j in range(i, len(s)+1):\n            if is_valid(s[i:j]):\n                total += 1\n    return total\n```",
+        "code": "def count_Substrings(s):\n    def is_valid(sub):\n        return sum(int(c) for c in sub) == len(sub)\n\n    total = 0\n    for i in range(len(s)):\n        for j in range(i, len(s)+1):\n            if is_valid(s[i:j]):\n                total += 1\n    return total"
+      }
+    },
+    {
+      "task_id": 62,
+      "prompt": "Write a python function to find smallest number in a list.",
+      "tests": [
+        "assert smallest_num([10, 20, 1, 45, 99]) == 1",
+        "assert smallest_num([1, 2, 3]) == 1",
+        "assert smallest_num([45, 46, 50, 60]) == 45"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef smallest_num(nums):\n    return min(nums)\n```",
+        "code": "def smallest_num(nums):\n    return min(nums)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef smallest_num(nums):\n    return min(nums)\n```",
+        "repair_raw": "",
+        "code": "def smallest_num(nums):\n    return min(nums)"
+      }
+    },
+    {
+      "task_id": 63,
+      "prompt": "Write a function to find the maximum difference between available pairs in the given tuple list.",
+      "tests": [
+        "assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7",
+        "assert max_difference([(4, 6), (2, 17), (9, 13), (11, 12)]) == 15",
+        "assert max_difference([(12, 35), (21, 27), (13, 23), (41, 22)]) == 23"
+      ],
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_wh4gnjvq/candidate.py\", line 13, in <module>\n    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef max_difference(tuples_list):\n    min_val = float('inf')\n    max_diff = 0\n    \n    for a, b in tuples_list:\n        if a < min_val:\n            min_val = a\n        elif (b - a) > max_diff:\n            max_diff = b - a\n            \n    return max_diff\n```",
+        "code": "def max_difference(tuples_list):\n    min_val = float('inf')\n    max_diff = 0\n    \n    for a, b in tuples_list:\n        if a < min_val:\n            min_val = a\n        elif (b - a) > max_diff:\n            max_diff = b - a\n            \n    return max_diff"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef max_difference(tuples_list):\n    return max(max(pair) - min(pair) for pair in tuples_list)\n```",
+        "repair_raw": "",
+        "code": "def max_difference(tuples_list):\n    return max(max(pair) - min(pair) for pair in tuples_list)"
+      }
+    },
+    {
+      "task_id": 64,
+      "prompt": "Write a function to sort a list of tuples using the second value of each tuple.",
+      "tests": [
+        "assert subject_marks([('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)])==[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]",
+        "assert subject_marks([('Telugu',49),('Hindhi',54),('Social',33)])==([('Social',33),('Telugu',49),('Hindhi',54)])",
+        "assert subject_marks([('Physics',96),('Chemistry',97),('Biology',45)])==([('Biology',45),('Physics',96),('Chemistry',97)])"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef subject_marks(subjects):\n    return sorted(subjects, key=lambda x: x[1])\n```",
+        "code": "def subject_marks(subjects):\n    return sorted(subjects, key=lambda x: x[1])"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef subject_marks(subjects):\n    return sorted(subjects, key=lambda x: x[1])\n```",
+        "repair_raw": "",
+        "code": "def subject_marks(subjects):\n    return sorted(subjects, key=lambda x: x[1])"
+      }
+    },
+    {
+      "task_id": 65,
+      "prompt": "Write a function to flatten a list and sum all of its elements.",
+      "tests": [
+        "assert recursive_list_sum(([1, 2, [3,4],[5,6]]))==21",
+        "assert recursive_list_sum(([7, 10, [15,14],[19,41]]))==106",
+        "assert recursive_list_sum(([10, 20, [30,40],[50,60]]))==210"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef recursive_list_sum(lst):\n    total = 0\n    for element in lst:\n        if isinstance(element, list):\n            total += recursive_list_sum(element)\n        else:\n            total += element\n    return total\n```",
+        "code": "def recursive_list_sum(lst):\n    total = 0\n    for element in lst:\n        if isinstance(element, list):\n            total += recursive_list_sum(element)\n        else:\n            total += element\n    return total"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef recursive_list_sum(lst):\n    return sum(item if isinstance(item, int) else recursive_list_sum(item) for item in lst)\n```",
+        "repair_raw": "",
+        "code": "def recursive_list_sum(lst):\n    return sum(item if isinstance(item, int) else recursive_list_sum(item) for item in lst)"
+      }
+    },
+    {
+      "task_id": 66,
+      "prompt": "Write a python function to count the number of positive numbers in a list.",
+      "tests": [
+        "assert pos_count([1,-2,3,-4]) == 2",
+        "assert pos_count([3,4,5,-1]) == 3",
+        "assert pos_count([1,2,3,4]) == 4"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef pos_count(nums):\n    return sum(1 for n in nums if n > 0)\n```",
+        "code": "def pos_count(nums):\n    return sum(1 for n in nums if n > 0)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef pos_count(nums):\n    return sum(1 for n in nums if n > 0)\n```",
+        "repair_raw": "",
+        "code": "def pos_count(nums):\n    return sum(1 for n in nums if n > 0)"
+      }
+    },
+    {
+      "task_id": 67,
+      "prompt": "Write a function to find the number of ways to partition a set of Bell numbers.",
+      "tests": [
+        "assert bell_number(2)==2",
+        "assert bell_number(10)==115975",
+        "assert bell_number(56)==6775685320645824322581483068371419745979053216268760300"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef bell_number(n):\n    if n == 0:\n        return 1\n    bell = [[0 for _ in range(n+1)] for _ in range(n+1)]\n    bell[0][0] = 1\n\n    for i in range(1, n+1):\n        bell[i][0] = bell[i-1][i-1]\n        for j in range(1, i+1):\n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]\n\n    return bell[n][0]\n```",
+        "code": "def bell_number(n):\n    if n == 0:\n        return 1\n    bell = [[0 for _ in range(n+1)] for _ in range(n+1)]\n    bell[0][0] = 1\n\n    for i in range(1, n+1):\n        bell[i][0] = bell[i-1][i-1]\n        for j in range(1, i+1):\n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]\n\n    return bell[n][0]"
+      },
+      "tris_architecture_on": {
+        "first_passed": false,
+        "final_passed": false,
+        "first_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_91izq50j/candidate.py\", line 18, in <module>\n    assert bell_number(2)==2\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_mbpp_o_jphwf1/candidate.py\", line 28, in <module>\n    assert bell_number(2)==2\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "```python\ndef bell_number(n):\n    if n == 0:\n        return 1\n    bell = [0] * (n + 1)\n    bell[0] = 1\n    \n    for i in range(1, n + 1):\n        for j in range(i):\n            bell[i] += bell[j] * binomial(n, j)\n        bell[i] *= factorial(i)\n    \n    return bell[n]\nfrom math import comb, factorial\n\ndef binomial(n, k):\n    return factorial(n) // (factorial(k) * factorial(n - k))\n```",
+        "repair_raw": "```python\ndef bell_number(n):\n    if n == 0:\n        return 1\n\n    bell = [0] * (n + 1)\n    bell[0] = 1\n\n    for i in range(1, n + 1):\n        for j in range(i):\n            bell[i] += bell[j] * comb(n, j)  # Corrected the binomial function call\n        bell[i] *= factorial(i)\n\n    return bell[n]\n\nfrom math import comb, factorial\n\ndef binomial(n, k):\n    return comb(n, k)  # Simplified the binomial function to directly use the comb function from math module\n\ndef factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result\n```\nNote: The `binomial` function was corrected to directly use the `comb` function from the `math` module. Additionally, a simplified version of the `factorial` function is provided as it's not necessary for this specific task and can be replaced with the built-in `math.factorial`.",
+        "code": "def bell_number(n):\n    if n == 0:\n        return 1\n\n    bell = [0] * (n + 1)\n    bell[0] = 1\n\n    for i in range(1, n + 1):\n        for j in range(i):\n            bell[i] += bell[j] * comb(n, j)  # Corrected the binomial function call\n        bell[i] *= factorial(i)\n\n    return bell[n]\n\nfrom math import comb, factorial\n\ndef binomial(n, k):\n    return comb(n, k)  # Simplified the binomial function to directly use the comb function from math module\n\ndef factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result"
+      }
+    },
+    {
+      "task_id": 68,
+      "prompt": "Write a python function to check whether the given array is monotonic or not.",
+      "tests": [
+        "assert is_Monotonic([6, 5, 4, 4]) == True",
+        "assert is_Monotonic([1, 2, 2, 3]) == True",
+        "assert is_Monotonic([1, 3, 2]) == False"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef is_Monotonic(nums):\n    return nums == sorted(nums) or nums == sorted(nums, reverse=True)\n```",
+        "code": "def is_Monotonic(nums):\n    return nums == sorted(nums) or nums == sorted(nums, reverse=True)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef is_Monotonic(arr):\n    return arr == sorted(arr) or arr == sorted(arr, reverse=True)\n```",
+        "repair_raw": "",
+        "code": "def is_Monotonic(arr):\n    return arr == sorted(arr) or arr == sorted(arr, reverse=True)"
+      }
+    }
+  ]
+}

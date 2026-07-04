@@ -42,7 +42,7 @@ VOICE_SPEED = 1.0
 VOICE_GAIN = 10 ** (1.8 / 20.0)
 MUSIC_GAIN = 0.15
 
-OUT_BASE = "USE_THIS_QWEN_TRIS_MEMORYAGENT_COMMERCIAL_2026-07-03_v07_MIRROR_LAYER_SSP_CLARITY"
+OUT_BASE = "USE_THIS_QWEN_TRIS_MEMORYAGENT_COMMERCIAL_2026-07-03_v09_HERMES_QWEN_SAME_PACKET_RESULT"
 OUT_VIDEO = OUT_DIR / f"{OUT_BASE}.mp4"
 OUT_AUDIO = OUT_DIR / f"{OUT_BASE}_AUDIO_MIX.wav"
 OUT_VOICE = OUT_DIR / f"{OUT_BASE}_VOICE.wav"
@@ -259,6 +259,51 @@ def draw_bridge(scene: Scene) -> Image.Image:
     return img
 
 
+def draw_side_by_side(scene: Scene) -> Image.Image:
+    img = base_bg()
+    draw = ImageDraw.Draw(img)
+    header(draw)
+    draw.text((86, 108), scene.title, font=F_H1, fill=WHITE)
+    wrapped(draw, (92, 186), scene.subtitle, F_BODY, MUTED, max_width=1130)
+
+    left = (105, 340, 860, 694)
+    right = (1060, 340, 1815, 694)
+    panel(draw, left, radius=18, outline=QWEN_PURPLE)
+    panel(draw, right, radius=18, outline=QWEN_CYAN)
+    draw.text((145, 382), "HERMES TRIS", font=F_H2, fill=QWEN_PURPLE)
+    draw.text((1100, 382), "QWEN TRIS", font=F_H2, fill=QWEN_CYAN)
+    draw.text((145, 438), "operator lane", font=F_H3, fill=WHITE)
+    draw.text((1100, 438), "memory lane", font=F_H3, fill=WHITE)
+
+    left_rows = [
+        "Hermes / Nemo route",
+        "chat, Telegram, browser, outreach",
+        "coding work and saved receipts",
+        "Stripe and review gates",
+    ]
+    right_rows = [
+        "Qwen Cloud MemoryAgent route",
+        "Mirror Layer routing + SSP",
+        "SQLite, JSONL, RAG memory rails",
+        "LongBench / Qasper receipts",
+    ]
+    for i, text in enumerate(left_rows):
+        y = 506 + i * 40
+        draw.rectangle((148, y + 9, 162, y + 23), fill=QWEN_PURPLE)
+        wrapped(draw, (178, y), text, F_SMALL, MUTED, max_width=610)
+    for i, text in enumerate(right_rows):
+        y = 506 + i * 40
+        draw.rectangle((1103, y + 9, 1117, y + 23), fill=QWEN_CYAN)
+        wrapped(draw, (1133, y), text, F_SMALL, MUTED, max_width=610)
+
+    draw.line((892, 520, 1028, 520), fill=GOLD, width=5)
+    draw.polygon([(1028, 520), (1008, 506), (1008, 534)], fill=GOLD)
+    wrapped(draw, (820, 570), "same Mirror Architecture spine", F_H3, GOLD, max_width=280, center=True)
+    wrapped(draw, (768, 658), "same-packet result: both Tris lanes 20/20; baselines 1/20 and 0/20", F_SMALL, WHITE, max_width=390, center=True)
+    caption_band(img, scene.narration)
+    return img
+
+
 def draw_stack(scene: Scene) -> Image.Image:
     img = base_bg()
     draw = ImageDraw.Draw(img)
@@ -451,11 +496,11 @@ SCENES = [
         8.2,
     ),
     Scene(
-        "From Tris to Qwen Tris.",
-        "The Hermes contest build gave us the operator. This version asks how far memory can carry it.",
-        "The Hermes build gave us the operator: chat, source checks, outreach, coding work, Stripe gates, and saved receipts. Qwen Tris keeps that shape and asks one question: can memory make it better?",
-        "bridge",
-        11.5,
+        "Hermes Tris -> Qwen Tris.",
+        "Same source packet. Same scorer. Different model family.",
+        "We ran the equal comparison first. Local OpenHermes and local Qwen took the same seven source-backed tasks. Baseline lanes had no source packet. Both Tris architecture-on lanes recovered twenty out of twenty required facts.",
+        "side_by_side",
+        12.4,
     ),
     Scene(
         "The stack is running.",
@@ -516,7 +561,7 @@ SCENES = [
     Scene(
         "Why this matters.",
         "The claim is not leaderboard theater. It is model-agnostic memory discipline.",
-        "The point is not one lucky prompt. The point is that the same method moved from Hermes and Nemo into Qwen, and the receipts still improved against the baseline.",
+        "The point is not one lucky prompt. The same source packet lifted both local OpenHermes Tris and local Qwen Tris to clean exact-fact recall while the prompt-only baselines stayed near zero.",
         "bridge",
         11.6,
     ),
@@ -555,6 +600,7 @@ def render_scene(scene: Scene) -> Image.Image:
     return {
         "open": draw_open,
         "bridge": draw_bridge,
+        "side_by_side": draw_side_by_side,
         "stack": draw_stack,
         "conditions": draw_conditions,
         "500": draw_500,
@@ -704,9 +750,10 @@ def write_docs(duration: float, sample_rate: int) -> None:
 
         Qwen Tris Recall is the Qwen Cloud memory build of the RFL Trismegistus stack.
 
-        The commercial shows the bridge from Tris into Qwen Tris: the Hermes/Nemo-era operator spine, SQLite memory, JSONL audit receipts, RAG retrieval, Mirror Layer interaction-state routing, measured SSP, hosted Qwen Cloud route, live UI screenshots, and public benchmark receipts.
+        The commercial shows Hermes Tris versus Qwen Tris side by side: the Hermes/Nemo-era operator spine, the Qwen Cloud memory route, SQLite memory, JSONL audit receipts, RAG retrieval, Mirror Layer interaction-state routing, measured SSP, live UI screenshots, same-packet model-family comparison, and public benchmark receipts.
 
         Public-safe receipts highlighted:
+        - Same-packet local comparison: OpenHermes Tris 20/20 and Qwen Tris 20/20 exact facts on the same seven source-backed tasks; prompt-only baselines 1/20 and 0/20.
         - Hosted Qwen Cloud 500-turn run: 500/500 turns, 2168/2168 checks, zero prompt spills, zero raw receipt spills.
         - LongBench-E offset 0: +0.092 architecture-on delta across 299 scored rows.
         - Held-out LongBench-E offset 50: +0.110 architecture-on delta across 299 scored rows.
@@ -714,7 +761,7 @@ def write_docs(duration: float, sample_rate: int) -> None:
 
         Track: Qwen Cloud MemoryAgent.
 
-        Boundary: this is not an official leaderboard claim. It is a public-safe demo and receipt package showing baseline Qwen versus Qwen Tris architecture-on memory discipline. Alibaba Cloud backend deployment recording remains the next submission gate.
+        Boundary: this is not an official leaderboard claim. It is a public-safe demo and receipt package showing the model-agnostic same-packet result: whether the same Mirror Architecture spine improves source-backed recall across model families. Alibaba Cloud backend deployment recording remains the next submission gate.
         """
     )
     OUT_CAPTION.write_text(caption, encoding="utf-8")

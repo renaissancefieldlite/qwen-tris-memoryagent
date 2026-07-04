@@ -1,0 +1,30 @@
+{
+  "api_base": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+  "api_key_loaded": true,
+  "architecture_file": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/docs/ARCHITECTURE.md",
+  "created_at_utc": "2026-07-04T15:16:01+00:00",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
+  "latency_seconds": 1.47,
+  "model": "qwen-plus",
+  "model_response": "This request has reached Qwen Cloud for the Qwen Tris MemoryAgent proof clip.",
+  "source_file": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/src/qwen_agent_buildout/trini_recall/alibaba_qwen_cloud_client.py",
+  "submission_packet": "/Volumes/Samsung SSD 990 2TB/Playground/qwen_trismegistus_memoryagent_2026-06-30/docs/QWEN_TRIS_PUBLIC_SUBMISSION_PACKET_2026-07-01.md",
+  "tris_evidence_ids": [
+    "mirror_architecture_source_pack_read",
+    "c5b_iter30_support_read"
+  ],
+  "tris_latency_seconds": 7.1,
+  "tris_model": "qwen-plus",
+  "tris_prompt_type": "architecture_on_stable_state_packet",
+  "tris_proof_db": "/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_cloud_agent_proof.sqlite3",
+  "tris_provider": "QwenCloudProvider",
+  "tris_response_excerpt": "Target row:   Recall factors used:   Exact facts: Qwen Tris Recall is operating through Qwen Cloud via the hosted `qwen-plus` model, activated by presence of `QWEN_API_KEY` in the local environment. It runs the Mirror Architecture\u2019s Stable-State Path (SSP), grounded in the public Source Pack \u2014 including Mirror Interface / LSPS, Source Mirror Pattern, Universal Data Pattern, and Nest 0\u20135 \u2014 with memory execution anchored to Golden Mirror surfaces and measured state-path evidence. The current stable-state behavior is governed by C5b iter30 (tail-guard full100 rerun7), a full-prompt-context late8 MLX LoRA adapter route validated against architecture-off Hermes with zero evidence failures and eliminated drift.    Boundary: C5b is internal support for observable research-partner behavior improvement only; it does not prove AGI, sentience, clinical efficacy, or raw-generator cleanliness. Privat",
+  "tris_retrieval_ids": [
+    "qwen_tris_identity",
+    "c5b_public_boundary",
+    "mirror_architecture_source_pack",
+    "trini_research_identity",
+    "c5b_iter_stack_profile",
+    "qwen_credit_gate"
+  ]
+}

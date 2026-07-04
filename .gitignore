@@ -19,6 +19,7 @@ __pycache__/
 venv/
 dist/
 build/
+*.egg-info/
 data/runtime/
 outputs/
 captures/

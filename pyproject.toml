@@ -14,6 +14,9 @@ dependencies = [
 dev = [
     "pytest>=8.0",
 ]
+eval = [
+    "datasets>=4.0",
+]
 audio = [
     "av",
     "faster-whisper",

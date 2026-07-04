@@ -1,0 +1,281 @@
+{
+  "run_id": "qwen_tris_humaneval_reflexion_slice_20260704T041216Z",
+  "created_utc": "2026-07-04T04:12:16Z",
+  "dataset": "openai/openai_humaneval",
+  "split": "test",
+  "model": "qwen2.5:3b",
+  "offset": 0,
+  "limit": 10,
+  "rows": [
+    {
+      "task_id": "HumanEval/0",
+      "entry_point": "has_close_elements",
+      "prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nfrom typing import List\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    numbers.sort()\n    for i in range(len(numbers) - 1):\n        if abs(numbers[i] - numbers[i + 1]) < threshold:\n            return True\n    return False\n```\n\nThis solution sorts the list of numbers first, which allows us to easily check adjacent elements. Then it iterates through the sorted list and checks if any two consecutive numbers are closer than the given threshold. If such a pair is found, it returns `True`. Otherwise, after checking all pairs, it returns `False`.",
+        "code": "from typing import List\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    numbers.sort()\n    for i in range(len(numbers) - 1):\n        if abs(numbers[i] - numbers[i + 1]) < threshold:\n            return True\n    return False"
+      },
+      "tris_architecture_on": {
+        "final_passed": true,
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "repair_raw": "",
+        "code": "from typing import List\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    numbers.sort()\n    for i in range(len(numbers) - 1):\n        if abs(numbers[i] - numbers[i + 1]) < threshold:\n            return True\n    return False"
+      }
+    },
+    {
+      "task_id": "HumanEval/1",
+      "entry_point": "separate_paren_groups",
+      "prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_humaneval_distafpx/candidate.py\", line 29, in <module>\n    assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "To solve this problem, we need to identify groups of balanced parentheses. We can use a stack-based approach to track open and close parentheses. Here's the complete Python code:\n\n```python\nfrom typing import List\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    def is_balanced(s):\n        stack = []\n        for char in s:\n            if char == '(':\n                stack.append(char)\n            elif char == ')':\n                if not stack:\n                    return False\n                stack.pop()\n        return len(stack) == 0\n\n    groups = []\n    current_group = ''\n    for char in paren_string.replace(' ', ''):\n        if char == '(' and is_balanced(current_group):\n            groups.append(current_group)\n            current_group = char\n        else:\n            current_group += char\n    if current_group:\n        groups.append(current_group)\n\n    return groups\n\n# Test cases to verify the solution\nassert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']\nassert separate_paren_groups('((()))()') == ['((()))', '()', '()']\nassert separate_paren_groups('() (()) (((())))') == ['()', '(())', '((()))']\nprint(\"All tests passed.\")\n```\n\nThis solution defines a helper function `is_balanced` to check if the current group of parentheses is balanced. The main function iterates through each character in the input string, building up groups of balanced parentheses and appending them to the result list when they are fully formed.",
+        "code": "from typing import List\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    def is_balanced(s):\n        stack = []\n        for char in s:\n            if char == '(':\n                stack.append(char)\n            elif char == ')':\n                if not stack:\n                    return False\n                stack.pop()\n        return len(stack) == 0\n\n    groups = []\n    current_group = ''\n    for char in paren_string.replace(' ', ''):\n        if char == '(' and is_balanced(current_group):\n            groups.append(current_group)\n            current_group = char\n        else:\n            current_group += char\n    if current_group:\n        groups.append(current_group)\n\n    return groups\n\n# Test cases to verify the solution\nassert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']\nassert separate_paren_groups('((()))()') == ['((()))', '()', '()']\nassert separate_paren_groups('() (()) (((())))') == ['()', '(())', '((()))']\nprint(\"All tests passed.\")"
+      },
+      "tris_architecture_on": {
+        "final_passed": false,
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_humaneval_jgfue2jw/candidate.py\", line 30, in <module>\n    assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "repair_raw": "```python\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    def is_balanced(s):\n        stack = []\n        for char in s:\n            if char == '(':\n                stack.append(char)\n            elif char == ')':\n                if not stack:\n                    return False\n                stack.pop()\n        return len(stack) == 0\n\n    groups = []\n    current_group = ''\n    for char in paren_string.replace(' ', ''):\n        if char == '(' and is_balanced(current_group):\n            groups.append(current_group)\n            current_group = char\n        else:\n            current_group += char\n    if current_group:\n        groups.append(current_group)\n\n    return groups\n\n# Test cases to verify the solution\nassert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']\nassert separate_paren_groups('((()))()') == ['((()))', '()', '()']\nassert separate_paren_groups('() (()) (((())))') == ['()', '(())', '((()))']\nprint(\"All tests passed.\")\n```\n\nThe original code had a test failure because the `is_balanced` function was not correctly checking if the current group is balanced before appending it to the result list. The fix involves ensuring that only fully balanced groups are added to the `groups` list. Here's the corrected version of the code:\n\n```python\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    def is_balanced(s):\n        stack = []\n        for char in s:\n            if char == '(':\n                stack.append(char)\n            elif char == ')':\n                if not stack:\n                    return False\n                stack.pop()\n        return len(stack) == 0\n\n    groups = []\n    current_group = ''\n    for char in paren_string.replace(' ', ''):\n        if char == '(' and is_balanced(current_group):\n            groups.append(current_group)\n            current_group = char\n        else:\n            current_group += char\n    if current_group:\n        groups.append(current_group)\n\n    return groups\n\n# Test cases to verify the solution\nassert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']\nassert separate_paren_groups('((()))()') == ['((()))', '()', '()']\nassert separate_paren_groups('() (()) (((())))') == ['()', '(())', '((())]')\nprint(\"All tests passed.\")\n```",
+        "code": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    def is_balanced(s):\n        stack = []\n        for char in s:\n            if char == '(':\n                stack.append(char)\n            elif char == ')':\n                if not stack:\n                    return False\n                stack.pop()\n        return len(stack) == 0\n\n    groups = []\n    current_group = ''\n    for char in paren_string.replace(' ', ''):\n        if char == '(' and is_balanced(current_group):\n            groups.append(current_group)\n            current_group = char\n        else:\n            current_group += char\n    if current_group:\n        groups.append(current_group)\n\n    return groups\n\n# Test cases to verify the solution\nassert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']\nassert separate_paren_groups('((()))()') == ['((()))', '()', '()']\nassert separate_paren_groups('() (()) (((())))') == ['()', '(())', '((()))']\nprint(\"All tests passed.\")"
+      }
+    },
+    {
+      "task_id": "HumanEval/2",
+      "entry_point": "truncate_number",
+      "prompt": "\n\ndef truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    >>> truncate_number(3.5)\n    0.5\n    \"\"\"\n",
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_humaneval_pc73tusg/candidate.py\", line 18, in <module>\n    assert truncate_number(12.9876) == 0.9876\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "To solve this problem, we need to extract the decimal part from a floating-point number. The decimal part can be obtained by subtracting the integer part (which is always less than or equal to the given number) from the original number.\n\nHere's how you could implement it:\n\n```python\ndef truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    \"\"\"\n    # Get the integer part by using floor division\n    integer_part = int(number)\n    \n    # Subtract the integer part from the original number to get the decimal part\n    decimal_part = number - integer_part\n    \n    return decimal_part\n\n# Test cases\nassert truncate_number(3.5) == 0.5\nassert truncate_number(12.9876) == 0.9876\n```\n\nIn this solution, we use the `int` function to get the largest integer less than or equal to the given number (the integer part). Then, by subtracting this from the original number, we obtain its decimal part.",
+        "code": "def truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    \"\"\"\n    # Get the integer part by using floor division\n    integer_part = int(number)\n    \n    # Subtract the integer part from the original number to get the decimal part\n    decimal_part = number - integer_part\n    \n    return decimal_part\n\n# Test cases\nassert truncate_number(3.5) == 0.5\nassert truncate_number(12.9876) == 0.9876"
+      },
+      "tris_architecture_on": {
+        "final_passed": false,
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_humaneval_gjo64n8p/candidate.py\", line 18, in <module>\n    assert truncate_number(12.9876) == 0.9876\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "repair_raw": "```python\ndef truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    \"\"\"\n    # Get the integer part by using floor division\n    integer_part = int(number)\n\n    # Subtract the integer part from the original number to get the decimal part\n    decimal_part = number - integer_part\n\n    return decimal_part\n\n# Test cases\nassert truncate_number(3.5) == 0.5\nassert truncate_number(12.9876) == 0.9876\n```",
+        "code": "def truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    \"\"\"\n    # Get the integer part by using floor division\n    integer_part = int(number)\n\n    # Subtract the integer part from the original number to get the decimal part\n    decimal_part = number - integer_part\n\n    return decimal_part\n\n# Test cases\nassert truncate_number(3.5) == 0.5\nassert truncate_number(12.9876) == 0.9876"
+      }
+    },
+    {
+      "task_id": "HumanEval/3",
+      "entry_point": "below_zero",
+      "prompt": "from typing import List\n\n\ndef below_zero(operations: List[int]) -> bool:\n    \"\"\" You're given a list of deposit and withdrawal operations on a bank account that starts with\n    zero balance. Your task is to detect if at any point the balance of account fallls below zero, and\n    at that point function should return True. Otherwise it should return False.\n    >>> below_zero([1, 2, 3])\n    False\n    >>> below_zero([1, 2, -4, 5])\n    True\n    \"\"\"\n",
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nfrom typing import List\n\ndef below_zero(operations: List[int]) -> bool:\n    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False\n```\n\nThis solution iterates through the list of deposit and withdrawal operations. It maintains a running balance starting from zero. If at any point the balance falls below zero, it immediately returns `True`. Otherwise, after processing all operations, it returns `False` if no such point exists.",
+        "code": "from typing import List\n\ndef below_zero(operations: List[int]) -> bool:\n    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False"
+      },
+      "tris_architecture_on": {
+        "final_passed": true,
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "repair_raw": "",
+        "code": "from typing import List\n\ndef below_zero(operations: List[int]) -> bool:\n    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False"
+      }
+    },
+    {
+      "task_id": "HumanEval/4",
+      "entry_point": "mean_absolute_deviation",
+      "prompt": "from typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"\n",
+      "baseline": {
+        "passed": false,
+        "result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_humaneval_fsll3zv8/candidate.py\", line 21, in <module>\n    assert abs(mean_absolute_deviation([-1.0, 2.0, 3.5, 4.0]) - 1.75) < 1e-9\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "raw": "To solve the problem of calculating the Mean Absolute Deviation (MAD) for a given list of numbers, we need to follow these steps:\n\n1. Calculate the mean of the input list.\n2. Compute the absolute difference between each number and the mean.\n3. Find the average of these differences.\n\nHere is the complete Python code that implements this logic:\n\n```python\nfrom typing import List\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    \"\"\"\n    \n    if not numbers:\n        return 0.0\n    \n    # Calculate the mean of the numbers\n    mean = sum(numbers) / len(numbers)\n    \n    # Compute the absolute differences and their average\n    mad = sum(abs(x - mean) for x in numbers) / len(numbers)\n    \n    return mad\n\n# Test cases to verify the solution\nassert abs(mean_absolute_deviation([1.0, 2.0, 3.0, 4.0]) - 1.0) < 1e-9\nassert abs(mean_absolute_deviation([-1.0, 2.0, 3.5, 4.0]) - 1.75) < 1e-9\nassert abs(mean_absolute_deviation([1.0, 1.0, 1.0, 1.0]) - 0.0) < 1e-9\n```\n\n### Explanation:\n- **Mean Calculation**: The mean is calculated by summing all the numbers and dividing by their count.\n- **Absolute Differences**: For each number in the list, we compute its absolute difference from the mean.\n- **Average of Absolute Differences**: Finally, we take the average of these differences to get the Mean Absolute Deviation.\n\nThe provided test cases ensure that the function works correctly for different inputs.",
+        "code": "from typing import List\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    \"\"\"\n    \n    if not numbers:\n        return 0.0\n    \n    # Calculate the mean of the numbers\n    mean = sum(numbers) / len(numbers)\n    \n    # Compute the absolute differences and their average\n    mad = sum(abs(x - mean) for x in numbers) / len(numbers)\n    \n    return mad\n\n# Test cases to verify the solution\nassert abs(mean_absolute_deviation([1.0, 2.0, 3.0, 4.0]) - 1.0) < 1e-9\nassert abs(mean_absolute_deviation([-1.0, 2.0, 3.5, 4.0]) - 1.75) < 1e-9\nassert abs(mean_absolute_deviation([1.0, 1.0, 1.0, 1.0]) - 0.0) < 1e-9"
+      },
+      "tris_architecture_on": {
+        "final_passed": false,
+        "final_result": {
+          "passed": false,
+          "reason": "test_failure",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/var/folders/yz/zrzkrf8x0x70l0zzxg0ml2cw0000gn/T/qwen_tris_humaneval_z7jw36mm/candidate.py\", line 22, in <module>\n    assert abs(mean_absolute_deviation([-1.0, 2.0, 3.5, 4.0]) - 1.75) < 1e-9\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "repair_raw": "```python\nfrom typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    \"\"\"\n\n    if not numbers:\n        return 0.0\n\n    # Calculate the mean of the numbers\n    mean = sum(numbers) / len(numbers)\n\n    # Compute the absolute differences and their average\n    mad = sum(abs(x - mean) for x in numbers) / len(numbers)\n\n    return mad\n\n# Test cases to verify the solution\nassert abs(mean_absolute_deviation([1.0, 2.0, 3.0, 4.0]) - 1.0) < 1e-9\nassert abs(mean_absolute_deviation([-1.0, 2.0, 3.5, 4.0]) - 1.75) < 1e-9\nassert abs(mean_absolute_deviation([1.0, 1.0, 1.0, 1.0]) - 0.0) < 1e-9\n```",
+        "code": "from typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    \"\"\"\n\n    if not numbers:\n        return 0.0\n\n    # Calculate the mean of the numbers\n    mean = sum(numbers) / len(numbers)\n\n    # Compute the absolute differences and their average\n    mad = sum(abs(x - mean) for x in numbers) / len(numbers)\n\n    return mad\n\n# Test cases to verify the solution\nassert abs(mean_absolute_deviation([1.0, 2.0, 3.0, 4.0]) - 1.0) < 1e-9\nassert abs(mean_absolute_deviation([-1.0, 2.0, 3.5, 4.0]) - 1.75) < 1e-9\nassert abs(mean_absolute_deviation([1.0, 1.0, 1.0, 1.0]) - 0.0) < 1e-9"
+      }
+    },
+    {
+      "task_id": "HumanEval/5",
+      "entry_point": "intersperse",
+      "prompt": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    \n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n            \n    return result\n```",
+        "code": "from typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    \n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n            \n    return result"
+      },
+      "tris_architecture_on": {
+        "final_passed": true,
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "repair_raw": "",
+        "code": "from typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    \n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n            \n    return result"
+      }
+    },
+    {
+      "task_id": "HumanEval/6",
+      "entry_point": "parse_nested_parens",
+      "prompt": "from typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> parse_nested_parens('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n",
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    def depth_counter(s):\n        stack = []\n        max_depth = -1\n        current_depth = 0\n        for char in s:\n            if char == '(':\n                stack.append('(')\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                stack.pop()\n                current_depth -= 1\n        return max_depth\n\n    groups = paren_string.split(' ')\n    result = []\n    for group in groups:\n        result.append(depth_counter(group))\n    return result\n```\n\nThis solution defines a helper function `depth_counter` to calculate the maximum depth of nested parentheses within each string. The main function then splits the input string by spaces, processes each group using the helper function, and returns the results as a list.",
+        "code": "from typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    def depth_counter(s):\n        stack = []\n        max_depth = -1\n        current_depth = 0\n        for char in s:\n            if char == '(':\n                stack.append('(')\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                stack.pop()\n                current_depth -= 1\n        return max_depth\n\n    groups = paren_string.split(' ')\n    result = []\n    for group in groups:\n        result.append(depth_counter(group))\n    return result"
+      },
+      "tris_architecture_on": {
+        "final_passed": true,
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "repair_raw": "",
+        "code": "from typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    def depth_counter(s):\n        stack = []\n        max_depth = -1\n        current_depth = 0\n        for char in s:\n            if char == '(':\n                stack.append('(')\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                stack.pop()\n                current_depth -= 1\n        return max_depth\n\n    groups = paren_string.split(' ')\n    result = []\n    for group in groups:\n        result.append(depth_counter(group))\n    return result"
+      }
+    },
+    {
+      "task_id": "HumanEval/7",
+      "entry_point": "filter_by_substring",
+      "prompt": "from typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n",
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nfrom typing import List\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring \"\"\"\n    return [s for s in strings if substring in s]\n```\n\nThis solution uses a list comprehension to iterate through the `strings` list and includes only those elements (`s`) which contain the `substring`. It passes all provided test cases:\n\n```python\nassert filter_by_substring([], 'a') == []\nassert filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a') == ['abc', 'bacd', 'array']\n```",
+        "code": "from typing import List\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring \"\"\"\n    return [s for s in strings if substring in s]"
+      },
+      "tris_architecture_on": {
+        "final_passed": true,
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "repair_raw": "",
+        "code": "from typing import List\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring \"\"\"\n    return [s for s in strings if substring in s]"
+      }
+    },
+    {
+      "task_id": "HumanEval/8",
+      "entry_point": "sum_product",
+      "prompt": "from typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\n",
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nfrom typing import List, Tuple\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    if not numbers:\n        return (0, 1)\n\n    total_sum = sum(numbers)\n    total_product = 1\n    for num in numbers:\n        total_product *= num\n\n    return (total_sum, total_product)\n```",
+        "code": "from typing import List, Tuple\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    if not numbers:\n        return (0, 1)\n\n    total_sum = sum(numbers)\n    total_product = 1\n    for num in numbers:\n        total_product *= num\n\n    return (total_sum, total_product)"
+      },
+      "tris_architecture_on": {
+        "final_passed": true,
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "repair_raw": "",
+        "code": "from typing import List, Tuple\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    if not numbers:\n        return (0, 1)\n\n    total_sum = sum(numbers)\n    total_product = 1\n    for num in numbers:\n        total_product *= num\n\n    return (total_sum, total_product)"
+      }
+    },
+    {
+      "task_id": "HumanEval/9",
+      "entry_point": "rolling_max",
+      "prompt": "from typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n",
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "To solve this problem, we need to create a function `rolling_max` that takes a list of integers and returns a new list where each element is the maximum value found up until that index in the original list. Here's how you can implement it:\n\n```python\nfrom typing import List\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\"\n    From a given list of integers, generate a list of rolling maximum elements found until the current moment.\n    \n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n    if not numbers:\n        return []\n    \n    result = [numbers[0]]\n    for i in range(1, len(numbers)):\n        result.append(max(result[-1], numbers[i]))\n    return result\n```\n\nThis solution works as follows:\n\n- We first check if the input list is empty. If it is, we immediately return an empty list.\n- We initialize a `result` list with the first element of the input list since that's the maximum up to the current moment (which is just the first element).\n- For each subsequent element in the input list:\n  - We append the maximum value between the last element in our result list and the current number from the input list.\n  \nThis ensures that at any point, `result` contains the largest number seen so far. The function then returns this modified list.\n\nLet's verify it with some test cases:\n\n```python\n# Test cases to ensure correctness of the solution\nassert rolling_max([1, 2, 3, 2, 3, 4, 2]) == [1, 2, 3, 3, 3, 4, 4]\nassert rolling_max([5, 4, 3, 2, 1]) == [5, 5, 5, 5, 5]\nassert rolling_max([]) == []\nassert rolling_max([-1, -2, -3, -4, -5]) == [-1, -1, -1, -1, -1]\n\nprint(\"All tests passed.\")\n```\n\nRunning these test cases will confirm that the function works as expected.",
+        "code": "from typing import List\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\"\n    From a given list of integers, generate a list of rolling maximum elements found until the current moment.\n    \n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n    if not numbers:\n        return []\n    \n    result = [numbers[0]]\n    for i in range(1, len(numbers)):\n        result.append(max(result[-1], numbers[i]))\n    return result"
+      },
+      "tris_architecture_on": {
+        "final_passed": true,
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "repair_raw": "",
+        "code": "from typing import List\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\"\n    From a given list of integers, generate a list of rolling maximum elements found until the current moment.\n    \n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n    if not numbers:\n        return []\n    \n    result = [numbers[0]]\n    for i in range(1, len(numbers)):\n        result.append(max(result[-1], numbers[i]))\n    return result"
+      }
+    }
+  ]
+}

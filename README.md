@@ -82,6 +82,17 @@ http://127.0.0.1:9471/
 python3 -m pytest tests
 ```
 
+## Run Reflexion-Adjacent Coding Slices
+
+These are local public-benchmark slices for comparison framing. They are not
+official leaderboard submissions.
+
+```bash
+python3 -m pip install -e ".[eval]"
+python3 scripts/run_mbpp_reflexion_slice.py --model qwen2.5:3b --offset 0 --limit 50
+python3 scripts/run_humaneval_reflexion_slice.py --model qwen2.5:3b --offset 0 --limit 10
+```
+
 The app can run with local fallback routes, but the hosted submission proof uses
 Qwen Cloud through Alibaba Cloud Model Studio:
 
@@ -166,6 +177,10 @@ data/memory_iteration_runs/qwen_tris_three_condition_iterations_20260701T054449Z
 
 Second hosted Qwen model slice:
 data/memory_iteration_runs/qwen_tris_three_condition_iterations_20260701T070452Z.md
+
+Alibaba/Qwen proof clip showing Qwen Cloud running Qwen Tris:
+docs/qwen_cloud_deployment_proof/USE_THIS_ALIBABA_QWEN_CLOUD_PROOF_2026-07-04_v02_RUNNING_TRIS.mp4
+docs/qwen_cloud_deployment_proof/USE_THIS_ALIBABA_QWEN_CLOUD_PROOF_2026-07-04_v02_RUNNING_TRIS_RECEIPT.md
 ```
 
 Current hosted result:
@@ -285,6 +300,14 @@ Qwen Cloud console proof:
 docs/qwen_cloud_deployment_proof/qwen_cloud_free_tier_active_20260701T040738Z.png
 ```
 
+Alibaba/Qwen running-Tris proof:
+
+```text
+docs/qwen_cloud_deployment_proof/USE_THIS_ALIBABA_QWEN_CLOUD_PROOF_2026-07-04_v02_RUNNING_TRIS.mp4
+docs/qwen_cloud_deployment_proof/USE_THIS_ALIBABA_QWEN_CLOUD_PROOF_2026-07-04_v02_RUNNING_TRIS_RECEIPT.md
+docs/qwen_cloud_deployment_proof/USE_THIS_ALIBABA_QWEN_CLOUD_PROOF_2026-07-04_v02_RUNNING_TRIS_CONTACT_SHEET.jpg
+```
+
 Live Qwen Tris UI:
 
 ```text
@@ -324,7 +347,8 @@ state-path refinement spine:
   prompt spills, zero raw receipt spills.
 - Current support level: Stable-State Path / architecture evidence,
   long-session engineering receipts, and benchmark scaffolding. External
-  deployment and leaderboard rows attach when their independent receipts land.
+  hosted-container deployment and leaderboard rows attach when their independent
+  receipts land.
 
 IP boundary:
 

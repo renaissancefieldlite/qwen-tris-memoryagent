@@ -1,0 +1,206 @@
+{
+  "run_id": "qwen_tris_mbpp_reflexion_slice_20260704T032927Z",
+  "created_utc": "2026-07-04T03:29:40Z",
+  "dataset": "google-research-datasets/mbpp: sanitized",
+  "split": "test",
+  "model": "qwen2.5:3b",
+  "offset": 0,
+  "limit": 5,
+  "rows": [
+    {
+      "task_id": 11,
+      "prompt": "Write a python function to remove first and last occurrence of a given character from the string.",
+      "tests": [
+        "assert remove_Occ(\"hello\",\"l\") == \"heo\"",
+        "assert remove_Occ(\"abcda\",\"a\") == \"bcd\"",
+        "assert remove_Occ(\"PHP\",\"P\") == \"H\""
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef remove_Occ(s, c):\n    return s.replace(c, '', 1).replace(c, '')\n```",
+        "code": "def remove_Occ(s, c):\n    return s.replace(c, '', 1).replace(c, '')"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef remove_Occ(s, c):\n    return s.replace(c, '', 1).replace(c, '', 1)\n```",
+        "repair_raw": "",
+        "code": "def remove_Occ(s, c):\n    return s.replace(c, '', 1).replace(c, '', 1)"
+      }
+    },
+    {
+      "task_id": 12,
+      "prompt": "Write a function to sort a given matrix in ascending order according to the sum of its rows.",
+      "tests": [
+        "assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]",
+        "assert sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])==[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]",
+        "assert sort_matrix([[5,8,9],[6,4,3],[2,1,4]])==[[2, 1, 4], [6, 4, 3], [5, 8, 9]]"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef sort_matrix(matrix):\n    return sorted(matrix, key=sum)\n```",
+        "code": "def sort_matrix(matrix):\n    return sorted(matrix, key=sum)"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef sort_matrix(matrix):\n    return sorted(matrix, key=sum)\n```",
+        "repair_raw": "",
+        "code": "def sort_matrix(matrix):\n    return sorted(matrix, key=sum)"
+      }
+    },
+    {
+      "task_id": 14,
+      "prompt": "Write a python function to find the volume of a triangular prism.",
+      "tests": [
+        "assert find_Volume(10,8,6) == 240",
+        "assert find_Volume(3,2,2) == 6",
+        "assert find_Volume(1,2,1) == 1"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef find_Volume(base_length, height, prism_height):\n    base_area = (base_length * height) / 2\n    return base_area * prism_height\n```",
+        "code": "def find_Volume(base_length, height, prism_height):\n    base_area = (base_length * height) / 2\n    return base_area * prism_height"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef find_Volume(base_length, height, prism_height):\n    base_area = (base_length * height) / 2\n    return base_area * prism_height\n```",
+        "repair_raw": "",
+        "code": "def find_Volume(base_length, height, prism_height):\n    base_area = (base_length * height) / 2\n    return base_area * prism_height"
+      }
+    },
+    {
+      "task_id": 16,
+      "prompt": "Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.",
+      "tests": [
+        "assert text_lowercase_underscore(\"aab_cbbbc\")==(True)",
+        "assert text_lowercase_underscore(\"aab_Abbbc\")==(False)",
+        "assert text_lowercase_underscore(\"Aaab_abbbc\")==(False)"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nimport re\n\ndef text_lowercase_underscore(text):\n    return bool(re.match(r'^[a-z]+_[a-z]+$', text))\n```",
+        "code": "import re\n\ndef text_lowercase_underscore(text):\n    return bool(re.match(r'^[a-z]+_[a-z]+$', text))"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\nimport re\n\ndef text_lowercase_underscore(text):\n    return bool(re.match(r'^[a-z]+_[a-z]+$', text))\n```",
+        "repair_raw": "",
+        "code": "import re\n\ndef text_lowercase_underscore(text):\n    return bool(re.match(r'^[a-z]+_[a-z]+$', text))"
+      }
+    },
+    {
+      "task_id": 17,
+      "prompt": "Write a function that returns the perimeter of a square given its side length as input.",
+      "tests": [
+        "assert square_perimeter(10)==40",
+        "assert square_perimeter(5)==20",
+        "assert square_perimeter(4)==16"
+      ],
+      "baseline": {
+        "passed": true,
+        "result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef square_perimeter(side_length):\n    return side_length * 4\n```",
+        "code": "def square_perimeter(side_length):\n    return side_length * 4"
+      },
+      "tris_architecture_on": {
+        "first_passed": true,
+        "final_passed": true,
+        "first_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "final_result": {
+          "passed": true,
+          "reason": "passed",
+          "stdout": "",
+          "stderr": ""
+        },
+        "raw": "```python\ndef square_perimeter(side_length):\n    return 4 * side_length\n```",
+        "repair_raw": "",
+        "code": "def square_perimeter(side_length):\n    return 4 * side_length"
+      }
+    }
+  ]
+}
