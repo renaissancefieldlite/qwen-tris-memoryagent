@@ -345,6 +345,11 @@ state-path refinement spine:
   failures 5 -> 0.
 - 500-turn architecture-on receipt: mean score 1.0, 2168/2168 checks, zero
   prompt spills, zero raw receipt spills.
+- Novel-output read: Hermes Tris showed the end-state direction first. The
+  architecture-on route held enough source context, correction history, and task
+  state to keep producing the next useful step instead of collapsing back into
+  generic chat drift. Qwen Tris moves that same measured state-path discipline
+  into the Qwen memory track.
 - Current support level: Stable-State Path / architecture evidence,
   long-session engineering receipts, and benchmark scaffolding. External
   hosted-container deployment and leaderboard rows attach when their independent
